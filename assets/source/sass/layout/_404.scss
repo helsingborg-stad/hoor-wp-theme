@@ -1,0 +1,126 @@
+.error404 {
+    background-color: $black !important;
+
+    #wrapper {
+        background: transparent !important;
+    }
+
+    #pong-game {
+        height: 500px;
+        margin-bottom: 15px;
+        border: 3px solid #fff;
+
+        canvas {
+
+        }
+    }
+
+    .logo {
+        font-family: 'Press Start 2P';
+        color: darken(#fff, 50%);
+        font-size: 1.5em;
+        text-transform: uppercase;
+        margin-top: 10px;
+
+        @media screen and (max-width: 500px) {
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+
+        em {
+            color: #fff;
+        }
+    }
+
+    .pong-controls {
+        font-family: 'Press Start 2P';
+        font-size: .8em;
+        color: #fff;
+    }
+
+    .pong-error-message {
+        font-family: 'Press Start 2P';
+        font-size: 1em;
+        color: #fff;
+
+        .actions {
+            font-size: .7em;
+            margin-top: 0;
+
+            @media screen and (max-width: 500px) {
+                margin-top: 15px;
+            }
+
+            li {
+                display: inline-block;
+            }
+
+            a {
+                color: $black;
+                background-color: #fff;
+                display: inline-block;
+
+                &:hover {
+                    color: #fff;
+                    background-color: $green;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .stripe {
+        display: none;
+    }
+
+    .logotype {
+        max-width: 500px;
+        width: 100%;
+
+        svg {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    h2 {
+        position: relative;
+        background-color: $black;
+        color: #fff !important;
+        padding: 60px 40px;
+        font-size: 6em;
+        border-radius: 20px;
+        font-weight: bold !important;
+        line-height: 1;
+
+        em {
+            display: block;
+            font-weight: 200;
+            font-size: .5em;
+            line-height: 1.2;
+            margin-top: .3em;
+        }
+
+        &::after {
+            $size: 100px;
+            display: block;
+            content: '';
+            width: 0;
+            height: 0;
+            border-top: $size solid $black;
+            border-left: $size/1.3 solid transparent;
+
+            position: absolute;
+            bottom: -$size;
+            right: 40px;
+        }
+    }
+
+    .actions {
+        margin-top: 30px;
+    }
+
+    a:not(.btn) {
+        color: $black;
+    }
+}

@@ -1,0 +1,138 @@
+.search-top {
+    background-color: $black;
+    padding: 20px 0;
+
+    form {
+        label {
+            display: none;
+        }
+    }
+}
+
+.navbar-mainmenu a svg.hbg-icon {
+    width: 28px;
+}
+
+#site-header {
+    display: table;
+    position: fixed;
+    z-index: 200;
+    width: 100%;
+    padding-top: 0;
+    top: 0px;
+    left: 0;
+    transition: all 200ms;
+    font-family: $dunkers-font-family;
+
+    nav.navbar {
+        background-color: transparent;
+        transition: padding 200ms;
+    }
+
+    nav.navbar svg {
+        opacity: 1;
+        fill: #fff;
+    }
+
+    nav.navbar [data-tooltip] {
+        &:after {
+            border-radius: 2px;
+            padding: 10px;
+            background-color: #fff;
+            color: $black;
+            text-transform: uppercase;
+            opacity: .9;
+            transition: all 100ms;
+        }
+
+        &:before {
+            border-bottom-color: #fff;
+            opacity: .9;
+            transition: all 100ms;
+            bottom: -8px;
+        }
+    }
+
+    .logotype {
+        transition: opacity 300ms;
+        z-index: 800;
+
+        svg, img {
+            height: 25px;
+            width: auto;
+            max-width: none;
+        }
+
+        svg path,
+        svg use {
+            fill: #fff !important;
+            transition: fill 300ms;
+        }
+
+        &:after, &:before {
+            opacity: 0;
+            transition: 200ms opacity;
+        }
+    }
+
+}
+
+&.mobile-menu-open #site-header .logotype {
+    svg path,
+    svg use {
+        fill: $black !important;
+    }
+}
+
+.site-header.header-casual {
+    background-color: transparent;
+}
+
+#site-header.liquid-header,
+&:not(.home) #site-header,
+&.menu-open #site-header,
+&.no-js #site-header {
+    background-color: rgba(#fff,.97);
+    border-bottom: 1px solid $gray-light;
+    box-shadow: 0 0 2px rgba($black, .1);
+
+    .logotype {
+        svg path,
+        svg use {
+            fill: $black !important;
+        }
+    }
+
+    nav.navbar [data-tooltip] {
+        &:after {
+            background-color: rgba(#000,.7);
+            color: #fff;
+        }
+
+        &:before {
+            border-bottom-color: rgba(#000,.7);
+            opacity: 1;
+            bottom: -8px;
+        }
+    }
+
+    nav.navbar svg.hbg-icon {
+        opacity: 1;
+        fill: $black;
+    }
+
+    nav.navbar {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+&.home .site-header.header-casual .navbar-mainmenu.navbar {
+    background-color: transparent;
+    padding: 15px 0;
+
+    .current-page-ancestor a::after,
+    .current_page_item a::after {
+        display: none;
+    }
+}

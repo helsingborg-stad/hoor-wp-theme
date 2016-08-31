@@ -1,0 +1,10 @@
+/* Webfont: Karbon-Semibold */@font-face {
+    font-family: 'Karbon';
+    src: url('Karbon-Semibold.eot'); /* IE9 Compat Modes */
+    src: url('Karbon-Semibold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('Karbon-Semibold.woff') format('woff'), /* Modern Browsers */
+         url('Karbon-Semibold.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('Karbon-Semibold.svg#Karbon-Semibold') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: bold;
+}
