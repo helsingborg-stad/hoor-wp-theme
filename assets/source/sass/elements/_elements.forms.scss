@@ -1,0 +1,17 @@
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+	resize: vertical;
+}

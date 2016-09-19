@@ -1,0 +1,25 @@
+// *****************************************************************************
+// Main Style
+// *****************************************************************************
+@import "settings/settings.colors";
+@import "settings/settings.typography";
+@import "settings/settings.fonts";
+
+@import "tools/tools.mixins";
+
+@import "generic/generic.normalize";
+@import "generic/generic.reset";
+@import "generic/generic.box-sizing";
+
+@import "elements/elements.typography";
+@import "elements/elements.focus";
+@import "elements/elements.links";
+@import "elements/elements.images";
+@import "elements/elements.forms";
+
+@import "objects/objects.global";
+
+@import "components/components.global";
+
+@import "trumps/trumps.visually-hidden";
+@import "trumps/trumps.clearfix";

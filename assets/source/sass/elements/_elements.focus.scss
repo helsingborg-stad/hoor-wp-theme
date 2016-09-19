@@ -1,0 +1,18 @@
+:focus {
+  outline: 2px solid $color-blue;
+}
+
+/* Mouse */
+[data-whatinput='mouse'] :focus {
+  outline: none;
+}
+
+/* Keyboard */
+[data-whatinput='keyboard'] :focus {
+  outline-color: $color-orange;
+}
+
+/* Touch */
+[data-whatinput='touch'] :focus {
+  outline-color: $color-blue;
+}

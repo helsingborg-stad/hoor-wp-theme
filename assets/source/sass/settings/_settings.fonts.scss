@@ -1,0 +1,60 @@
+/**
+ * Solution for modern browsers (IE9 and up): http://caniuse.com/#search=woff
+ * If you need deeper browser support see: https://css-tricks.com/snippets/css/using-font-face/
+ *
+ * Font Weights - https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight
+ *
+ * 100 - Thin (Hairline)
+ * 700 - Bold
+ * 200 - Extra Light (Ultra Light)
+ * 300 - Light
+ * 400 - Normal
+ * 500 - Medium
+ * 600 - Semi Bold (Demi Bold)
+ * 700 - Bold
+ * 800 - Extra Bold (Ultra Bold)
+ * 900 - Black (Heavy)
+ *
+ **/
+
+@font-face {
+	font-family: "Clear Sans";
+	src: url("../fonts/ClearSans-Regular.woff2") format("woff2"), url("../fonts/ClearSans-Regular.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Clear Sans";
+	src: url("../fonts/ClearSans-Italic.woff2") format("woff2"), url("../fonts/ClearSans-Italic.woff") format("woff");
+	font-weight: 400;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Clear Sans";
+	src: url("../fonts/ClearSans-Medium.woff2") format("woff2"), url("../fonts/ClearSans-Medium.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Clear Sans";
+	src: url("../fonts/ClearSans-MediumItalic.woff2") format("woff2"), url("../fonts/ClearSans-MediumItalic.woff") format("woff");
+	font-weight: 500;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Clear Sans";
+	src: url("../fonts/ClearSans-Bold.woff2") format("woff2"), url("../fonts/ClearSans-Bold.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Clear Sans";
+	src: url("../fonts/ClearSans-BoldItalic.woff2") format("woff2"), url("../fonts/ClearSans-BoldItalic.woff") format("woff");
+	font-weight: 700;
+	font-style: italic;
+}

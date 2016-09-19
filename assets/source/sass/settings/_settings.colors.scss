@@ -1,0 +1,86 @@
+// *****************************************************************************
+// Default Color Palette
+// *****************************************************************************
+
+$color-dark: #222;
+$color-light: #fff;
+$color-action: #0872b9;
+
+// Primary Red
+$color-red: rgb(225, 38, 28);
+$color-light-red: rgb((red($color-red) + 255) * .5, (green($color-red) + 255) * .5, (blue($color-red) + 255) * .5);
+$color-dark-red: rgb((red($color-red) + 0) * .5, (green($color-red) + 0) * .5, (blue($color-red) + 0) * .5);
+
+// Primary Green
+$color-green: rgb(152, 194, 38);
+$color-light-green: rgb((red($color-green) + 255) * 05, (green($color-green) + 255) * .5, (blue($color-green) + 255) * .5);
+$color-dark-green: rgb((red($color-green) + 0) * .5, (green($color-green) + 0), (blue($color-green) + 0) * .5);
+
+// Primary Blue
+$color-blue: rgb(81, 165, 220);
+$color-light-blue: rgb((red($color-blue) + 255) * .5, (green($color-blue) + 255) * .5, (blue($color-blue) + 255) * .5);
+$color-dark-blue: rgb((red($color-blue) + 0) * .5, (green($color-blue) + 0) * .5, (blue($color-blue) + 0) * .5);
+
+
+// Complementary Orange
+$color-orange: rgb(239, 130, 0);
+$color-light-orange: rgb((red($color-orange) + 255) * .5, (green($color-orange) + 255) * .5, (blue($color-orange) + 255) * .5);
+$color-dark-orange: rgb((red($color-orange) + 0) * .5, (green($color-orange) + 0) * .5, (blue($color-orange) + 0) * .5);
+
+// Complementary Gray
+$color-gray: rgb(198, 198, 198);
+$color-light-gray: rgb((red($color-gray) + 255) * .5, (green($color-gray) + 255) * .5, (blue($color-gray) + 255) * .5);
+$color-dark-gray: rgb((red($color-gray) + 0) * .5, (green($color-gray) + 0) * .5, (blue($color-gray) + 0) * .5);
+
+// *****************************************************************************
+// Gray Color Palette
+// *****************************************************************************
+
+$color-gray-100: #f4f4f4;
+$color-gray-200: #f1f1f1;
+$color-gray-300: $color-light-gray;
+$color-gray-400: $color-gray;
+$color-gray-500: #a3a3a3;
+$color-gray-600: #808080;
+$color-gray-700: $color-dark-gray;
+$color-gray-800: $color-dark;
+
+// *****************************************************************************
+// Link Color Palette
+// *****************************************************************************
+
+$link-color: $color-action;
+$link-hover-color: darken($link-color, 20%);
+
+
+// *****************************************************************************
+// Alert Color Palette
+// *****************************************************************************
+
+$color-alert-default-text: $color-dark;
+$color-alert-default-icon: $color-dark;
+
+// Success
+$color-success-bg: #e7f4e4;
+$color-success-text: $color-alert-default-text;
+$color-success-icon: $color-alert-default-icon;
+
+// Warning
+$color-warning-bg: #fff1d2;
+$color-warning-text: $color-alert-default-text;
+$color-warning-icon: $color-alert-default-icon;
+
+// Error
+$color-error-bg: #f9dede;
+$color-error-text: $color-alert-default-text;
+$color-error-icon: $color-alert-default-icon;
+
+// Danger
+$color-danger-bg: #ebff00;
+$color-danger-text: $color-alert-default-text;
+$color-danger-icon: $color-alert-default-icon;
+
+// Informative
+$color-info-bg: #e1f3f8;
+$color-info-text: $color-alert-default-text;
+$color-info-icon: $color-alert-default-icon;
