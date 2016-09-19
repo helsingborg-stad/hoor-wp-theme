@@ -1,5 +1,3 @@
-var Hoor;
-
 /**
  * what-input - A global utility for tracking the current input method (mouse, keyboard or touch).
  * @version v3.0.0
