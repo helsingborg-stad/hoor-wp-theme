@@ -2,18 +2,18 @@
 var gulp = require('gulp');
 
 // Include Our Plugins
-var sass 			= require('gulp-sass');
-var concat 			= require('gulp-concat');
-var uglify 			= require('gulp-uglify');
-var cssnano 		= require('gulp-cssnano');
-var rename 			= require('gulp-rename');
-var autoprefixer 	= require('gulp-autoprefixer');
-var plumber 		= require('gulp-plumber');
-var notify 			= require('gulp-notify');
+var sass            = require('gulp-sass');
+var concat          = require('gulp-concat');
+var uglify          = require('gulp-uglify');
+var cssnano         = require('gulp-cssnano');
+var rename          = require('gulp-rename');
+var autoprefixer    = require('gulp-autoprefixer');
+var plumber         = require('gulp-plumber');
+var notify          = require('gulp-notify');
 
 // Compile Our Sass
 gulp.task('sass-dist', function() {
-    return gulp.src('assets/source/sass/app.scss')
+    return gulp.src('assets/source/sass/main.scss')
             .pipe(plumber({
                 errorHandler: notify.onError({
                     title: 'Sass build failed',
@@ -31,7 +31,7 @@ gulp.task('sass-dist', function() {
 });
 
 gulp.task('sass-dev', function() {
-    return gulp.src('assets/source/sass/app.scss')
+    return gulp.src('assets/source/sass/main.scss')
             .pipe(plumber({
                 errorHandler: notify.onError({
                     title: 'Sass build failed',
