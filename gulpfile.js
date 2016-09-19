@@ -9,11 +9,17 @@ var cssnano 		= require('gulp-cssnano');
 var rename 			= require('gulp-rename');
 var autoprefixer 	= require('gulp-autoprefixer');
 var plumber 		= require('gulp-plumber');
+var notify 			= require('gulp-notify');
 
 // Compile Our Sass
 gulp.task('sass-dist', function() {
     return gulp.src('assets/source/sass/app.scss')
-            .pipe(plumber())
+            .pipe(plumber({
+                errorHandler: notify.onError({
+                    title: 'Sass build failed',
+                    message: '<%= error.message %>'
+                })
+            }))
             .pipe(sass())
             .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
             .pipe(rename({suffix: '.min'}))
@@ -26,7 +32,12 @@ gulp.task('sass-dist', function() {
 
 gulp.task('sass-dev', function() {
     return gulp.src('assets/source/sass/app.scss')
-            .pipe(plumber())
+            .pipe(plumber({
+                errorHandler: notify.onError({
+                    title: 'Sass build failed',
+                    message: '<%= error.message %>'
+                })
+            }))
             .pipe(sass())
             .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
             .pipe(rename({suffix: '.dev'}))
@@ -36,6 +47,12 @@ gulp.task('sass-dev', function() {
 // Concatenate & Minify JS
 gulp.task('scripts-dist', function() {
     return gulp.src('assets/source/js/*.js')
+            .pipe(plumber({
+                errorHandler: notify.onError({
+                    title: 'JS build failed',
+                    message: '<%= error.message %>'
+                })
+            }))
             .pipe(concat('app.js'))
             .pipe(gulp.dest('assets/dist/js'))
             .pipe(rename('app.min.js'))
