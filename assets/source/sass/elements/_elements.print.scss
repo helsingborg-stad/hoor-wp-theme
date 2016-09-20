@@ -1,0 +1,50 @@
+@media print {
+  body {
+    font-size: 12pt;
+  }
+
+  iframe,
+  embed,
+  object {
+    display: none;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    white-space: nowrap;
+    line-height: 0;
+  }
+
+  a {
+    page-break-inside:avoid;
+  }
+
+  blockquote {
+    page-break-inside: avoid;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    page-break-inside:avoid;
+    page-break-after:avoid;
+  }
+
+  img {
+    page-break-inside:avoid;
+    page-break-after:avoid;
+  }
+
+  table,
+  pre {
+    page-break-inside:avoid;
+  }
+
+  ul,
+  ol,
+  dl  {
+    page-break-before:avoid;
+  }
+}

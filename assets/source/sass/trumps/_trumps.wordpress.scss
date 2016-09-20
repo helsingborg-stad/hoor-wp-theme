@@ -1,0 +1,41 @@
+.wp-caption {
+  background: $color-gray-100;
+  font-size: $font-size-small;
+  margin-bottom: $content-gutter;
+  max-width: 100%;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.wp-caption.alignnone {
+  //
+}
+
+.wp-caption.alignleft {
+  float: left;
+  margin-right: $content-gutter;
+}
+
+.wp-caption.alignright {
+  float: right;
+  margin-left: $content-gutter;
+}
+
+.wp-caption.aligncenter {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wp-caption-text {
+  margin: 0;
+  padding: .5rem;
+
+  em {
+    font-size: $font-size-smallest;
+    display: block;
+    color: rgba($color-dark, .75);
+  }
+}
