@@ -1,0 +1,90 @@
+$color-facebook: #3a579a;
+$color-twitter: #4fabf0;
+$color-linkedin: #0077b5;
+
+.c-share {
+  padding: 1rem 0 .5rem;
+  border-top: 1px solid $color-gray-200;
+  font-size: $font-size-small;
+
+  &__title {
+    margin: 0 0 .5rem;
+  }
+
+  &__list {
+    display: inline;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__list-item {
+    float: left;
+    margin-bottom: .5rem;
+
+    &:not(:last-child) {
+      margin-right: .5rem;
+    }
+
+    @media #{$screen-md-up} {
+      &:last-child {
+        float: right;
+      }
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    padding: .5rem 1rem;
+    border-radius: 10em;
+    background: $color-gray-500;
+    color: $color-dark;
+    text-decoration: none;
+    transition: background .3s ease-in-out, color .2s ease-in-out;
+
+    &:hover,
+    &:focus {
+      background: $color-dark;
+      color: $color-light;
+    }
+
+    &--facebook {
+      background: $color-facebook;
+      color: $color-light;
+
+      &:hover,
+      &:focus {
+        background: darken($color-facebook, 25%);
+      }
+    }
+
+    &--twitter {
+      background: $color-twitter;
+      color: $color-light;
+
+      &:hover,
+      &:focus {
+        background: darken($color-twitter, 45%);
+      }
+    }
+
+    &--linkedin {
+      background: $color-linkedin;
+      color: $color-light;
+
+      &:hover,
+      &:focus {
+        background: darken($color-linkedin, 20%);
+      }
+    }
+
+    &--mail {
+      background: $color-red;
+      color: $color-light;
+
+      &:hover,
+      &:focus {
+        background: darken($color-red, 20%);
+      }
+    }
+  }
+}
