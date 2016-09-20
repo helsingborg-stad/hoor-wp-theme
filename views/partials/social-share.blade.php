@@ -1,4 +1,4 @@
-<ul class="c-share__list clearfix" aria-labelledby="social-share">
+<ul class="c-share__list hidden-print clearfix" aria-labelledby="social-share">
     <li class="c-share__list-item">
         <a class="c-share__link c-share__link--facebook" data-action="share-popup" href="https://www.facebook.com/sharer/sharer.php?u={{ get_the_permalink() }}" data-tooltip="<?php _e('Share on', 'municipio'); ?> Facebook"><span class="visually-hidden">
             <?php _e('Share on', 'municipio'); ?> </span>Facebook

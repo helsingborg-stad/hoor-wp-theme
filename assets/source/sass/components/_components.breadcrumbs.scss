@@ -8,6 +8,12 @@
     padding: 1rem 2.5rem;
   }
 
+  @media print {
+    padding: 1rem 0;
+    margin-bottom: 0;
+    border-bottom: none;
+  }
+
   &__title {
     display: inline;
     font-weight: 700;
@@ -26,14 +32,26 @@
       color: $color-gray-300;
       content: " / ";
       speak: none;
+
+      @media print {
+        color: $color-dark;
+      }
     }
   }
 
   &__link {
     color: $color-dark;
+
+    @media print {
+      text-decoration: none;
+    }
   }
 
   &__current {
     color: $color-gray-600;
+
+    @media print {
+      color: $color-dark;
+    }
   }
 }
