@@ -1,0 +1,206 @@
+.grid {
+  width: auto;
+  @extend .clearfix;
+}
+
+// ***************************************************************
+// *** Grid column gutter
+// ***************************************************************
+[class*="grid-"] {
+  min-height: 1px;
+  padding-left: $grid-gutter-xs / 2;
+  padding-right: $grid-gutter-xs / 2;
+
+  @media #{$screen-sm} {
+    padding-left: $grid-gutter-sm / 2;
+    padding-right: $grid-gutter-sm / 2;
+  }
+
+  @media #{$screen-md} {
+    padding-left: $grid-gutter-md / 2;
+    padding-right: $grid-gutter-md / 2;
+  }
+
+  @media #{$screen-lg} {
+    padding-left: $grid-gutter-lg / 2;
+    padding-right: $grid-gutter-lg / 2;
+  }
+}
+
+// ***************************************************************
+// *** Grid columns
+// ***************************************************************
+
+// X-Small screens
+// This will generate grid-xs-*
+@include grid($screen-xs-up, $screen-xs, "xs");
+
+// Small screens
+// This will generate grid-sm-*
+@include grid($screen-sm-up, $screen-sm, "sm");
+
+// Medium screens
+// This will generate grid-md-*
+@include grid($screen-md-up, $screen-md, "md");
+
+// Large screens and up
+// This will generate grid-lg-*
+@include grid($screen-lg-up, $screen-lg, "lg");
+
+// Print grid size
+@media print {
+  @for $i from 1 to $grid-column-count + 1 {
+    .grid-print-#{$i}.grid-print-#{$i} {
+      display: block;
+      float: left;
+      width: (100% / $grid-column-count) * $i;
+    }
+  }
+
+  .grid-tester::after {
+    content: "print";
+  }
+}
+
+.grid-tester {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  width: 50px;
+  text-align: center;
+  z-index: $level-top;
+}
+
+// ***************************************************************
+// *** Grid inside grid, fix margins
+// ***************************************************************
+.grid {
+  @media #{$screen-xs} {
+    .grid {
+      margin-left: -($grid-gutter-xs / 2);
+      margin-right: -($grid-gutter-xs / 2);
+    }
+
+    & + .grid {
+      margin-top: $grid-gutter-xs;
+    }
+  }
+
+  @media #{$screen-sm} {
+    .grid {
+      margin-left: -($grid-gutter-sm / 2);
+      margin-right: -($grid-gutter-sm / 2);
+    }
+
+    & + .grid {
+      margin-top: $grid-gutter-sm;
+    }
+  }
+
+  @media #{$screen-md} {
+    .grid {
+      margin-left: -($grid-gutter-md / 2);
+      margin-right: -($grid-gutter-md / 2);
+    }
+
+    & + .grid {
+      margin-top: $grid-gutter-md;
+    }
+  }
+
+  @media #{$screen-lg} {
+    .grid {
+      margin-left: -($grid-gutter-lg / 2);
+      margin-right: -($grid-gutter-lg / 2);
+    }
+
+    & + .grid {
+      margin-top: $grid-gutter-lg;
+    }
+  }
+}
+
+// ***************************************************************
+// *** Grid as display table (to be able to vertical align)
+// ***************************************************************
+
+.grid-table {
+  @include grid-table;
+
+  &.grid-table-autofit [class*="grid-"] {
+    max-width: none;
+  }
+}
+
+@media #{$screen-xs-up} {
+  .grid-table-xs {
+    @include grid-table;
+  }
+}
+
+@media #{$screen-sm-up} {
+  .grid-table-sm {
+    @include grid-table;
+  }
+}
+
+@media #{$screen-md-up} {
+  .grid-table-md {
+    @include grid-table;
+  }
+}
+
+@media #{$screen-lg-up} {
+  .grid-table-lg {
+    @include grid-table;
+  }
+}
+
+// ***************************************************************
+// *** Styleguide helper
+// ***************************************************************
+.grid-example [class*="grid-"] {
+  background-color: $color-red;
+  border: 1px solid $color-dark-red;
+  overflow: hidden;
+}
+
+.grid.no-gutter [class*="grid-"] {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.grid-va-middle {
+  align-items: center;
+
+  [class*="grid-"] {
+    vertical-align: middle;
+  }
+}
+
+.grid-va-bottom {
+  align-items: flex-end;
+
+  [class*="grid-"] {
+    vertical-align: bottom;
+  }
+}
+
+.grid-va-top {
+  align-items: top;
+
+  [class*="grid-"] {
+    vertical-align: top;
+  }
+}
+
+.grid-va-bottom {
+  align-items: bottom;
+
+  [class*="grid-"] {
+    vertical-align: bottom;
+  }
+}

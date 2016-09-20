@@ -1,0 +1,95 @@
+@mixin grid($media-query-up: $screen-xs-up, $media-query: $screen-xs, $grid-size: "xs") {
+  @media #{$media-query-up} {
+    @for $i from 1 to $grid-column-count + 1 {
+      .grid-#{$grid-size}-#{$i} {
+        display: block;
+        float: left;
+        width: (100% / $grid-column-count) * $i;
+      }
+    }
+
+    .grid-tester::after {
+      content: $grid-size;
+    }
+  }
+}
+
+@mixin grid-flexbox($media-query-up: $screen-xs-up, $media-query: $screen-xs, $grid-size: "xs") {
+  @media #{$media-query-up} {
+    @for $i from 1 to $grid-column-count + 1 {
+      .grid-#{$grid-size}-#{$i} {
+        width: auto;
+        flex-basis: (100% / $grid-column-count) * $i;
+        max-width: (100% / $grid-column-count) * $i;
+      }
+    }
+  }
+}
+
+@mixin grid-table {
+  display: table;
+  width: 100%;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0;
+  padding-right: 0;
+
+  @supports (display: flex) {
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  [class*="grid-"] {
+    display: table-cell;
+    float: none;
+
+    @supports (display:flex) {
+      display: block;
+      flex: 1 1 auto;
+    }
+  }
+
+  .grid-fit-content {
+    width: 1%;
+    white-space: nowrap;
+  }
+
+  @supports (display:flex) {
+    .grid-auto {
+      flex: 1 1 0;
+    }
+
+    .grid-defined-width {
+      flex: 0 0 auto;
+    }
+
+    .grid-fit-content {
+      flex: 0 1 auto;
+      white-space: normal;
+      width: auto;
+    }
+  }
+
+  &.no-padding {
+    padding-left: 0;
+    padding-right: 0;
+
+    [class*="grid-"] {
+      padding: 0;
+    }
+  }
+
+  .grid-col-icon {
+    width: 1%;
+    white-space: nowrap;
+    padding-right: 0;
+
+    @supports (display: flex) {
+      display: block;
+      flex: 0 0 auto;
+      min-width: 40px;
+    }
+  }
+}
