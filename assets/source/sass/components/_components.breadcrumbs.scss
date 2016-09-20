@@ -1,0 +1,39 @@
+.c-breadcrumbs {
+  margin-bottom: $content-gutter;
+  padding: 1rem;
+  border-bottom: 1px solid $color-gray-200;
+  font-size: $font-size-small;
+
+  @media #{$screen-md-up} {
+    padding: 1rem 2.5rem;
+  }
+
+  &__title {
+    display: inline;
+    font-weight: 700;
+  }
+
+  &__list {
+    display: inline;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__list-item {
+    display: inline;
+
+    &:not(:last-child)::after {
+      color: $color-gray-300;
+      content: " / ";
+      speak: none;
+    }
+  }
+
+  &__link {
+    color: $color-dark;
+  }
+
+  &__current {
+    color: $color-gray-600;
+  }
+}

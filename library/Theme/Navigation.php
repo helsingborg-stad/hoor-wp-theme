@@ -154,7 +154,7 @@ class Navigation
         $title = get_the_title();
         $output = '';
 
-        echo '<ol class="c-breadcrumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList">';
+        echo '<ol class="c-breadcrumbs__list" aria-labelledby="breadcrumbslabel" itemscope itemtype="http://schema.org/BreadcrumbList">';
 
         if (!is_front_page()) {
             if (is_category() || is_single()) {
