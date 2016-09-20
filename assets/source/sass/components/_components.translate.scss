@@ -1,0 +1,39 @@
+.c-google-translate {
+  box-sizing: border-box;
+  padding: 1rem;
+  font-size: $font-size-small;
+
+  // Placement 'Above header' and ´Below footer'
+  &--static {
+    border-bottom: 1px solid $color-gray-200;
+    background: $color-gray-100;
+  }
+
+  // Placement 'Fixed to right edge'
+  &--fixed {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: $level-top;
+    background: rgba($color-light, .96);
+    box-shadow: 0 0 2rem rgba($color-dark, .5);
+
+    @media #{$screen-md-up} {
+      margin: 1rem;
+      border-radius: 2px;
+    }
+
+    .button {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+  }
+}
+
+// Fix for when the box is placed ´Below footer'
+.main-footer + .c-google-translate--static {
+  border-top: 1px solid $color-gray-400;
+  border-bottom: none;
+}
