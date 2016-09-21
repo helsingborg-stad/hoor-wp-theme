@@ -1,0 +1,32 @@
+.primary-navigation {
+  background: $color-action;
+  font-size: $font-size-medium;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+
+  a {
+    display: block;
+    color: $color-light;
+    text-decoration: none;
+    padding: 1.5rem 1.25rem;
+    align-self: center;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+.current-page-ancestor,
+.current-menu-item {
+  background: darken($color-action, 6);
+}

@@ -1,12 +1,8 @@
 .c-breadcrumbs {
   margin-bottom: $content-gutter;
-  padding: 1rem;
+  padding: 1rem 0;
   border-bottom: 1px solid $color-gray-200;
   font-size: $font-size-small;
-
-  @media #{$screen-md-up} {
-    padding: 1rem 2.5rem;
-  }
 
   @media print {
     padding: 1rem 0;

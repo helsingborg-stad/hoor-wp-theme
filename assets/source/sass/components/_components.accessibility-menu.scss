@@ -1,0 +1,20 @@
+.c-accessibility-menu {
+  margin-bottom: $content-gutter;
+  font-size: $font-size-small;
+
+  a {
+    display: inline-block;
+    padding: .5rem 1rem;
+    border-radius: 10em;
+    background: $color-gray-500;
+    color: $color-dark;
+    text-decoration: none;
+    transition: background .3s ease-in-out, color .2s ease-in-out;
+
+    &:hover,
+    &:focus {
+      background: $color-dark;
+      color: $color-light;
+    }
+  }
+}

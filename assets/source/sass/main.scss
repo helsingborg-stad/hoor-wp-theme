@@ -32,6 +32,12 @@
 @import "components/components.share";
 @import "components/components.page-footer";
 @import "components/components.translate";
+@import "components/components.search";
+@import "components/components.pagination";
+@import "components/components.accessibility-menu";
+
+@import "components/navigation/primary";
+@import "components/navigation/sidebar";
 
 @import "trumps/trumps.visually-hidden";
 @import "trumps/trumps.clearfix";

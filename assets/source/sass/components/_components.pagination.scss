@@ -1,0 +1,50 @@
+.pagination {
+  margin: 0 0 $content-gutter;
+  padding: 1rem 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  @media #{$screen-below-md} {
+    justify-content: space-between;
+  }
+
+  li {
+    margin: 0 .25rem;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .page,
+  .next,
+  .previous {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border: 1px solid $color-action;
+    border-radius: 3px;
+    padding: .75rem 1rem;
+  }
+
+  @media #{$screen-below-md} {
+
+    .page {
+      display: none;
+    }
+  }
+
+  .current {
+    border-color: $color-gray-400;
+    background: $color-gray-100;
+    color: $color-gray-600;
+  }
+}
