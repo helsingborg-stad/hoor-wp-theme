@@ -32,12 +32,6 @@
             {!! $navigation['mainMenu'] !!}
         </div>
     </nav>
-
-    @if (strlen($navigation['mobileMenu']) > 0)
-        <nav id="mobile-menu" class="nav-mobile-menu nav-toggle nav-toggle-expand {!! apply_filters('Municipio/mobile_menu_breakpoint','hidden-md hidden-lg'); !!} hidden-print">
-            @include('partials.mobile-menu')
-        </nav>
-    @endif
 @endif
 
 <div class="search-top {!! apply_filters('Municipio/desktop_menu_breakpoint','hidden-sm'); !!} hidden-print" id="search">
