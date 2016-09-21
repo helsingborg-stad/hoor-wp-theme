@@ -38,8 +38,8 @@ add_action( 'wp_print_scripts', 'hoor_dequeue_unnecessary_scripts' );
 add_filter( 'mce_buttons_2', 'editor_buttons' );
 function editor_buttons( $buttons ) {
 
-	array_unshift( $buttons, 'styleselect' );
-	return $buttons;
+    array_unshift( $buttons, 'styleselect' );
+    return $buttons;
 }
 
 // Add Styles to the Format TinyMCE toolbar
@@ -47,23 +47,27 @@ add_filter( 'tiny_mce_before_init', 'editor_buttons_before_init' );
 
 function editor_buttons_before_init( $settings ) {
 
-	$style_formats = array(
-		array(
-			'title' => 'Introduction',
-			'selector' => 'p',
-			'classes' => 'o-lead'
-		)
-	);
+    $style_formats = array(
+        array(
+            'title' => 'Introduction',
+            'selector' => 'p',
+            'classes' => 'o-lead'
+        )
+    );
 
-	$settings['style_formats'] = json_encode( $style_formats );
+    $settings['style_formats'] = json_encode( $style_formats );
 
-	return $settings;
+    return $settings;
 }
 
 // Register editor stylesheet for the theme.
 function hoor_add_editor_styles() {
     add_editor_style( 'assets/dist/css/editor-style.css' );
 }
-
 add_action( 'admin_init', 'hoor_add_editor_styles' );
 
+// Wrap embeds in an div to be able to make videos responsive
+add_filter('embed_oembed_html', 'site_embed_oembed_html', 99, 4);
+function site_embed_oembed_html($html, $url, $attr, $post_id) {
+    return '<div class="o-embed-container">' . $html . '</div>';
+}
