@@ -4,8 +4,9 @@
 
 @include('partials.archive-filters')
 
+@include('partials.breadcrumbs')
+
 <div class="container main-container">
-    @include('partials.breadcrumbs')
 
     <div class="grid">
         @if (get_field('archive_' . sanitize_title(get_post_type()) . '_show_sidebar_navigation', 'option'))
