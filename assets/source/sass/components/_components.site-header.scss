@@ -1,0 +1,12 @@
+.site-header {
+
+
+  &__logotype {
+    margin: 1rem 0;
+
+    @media #{$screen-xs} {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
