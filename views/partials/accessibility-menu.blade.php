@@ -1,14 +1,11 @@
-<ul class="nav nav-help nav-accessibility nav-horizontal hidden-print">
-    @if (function_exists('ReadSpeakerHelper_playButton'))
-    <li>
-        {!! ReadSpeakerHelper_playButton() !!}
-    </li>
-    @endif
-    <li>
-        <a href="#" onclick="window.print();return false;" class=""><i class="pricon pricon-print"></i> Skriv ut</a>
-    </li>
-</ul>
+@if (function_exists('ReadSpeakerHelper_playButton'))
+<div class="c-accessibility-menu" aria-label="<?php _e('Listen to this page text with ReadSpeaker', 'hoor'); ?>">
+    {!! ReadSpeakerHelper_playButton() !!}
+</div>
+@endif
 
 @if (function_exists('ReadSpeakerHelper_player'))
+    <div>
     {!! ReadSpeakerHelper_player() !!}
+    </div>
 @endif
