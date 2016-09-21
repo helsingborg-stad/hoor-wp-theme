@@ -32,3 +32,30 @@ function hoor_dequeue_unnecessary_scripts() {
     wp_deregister_script( 'municipio' );
 }
 add_action( 'wp_print_scripts', 'hoor_dequeue_unnecessary_scripts' );
+
+
+// Add Format button to TinyMCE toolbar
+add_filter( 'mce_buttons_2', 'editor_buttons' );
+function editor_buttons( $buttons ) {
+
+	array_unshift( $buttons, 'styleselect' );
+	return $buttons;
+}
+
+// Add Styles to the Format TinyMCE toolbar
+add_filter( 'tiny_mce_before_init', 'editor_buttons_before_init' );
+
+function editor_buttons_before_init( $settings ) {
+
+	$style_formats = array(
+		array(
+			'title' => 'Introduction',
+			'selector' => 'p',
+			'classes' => 'o-lead'
+		)
+	);
+
+	$settings['style_formats'] = json_encode( $style_formats );
+
+	return $settings;
+}
