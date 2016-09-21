@@ -18,3 +18,8 @@
     }
   }
 }
+
+// Target Readspeaker button and override default value
+.readspeaker-player-element.rsbtn {
+  margin-bottom: $content-gutter;
+}
