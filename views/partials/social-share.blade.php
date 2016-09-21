@@ -9,7 +9,7 @@
         </a>
     </li>
     <li class="c-share__list-item">
-        <a class="c-share__link c-share__link--linkedin" data-action="share-popup" href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{ get_the_permalink() }}&amp;title={{ get_the_title() }}&amp;summary={{ get_the_excerpt() }}&amp;source={{ bloginfo('site_name') }}" data-tooltip="<?php _e('Share on', 'municipio'); ?> LinkedIn"><span class="visually-hidden"><?php _e('Share on', 'municipio'); ?> </span>LinkedIn
+        <a class="c-share__link c-share__link--linkedin" data-action="share-popup" href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{ get_the_permalink() }}&amp;title={{ get_the_title() }}&amp;summary={{ get_the_excerpt() }}&amp;source={{ bloginfo('site_name') }}" data-tooltip="<?php _e('Share on', 'municipio'); ?> Linkedin"><span class="visually-hidden"><?php _e('Share on', 'municipio'); ?> </span>Linkedin
         </a>
     </li>
     <li class="c-share__list-item">
