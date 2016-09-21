@@ -90,13 +90,9 @@
 </div>
 
 @if (get_field('nav_primary_enable', 'option') === true)
-    <nav class="navbar navbar-mainmenu hidden-xs hidden-sm hidden-print">
+    <nav class="primary-navigation hidden-print">
         <div class="container">
-            <div class="grid">
-                <div class="grid-sm-12">
-                    {!! $navigation['mainMenu'] !!}
-                </div>
-            </div>
+            {!! $navigation['mainMenu'] !!}
         </div>
     </nav>
 
