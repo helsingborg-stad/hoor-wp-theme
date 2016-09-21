@@ -1,4 +1,4 @@
-<footer class="main-footer hidden-print">
+<footer class="main-footer">
     <div class="container">
 
         @if (get_field('footer_logotype_vertical_position', 'option') == 'bottom')
@@ -123,13 +123,17 @@
                     </div>
                 @endif
             </div>
-
-            {{-- ## Footer signature ## --}}
-            @if (get_field('footer_signature_show', 'option'))
-                <div class="grid-md-2 text-right">
-                    {!! apply_filters('Municipio/footer_signature', '<a href="http://www.helsingborg.se"><img src="' . get_template_directory_uri() . '/assets/dist/images/helsingborg.svg" alt="Helsingborg Stad" class="footer-signature"></a>') !!}
-                </div>
-            @endif
         </div>
     </div>
 </footer>
+
+{{-- ## Footer signature ## --}}
+@if (get_field('footer_signature_show', 'option'))
+    <div class="container">
+        <div class="grid">
+            <div class="grid-sm-12">
+                {!! apply_filters('Municipio/footer_signature', '<img src="' . get_template_directory_uri() . '/assets/dist/images/helsingborg.svg" alt="Helsingborg Stad" class="footer-signature">') !!}
+            </div>
+        </div>
+    </div>
+@endif
