@@ -30,6 +30,23 @@ gulp.task('sass-dist', function() {
             .pipe(gulp.dest('assets/dist/css'));
 });
 
+gulp.task('sass-editor', function() {
+    return gulp.src('assets/source/sass/editor-style.scss')
+            .pipe(plumber({
+                errorHandler: notify.onError({
+                    title: 'Sass build failed',
+                    message: '<%= error.message %>'
+                })
+            }))
+            .pipe(sass())
+            .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
+            .pipe(cssnano({
+                mergeLonghand: false,
+                zindex: false
+            }))
+            .pipe(gulp.dest('assets/dist/css'));
+});
+
 gulp.task('sass-dev', function() {
     return gulp.src('assets/source/sass/main.scss')
             .pipe(plumber({
@@ -63,9 +80,9 @@ gulp.task('scripts-dist', function() {
 // Watch Files For Changes
 gulp.task('watch', function() {
     gulp.watch('assets/source/js/**/*.js', ['scripts-dist']);
-    gulp.watch('assets/source/sass/**/*.scss', ['sass-dist', 'sass-dev']);
+    gulp.watch('assets/source/sass/**/*.scss', ['sass-dist', 'sass-dev', 'sass-editor']);
 //    gulp.watch('assets/source/images/**/*', ['imagemin']);
 });
 
 // Default Task
-gulp.task('default', ['sass-dist', 'sass-dev', 'scripts-dist', 'watch']);
+gulp.task('default', ['sass-dist', 'sass-dev', 'sass-editor', 'scripts-dist', 'watch']);

@@ -59,3 +59,11 @@ function editor_buttons_before_init( $settings ) {
 
 	return $settings;
 }
+
+// Register editor stylesheet for the theme.
+function hoor_add_editor_styles() {
+    add_editor_style( 'assets/dist/css/editor-style.css' );
+}
+
+add_action( 'admin_init', 'hoor_add_editor_styles' );
+
