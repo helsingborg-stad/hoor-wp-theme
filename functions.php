@@ -26,13 +26,6 @@ function hoor_dequeue_unnecessary_styles() {
 }
 add_action( 'wp_print_styles', 'hoor_dequeue_unnecessary_styles' );
 
-// Dequeue JavaScripts from municipio
-function hoor_dequeue_unnecessary_scripts() {
-    wp_dequeue_script( 'hbg-prime' );
-    wp_deregister_script( 'municipio' );
-}
-add_action( 'wp_print_scripts', 'hoor_dequeue_unnecessary_scripts' );
-
 
 // Add Format button to TinyMCE toolbar
 add_filter( 'mce_buttons_2', 'editor_buttons' );
