@@ -63,7 +63,7 @@ gulp.task('sass-dev', function() {
 
 // Concatenate & Minify JS
 gulp.task('scripts-dist', function() {
-    return gulp.src('assets/source/js/*.js')
+    return gulp.src('assets/source/js/**/*.js')
             .pipe(plumber({
                 errorHandler: notify.onError({
                     title: 'JS build failed',
