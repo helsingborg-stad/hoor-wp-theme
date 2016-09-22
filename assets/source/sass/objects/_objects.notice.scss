@@ -1,0 +1,36 @@
+.notice {
+  background: $color-gray-400;
+  margin-bottom: $content-gutter;
+  padding: 1rem;
+
+  &.notice-lg {
+    font-size: $font-size-large;
+    line-height: 1.5;
+  }
+
+  &.success {
+    background: $color-success-bg;
+    color: $color-success-text;
+  }
+
+  &.info {
+    background: $color-info-bg;
+    color: $color-info-text;
+  }
+
+  &.warning {
+    background: $color-warning-bg;
+    color: $color-warning-text;
+  }
+
+  &.danger {
+    background: $color-danger-bg;
+    color: $color-danger-text;
+  }
+
+  // Doesn't exist yet
+  &.error {
+    background: $color-error-bg;
+    color: $color-error-text;
+  }
+}

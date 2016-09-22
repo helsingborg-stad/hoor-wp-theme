@@ -32,6 +32,10 @@
   }
 }
 
+.target-toggle:not(:target) {
+  display: none;
+}
+
 // Fix for when the box is placed ´Below footer'
 .main-footer + .c-google-translate--static {
   border-top: 1px solid $color-gray-400;
