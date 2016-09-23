@@ -49,3 +49,78 @@
 @import "trumps/trumps.float";
 @import "trumps/trumps.wordpress";
 @import "trumps/trumps.print";
+
+
+.icon {
+  width: 40px;
+  height: 40px;
+  color: red;
+}
+
+.icons--twitter {
+  fill: currentColor;
+}
+
+.icons--facebook {
+  fill: blue;
+
+  &:hover {
+    fill: orange;
+  }
+}
+
+.icons--email {
+  fill: pink;
+  width: 80px;
+  height: 80px;
+
+  &:hover {
+    fill: red;
+  }
+}
+
+/* Nackdel med att hämta en svg som en bakgrundsbild är:
+ * 1. Det går inte att ändra färg på ikonen med CSS
+ * 2. Det görs en request efter en ikon som redan finns i ../sprite.svg
+ *
+ * Resten av CSS:en för menyn finns i components/navigation/_help.scss
+ */
+.menu-item--services {
+  a {
+    &::before {
+      background-image: url(../images/icons/icons--twitter.svg);
+    }
+  }
+}
+
+.menu-item--contact {
+  a {
+    &::before {
+      background-image: url(../images/icons/icons--facebook.svg);
+    }
+  }
+}
+
+.menu-item--maps {
+  a {
+    &::before {
+      background-image: url(../images/icons/icons--email.svg);
+    }
+  }
+}
+
+.menu-item--easy-read {
+  a {
+    &::before {
+      background-image: url(../images/icons/icons--twitter.svg);
+    }
+  }
+}
+
+.menu-item-translate {
+  a {
+    &::before {
+      background-image: url(../images/icons/icons--email.svg);
+    }
+  }
+}

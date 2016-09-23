@@ -1,3 +1,9 @@
+<svg class="icon icons--twitter"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="<?php echo get_stylesheet_directory_uri() ?>/assets/dist/images/icons.svg#icons--twitter"></use></svg>
+
+<svg class="icon icons--facebook"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="<?php echo get_stylesheet_directory_uri() ?>/assets/dist/images/icons.svg#icons--facebook"></use></svg>
+
+<svg class="icon icons--email"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="<?php echo get_stylesheet_directory_uri() ?>/assets/dist/images/icons.svg#icons--email"></use></svg>
+
 <div class="container">
     <div class="grid">
         <div class="grid-xs-12 grid-sm-3 site-header__logotype">

@@ -2019,11 +2019,14 @@ html:not(.no-flexbox) [data-equal-container] > [data-equal-item] {
       display: block;
       border: 2px solid #eee;
       border-radius: 100%;
-      background: #fff;
       width: 44px;
       height: 44px;
       margin: 0 auto .25rem;
-      box-sizing: border-box; }
+      box-sizing: border-box;
+      background-color: #fff;
+      background-size: 40px 40px;
+      background-repeat: no-repeat;
+      background-position: 50% 50%; }
   .menu-help .current-page-item,
   .menu-help .current-menu-item {
     color: #222; }
@@ -2154,3 +2157,44 @@ html:not(.no-flexbox) [data-equal-container] > [data-equal-item] {
 @media print {
   .hidden-print {
     display: none; } }
+
+.icon  {
+  width: 40px;
+  height: 40px;
+  color: red; }
+
+.icons--twitter {
+  fill: currentColor; }
+
+.icons--facebook {
+  fill: blue; }
+  .icons--facebook:hover {
+    fill: orange; }
+
+.icons--email {
+  fill: pink;
+  width: 80px;
+  height: 80px; }
+  .icons--email:hover {
+    fill: red; }
+
+/* Nackdel med att hämta en svg som en bakgrundsbild är:
+ * 1. Det går inte att ändra färg på ikonen med CSS
+ * 2. Det görs en request efter en ikon som redan finns i ../sprite.svg
+ *
+ * Resten av CSS:en för menyn finns i components/navigation/_help.scss
+ */
+.menu-item--services a::before {
+  background-image: url(../images/icons/icons--twitter.svg); }
+
+.menu-item--contact a::before {
+  background-image: url(../images/icons/icons--facebook.svg); }
+
+.menu-item--maps a::before {
+  background-image: url(../images/icons/icons--email.svg); }
+
+.menu-item--easy-read a::before {
+  background-image: url(../images/icons/icons--twitter.svg); }
+
+.menu-item-translate a::before {
+  background-image: url(../images/icons/icons--email.svg); }
