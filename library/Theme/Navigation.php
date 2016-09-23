@@ -11,22 +11,15 @@ class Navigation
     public static function outputBreadcrumbs()
     {
         global $post;
-
-        $title = get_the_title();
         $output = '';
 
         echo '<ol class="c-breadcrumbs__list" aria-labelledby="breadcrumbslabel" itemscope itemtype="http://schema.org/BreadcrumbList">';
 
         if (!is_front_page()) {
-            if (is_category() || is_single()) {
-                echo '<li>';
-                the_category('<li>');
-
-                if (is_single()) {
-                    echo '<li>';
-                    the_title();
-                    echo '</li>';
-                }
+            if (is_single()) {
+                echo '<li class="c-breadcrumbs__list-item" itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+                        <span class="c-breadcrumbs__current" itemprop="name">' . get_the_title() . '</span><meta itemprop="position" content="1" />
+                      </li>';
             } elseif (is_page()) {
                 if ($post->post_parent) {
                     $anc = array_reverse(get_post_ancestors($post->ID));

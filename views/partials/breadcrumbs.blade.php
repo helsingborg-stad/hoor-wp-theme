@@ -1,4 +1,3 @@
-@if (wp_get_post_parent_id(get_the_id()) != 1)
 <nav class="c-breadcrumbs" aria-label="<?php _e('breadcrumbs', 'hoor'); ?>" role="navigation">
     <div class="container">
         <div class="grid">
@@ -9,4 +8,3 @@
         </div>
     </div>
 </nav>
-@endif
