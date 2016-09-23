@@ -1,5 +1,5 @@
 .header__search {
-  display: block;
+  display: none;
   background: darken($color-action, 6);
 
   @media #{$screen-below-sm} {
@@ -61,4 +61,12 @@
       display: none; // Hide button on smaller screens. Make assumtion that the user has an on screen keyboard.
     }
   }
+}
+
+// TODO
+.menu-item-search {
+  background: darken($color-action, 8);
+  display: block;
+  width: 62px;
+  height: 62px;
 }

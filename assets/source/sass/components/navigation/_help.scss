@@ -37,10 +37,22 @@
       display: block;
       border: 2px solid #eee;
       border-radius: 100%;
+      background: $color-light;
       width: 44px;
       height: 44px;
       margin: 0 auto .25rem;
       box-sizing: border-box;
+    }
+  }
+
+  .current-page-item,
+  .current-menu-item {
+    color: $color-dark;
+
+    a {
+      &::before {
+        background: $color-gray-100;
+      }
     }
   }
 }

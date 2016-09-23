@@ -39,9 +39,10 @@
       text-decoration: underline;
     }
   }
-}
 
-.current-page-ancestor,
-.current-menu-item {
-  background: darken($color-action, 6);
+  .current-page-ancestor,
+  .current-menu-item {
+    background: darken($color-action, 6);
+  }
+
 }
