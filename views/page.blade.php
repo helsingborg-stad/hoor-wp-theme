@@ -2,6 +2,8 @@
 
 @section('content')
 
+@include('partials.hero-image')
+
 @include('partials.breadcrumbs')
 
 <div class="container main-container">
