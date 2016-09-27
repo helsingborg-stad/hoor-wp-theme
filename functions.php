@@ -116,3 +116,8 @@ register_nav_menus( array(
 	'footer_links' => 'Footer Navigation',
 	'footer_social_links' => 'Social Links',
 ) );
+
+add_action( 'after_setup_theme', 'hoor_theme_setup' );
+function hoor_theme_setup() {
+    add_image_size( 'hero_image', 1300, 280, array( 'left', 'top' ) );
+}
