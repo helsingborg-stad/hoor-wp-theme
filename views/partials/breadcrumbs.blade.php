@@ -1,4 +1,4 @@
-<nav class="c-breadcrumbs" aria-label="<?php _e('breadcrumbs', 'hoor'); ?>" role="navigation">
+<nav class="c-breadcrumbs hidden-print" aria-label="<?php _e('breadcrumbs', 'hoor'); ?>" role="navigation">
     <div class="container">
         <div class="grid">
             <div class="grid-md-12">
