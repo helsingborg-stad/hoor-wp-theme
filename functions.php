@@ -42,16 +42,43 @@ function editor_buttons_before_init( $settings ) {
 
     $style_formats = array(
         array(
-            'title' => 'Introduction',
+            'title' => 'Preamble',
             'selector' => 'p',
             'classes' => 'o-lead'
-        )
+        ),
+        array(
+            'title' => 'Pull quote',
+            'selector' => 'blockquote',
+            'classes' => 'o-pull-quote'
+        ),
     );
 
     $settings['style_formats'] = json_encode( $style_formats );
 
     return $settings;
 }
+
+/**
+ * Remove unused buttons from TinyMCE toolbar
+ */
+function hoor_tinymce_buttons($buttons) {
+    $remove = array('alignleft', 'aligncenter', 'alignright', 'wp_more');
+    return array_diff($buttons,$remove);
+}
+add_filter('mce_buttons','hoor_tinymce_buttons');
+
+function hoor_tinymce_second_buttons($buttons) {
+    $remove = array('underline', 'alignjustify', 'forecolor', 'indent', 'outdent');
+    return array_diff($buttons,$remove);
+}
+add_filter('mce_buttons_2','hoor_tinymce_second_buttons');
+
+function wpa_45815($arr){
+    $arr['block_formats'] = 'Paragraph=p;Heading 2=h2;Heading 3=h3;Heading 4=h4;Heading 5=h5;Heading 6=h6';
+    return $arr;
+}
+add_filter('tiny_mce_before_init', 'wpa_45815');
+
 
 // Register editor stylesheet for the theme.
 function hoor_add_editor_styles() {
@@ -83,3 +110,9 @@ function hoor_unregister_widgets() {
     //unregister_widget('WP_Widget_RSS');
 }
 add_action( 'widgets_init', 'hoor_unregister_widgets' );
+
+
+register_nav_menus( array(
+	'footer_links' => 'Footer Navigation',
+	'footer_social_links' => 'Social Links',
+) );
