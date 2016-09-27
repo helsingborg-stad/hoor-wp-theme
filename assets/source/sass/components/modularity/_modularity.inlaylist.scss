@@ -1,0 +1,35 @@
+.modularity-mod-inlaylist {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    border-bottom: 1px solid $color-gray-200;
+    padding: .75rem 1rem .75rem .625rem;
+    font-size: $font-size-medium;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+
+    span {
+      display: block;
+      text-decoration: underline;
+      font-size: $font-size-medium;
+    }
+
+    time {
+      color: $color-gray-600;
+      display: block;
+      text-decoration: none;
+      font-size: $font-size-small;
+    }
+  }
+}
