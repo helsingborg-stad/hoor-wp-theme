@@ -43,6 +43,7 @@
 @import "components/components.pagination";
 @import "components/components.accessibility-menu";
 @import "components/components.cookie-consent";
+@import "components/components.hero";
 
 @import "components/components.box";
 @import "components/modularity/modularity.posts";
@@ -52,6 +53,11 @@
 @import "components/modularity/modularity.noticeboard";
 @import "components/modularity/modularity.mainnews";
 @import "components/modularity/modularity.inlaylist";
+@import "components/modularity/modularity.index";
+@import "components/modularity/modularity.latest";
+@import "components/modularity/modularity.script";
+@import "components/modularity/modularity.contact";
+@import "components/modularity/modularity.inheritpost";
 
 @import "components/navigation/primary";
 @import "components/navigation/help";
@@ -62,22 +68,3 @@
 @import "trumps/trumps.float";
 @import "trumps/trumps.wordpress";
 @import "trumps/trumps.print";
-
-@media #{$screen-md-up} {
-
-  .main-container article {
-    max-width: 36.875rem;
-  }
-
-  html {
-    background-image: url(../images/pattern.png);
-    background-position: 0 100%;
-    background-repeat: repeat-x;
-    background-attachment: fixed;
-  }
-
-  body {
-    margin-bottom: 86px;
-    background: $color-light;
-  }
-}

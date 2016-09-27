@@ -1,0 +1,40 @@
+.modularity-mod-inheritpost {
+
+  .box-index {
+    border-top: .1875rem solid $color-action;
+    color: $color-dark;
+    text-decoration: none;
+    font-size: $font-size-small;
+    min-width: 100%;
+    transition: background .2s linear, border-color .1s ease-in-out;
+
+    &:hover,
+    &:focus {
+      border-color: $color-dark;
+      background: $color-gray-100;
+    }
+  }
+
+  .box-image {
+    width: 100%;
+    flex: 0 0 auto;
+  }
+
+  .box-content {
+    padding: 1rem;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  h5 {
+    background: url(../images/link-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    background-size: 14px 14px;
+    padding-left: 1.25rem;
+    margin-bottom: .25rem;
+  }
+
+}
