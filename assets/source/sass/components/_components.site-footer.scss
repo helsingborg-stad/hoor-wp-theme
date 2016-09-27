@@ -1,0 +1,52 @@
+.main-footer {
+  margin-top: $content-gutter;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-top: 1px solid $color-gray-300;
+  background: $color-gray-100;
+  font-size: $font-size-small;
+  position: relative;
+  z-index: 1;
+
+  // Show shadow when HTML background is visisble
+  @media #{$screen-md-up} {
+    border-bottom: 1px solid $color-gray-300;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+  }
+
+  @media print {
+    padding-top: 1rem;
+    padding-bottom: 0;
+    border-top: 1px solid $color-gray-300;
+    background: transparent;
+
+    // TODO We need a better solution for this
+
+    .sidebar-footer-area > div:not(:nth-child(2)) {
+      display: none;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height: 2.4615;
+  }
+
+  a {
+    color: $color-dark;
+  }
+}
+
+.footer-title {
+  font-size: $font-size-medium;
+}
+
+.sidebar-footer-area > div:not(:last-child) {
+  border-right: 1px solid $color-gray-300;
+
+  @media print {
+    border-right: none;
+  }
+}

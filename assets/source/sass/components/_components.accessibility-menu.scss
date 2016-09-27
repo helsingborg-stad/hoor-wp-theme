@@ -4,17 +4,19 @@
 
   a {
     display: inline-block;
-    padding: .5rem 1rem;
+    padding: .5rem 1rem .5rem 1.75rem;
     border-radius: 10em;
-    background: $color-gray-500;
+    background: $color-gray-200;
     color: $color-dark;
     text-decoration: none;
-    transition: background .3s ease-in-out, color .2s ease-in-out;
+    transition: background .3s ease-in-out;
+    background-image: url(../images/icons/icons--volume_up.svg);
+    background-repeat: no-repeat;
+    background-position: .5rem 50%;
 
     &:hover,
     &:focus {
-      background: $color-dark;
-      color: $color-light;
+      background-color: $color-gray-400;
     }
   }
 }

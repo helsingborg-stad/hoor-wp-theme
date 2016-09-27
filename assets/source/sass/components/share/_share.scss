@@ -1,7 +1,3 @@
-$color-facebook: #3a579a;
-$color-twitter: #4fabf0;
-$color-linkedin: #0077b5;
-
 .c-share {
   padding: 1rem 0 .5rem;
   border-top: 1px solid $color-gray-200;
@@ -32,19 +28,22 @@ $color-linkedin: #0077b5;
     }
   }
 
+  .o-icon {
+    margin-right: .25rem;
+  }
+
   &__link {
     display: inline-block;
-    padding: .5rem 1rem;
+    padding: .5rem .75rem;
     border-radius: 10em;
-    background: $color-gray-500;
+    background: $color-gray-200;
     color: $color-dark;
     text-decoration: none;
     transition: background .3s ease-in-out, color .2s ease-in-out;
 
     &:hover,
     &:focus {
-      background: $color-dark;
-      color: $color-light;
+      background: $color-gray-400;
     }
 
     &--facebook {
@@ -54,6 +53,7 @@ $color-linkedin: #0077b5;
       &:hover,
       &:focus {
         background: darken($color-facebook, 25%);
+        color: $color-light;
       }
     }
 
@@ -64,6 +64,7 @@ $color-linkedin: #0077b5;
       &:hover,
       &:focus {
         background: darken($color-twitter, 45%);
+        color: $color-light;
       }
     }
 
@@ -74,6 +75,7 @@ $color-linkedin: #0077b5;
       &:hover,
       &:focus {
         background: darken($color-linkedin, 20%);
+        color: $color-light;
       }
     }
 
@@ -84,6 +86,7 @@ $color-linkedin: #0077b5;
       &:hover,
       &:focus {
         background: darken($color-red, 20%);
+        color: $color-light;
       }
     }
   }

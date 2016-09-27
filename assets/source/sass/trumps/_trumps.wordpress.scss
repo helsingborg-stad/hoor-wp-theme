@@ -14,19 +14,40 @@
   //
 }
 
-.wp-caption.alignleft {
-  float: left;
-  margin-right: $content-gutter;
+.alignleft:not(.wp-caption),
+.alignright:not(.wp-caption) {
+
+  @media #{$screen-below-md} {
+    margin-bottom: $content-gutter;
+    width: 100%;
+    height: auto;
+  }
+
+  @media #{$screen-md-up} {
+    margin-top: 6px;
+  }
 }
 
-.wp-caption.alignright {
-  float: right;
-  margin-left: $content-gutter;
+
+.alignleft {
+  @media #{$screen-md-up} {
+    float: left;
+    margin-right: $content-gutter;
+    margin-bottom: auto;
+  }
 }
 
-.wp-caption.aligncenter {
+.alignright {
+  @media #{$screen-md-up} {
+    float: right;
+    margin-left: $content-gutter;
+  }
+}
+
+.aligncenter {
   margin-left: auto;
   margin-right: auto;
+  display: block;
 }
 
 .wp-caption-text {

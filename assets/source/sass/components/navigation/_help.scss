@@ -18,6 +18,28 @@
 
   .menu-item {
     margin: 0 .5rem;
+
+    &--services a::before {
+      background-image: url(../images/icons/icons--services.svg);
+    }
+
+    &--contact a::before {
+      background-image: url(../images/icons/icons--contact.svg);
+    }
+
+    &--maps a::before {
+      background-image: url(../images/icons/icons--map.svg);
+    }
+
+    &--easy-read a::before {
+      background-image: url(../images/icons/icons--easy-read.svg);
+    }
+
+    // NOTE This selector doesn't follow BEM
+
+    &-translate a::before {
+      background-image: url(../images/icons/icons--translate.svg);
+    }
   }
 
   a {
@@ -26,10 +48,6 @@
     position: relative;
     text-align: center;
     display: block;
-
-    &:hover {
-      text-decoration: underline;
-    }
 
     &::before {
       position: relative;
@@ -43,9 +61,13 @@
       box-sizing: border-box;
 
       background-color: $color-light;
-      background-size: 40px 40px;
+      background-size: 20px 20px;
       background-repeat: no-repeat;
       background-position: 50% 50%;
+    }
+
+    &:hover {
+      text-decoration: underline;
     }
   }
 
@@ -54,8 +76,9 @@
     color: $color-dark;
 
     a {
+
       &::before {
-        background: $color-gray-100;
+        background-color: $color-gray-200;
       }
     }
   }

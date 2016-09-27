@@ -1,0 +1,43 @@
+.search-result {
+  margin: 0 0 $content-gutter;
+  padding: 0;
+  list-style: none;
+
+  &__headline {
+    font-weight: 400;
+    font-size: 1rem;
+  }
+
+  &__title {
+    line-height: 1;
+  }
+
+   &__link {
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: 400;
+  }
+
+  p {
+    font-size: $font-size-medium;
+  }
+
+
+  &__item {
+    padding: 1rem 0;
+    border-bottom: 1px solid $color-gray-200;
+  }
+
+  &__date {
+    font-size: $font-size-small;
+    color: $color-gray-700;
+  }
+
+  &__info {
+
+  }
+
+  &__url {
+
+  }
+}

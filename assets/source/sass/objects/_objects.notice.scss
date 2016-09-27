@@ -1,36 +1,75 @@
 .notice {
-  background: $color-gray-400;
   margin-bottom: $content-gutter;
-  padding: 1rem;
+  background-color: $color-gray-400;
+  background-repeat: no-repeat;
+
+  @media #{$screen-below-sm} {
+    padding: 2.75rem .375rem 1rem;
+    background-position: 1rem 1rem;
+    background-size: 1.5rem 1.5rem;
+  }
+
+  @media #{$screen-sm-up} {
+    padding: 1rem 1rem 1rem 4.5rem;
+    background-position: 1rem 50%;
+    background-size: 2.5rem 2.5rem;
+  }
 
   &.notice-lg {
     font-size: $font-size-large;
     line-height: 1.5;
   }
 
+  &.notice-sm {
+    font-size: $font-size-medium;
+    line-height: 1.5;
+  }
+
   &.success {
-    background: $color-success-bg;
+    background-color: $color-success-bg;
+    background-image: url(../images/icons/icons--check.svg);
     color: $color-success-text;
   }
 
   &.info {
-    background: $color-info-bg;
+    background-color: $color-info-bg;
+    background-image: url(../images/icons/icons--informative.svg);
     color: $color-info-text;
   }
 
   &.warning {
-    background: $color-warning-bg;
+    background-color: $color-warning-bg;
+    background-image: url(../images/icons/icons--warning.svg);
     color: $color-warning-text;
   }
 
   &.danger {
-    background: $color-danger-bg;
-    color: $color-danger-text;
+    background-color: $color-error-bg;
+    background-image: url(../images/icons/icons--warning.svg);
+    color: $color-error-text;
   }
 
-  // Doesn't exist yet
+  // TODO Doesn't exist yet
   &.error {
-    background: $color-error-bg;
-    color: $color-error-text;
+    background-color: $color-danger-bg;
+    background-image: url(../images/icons/icons--warning.svg);
+    color: $color-danger-text;
+  }
+}
+
+.sidebar-right-sidebar {
+
+  .notice {
+    @media #{$screen-below-sm} {
+      padding: 2.75rem .375rem 1rem;
+      background-position: 1rem 1rem;
+      background-size: 1.5rem 1.5rem;
+    }
+
+    @media #{$screen-sm-up} {
+      padding: 4.5rem 1rem 1rem;
+      background-position: 50% 1rem;
+      background-size: 2.5rem 2.5rem;
+    }
   }
 }

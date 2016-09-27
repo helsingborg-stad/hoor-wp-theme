@@ -1,3 +1,35 @@
 /**
  * EDITOR STYLE
  */
+@import "settings/settings.colors";
+@import "settings/settings.typography";
+@import "settings/settings.fonts";
+@import "settings/settings.z-level";
+@import "settings/settings.grid";
+
+@import "tools/tools.mixins";
+@import "tools/tools.mixins.grid";
+
+@import "generic/generic.normalize";
+@import "generic/generic.reset";
+@import "generic/generic.box-sizing";
+
+@import "elements/elements.typography";
+@import "elements/elements.links";
+@import "elements/elements.images";
+@import "elements/elements.forms";
+
+@import "objects/objects.global";
+@import "objects/objects.typography";
+
+@import "trumps/trumps.visually-hidden";
+@import "trumps/trumps.clearfix";
+@import "trumps/trumps.float";
+@import "trumps/trumps.wordpress";
+@import "trumps/trumps.print";
+
+body#tinymce {
+  font-family: $base-font-family;
+  color: $color-dark;
+  margin: 1rem;
+}
