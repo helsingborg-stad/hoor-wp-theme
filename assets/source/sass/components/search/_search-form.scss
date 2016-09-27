@@ -21,7 +21,7 @@
     background-color: $color-light;
     background-image: url(../images/icons/icons--search.svg);
     background-repeat: no-repeat;
-    font-size: $base-font-size;
+    font-size: $font-size-base;
 
     @media #{$screen-below-sm} {
       padding: .75rem .5rem .75rem 2rem;

@@ -1,6 +1,6 @@
 .wp-caption {
   background: $color-gray-100;
-  font-size: $font-size-small;
+  font-size: $font-size-smaller;
   margin-bottom: $content-gutter;
   max-width: 100%;
 
@@ -55,7 +55,7 @@
   padding: .5rem;
 
   em {
-    font-size: $font-size-smallest;
+    font-size: $font-size-tiny;
     display: block;
     color: rgba($color-dark, .75);
   }

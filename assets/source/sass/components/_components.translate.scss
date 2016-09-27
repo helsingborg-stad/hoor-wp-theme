@@ -1,7 +1,7 @@
 .c-google-translate {
   box-sizing: border-box;
   padding: 1rem;
-  font-size: $font-size-small;
+  font-size: $font-size-smaller;
 
   // Placement 'Above header' and ´Below footer'
   &--static {
@@ -16,7 +16,7 @@
     bottom: 0;
     left: 0;
     z-index: $level-top;
-    background: rgba($color-light, .96);
+    background: rgba($color-orange, .96);
     box-shadow: 0 0 2rem rgba($color-dark, .5);
 
     @media #{$screen-md-up} {

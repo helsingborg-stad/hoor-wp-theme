@@ -3,14 +3,15 @@
 // ***************************************************************
 
 $base-font-family: "Clear Sans", Helvetica, Arial, sans-serif;
-$base-font-size: 100%;
 $base-line-height: 1.4;
 $base-font-color: $color-dark;
 
+$font-size-base: 100%; // 16px
 $font-size-large: 1.125rem; // 18px;
-$font-size-medium: .875rem; // 14px
-$font-size-small: .8125rem; // 13px
-$font-size-smallest: .75rem; // 12px
+$font-size-medium: .9375rem; // 15px
+$font-size-small: .875rem; // 14px
+$font-size-smaller: .8125rem; // 13px
+$font-size-tiny: .75rem; // 12px
 
 // ***************************************************************
 // Content
