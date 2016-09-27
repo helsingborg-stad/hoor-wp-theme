@@ -18,43 +18,50 @@
  **/
 
 @font-face {
-	font-family: "Clear Sans";
-	src: url("../fonts/ClearSans-Regular.woff2") format("woff2"), url("../fonts/ClearSans-Regular.woff") format("woff");
-	font-weight: 400;
-	font-style: normal;
+  font-family: "Clear Sans";
+  src: url("../fonts/ClearSans-Light.woff2") format("woff2"), url("../fonts/ClearSans-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
 }
 
 @font-face {
-	font-family: "Clear Sans";
-	src: url("../fonts/ClearSans-Italic.woff2") format("woff2"), url("../fonts/ClearSans-Italic.woff") format("woff");
-	font-weight: 400;
-	font-style: italic;
+  font-family: "Clear Sans";
+  src: url("../fonts/ClearSans-Regular.woff2") format("woff2"), url("../fonts/ClearSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
 }
 
 @font-face {
-	font-family: "Clear Sans";
-	src: url("../fonts/ClearSans-Medium.woff2") format("woff2"), url("../fonts/ClearSans-Medium.woff") format("woff");
-	font-weight: 500;
-	font-style: normal;
+  font-family: "Clear Sans";
+  src: url("../fonts/ClearSans-Italic.woff2") format("woff2"), url("../fonts/ClearSans-Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
 }
 
 @font-face {
-	font-family: "Clear Sans";
-	src: url("../fonts/ClearSans-MediumItalic.woff2") format("woff2"), url("../fonts/ClearSans-MediumItalic.woff") format("woff");
-	font-weight: 500;
-	font-style: italic;
+  font-family: "Clear Sans";
+  src: url("../fonts/ClearSans-Medium.woff2") format("woff2"), url("../fonts/ClearSans-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
 }
 
 @font-face {
-	font-family: "Clear Sans";
-	src: url("../fonts/ClearSans-Bold.woff2") format("woff2"), url("../fonts/ClearSans-Bold.woff") format("woff");
-	font-weight: 700;
-	font-style: normal;
+  font-family: "Clear Sans";
+  src: url("../fonts/ClearSans-MediumItalic.woff2") format("woff2"), url("../fonts/ClearSans-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
 }
 
 @font-face {
-	font-family: "Clear Sans";
-	src: url("../fonts/ClearSans-BoldItalic.woff2") format("woff2"), url("../fonts/ClearSans-BoldItalic.woff") format("woff");
-	font-weight: 700;
-	font-style: italic;
+  font-family: "Clear Sans";
+  src: url("../fonts/ClearSans-Bold.woff2") format("woff2"), url("../fonts/ClearSans-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Clear Sans";
+  src: url("../fonts/ClearSans-BoldItalic.woff2") format("woff2"), url("../fonts/ClearSans-BoldItalic.woff") format("woff");
+  font-weight: 700;
+  font-style: italic;
 }
