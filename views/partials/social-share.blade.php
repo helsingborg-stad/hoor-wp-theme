@@ -5,7 +5,7 @@
         </a>
     </li>
     <li class="c-share__list-item">
-        <a class="c-share__link c-share__link--twitter" data-action="share-popup" href="http://twitter.com/share?url=<?php echo urlencode(wp_get_shortlink()); ?>" data-tooltip="<?php _e('Share on', 'municipio'); ?> Twitter">@include('partials.icon', ['name' => 'twitter']) <span class="visually-hidden"><?php _e('Share on', 'municipio'); ?> </span>Twitter
+        <a class="c-share__link c-share__link--twitter" data-action="share-popup" href="http://twitter.com/share?url=<?php get_the_permalink() ?>" data-tooltip="<?php _e('Share on', 'municipio'); ?> Twitter">@include('partials.icon', ['name' => 'twitter']) <span class="visually-hidden"><?php _e('Share on', 'municipio'); ?> </span>Twitter
         </a>
     </li>
     <li class="c-share__list-item">
