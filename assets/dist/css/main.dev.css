@@ -1769,23 +1769,23 @@ html:not(.no-flexbox) [data-equal-container] > [data-equal-item] {
     line-height: 1.5; }
   .notice.success {
     background-color: #e7f4e4;
-    background-image: url(../images/icons/icons--check.svg);
+    background-image: url(../images/icons/check.svg);
     color: #222; }
   .notice.info {
     background-color: #e1f3f8;
-    background-image: url(../images/icons/icons--informative.svg);
+    background-image: url(../images/icons/informative.svg);
     color: #222; }
   .notice.warning {
     background-color: #fff1d2;
-    background-image: url(../images/icons/icons--warning.svg);
+    background-image: url(../images/icons/warning.svg);
     color: #222; }
   .notice.danger {
     background-color: #f9dede;
-    background-image: url(../images/icons/icons--warning.svg);
+    background-image: url(../images/icons/warning.svg);
     color: #222; }
   .notice.error {
     background-color: #ebff00;
-    background-image: url(../images/icons/icons--warning.svg);
+    background-image: url(../images/icons/warning.svg);
     color: #222; }
 
 @media (max-width: 469px) {
@@ -1874,7 +1874,7 @@ html:not(.no-flexbox) [data-equal-container] > [data-equal-item] {
   border-color: #fff;
   border-radius: 3px;
   background-color: #fff;
-  background-image: url(../images/icons/icons--search.svg);
+  background-image: url(../images/icons/search.svg);
   background-repeat: no-repeat;
   font-size: 100%; }
   @media (max-width: 469px) {
@@ -2139,7 +2139,7 @@ html:not(.no-flexbox) [data-equal-container] > [data-equal-item] {
     text-decoration: none;
     -webkit-transition: background .3s ease-in-out;
             transition: background .3s ease-in-out;
-    background-image: url(../images/icons/icons--volume_up.svg);
+    background-image: url(../images/icons/volume_up.svg);
     background-repeat: no-repeat;
     background-position: .5rem 50%; }
     .c-accessibility-menu a:hover, .c-accessibility-menu a:focus {
@@ -2169,7 +2169,7 @@ html:not(.no-flexbox) [data-equal-container] > [data-equal-item] {
       display: block;
       width: 16px;
       height: 16px;
-      background-image: url(../images/icons/icons--informative.svg);
+      background-image: url(../images/icons/informative.svg);
       background-size: 16px 16px;
       background-repeat: no-repeat;
       content: "";
@@ -2200,7 +2200,7 @@ html:not(.no-flexbox) [data-equal-container] > [data-equal-item] {
     width: 16px;
     height: 16px;
     border-radius: 100%;
-    background-image: url(../images/icons/icons--close.svg);
+    background-image: url(../images/icons/close.svg);
     background-size: 16px 16px;
     background-repeat: no-repeat;
     vertical-align: text-bottom; }
@@ -2503,15 +2503,15 @@ html:not(.no-flexbox) [data-equal-container] > [data-equal-item] {
   .menu-help .menu-item {
     margin: 0 .5rem; }
     .menu-help .menu-item--services a::before {
-      background-image: url(../images/icons/icons--services.svg); }
+      background-image: url(../images/icons/services.svg); }
     .menu-help .menu-item--contact a::before {
-      background-image: url(../images/icons/icons--contact.svg); }
+      background-image: url(../images/icons/contact.svg); }
     .menu-help .menu-item--maps a::before {
-      background-image: url(../images/icons/icons--map.svg); }
+      background-image: url(../images/icons/map.svg); }
     .menu-help .menu-item--easy-read a::before {
-      background-image: url(../images/icons/icons--easy-read.svg); }
+      background-image: url(../images/icons/easy-read.svg); }
     .menu-help .menu-item-translate a::before {
-      background-image: url(../images/icons/icons--translate.svg); }
+      background-image: url(../images/icons/translate.svg); }
   .menu-help a {
     text-decoration: none;
     color: #636363;

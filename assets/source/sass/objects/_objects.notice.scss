@@ -27,32 +27,32 @@
 
   &.success {
     background-color: $color-success-bg;
-    background-image: url(../images/icons/icons--check.svg);
+    background-image: url(../images/icons/check.svg);
     color: $color-success-text;
   }
 
   &.info {
     background-color: $color-info-bg;
-    background-image: url(../images/icons/icons--informative.svg);
+    background-image: url(../images/icons/informative.svg);
     color: $color-info-text;
   }
 
   &.warning {
     background-color: $color-warning-bg;
-    background-image: url(../images/icons/icons--warning.svg);
+    background-image: url(../images/icons/warning.svg);
     color: $color-warning-text;
   }
 
   &.danger {
     background-color: $color-error-bg;
-    background-image: url(../images/icons/icons--warning.svg);
+    background-image: url(../images/icons/warning.svg);
     color: $color-error-text;
   }
 
   // TODO Doesn't exist yet
   &.error {
     background-color: $color-danger-bg;
-    background-image: url(../images/icons/icons--warning.svg);
+    background-image: url(../images/icons/warning.svg);
     color: $color-danger-text;
   }
 }

@@ -20,25 +20,25 @@
     margin: 0 .5rem;
 
     &--services a::before {
-      background-image: url(../images/icons/icons--services.svg);
+      background-image: url(../images/icons/services.svg);
     }
 
     &--contact a::before {
-      background-image: url(../images/icons/icons--contact.svg);
+      background-image: url(../images/icons/contact.svg);
     }
 
     &--maps a::before {
-      background-image: url(../images/icons/icons--map.svg);
+      background-image: url(../images/icons/map.svg);
     }
 
     &--easy-read a::before {
-      background-image: url(../images/icons/icons--easy-read.svg);
+      background-image: url(../images/icons/easy-read.svg);
     }
 
     // NOTE This selector doesn't follow BEM
 
     &-translate a::before {
-      background-image: url(../images/icons/icons--translate.svg);
+      background-image: url(../images/icons/translate.svg);
     }
   }
 

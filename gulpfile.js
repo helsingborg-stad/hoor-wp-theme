@@ -10,6 +10,7 @@ var rename          = require('gulp-rename');
 var autoprefixer    = require('gulp-autoprefixer');
 var plumber         = require('gulp-plumber');
 var notify          = require('gulp-notify');
+var svgSprite       = require('gulp-svg-sprite');
 
 // Compile Our Sass
 gulp.task('sass-dist', function() {
@@ -80,12 +81,55 @@ gulp.task('scripts-dist', function() {
             .pipe(gulp.dest('assets/dist/js'));
 });
 
+gulp.task('icons', function () {
+    runSequence('iconfont', ['sass-dist', 'sass-dev', 'dss-sass']);
+});
+
+
+gulp.task('icons', function () {
+  var config = {
+    shape : {
+      dimension : {
+        maxWidth : 16,
+        maxHeight : 16
+      },
+      spacing : {
+        padding : 0
+      },
+      dest : 'icons/'
+    },
+    mode : {
+      'symbol': {
+        'dest': 'icons',
+        'sprite': '../icons.svg',
+        'bust': false,
+        'inline': false,
+        "example": {
+          "template": "./assets/source/icons/icons.tpl.mustache",
+          "dest": "./icons-sprite.html"
+        }
+      }
+    },
+  };
+
+  return gulp.src('assets/source/icons/*.svg')
+    .pipe(plumber({
+        errorHandler: notify.onError({
+            title: 'Icon build failed',
+            message: '<%= error.message %>'
+        })
+    }))
+    .pipe(svgSprite(config))
+    .pipe(gulp.dest('assets/dist/images'))
+});
+
 // Watch Files For Changes
 gulp.task('watch', function() {
     gulp.watch('assets/source/js/**/*.js', ['scripts-dist']);
     gulp.watch('assets/source/sass/**/*.scss', ['sass-dist', 'sass-dev', 'sass-editor']);
+    gulp.watch('assets/source/icons/*.svg', ['icons']);
 //    gulp.watch('assets/source/images/**/*', ['imagemin']);
 });
 
 // Default Task
-gulp.task('default', ['sass-dist', 'sass-dev', 'sass-editor', 'scripts-dist', 'watch']);
+gulp.task('default', ['sass-dist', 'sass-dev', 'sass-editor', 'scripts-dist', 'icons', 'watch']);
