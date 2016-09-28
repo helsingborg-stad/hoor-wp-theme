@@ -1,39 +1,53 @@
 .modularity-mod-latest {
+  margin-top: $content-gutter * 2;
 
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  li:not(:last-child) {
+  .box__headline {
+    padding-bottom: $content-gutter / 2;
     border-bottom: 1px solid $color-gray-200;
+    font-weight: 500;
   }
 
-  a {
+  .box__title {
     display: block;
-    padding: 1rem;
+    text-decoration: underline;
+    font-size: $font-size-medium;
+  }
+
+  .box__date {
+    display: block;
+    margin-top: 6px;
+    color: $color-gray-600;
     text-decoration: none;
-    transition: background .2s linear;
+    font-size: $font-size-smaller;
+  }
 
-    &:hover,
-    &:focus {
-      background: rgba($color-gray-100, .5);
-      color: $color-dark;
-    }
+  .box {
 
-    .link-item {
-      display: block;
-      text-decoration: underline;
-      font-size: $font-size-medium;
-    }
+    &__list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
 
-    .date {
-      display: block;
-      margin-top: 6px;
-      color: $color-gray-600;
-      text-decoration: none;
-      font-size: $font-size-smaller;
+      &-item:not(:last-child) {
+        border-bottom: 1px solid $color-gray-200;
+      }
+
+      &-link {
+        display: block;
+        padding: 1rem 0;
+        text-decoration: none;
+        transition: background .2s linear;
+
+        &:hover,
+        &:focus {
+          background: rgba($color-gray-100, .5);
+          color: $color-dark;
+        }
+      }
     }
+  }
+
+  .box__footer {
+    // TODO
   }
 }
