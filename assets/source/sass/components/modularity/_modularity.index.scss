@@ -1,17 +1,17 @@
 .modularity-mod-index {
 
   &__headline {
-    font-size: $font-size-small;
     margin-top: $content-gutter;
     margin-bottom: .5rem;
+    font-size: $font-size-small;
   }
 
   .box-index {
+    min-width: 100%;
     border-top: .1875rem solid $color-action;
     color: $color-dark;
     text-decoration: none;
     font-size: $font-size-small;
-    min-width: 100%;
     transition: background .2s linear, border-color .1s ease-in-out;
 
     &:hover,
@@ -35,12 +35,12 @@
   }
 
   .box-index-title {
+    margin-bottom: .25rem;
+    padding-left: 1.25rem;
     background: url(../images/link-arrow.svg);
-    background-repeat: no-repeat;
     background-position: 0 50%;
     background-size: 14px 14px;
-    padding-left: 1.25rem;
-    margin-bottom: .25rem;
+    background-repeat: no-repeat;
+    font-size: 1rem;
   }
-
 }
