@@ -68,3 +68,28 @@
 @import "trumps/trumps.float";
 @import "trumps/trumps.wordpress";
 @import "trumps/trumps.print";
+
+@media #{$screen-md-up} {
+
+  .main-container article {
+    max-width: 36.875rem;
+  }
+
+  html {
+    background-image: url(../images/pattern.png);
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+  }
+
+  body {
+    margin-bottom: 86px;
+    background: $color-light;
+  }
+}
+
+
+.menu-item-search {
+  background: black;
+  min-width: 67px;
+}
