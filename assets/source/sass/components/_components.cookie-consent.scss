@@ -5,6 +5,10 @@
   background: $color-gray-100;
   font-size: $font-size-smaller;
 
+  @media print {
+    display: none;
+  }
+
   .container {
     position: relative;
     padding: 1rem 1.25rem;
@@ -37,6 +41,10 @@
     bottom: 0;
     left: 0;
     border-width: 1px 0 0;
+
+    .container {
+      max-width: 100%;
+    }
   }
 }
 
