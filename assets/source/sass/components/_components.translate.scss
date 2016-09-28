@@ -16,7 +16,7 @@
     bottom: 0;
     left: 0;
     z-index: $level-top;
-    background: rgba($color-orange, .96);
+    background: $color-gray-100;
     box-shadow: 0 0 2rem rgba($color-dark, .5);
 
     @media #{$screen-md-up} {
