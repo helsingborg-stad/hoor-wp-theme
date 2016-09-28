@@ -5,6 +5,8 @@
     $columnClass = !empty(get_field('index_columns', $module->ID)) ? get_field('index_columns', $module->ID) : 'grid-md-6';
 ?>
 
+<h2 class="modularity-mod-index__headline">Du kanske letar efter?</h2>
+
 <div class="grid" data-equal-container>
     <?php
 
@@ -55,7 +57,7 @@
             <?php endif; ?>
 
             <div class="box-content">
-                <h5 class="box-index-title link-item"><?php echo isset($item['title']) && !empty($item['title']) ? $item['title'] : get_the_title(); ?></h5>
+                <h3 class="box-index-title link-item"><?php echo isset($item['title']) && !empty($item['title']) ? $item['title'] : get_the_title(); ?></h3>
                 <?php echo isset($item['lead']) && !empty($item['lead']) ? $item['lead'] : get_the_excerpt(); ?>
             </div>
         </a>

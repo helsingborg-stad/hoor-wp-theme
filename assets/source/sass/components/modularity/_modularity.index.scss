@@ -1,5 +1,11 @@
 .modularity-mod-index {
 
+  &__headline {
+    font-size: $font-size-small;
+    margin-top: $content-gutter;
+    margin-bottom: .5rem;
+  }
+
   .box-index {
     border-top: .1875rem solid $color-action;
     color: $color-dark;
@@ -28,7 +34,7 @@
     margin: 0;
   }
 
-  h5 {
+  .box-index-title {
     background: url(../images/link-arrow.svg);
     background-repeat: no-repeat;
     background-position: 0 50%;
