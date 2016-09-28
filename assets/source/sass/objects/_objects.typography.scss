@@ -24,22 +24,3 @@
     max-width: 43.4375rem;
   }
 }
-
-@media #{$screen-md-up} {
-
-  .main-container article {
-    max-width: 36.875rem;
-  }
-
-  html {
-    background-image: url(../images/pattern.png);
-    background-position: 0 100%;
-    background-repeat: repeat-x;
-    background-attachment: fixed;
-  }
-
-  body {
-    margin-bottom: 86px;
-    background: $color-light;
-  }
-}
