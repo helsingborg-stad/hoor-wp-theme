@@ -4,8 +4,20 @@
   &__logotype {
     margin: 1rem 0;
 
+    .logotype {
+      text-decoration: none;
+    }
+
+    span {
+      display: block;
+      color: $color-dark;
+      font-style: italic;
+      font-size: $font-size-small;
+    }
+
     @media #{$screen-xs} {
       display: flex;
+
       justify-content: center;
     }
   }
