@@ -1,0 +1,122 @@
+[data-tooltip] {
+  position: relative;
+
+  &:hover,
+  &:focus {
+
+    &::after {
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      z-index: $level-900;
+      display: block;
+      padding: 3px 8px;
+      border-radius: 5px;
+      background-color: rgba(#252525, .9);
+      color: #fff;
+      content: attr(data-tooltip);
+      text-align: center;
+      white-space: nowrap;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: $base-line-height;
+      transform: translateY(100%) translateX(-50%);
+    }
+
+    &::before {
+      @include arrow("up", 5px, #252525);
+
+      position: absolute;
+      bottom: -9px;
+      left: 50%;
+      z-index: $level-900;
+      display: block;
+      content: "";
+      opacity: .9;
+      transform: translateY(0%) translateX(-50%);
+    }
+  }
+
+  &[data-tooltip-top] {
+
+    &:hover {
+
+      &::after {
+        top: -8px;
+        right: -auto;
+        bottom: auto;
+        left: 50%;
+        transform: translateY(-100%) translateX(-50%);
+      }
+
+      &::before {
+        @include arrow("down", 5px, #252525);
+
+        top: -9px;
+        right: auto;
+        bottom: auto;
+        left: 50%;
+        transform: translateY(0%) translateX(-50%);
+      }
+    }
+  }
+
+  &[data-tooltip-left] {
+
+    &:hover {
+
+      &::after {
+        top: 50%;
+        right: auto;
+        bottom: auto;
+        left: -10px;
+        transform: translateY(-50%) translateX(-100%);
+      }
+
+      &::before {
+        @include arrow("right", 5px, #252525);
+
+        top: 50%;
+        right: auto;
+        bottom: auto;
+        left: -10px;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &[data-tooltip-right] {
+
+    &:hover {
+
+      &::after {
+        top: 50%;
+        right: -10px;
+        bottom: auto;
+        left: auto;
+        transform: translateY(-50%) translateX(100%);
+      }
+
+      &::before {
+        @include arrow("left", 5px, #252525);
+
+        top: 50%;
+        right: -10px;
+        bottom: auto;
+        left: auto;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  @media print {
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+}

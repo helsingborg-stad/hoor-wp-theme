@@ -9,6 +9,8 @@
 
 @import "tools/tools.mixins";
 @import "tools/tools.mixins.grid";
+@import "tools/tools.mixins.box";
+@import "tools/tools.mixins.arrow";
 
 @import "generic/generic.normalize";
 @import "generic/generic.reset";
@@ -30,6 +32,7 @@
 @import "objects/objects.embed";
 @import "objects/objects.icons";
 @import "objects/objects.notice";
+@import "objects/objects.tooltip";
 
 @import "components/share/_share";
 @import "components/search/search-form";
@@ -91,6 +94,40 @@
 
 
 .menu-item-search {
-  background: black;
-  min-width: 67px;
+  display: flex;
+  max-width: 62px;
+
+  @media #{$screen-below-md} {
+    display: none;
+  }
+
+  a {
+    background-color: darken($color-action, 6);
+    display: block;
+    border: 0;
+    padding: 0 1.9375rem;
+    background-image: url(../images/icons/search-inverted.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 22px 22px;
+    box-sizing: border-box;
+    transition: background-color .2s ease-in-out;
+  }
+}
+
+
+.no-js {
+  .menu-item-translate,
+  .menu-item-search,
+  .c-share__list--print {
+    display: none;
+  }
+  .header__search {
+    display: block;
+  }
+  &.search {
+    .header__search {
+      display: none;
+    }
+  }
 }
