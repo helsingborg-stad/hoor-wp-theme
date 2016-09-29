@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "A child theme for municipio",
   "main": "gulpfile.js",
-  "dependencies": {},
+  "dependencies": {
+    "jquery": "^2.2.0"
+  },
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.3.1",
