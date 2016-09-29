@@ -1,3 +1,56 @@
 .modularity-mod-noticeboard {
-  
+  .box-content {
+    padding: 1rem;
+    border-bottom: 1px solid $color-gray-200;
+
+    p {
+      font-size: $font-size-medium;
+    }
+
+    p:only-of-type {
+      margin: 0;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .box__date {
+    display: block;
+    text-decoration: none;
+    font-size: $font-size-smaller;
+    padding: 0;
+  }
+
+  .box {
+
+    &__list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      &-item {
+        padding: 1rem;
+      }
+
+      &-item:not(:last-child) {
+        border-bottom: 1px solid $color-gray-200;
+      }
+
+      &-link {
+        padding-left: 1.25rem;
+        text-decoration: none;
+        background: url(../images/link-arrow.svg);
+        background-position: 0 3px;
+        background-size: 14px 14px;
+        background-repeat: no-repeat;
+
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
 }
