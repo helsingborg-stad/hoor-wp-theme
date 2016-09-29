@@ -34,7 +34,7 @@
     </nav>
 @endif
 
-<div class="search-top header__search hidden-print" id="header-search">
+<div class="search-top header__search hidden-print" id="search">
     <div class="container">
         <div class="grid">
             <div class="grid-sm-12">
