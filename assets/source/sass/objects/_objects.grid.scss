@@ -1,6 +1,13 @@
+// ***************************************************************
+// *** Grid container/row
+// ***************************************************************
 .grid {
   width: auto;
   @extend .clearfix;
+}
+
+.grid-fit-content {
+  width: 1%;
 }
 
 // ***************************************************************
@@ -41,7 +48,7 @@
 
 // Medium screens
 // This will generate grid-md-*
-@include grid($screen-md-up, $screen-md, "md");
+@include grid($screen-md-up, $screen-md, "md");
 
 // Large screens and up
 // This will generate grid-lg-*
@@ -162,12 +169,6 @@
 // ***************************************************************
 // *** Styleguide helper
 // ***************************************************************
-.grid-example [class*="grid-"] {
-  background-color: $color-red;
-  border: 1px solid $color-dark-red;
-  overflow: hidden;
-}
-
 .grid.no-gutter [class*="grid-"] {
   padding-left: 0;
   padding-right: 0;

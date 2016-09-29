@@ -16,7 +16,7 @@
         <a class="c-share__link c-share__link--mail" href="mailto:?&subject={{ get_the_title() }} &mdash; {{ bloginfo('site_name') }}&amp;body={{ get_the_permalink() }}">@include('partials.icon', ['name' => 'email'])<?php _e('Email page', 'hoor'); ?>
         </a>
     </li>
-    <li class="c-share__list-item">
+    <li class="c-share__list-item c-share__list--print">
         <a class="c-share__link c-share__link--print" href="#" onclick="window.print();return false;">@include('partials.icon', ['name' => 'print'])<?php _e('Print page', 'hoor'); ?>
         </a>
     </li>

@@ -1,4 +1,8 @@
 .container {
   margin: 0 auto;
   max-width: $screen-lg-max;
+
+  @media #{$screen-xs} {
+    margin: 0 .625rem;
+  }
 }

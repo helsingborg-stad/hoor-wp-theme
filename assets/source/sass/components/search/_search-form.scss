@@ -1,7 +1,7 @@
 .c-search-form {
 
   @media #{$screen-below-sm} {
-    padding: .5rem 0;
+    padding: 1rem 0;
   }
 
   @media #{$screen-sm-up} {
@@ -65,8 +65,14 @@
 
 .header__search {
   background: darken($color-action, 6);
-  display: none;
-  // Hide the Header Search
+
+  @media #{$screen-below-sm} {
+    border-top: 1px solid $color-light;
+  }
+
+  @media #{$screen-sm-up} {
+    display: none; // Hide the Header Search
+  }
 }
 
 .main__search {

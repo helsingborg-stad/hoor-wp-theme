@@ -36,19 +36,19 @@ html:not(.no-flexbox) {
 
   // X-Small screens
   // This will generate grid-xs-*
-  @include grid-flexbox($screen-xs-up, $screen-xs, 'xs');
+  @include grid-flexbox($screen-xs-up, $screen-xs, "xs");
 
   // Small screens
   // This will generate grid-sm-*
-  @include grid-flexbox($screen-sm-up, $screen-sm, 'sm');
+  @include grid-flexbox($screen-sm-up, $screen-sm, "sm");
 
   // Medium screens
   // This will generate grid-md-*
-  @include grid-flexbox($screen-md-up, $screen-md, 'md');
+  @include grid-flexbox($screen-md-up, $screen-md, "md");
 
   // Large screens and up
   // This will generate grid-lg-*
-  @include grid-flexbox($screen-lg-up, $screen-lg, 'lg');
+  @include grid-flexbox($screen-lg-up, $screen-lg, "lg");
 
   // Print grid size
   @media print {
@@ -61,7 +61,7 @@ html:not(.no-flexbox) {
     }
 
     .grid-tester::after {
-      content: 'print';
+      content: "print";
     }
   }
 

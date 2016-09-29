@@ -2,9 +2,16 @@
   position: relative;
   background: $color-action;
   font-size: $font-size-small;
+  line-height: 1.5;
 
-  .container {
+  &__container {
     display: flex;
+    margin: 0 auto;
+    max-width: $screen-lg-max;
+
+    @media #{$screen-full-width} {
+      padding-right: 1.25rem;
+    }
   }
 
   ul {
@@ -25,10 +32,13 @@
 
   li {
     flex-grow: 1;
-    border-bottom: 1px solid $color-light;
 
-    @media #{$screen-md-up} {
-      border-bottom: none;
+    &:not(:first-child) {
+      border-top: 1px solid rgba($color-light, .5);
+
+      @media #{$screen-md-up} {
+        border-top: none;
+      }
     }
   }
 
@@ -36,11 +46,11 @@
     display: block;
     color: $color-light;
     text-decoration: none;
-    text-align: center;
-    padding: .5rem 1rem;
+    padding: 1rem;
 
     @media #{$screen-md-up} {
-      padding: 1.5rem .5rem;
+      text-align: center;
+      padding: 1.28125rem 1rem;
     }
 
     &:hover {
@@ -50,16 +60,6 @@
 
   .current-page-ancestor,
   .current-menu-item {
-    background: darken($color-action, 6);
-  }
-
-  // TODO
-  &__search-button {
-    background: darken($color-action, 8);
-    display: block;
-    width: 62px;
-    height: 62px;
-    border: 0;
-    flex: 1;
+    background: darken($color-action, 4);
   }
 }

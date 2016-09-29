@@ -3,10 +3,13 @@
   &__headline {
     font-size: $font-size-small;
     text-transform: uppercase;
+    margin-bottom: .5rem;
+    font-weight: 700;
   }
 }
 
 .nav-aside {
+  margin-top: 0;
   margin-bottom: $content-gutter;
   padding: 0;
   font-size: $font-size-small;
