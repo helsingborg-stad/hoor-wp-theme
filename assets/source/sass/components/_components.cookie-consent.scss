@@ -1,4 +1,5 @@
 .cookie-consent {
+  position: relative;
   border-width: 0 0 1px;
   border-style: solid;
   border-color: $color-gray-300;
@@ -10,28 +11,43 @@
   }
 
   .container {
-    position: relative;
-    padding: 1rem 1.25rem;
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+
+    @media #{$screen-sm-up} {
+      position: relative;
+    }
+
+    @media #{$screen-sm-up} {
+      padding-top: .75rem;
+      padding-right: 1.25rem;
+      padding-bottom: .75rem;
+      padding-left: 1.25rem;
+    }
   }
 
   p {
     position: relative;
     margin: 0;
-    padding: 0 3rem 0 1.5rem;
+    padding-right: 2.5rem;
 
-    &:after {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      display: block;
-      display: block;
-      width: 16px;
-      height: 16px;
-      background-image: url(../images/icons/informative.svg);
-      background-size: 16px 16px;
-      background-repeat: no-repeat;
-      content: "";
-      transform: translateY(-50%);
+    @media #{$screen-sm-up} {
+      padding: 0 3.5rem 0 1.5rem;
+
+      &:after {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        display: block;
+        display: block;
+        width: 16px;
+        height: 16px;
+        background-image: url(../images/icons/informative.svg);
+        background-size: 16px 16px;
+        background-repeat: no-repeat;
+        content: "";
+        transform: translateY(-50%);
+      }
     }
   }
 
@@ -41,6 +57,7 @@
     bottom: 0;
     left: 0;
     border-width: 1px 0 0;
+    z-index: $level-top;
 
     .container {
       max-width: 100%;
@@ -59,19 +76,32 @@
   background: transparent;
   cursor: pointer;
 
+  &--text {
+    display: none;
+  }
+
+  @media #{$screen-sm-up} {
+    &--text {
+      display: inline-block;
+    }
+  }
+
   &:hover {
     text-decoration: underline;
   }
 
   &--icon {
     display: inline-block;
-    margin-right: .25rem;
     width: 16px;
     height: 16px;
     border-radius: 100%;
     background-image: url(../images/icons/close.svg);
-    background-size: 16px 16px;
+    background-size: 1rem 1rem;
     background-repeat: no-repeat;
     vertical-align: text-bottom;
+
+    @media #{$screen-sm-up} {
+      margin-right: .25rem;
+    }
   }
 }

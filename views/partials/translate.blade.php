@@ -3,8 +3,8 @@
         <h3 class="c-google-translate__headline">Translate</h3>
         <div class="c-google-translate__content">
             <p class="c-google-translate__description">You can use Google Translate to translate the contents of hoor.se. To do that, select the language you would like to translate into in the lost below.</p>
-            <p class="c-google-translate__disclaimer">Please bear in mind, since the Google Translate is an automatically generated translation, we do not take any responsibility for errors in the text.</p>
             <div id="google-translate-element"></div>
+            <p class="c-google-translate__disclaimer">Please bear in mind, since the Google Translate is an automatically generated translation, we do not take any responsibility for errors in the text.</p>
         </div>
         <a href="#" class="c-google-translate__button" aria-label="Close popup window"></a>
     </div>
