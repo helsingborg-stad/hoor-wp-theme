@@ -23,17 +23,29 @@
       margin: 1rem;
       border-radius: 2px;
     }
-
-    .button {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-    }
   }
 }
 
+// Hide
 .target-toggle:not(:target) {
   display: none;
+}
+
+// Show with animation
+.target-toggle:target {
+  animation:target .5s 2 linear;
+}
+
+@keyframes target {
+  from {
+    background: $color-light;
+  }
+  50% {
+    background: $color-orange;
+  }
+  to {
+    background: $color-light;
+  }
 }
 
 // Fix for when the box is placed ´Below footer'
