@@ -47,12 +47,8 @@ HelsingborgPrime.Prompt.CookieConsent = (function ($) {
         var placement = HelsingborgPrime.Args.get('cookieConsent.placement') ? HelsingborgPrime.Args.get('cookieConsent.placement') : null;
 
         wrapper.prepend('\
-            <div id="cookie-consent" class="notice info gutter gutter-vertical ' + placement + '" style="display:none;">\
-                <div class="container"><div class="grid grid-table-md grid-va-middle">\
-                    <div class="grid-fit-content"><i class="pricon pricon-info-o"></i></div>\
-                    <div class="grid-auto">' + consentText + '</div>\
-                    <div class="grid-fit-content text-right-md text-right-lg"><button class="btn btn-primary" data-action="cookie-consent">' + buttonText + '</button></div>\
-                </div></div>\
+            <div id="cookie-consent" class="cookie-consent ' + placement + '">\
+            <div class="container">' + consentText + '<button class="button__cookie-consent" data-action="cookie-consent"><span class="button__cookie-consent--icon"></span>' + buttonText + '</button></div>\
             </div>\
         ');
 
