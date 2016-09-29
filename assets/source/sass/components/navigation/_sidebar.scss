@@ -1,3 +1,11 @@
+.sidebar-menu {
+
+  &__headline {
+    font-size: $font-size-small;
+    text-transform: uppercase;
+  }
+}
+
 .nav-aside {
   margin-bottom: $content-gutter;
   padding: 0;
