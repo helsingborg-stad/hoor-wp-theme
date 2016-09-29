@@ -2,6 +2,6 @@
     <h3>Translate</h3>
     <p>You can use Google Translate to translate the contents of hoor.se. To do that, select the language you would like to translate into in the lost below.</p>
     <p><small>Please bear in mind, since the Google Translate is an automatically generated translation, we do not take any responsibility for errors in the text.</small></p>
-    <div id="google-translate-element" class="gutter gutter-vertical"></div>
-    <a href="#" class="button button--close">Close</a>
+    <div id="google-translate-element"></div>
+    <a href="#" class="o-button o-button--close">Close</a>
 </div>

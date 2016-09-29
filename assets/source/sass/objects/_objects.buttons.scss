@@ -20,4 +20,10 @@
   &--primary {
     background-color: $color-action;
   }
+
+  &--close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
 }
