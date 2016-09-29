@@ -4,6 +4,30 @@ namespace Hoor\Theme;
 
 class Navigation
 {
+
+    /**
+     * Adds a search icon to the main menu
+     * @param string $items Menu items html markup
+     * @param object $args  Menu args
+     */
+    public function addSearchMagnifier($items, $args = null)
+    {
+        if ($args && $args->theme_location != apply_filters('Hoor/main_menu_theme_location', 'main-menu')) {
+            return $items;
+        }
+
+        //Not in child (if inherited from main)
+        if ($args && (isset($args->child_menu) && $args->child_menu == true) && $args->theme_location == "main-menu") {
+            return $items;
+        }
+
+        $search = '<li class="menu-item-search"><a href="#search" class="search-icon-btn toggle-search-top" aria-label="' . __('Search', 'municipio') . '">YEAH BABY<span data-tooltip="' . __('Search', 'municipio') . '"><i class="pricon pricon-search"></i></span></a></li>';
+
+        $items .= $search;
+        return $items;
+    }
+
+
     /**
      * Outputs the html for the breadcrumb
      * @return void
