@@ -44,7 +44,7 @@ function editor_buttons_before_init( $settings ) {
         array(
             'title' => 'Preamble',
             'selector' => 'p',
-            'classes' => 'o-lead'
+            'classes' => 'lead'
         ),
         array(
             'title' => 'Pull quote',
