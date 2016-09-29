@@ -1,54 +1,127 @@
 .c-google-translate {
-  box-sizing: border-box;
-  padding: 1rem;
-  font-size: $font-size-smaller;
+
+  &__container {
+    position: relative;
+  }
+
+  &__headline {
+    padding: 1rem;
+    background: $color-dark;
+    color: $color-light;
+    font-size: $font-size-medium;
+  }
+
+  &__content {
+    padding: 1rem;
+  }
+
+  &__description {
+    margin: 0 0 1rem;
+    font-size: $font-size-small;
+  }
+
+  &__disclaimer {
+    margin: 0 0 1rem;
+    font-size: $font-size-tiny;
+  }
+
+  #google-translate-element {
+    min-height: 41px;
+
+    .goog-te-combo {
+      max-width: 275px;
+      width: 100%;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: block;
+    width: 22px;
+    height: 22px;
+    border-radius: 10em;
+    background-color: $color-black;
+    background-image: url(../images/icons/close-simple.svg);
+    background-position: 50% 50%;
+    background-size: 10px 10px;
+    background-repeat: no-repeat;
+  }
+
 
   // Placement 'Above header' and ´Below footer'
+
   &--static {
-    border-bottom: 1px solid $color-gray-200;
-    background: $color-gray-100;
+    border-bottom: 1px solid $color-gray-300;
+    background: $color-light;
   }
 
   // Placement 'Fixed to right edge'
+
   &--fixed {
     position: fixed;
     right: 0;
     bottom: 0;
     left: 0;
     z-index: $level-top;
-    background: $color-gray-100;
-    box-shadow: 0 0 2rem rgba($color-dark, .5);
+    background: $color-light;
+    box-shadow: 0 .25rem 1.25rem rgba($color-dark, .35);
+
+    &.target-toggle:target {
+      animation: bounceIn 1s;
+    }
 
     @media #{$screen-md-up} {
+      right: 0;
+      left: auto;
       margin: 1rem;
-      border-radius: 2px;
+      max-width: 275px;
     }
   }
 }
 
 // Hide
+
 .target-toggle:not(:target) {
   display: none;
 }
 
-// Show with animation
-.target-toggle:target {
-  animation:target .5s 2 linear;
-}
+@keyframes bounceIn {
 
-@keyframes target {
-  from {
-    background: $color-light;
-  }
-  50% {
-    background: $color-orange;
-  }
+  from,
+  60%,
+  75%,
+  90%,
   to {
-    background: $color-light;
+    animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    transform: translate3d(0, 5px, 0);
+  }
+
+  to {
+    transform: none;
   }
 }
 
 // Fix for when the box is placed ´Below footer'
+
 .main-footer + .c-google-translate--static {
   border-top: 1px solid $color-gray-400;
   border-bottom: none;

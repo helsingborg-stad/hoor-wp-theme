@@ -79,17 +79,20 @@
     max-width: 36.875rem;
   }
 
-  html {
+  body:not(.error404) {
+    margin-bottom: 86px;
+    background: $color-light;
+
     background-image: url(../images/pattern.png);
-    background-position: 0 100%;
+    background-position: 50% calc(100% + 120px);
     background-repeat: repeat-x;
     background-attachment: fixed;
   }
+}
 
-  body {
-    margin-bottom: 86px;
-    background: $color-light;
-  }
+#main-content {
+  background: $color-light;
+  padding-bottom: $content-gutter * 2;
 }
 
 
