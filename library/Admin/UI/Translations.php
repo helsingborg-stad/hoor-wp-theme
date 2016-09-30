@@ -4,6 +4,7 @@ namespace Hoor\Admin\UI;
 
 class Translations
 {
+    // Note! These do not cover plural forms.
     protected $translations = array(
         'Inlägg' => 'Nyheter',
         'Alla inlägg' => 'Alla nyheter',
