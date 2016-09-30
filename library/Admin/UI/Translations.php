@@ -16,6 +16,10 @@ class Translations
         'Inlägg publicerat.' => 'Nyheter publicerat.',
         'Inläggssida' => 'Nyhetssida',
         'Inläggstitel' => 'Nyhetstitel',
+        'Skapa ett blogginlägg' => 'Skapa en nyhet',
+        'inlägg' => 'nyheter',
+        'Visa inlägg' => 'Visa nyheter',
+
 
     );
 
