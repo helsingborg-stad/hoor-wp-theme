@@ -47,5 +47,10 @@
     margin-top: .25rem;
     font-size: $font-size-smaller;
     color: $color-gray-700;
+    display: none;
+
+    @media #{$screen-md-up} {
+      display: block;
+    }
   }
 }
