@@ -1,11 +1,11 @@
-@extends('templates.error')
+@extends('templates.master')
 
 @section('content')
 
 <div class="container main-container">
     <div class="grid">
         <div class="grid-lg-6 grid-md-8 grid-sm-12">
-            <h1>404 <em>{{ get_field('404_error_message', 'option') ? get_field('404_error_message', 'option') : 'The page could not be found' }}</em></h1>
+            <h1>404 <strong>{{ get_field('404_error_message', 'option') ? get_field('404_error_message', 'option') : 'The page could not be found' }}</strong></h1>
 
             <ul class="actions">
                 @if (is_array(get_field('404_display', 'option')) && in_array('search', get_field('404_display', 'option')))

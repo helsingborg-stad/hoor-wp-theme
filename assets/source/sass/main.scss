@@ -93,9 +93,13 @@
   }
 }
 
+.main-container {
+  margin-top: $content-gutter * 2;
+  margin-bottom: $content-gutter * 2;
+}
+
 #main-content {
   background: $color-light;
-  padding-bottom: $content-gutter * 2;
 }
 
 
