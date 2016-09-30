@@ -10,6 +10,7 @@
 
   &__title {
     line-height: 1;
+    margin-bottom: .25rem;
   }
 
    &__link {
@@ -20,12 +21,17 @@
 
   p {
     font-size: $font-size-small;
+    margin: 0;
   }
 
 
   &__item {
     padding: 1rem 0;
     border-bottom: 1px solid $color-gray-200;
+
+    &:first-child {
+      border-top: 1px solid $color-gray-200;
+    }
   }
 
   &__date {
@@ -38,6 +44,8 @@
   }
 
   &__url {
-
+    margin-top: .25rem;
+    font-size: $font-size-smaller;
+    color: $color-gray-700;
   }
 }
