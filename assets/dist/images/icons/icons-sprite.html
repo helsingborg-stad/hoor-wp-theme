@@ -18,6 +18,8 @@ They might well be outsourced to an external stylesheet of course.
 -->
 
 <style type="text/css">
+  .svg-arrow-down-dims { width: 8px; height: 4px; }
+  .svg-arrow-up-dims { width: 8px; height: 4px; }
   .svg-check-dims { width: 16px; height: 16px; }
   .svg-chevron-left-dims { width: 7px; height: 12px; }
   .svg-chevron-right-dims { width: 7px; height: 12px; }
@@ -62,6 +64,8 @@ further details on how to create this embeddable sprite variant.
 -->
 
 <svg width="0" height="0" style="position:absolute">
+    <symbol viewBox="0 0 8 4" id="arrow-down"><title>android arrow dropdown</title><path d="M0 0l4 4 4-4z" fill="#222" fill-rule="evenodd"/></symbol>
+    <symbol viewBox="0 0 8 4" id="arrow-up"><title>android arrow dropdown</title><path d="M8 4L4 0 0 4z" fill="#222" fill-rule="evenodd"/></symbol>
     <symbol viewBox="0 0 40 40" id="check"><title>Shape</title><path d="M20 0C8.955 0 0 8.955 0 20s8.955 20 20 20 20-8.955 20-20S31.045 0 20 0zm10.259 13.313L17.839 29.25c-.098.098-.259.313-.455.313-.205 0-.34-.143-.455-.26a9975.16 9975.16 0 0 0-7.045-6.776l-.134-.134a.523.523 0 0 1-.098-.286c0-.107.044-.205.098-.286a.937.937 0 0 0 .098-.107c.688-.723 2.08-2.187 2.17-2.276.116-.117.214-.268.428-.268.224 0 .367.187.474.294.107.107 4.018 3.866 4.018 3.866l9.937-12.767a.51.51 0 0 1 .313-.126.5.5 0 0 1 .312.117l2.732 2.151a.5.5 0 0 1 .116.313.463.463 0 0 1-.09.294z" fill="#222" fill-rule="evenodd"/></symbol>
     <symbol viewBox="0 0 7 12" id="chevron-left"><title>Chevron_left</title><path d="M6.452.317c.446.436.481 1.043 0 1.576L2.705 5.801l3.747 3.908c.481.533.446 1.141 0 1.574-.445.436-1.197.408-1.615 0C4.419 10.877.335 6.588.335 6.588a1.095 1.095 0 0 1 0-1.576S4.419.725 4.837.317c.418-.409 1.17-.436 1.615 0z" fill="#FFF" fill-rule="evenodd"/></symbol>
     <symbol viewBox="0 0 7 12" id="chevron-right"><title>Chevron_left</title><path d="M.348 11.283c-.446-.436-.481-1.043 0-1.576l3.747-3.908L.348 1.89C-.133 1.358-.098.75.348.317c.445-.436 1.197-.408 1.615 0 .418.406 4.502 4.695 4.502 4.695a1.095 1.095 0 0 1 0 1.576s-4.084 4.287-4.502 4.695c-.418.409-1.17.436-1.615 0z" fill="#FFF" fill-rule="evenodd"/></symbol>
@@ -113,6 +117,28 @@ embedded above. They may be styled via CSS.
       <h3>A) Inline SVG with embedded sprite</h3>
       <ul>
 
+        <li title="arrow-down">
+          <div class="icon-box">
+
+            <!-- arrow-down -->
+            <svg class="svg-arrow-down-dims">
+              <use xlink:href="#arrow-down"></use>
+            </svg>
+
+          </div>
+          <h2>arrow-down</h2>
+        </li>
+        <li title="arrow-up">
+          <div class="icon-box">
+
+            <!-- arrow-up -->
+            <svg class="svg-arrow-up-dims">
+              <use xlink:href="#arrow-up"></use>
+            </svg>
+
+          </div>
+          <h2>arrow-up</h2>
+        </li>
         <li title="check">
           <div class="icon-box">
 
@@ -419,6 +445,28 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
       <h3>B) Inline SVG with external sprite (IE 9-11 with polyfill only)</h3>
       <ul>
 
+        <li title="arrow-down">
+          <div class="icon-box">
+
+            <!-- arrow-down -->
+            <svg class="svg-arrow-down-dims">
+              <use xlink:href="../icons.svg#arrow-down"></use>
+            </svg>
+
+          </div>
+          <h2>arrow-down</h2>
+        </li>
+        <li title="arrow-up">
+          <div class="icon-box">
+
+            <!-- arrow-up -->
+            <svg class="svg-arrow-up-dims">
+              <use xlink:href="../icons.svg#arrow-up"></use>
+            </svg>
+
+          </div>
+          <h2>arrow-up</h2>
+        </li>
         <li title="check">
           <div class="icon-box">
 

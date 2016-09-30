@@ -80,13 +80,16 @@
   }
 
   body:not(.error404) {
-    margin-bottom: 86px;
     background: $color-light;
 
     background-image: url(../images/pattern.png);
     background-position: 50% calc(100% + 120px);
     background-repeat: repeat-x;
     background-attachment: fixed;
+
+    .main-footer {
+      margin-bottom: 86px;
+    }
   }
 }
 

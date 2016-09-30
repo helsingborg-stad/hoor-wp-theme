@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="8px" height="4px" viewBox="0 0 8 4" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.1 (33804) - http://www.bohemiancoding.com/sketch -->
+    <title>android arrow dropdown</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Secondary-Navigation/Dropdown-Contracted" transform="translate(-7.000000, -9.000000)" fill="#222222">
+            <g id="Desktop/Secondary-Navigation/Dropdown-Contracted">
+                <g id="Primary-Navigation/Dropdown-Contracted">
+                    <g id="android-arrow-dropdown" transform="translate(7.000000, 9.000000)">
+                        <g id="Layer_1">
+                            <polygon id="Shape" points="0 0 4 4 8 0"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

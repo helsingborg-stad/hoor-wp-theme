@@ -84,16 +84,21 @@
     &::before {
       position: absolute;
       right: 6px;
-      top: 4px;
-      width: 1.375rem;
-      height: 1.375rem;
-      background: $color-light;
-      border-radius: 3px;
-      border: 1px solid $color-gray-300;
+      top: 10px;
+      width: 1.125rem;
+      height: 1.125rem;
+      //background: $color-gray-100;
+      //border-radius: 3px;
+      //border: 1px solid $color-gray-300;
       box-sizing: border-box;
-      content: "▼";
+      content: "";
+      background-image: url(../images/icons/arrow-down.svg);
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: 8px 4px;
       text-align: center;
       font-size: 10px;
+      pointer-events: none;
     }
   }
 
@@ -101,7 +106,7 @@
   .has-children.current-menu-item {
 
     &::before {
-      content: "▲";
+      background-image: url(../images/icons/arrow-up.svg);
     }
   }
 }
