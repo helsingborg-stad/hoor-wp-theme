@@ -19,6 +19,8 @@ They might well be outsourced to an external stylesheet of course.
 
 <style type="text/css">
   .svg-check-dims { width: 16px; height: 16px; }
+  .svg-chevron-left-dims { width: 7px; height: 12px; }
+  .svg-chevron-right-dims { width: 7px; height: 12px; }
   .svg-close-dims { width: 16px; height: 16px; }
   .svg-close-simple-dims { width: 16px; height: 16px; }
   .svg-contact-dims { width: 16px; height: 16px; }
@@ -61,6 +63,8 @@ further details on how to create this embeddable sprite variant.
 
 <svg width="0" height="0" style="position:absolute">
     <symbol viewBox="0 0 40 40" id="check"><title>Shape</title><path d="M20 0C8.955 0 0 8.955 0 20s8.955 20 20 20 20-8.955 20-20S31.045 0 20 0zm10.259 13.313L17.839 29.25c-.098.098-.259.313-.455.313-.205 0-.34-.143-.455-.26a9975.16 9975.16 0 0 0-7.045-6.776l-.134-.134a.523.523 0 0 1-.098-.286c0-.107.044-.205.098-.286a.937.937 0 0 0 .098-.107c.688-.723 2.08-2.187 2.17-2.276.116-.117.214-.268.428-.268.224 0 .367.187.474.294.107.107 4.018 3.866 4.018 3.866l9.937-12.767a.51.51 0 0 1 .313-.126.5.5 0 0 1 .312.117l2.732 2.151a.5.5 0 0 1 .116.313.463.463 0 0 1-.09.294z" fill="#222" fill-rule="evenodd"/></symbol>
+    <symbol viewBox="0 0 7 12" id="chevron-left"><title>Chevron_left</title><path d="M6.452.317c.446.436.481 1.043 0 1.576L2.705 5.801l3.747 3.908c.481.533.446 1.141 0 1.574-.445.436-1.197.408-1.615 0C4.419 10.877.335 6.588.335 6.588a1.095 1.095 0 0 1 0-1.576S4.419.725 4.837.317c.418-.409 1.17-.436 1.615 0z" fill="#FFF" fill-rule="evenodd"/></symbol>
+    <symbol viewBox="0 0 7 12" id="chevron-right"><title>Chevron_left</title><path d="M.348 11.283c-.446-.436-.481-1.043 0-1.576l3.747-3.908L.348 1.89C-.133 1.358-.098.75.348.317c.445-.436 1.197-.408 1.615 0 .418.406 4.502 4.695 4.502 4.695a1.095 1.095 0 0 1 0 1.576s-4.084 4.287-4.502 4.695c-.418.409-1.17.436-1.615 0z" fill="#FFF" fill-rule="evenodd"/></symbol>
     <symbol viewBox="0 0 40 40" id="close"><title>Close</title><path d="M20 0C8.955 0 0 8.955 0 20s8.955 20 20 20 20-8.955 20-20S31.045 0 20 0zm9.67 26.741a.702.702 0 0 1 .205.5.687.687 0 0 1-.205.5l-1.93 1.939a.695.695 0 0 1-.5.205.718.718 0 0 1-.5-.205L20 22.929l-6.732 6.759a.68.68 0 0 1-.5.205.718.718 0 0 1-.5-.206l-1.929-1.937a.702.702 0 0 1-.205-.5c0-.188.071-.375.205-.5l6.76-6.786-6.778-6.696a.717.717 0 0 1 0-1.01l1.929-1.937a.702.702 0 0 1 .5-.205c.188 0 .366.072.5.205l6.759 6.67 6.759-6.67a.702.702 0 0 1 .5-.205c.187 0 .366.072.5.205l1.928 1.938a.717.717 0 0 1 0 1.009l-6.776 6.696 6.75 6.777z" fill="#222" fill-rule="evenodd"/></symbol>
     <symbol viewBox="0 0 20 20" id="close-simple"><title>Shape</title><path d="M20 2l-2-2-8 8-8-8-2 2 8 8-8 8 2 2 8-8 8 8 2-2-8-8z" fill="#FFF" fill-rule="evenodd"/></symbol>
     <symbol viewBox="0 0 20 20" id="contact"><title>Contact</title><g fill-rule="evenodd"><path d="M1.216 16.49a.938.938 0 0 1 .135.49L.769 20l2.702-1.063a1.135 1.135 0 0 1 .803-.014h.01c.019.01.038.015.057.024a7.33 7.33 0 0 0 2.784.548 7.212 7.212 0 0 0 5.52-2.529 8.57 8.57 0 0 1-2.121.274c-4.61 0-8.35-3.605-8.35-8.052 0-.568.062-1.116.177-1.65C.909 8.793 0 10.606 0 12.625a6.7 6.7 0 0 0 1.13 3.726c.029.038.058.091.086.14z"/><path d="M11.649 0C7.625 0 4.264 2.75 3.476 6.404a7.771 7.771 0 0 0-.178 1.649c0 4.447 3.736 8.053 8.351 8.053.736 0 1.442-.101 2.12-.274.39-.101.774-.217 1.144-.366l.068-.028c.005 0 .01 0 .01-.005a1.271 1.271 0 0 1 .932.014l3.298 1.24-.817-3.548c0-.211.058-.413.159-.586.028-.053.067-.101.1-.15a7.817 7.817 0 0 0 1.323-4.35C20 3.606 16.264 0 11.649 0z"/></g></symbol>
@@ -119,6 +123,28 @@ embedded above. They may be styled via CSS.
 
           </div>
           <h2>check</h2>
+        </li>
+        <li title="chevron-left">
+          <div class="icon-box">
+
+            <!-- chevron-left -->
+            <svg class="svg-chevron-left-dims">
+              <use xlink:href="#chevron-left"></use>
+            </svg>
+
+          </div>
+          <h2>chevron-left</h2>
+        </li>
+        <li title="chevron-right">
+          <div class="icon-box">
+
+            <!-- chevron-right -->
+            <svg class="svg-chevron-right-dims">
+              <use xlink:href="#chevron-right"></use>
+            </svg>
+
+          </div>
+          <h2>chevron-right</h2>
         </li>
         <li title="close">
           <div class="icon-box">
@@ -403,6 +429,28 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 
           </div>
           <h2>check</h2>
+        </li>
+        <li title="chevron-left">
+          <div class="icon-box">
+
+            <!-- chevron-left -->
+            <svg class="svg-chevron-left-dims">
+              <use xlink:href="../icons.svg#chevron-left"></use>
+            </svg>
+
+          </div>
+          <h2>chevron-left</h2>
+        </li>
+        <li title="chevron-right">
+          <div class="icon-box">
+
+            <!-- chevron-right -->
+            <svg class="svg-chevron-right-dims">
+              <use xlink:href="../icons.svg#chevron-right"></use>
+            </svg>
+
+          </div>
+          <h2>chevron-right</h2>
         </li>
         <li title="close">
           <div class="icon-box">

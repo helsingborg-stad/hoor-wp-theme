@@ -31,7 +31,7 @@ class Google extends \Municipio\Search\Google
             $this->currentPage = (($this->currentIndex-1) / $this->resultsPerPage)+1;
         }
 
-        $markup[] = '<ul class="pagination" role="menubar" arial-label="pagination">';
+        $markup[] = '<h2 class="visually-hidden" aria-labelledby="pagination"></h2><ul class="pagination" role="navigation" aria-labelledby="pagination">';
 
         // Get the previous page
         $previousPage = null;
@@ -40,7 +40,7 @@ class Google extends \Municipio\Search\Google
 
             $markup[] = '<li><a class="previous" href="?s=' . urlencode(stripslashes($this->keyword)) .
                         '&amp;index=' . $previousPage->startIndex .
-                        '">&laquo; Föregående</a></li>';
+                        '" aria-label="Föregående sida"><span class="previous__label">Föregående<span class="visually-hidden"> sida</span></span></a></li>';
         }
 
         // Get pages
@@ -71,7 +71,7 @@ class Google extends \Municipio\Search\Google
             $startIndex = $query->nextPage[0]->startIndex;
             if ($startIndex < $maxResults) {
                 $markup[] = '<li><a class="next" href="?s=' . urlencode(stripslashes($this->keyword)) .
-              '&amp;index=' . $startIndex . '">Nästa &raquo;</a></li>';
+              '&amp;index=' . $startIndex . '" aria-label="Nästa sida"><span class="next__label">Nästa<span class="visually-hidden"> sida</span></span></a></li>';
             }
         }
 
