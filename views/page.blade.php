@@ -6,6 +6,8 @@
 
 @include('partials.breadcrumbs')
 
+@include('partials.hero')
+
 <div class="container main-container">
 
     <div class="grid {{ (wp_get_post_parent_id(get_the_id()) != 0) ? 'no-margin-top' : '' }}">
