@@ -12201,6 +12201,9 @@ var HelsingborgPrime = {};
 $('html, body').removeClass('no-js');
 document.documentElement.setAttribute('data-useragent', navigator.userAgent);
 
+$(document).ready(function() {
+	svg4everybody();
+});
 //
 // @name Language
 //
@@ -13627,7 +13630,7 @@ HelsingborgPrime.Prompt.CookieConsent = (function ($) {
 
         wrapper.prepend('\
             <div id="cookie-consent" class="cookie-consent ' + placement + '">\
-            <div class="container">' + consentText + '<button class="button__cookie-consent" data-action="cookie-consent"><span class="button__cookie-consent--icon"></span>' + buttonText + '</button></div>\
+            <div class="container">' + consentText + '<button class="button__cookie-consent" data-action="cookie-consent"><span class="button__cookie-consent--icon"></span><span class="button__cookie-consent--text">' + buttonText + '</span></button></div>\
             </div>\
         ');
 
@@ -23713,7 +23716,7 @@ function loadGoogleTranslate() {
             var hrefUrl = $(this).attr('href');
 
             // Check if external or non valid url (do not add querystring)
-            if (hrefUrl.indexOf(location.origin) === -1 || hrefUrl.substr(0, 1) === '#') {
+            if (hrefUrl == null || hrefUrl.indexOf(location.origin) === -1 || hrefUrl.substr(0, 1) === '#') {
                 return;
             }
 
