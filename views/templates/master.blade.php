@@ -2,11 +2,12 @@
 <html <?php language_attributes(); ?>>
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>{{ wp_title('&mdash;', false, 'right') }}{{ get_bloginfo('name') }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="{{ bloginfo('description') }}" />
-  <meta name="pubdate" content="{{ the_time('d M Y') }}">
-  <meta name="moddate" content="{{ the_modified_time('d M Y') }}">
+  <meta name="pubdate" content="{{ the_time('Y-m-d') }}">
+  <meta name="moddate" content="{{ the_modified_time('Y-m-d') }}">
   <script>
     var ajaxurl = '{!! apply_filters('Municipio/ajax_url_in_head', admin_url('admin-ajax.php')) !!}';
   </script>
