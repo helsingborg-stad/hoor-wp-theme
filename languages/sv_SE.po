@@ -1,0 +1,1302 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Municipio\n"
+"POT-Creation-Date: 2016-10-12 19:35+0200\n"
+"PO-Revision-Date: 2016-10-12 19:35+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: sv_SE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.9\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: library/Theme/Navigation.php:24
+msgid "Search"
+msgstr "Sök"
+
+#: library/Theme/Navigation.php:44 library/Theme/Navigation.php:45
+msgid "Home"
+msgstr "Hem"
+
+#: templates/module/modularity-mod-index.php:8
+msgid "Maybe this is what you are looking for?"
+msgstr "Kanske är detta vad du söker?"
+
+#: templates/module/modularity-mod-latest-list.php:54
+msgid "Show more"
+msgstr "Visa mer"
+
+#: templates/module/modularity-mod-latest-news.php:56
+msgid "Read more"
+msgstr "Läs mer"
+
+#: views/partials/accessibility-menu.blade.php:2
+msgid "Listen to this page with ReadSpeaker"
+msgstr "Lyssna på sidan med ReadSpeaker"
+
+#: views/partials/breadcrumbs.blade.php:1
+msgid "breadcrumbs"
+msgstr "Brödsmulor"
+
+#: views/partials/breadcrumbs.blade.php:5
+msgid "You are here:"
+msgstr "Du är här:"
+
+#: views/partials/page-footer.blade.php:12
+msgid "Share the page"
+msgstr "Dela sidan"
+
+#: views/partials/search/google.blade.php:31
+msgid "Found no matching results on your search."
+msgstr "Hittade inga matchande resultat på din sökning."
+
+#: views/partials/social-share.blade.php:3
+#: views/partials/social-share.blade.php:4
+#: views/partials/social-share.blade.php:8
+#: views/partials/social-share.blade.php:12
+msgid "Share on"
+msgstr "Dela på"
+
+#: views/partials/social-share.blade.php:16
+msgid "Email page"
+msgstr "E-post"
+
+#: views/partials/social-share.blade.php:20
+msgid "Print page"
+msgstr "Skriv ut"
+
+#: views/partials/timestamps.blade.php:4
+msgid "Published by"
+msgstr "Publicerad av"
+
+#: views/partials/timestamps.blade.php:30
+#: views/partials/timestamps.blade.php:51
+msgid "Published"
+msgstr "Publicerad"
+
+#: views/partials/timestamps.blade.php:39
+msgid "Last updated"
+msgstr "Senast uppdaterad"
+
+#: views/templates/master.blade.php:17
+msgid "Jump to the main menu"
+msgstr "Hoppa till huvudmenyn"
+
+#: views/templates/master.blade.php:18
+msgid "Jump to the main content"
+msgstr "Hoppa till innehåll"
+
+#. Theme Name of the plugin/theme
+msgid "Höörs kommun"
+msgstr "Höörs kommun"
+
+#. Description of the plugin/theme
+msgid "Child theme for Municipio"
+msgstr "Barntema för Municipio"
+
+#. Author of the plugin/theme
+msgid "Whitespace AB"
+msgstr "Whitespace AB"
+
+#~ msgid "Display settings"
+#~ msgstr "Visningsinställningar"
+
+#~ msgid "Share"
+#~ msgstr "Dela"
+
+#~ msgid "Show social media share buttons"
+#~ msgstr "Visa delningsknappar"
+
+#~ msgid "Author"
+#~ msgstr "Författare"
+
+#~ msgid "Show author"
+#~ msgstr "Visa författare"
+
+#~ msgid "Author image"
+#~ msgstr "Bild på författare"
+
+#~ msgid "Show author's image"
+#~ msgstr "Visa författarens bild"
+
+#~ msgid "Navigation settings"
+#~ msgstr "Navigationsinställningar"
+
+#~ msgid "Hide from sidebar menu"
+#~ msgstr "Dölj från sidebar-menyn"
+
+#~ msgid "Hide"
+#~ msgstr "Dölj"
+
+#~ msgid "Menu title"
+#~ msgstr "Menytitel"
+
+#~ msgid ""
+#~ "If you want to use another title for this page in the sidebar navigation "
+#~ "fill it in here. If you want to use the page title just leave this field "
+#~ "empty."
+#~ msgstr ""
+#~ "Om du vill använda en annan titel för denna sidan i menyn, fyll i den "
+#~ "här. Om du vill använda den vanliga sidtiteln så lämnar du detta fältet "
+#~ "tomt."
+
+#~ msgid "Default post types"
+#~ msgstr "Standardinläggstyper"
+
+#~ msgid "Disable blog"
+#~ msgstr "Inaktivera blogg"
+
+#~ msgid "Yes, disable posts."
+#~ msgstr "Ja, inaktivera blogg"
+
+#~ msgid "Disable pages"
+#~ msgstr "Inaktivera sidor"
+
+#~ msgid "Yes, disable pages."
+#~ msgstr "Ja, inaktivera sidor"
+
+#~ msgid "Logotype"
+#~ msgstr "Logotyp"
+
+#~ msgid "standard"
+#~ msgstr "standard"
+
+#~ msgid "Standard"
+#~ msgstr "Standard"
+
+#~ msgid "Negative"
+#~ msgstr "Negativ"
+
+#~ msgid "Error message"
+#~ msgstr "Felmeddelande"
+
+#~ msgid "The message that will be displayed underneeth the 404-error code"
+#~ msgstr "Meddelandet kommer att visas under 404-felkoden"
+
+#~ msgid "The page could not be found"
+#~ msgstr "Sidan kunde inte hittas"
+
+#~ msgid "Error info"
+#~ msgstr "Felinformation"
+
+#~ msgid "Additional information about the error or other information"
+#~ msgstr "Utökada information om felet"
+
+#~ msgid "Display"
+#~ msgstr "Visa"
+
+#~ msgid "Link to home"
+#~ msgstr "Länk till startsidan"
+
+#~ msgid "Link to search"
+#~ msgstr "Länk till sök"
+
+#~ msgid "Back button (previous page in browser history)"
+#~ msgstr "Tillbaka-knapp (bakåt i webbläsarens historik)"
+
+#~ msgid "Home link text"
+#~ msgstr "Text på hemknapp"
+
+#~ msgid "Back to home"
+#~ msgstr "Tillbaka till startsidan"
+
+#~ msgid "Back button text"
+#~ msgstr "Text på tillbaka-knapp"
+
+#~ msgid "Go back"
+#~ msgstr "Gå bakåt"
+
+#~ msgid "Search link text"
+#~ msgstr "Text på sök-knapp"
+
+#~ msgid "Use %s to output suggested search query"
+#~ msgstr "Använd %s för att skriva ut föreslagen sökfras"
+
+#~ msgid "Search for \\\"%s\\\""
+#~ msgstr "Sök efter \\\"%s\\\""
+
+#~ msgid "Enable"
+#~ msgstr "Aktivera"
+
+#~ msgid "Show author image"
+#~ msgstr "Visa bild på författare"
+
+#~ msgid "Color scheme"
+#~ msgstr "Färgschema"
+
+#~ msgid "gray"
+#~ msgstr "grå"
+
+#~ msgid "Gray"
+#~ msgstr "Grå"
+
+#~ msgid "Red"
+#~ msgstr "Röd"
+
+#~ msgid "Blue"
+#~ msgstr "Blå"
+
+#~ msgid "Green"
+#~ msgstr "Grön"
+
+#~ msgid "Purple"
+#~ msgstr "Lila"
+
+#~ msgid "Cookie consent"
+#~ msgstr "Cookie-medgivande"
+
+#~ msgid "Active"
+#~ msgstr "Aktivera"
+
+#~ msgid "Show cookie consent to users if not already accepted"
+#~ msgstr "Visa cookie-medgivande för nya användare"
+
+#~ msgid "Message"
+#~ msgstr "Meddelande"
+
+#~ msgid ""
+#~ "This website uses cookies to ensure you get the best experience on our "
+#~ "website."
+#~ msgstr ""
+#~ "Denna hemsida använder cookies för att erbjuda en så bra upplevelse som "
+#~ "möjligt för ditt besök."
+
+#~ msgid "Button"
+#~ msgstr "Knapp"
+
+#~ msgid "Got it!"
+#~ msgstr "Jag förstår"
+
+#~ msgid "Placement"
+#~ msgstr "Placering"
+
+#~ msgid "At the top of the page"
+#~ msgstr "Toppen av sidan"
+
+#~ msgid "Fixed to bottom of window"
+#~ msgstr "Fixerad till botten av fönstret"
+
+#~ msgid "Custom CSS"
+#~ msgstr "Egen CSS"
+
+#~ msgid "Css input"
+#~ msgstr "Css"
+
+#~ msgid ""
+#~ "Enter your CSS-code here. It will be wrapped with \\\"style\\\" tags, and "
+#~ "included on all pages."
+#~ msgstr ""
+#~ "Skriv in din css-kod här. Den kommer att wrappas med \\”style\\” taggar "
+#~ "och inkluderas på samtliga sidor."
+
+#~ msgid "Manage post types"
+#~ msgstr "Inläggstyper"
+
+#~ msgid "Post type name"
+#~ msgstr "Inläggstypens namn"
+
+#~ msgid ""
+#~ "<span style=\\\"color: #ff0000;\\\">Will generate the post type name, "
+#~ "select a name with care! Cannot be changed! </span>"
+#~ msgstr ""
+#~ "<span style=\\\"color: #ff0000;\\\">Välj namn med omsorg. Namnet går inte "
+#~ "att ändra.</span>"
+
+#~ msgid "Permalänk"
+#~ msgstr "Permalänk"
+
+#~ msgid "Public /url/ to show archive on."
+#~ msgstr "Offentlig /url/ att visa arkivet på"
+
+#~ msgid "Menu icon"
+#~ msgstr "Menyikon"
+
+#~ msgid "Menu position"
+#~ msgstr "Menyposition"
+
+#~ msgid "Select where to place this custom post type admin section."
+#~ msgstr "Välj var inläggstypen ska ligga i amdinistrationsmenyn"
+
+#~ msgid "Below Posts"
+#~ msgstr "Under inlägg"
+
+#~ msgid "Below Media"
+#~ msgstr "Under media"
+
+#~ msgid "Below Links"
+#~ msgstr "Under länkar"
+
+#~ msgid "Below Pages"
+#~ msgstr "Under sidor"
+
+#~ msgid "Below comments"
+#~ msgstr "Under kommentarer"
+
+#~ msgid "Below first separator"
+#~ msgstr "Under första avgränsningen"
+
+#~ msgid "Below Plugins"
+#~ msgstr "Under plugin"
+
+#~ msgid "Below Users"
+#~ msgstr "Under användare"
+
+#~ msgid "Below Tools"
+#~ msgstr "Under verktyg"
+
+#~ msgid "Below Settings"
+#~ msgstr "Under inställningar"
+
+#~ msgid "Below second separator"
+#~ msgstr "Under andra avgränsningen"
+
+#~ msgid "Public?"
+#~ msgstr "Publik?"
+
+#~ msgid "Controls how the type is visible to authors"
+#~ msgstr "Kontrollerar inläggstypens tillgänglighet"
+
+#~ msgid "Exclude from search?"
+#~ msgstr "Exkludera från sökresultat"
+
+#~ msgid ""
+#~ "Whether to exclude posts with this post type from front end search "
+#~ "results."
+#~ msgstr "Om inläggstypen ska exkluderas från sökresultat"
+
+#~ msgid "Avabile in nav menus?"
+#~ msgstr "Tillgänglig i menyer"
+
+#~ msgid "Make post type available for selection in navigation menus."
+#~ msgstr "Tillåt inläggstypen att kunna visas i menyer."
+
+#~ msgid "Hierarchical"
+#~ msgstr "Hierarkisk"
+
+#~ msgid ""
+#~ "Whether the post type is hierarchical (e.g. page). Allows Parent to be "
+#~ "specified."
+#~ msgstr ""
+#~ "Om inläggstypen är hierarkisk. Tillåter parent/child förhållande mellan "
+#~ "inlägg."
+
+#~ msgid "Post type functions"
+#~ msgstr "Funktioner för inläggstypen"
+
+#~ msgid "Content editor"
+#~ msgstr "Innehållsförfattare"
+
+#~ msgid "Author Select"
+#~ msgstr "Val av författare"
+
+#~ msgid "Featured Image"
+#~ msgstr "Utvald bild"
+
+#~ msgid "Excerpt"
+#~ msgstr "Ingress"
+
+#~ msgid "Trackbacks"
+#~ msgstr "Trackbacks"
+
+#~ msgid "Comments"
+#~ msgstr "Kommentarer"
+
+#~ msgid "Page Attributes"
+#~ msgstr "Sidattribut"
+
+#~ msgid "Post Formats"
+#~ msgstr "Inläggsformat"
+
+#~ msgid "Available post types"
+#~ msgstr "Tillgängliga inläggstyper"
+
+#~ msgid "Add post type"
+#~ msgstr "Lägg till inläggstyp"
+
+#~ msgid "Manage taxonomies"
+#~ msgstr "Taxonomies"
+
+#~ msgid "Label"
+#~ msgstr "Namn"
+
+#~ msgid ""
+#~ "<span style=\\\"color: #ff0000;\\\">Once you have published a post type "
+#~ "the name cannot be changed!</span>"
+#~ msgstr ""
+#~ "<span style=\\\"color: #ff0000;\\\">När du har sparat inläggstypen kan "
+#~ "inte detta fält redigeras!</span>"
+
+#~ msgid "Only applies if you enable the option to publish your taxonomy."
+#~ msgstr "Används bara om du publicerar din taxonomy"
+
+#~ msgid "Type of taxonomy"
+#~ msgstr "Typ av taxonomy"
+
+#~ msgid "Tags"
+#~ msgstr "Taggar"
+
+#~ msgid "Categories"
+#~ msgstr "Kategorier"
+
+#~ msgid "Connect to post type(s)"
+#~ msgstr "Koppla till inläggstyp(er)"
+
+#~ msgid "post"
+#~ msgstr "inlägg"
+
+#~ msgid "page"
+#~ msgstr "sida"
+
+#~ msgid "Offentlig"
+#~ msgstr "Offentlig"
+
+#~ msgid "Enable visitors to browse this taxonomy"
+#~ msgstr "Tillåt besökare att visa denna taxonomy"
+
+#~ msgid "Admin user interface"
+#~ msgstr "Administrationsgränssnitt"
+
+#~ msgid "Enable administration UI"
+#~ msgstr "Aktivera administrationsgränssnitt"
+
+#~ msgid "Available dynamic taxonomies"
+#~ msgstr "Tillgängliga dynamiska taxanomier"
+
+#~ msgid "Add taxonomy"
+#~ msgstr "Lägg till taxonomy"
+
+#~ msgid "Favicon"
+#~ msgstr "Favoritikoner"
+
+#~ msgid "Type"
+#~ msgstr "Typ"
+
+#~ msgid "favicon.ico (16x16px, 32x32px, 48x48px)"
+#~ msgstr "favicon.ico (16x16px, 32x32px, 48x48px)"
+
+#~ msgid "iOS, Android (152x152px)"
+#~ msgstr "iOS, Android (152x152px)"
+
+#~ msgid "IE10, Windows Metro (144x144px)"
+#~ msgstr "IE10, Windows Metro (144x144px)"
+
+#~ msgid "Icon 152x152"
+#~ msgstr "Ikon 152x152"
+
+#~ msgid "Must be 152x152 pixels .png"
+#~ msgstr "Måste vara 152x152 pixlar och format .png"
+
+#~ msgid "Icon 144x144"
+#~ msgstr "Ikon 144x144"
+
+#~ msgid "Must be 144x144 pixels .png"
+#~ msgstr "Måste vara 144x144 pixlar och format .png"
+
+#~ msgid "Favicon.ico"
+#~ msgstr "Favicon.ico"
+
+#~ msgid "Must be a .ico containing 16x16px, 32x32px and 48x48px"
+#~ msgstr "Måste vara en .ico innehållandes 16x16px, 32x32px and 48x48px"
+
+#~ msgid "Icon"
+#~ msgstr "Ikon"
+
+#~ msgid "Metro tile color"
+#~ msgstr "Bakgrundsfärg på Metro-bricka"
+
+#~ msgid "#FFFFFF"
+#~ msgstr "#FFFFFF"
+
+#~ msgid "Favicons"
+#~ msgstr "Favoritikoner"
+
+#~ msgid ""
+#~ "Add favicons in various sizes. If a size has multiple icons specified "
+#~ "only the latest specified icon will be used."
+#~ msgstr ""
+#~ "Lägg till favoritikoner i olika storlekar. Om en storlek har multipla "
+#~ "värden kommer bara den senast specificerade att användas."
+
+#~ msgid "Lägg till rad"
+#~ msgstr "Lägg till rad"
+
+#~ msgid "Footer Icons"
+#~ msgstr "Sidfotsikoner"
+
+#~ msgid "null"
+#~ msgstr "null"
+
+#~ msgid "- Select -"
+#~ msgstr "- Välj -"
+
+#~ msgid "Title"
+#~ msgstr "Titel"
+
+#~ msgid "Url"
+#~ msgstr "Url"
+
+#~ msgid "Footer icons repeater"
+#~ msgstr "Ikoner i sidfoten"
+
+#~ msgid ""
+#~ "Add icons to the footer of your site. Link to external resources link "
+#~ "facebook, twitter and linkedin! <style>.acf-field-font-awesome .fa-live-"
+#~ "preview {display:none;}</style>"
+#~ msgstr ""
+#~ "Lägg till ikoner i sidfoten. Länka till externa resurser som till exempel "
+#~ "Facebook, Twitter och LinkedIn.<style>.acf-field-font-awesome .fa-live-"
+#~ "preview {display:none;}</style>"
+
+#~ msgid "Add icon"
+#~ msgstr "Lägg till ikon"
+
+#~ msgid "Footer layout"
+#~ msgstr "Sidfotslayout"
+
+#~ msgid "Default style"
+#~ msgstr "Standard"
+
+#~ msgid "Compressed"
+#~ msgstr "Komprimerad"
+
+#~ msgid "Footer signature"
+#~ msgstr "Avsändare i sidfoten"
+
+#~ msgid ""
+#~ "If enabled a predefined footer signature logo will be appended to the "
+#~ "footer."
+#~ msgstr ""
+#~ "Om du aktiverar alternativet så kommer en fördefinierad avsändare-logotyp "
+#~ "att visas i sidfoten."
+
+#~ msgid "Enable footer signature"
+#~ msgstr "Aktivera avsändare i sidfoten"
+
+#~ msgid "Footer logotype"
+#~ msgstr "Logotyp i sidfot"
+
+#~ msgid "Logotype to use in footer"
+#~ msgstr "Logotyp att använda i sidfot"
+
+#~ msgid "Hide logotype in footer"
+#~ msgstr "Dölj logotyp i sidfoten"
+
+#~ msgid "Vertical position"
+#~ msgstr "Vertikal positionering"
+
+#~ msgid "top"
+#~ msgstr "Toppen"
+
+#~ msgid "Above footer content"
+#~ msgstr "Ovanför footerinnehåll"
+
+#~ msgid "Below footer content"
+#~ msgstr "Under footerinnehåll"
+
+#~ msgid "Google Analytics"
+#~ msgstr "Google Analytics"
+
+#~ msgid "Google Analytics UA"
+#~ msgstr "Google Analytics UA"
+
+#~ msgid ""
+#~ "To activate Google Analytics please insert your Google Analytics UA.<br> "
+#~ "Usally a string like this: UA-XXXXX-Y"
+#~ msgstr ""
+#~ "För att aktivera Google Analytics anger du ditt Google Analytics UA här."
+#~ "<br>Brukar vara formatterat såhär: UA-XXXXX-Y"
+
+#~ msgid "Google Translate"
+#~ msgstr "Google Translate"
+
+#~ msgid "Where to show Google Translate"
+#~ msgstr "Var Google Translate ska visas"
+
+#~ msgid "Do not show"
+#~ msgstr "Visa inte"
+
+#~ msgid "Above header"
+#~ msgstr "Ovanför sidhuvudet"
+
+#~ msgid "Below footer"
+#~ msgstr "Under sidfoten"
+
+#~ msgid "Fixed to right edge"
+#~ msgstr "Fixerad till högerkanten"
+
+#~ msgid "Menu to show translate link in"
+#~ msgstr "Meny att visa översättningslänk i"
+
+#~ msgid "Help menu"
+#~ msgstr "Hjälpmeny"
+
+#~ msgid "Header tabs menu"
+#~ msgstr "Header-tabbar"
+
+#~ msgid "Main menu"
+#~ msgstr "Huvudmeny"
+
+#~ msgid "Sidebar menu"
+#~ msgstr "Sidebar-meny"
+
+#~ msgid "Show as"
+#~ msgstr "Visa som"
+
+#~ msgid "text"
+#~ msgstr "text"
+
+#~ msgid "Text"
+#~ msgstr "Text"
+
+#~ msgid "Icon and text"
+#~ msgstr "Ikon och text"
+
+#~ msgid "Track usage with Google Analytics"
+#~ msgstr "Analysera användandet av webbplatsen med Google Analytics"
+
+#~ msgid ""
+#~ "If set to enabled, Google Translate usage will be tracked in Google "
+#~ "Analytics (to the account specified under the Google Analytics settings)"
+#~ msgstr ""
+#~ "Om funktionen är aktiverad kommer Google Translate användandet att spåras "
+#~ "i Google Analytucs (till det Google Analytics kontot som är speicificerat "
+#~ "under Google Analytics tabben)"
+
+#~ msgid "Header logotype"
+#~ msgstr "Logotyp i sidhuvud"
+
+#~ msgid "Logotype to use in header"
+#~ msgstr "Logotyp att använda i sidhuvudet"
+
+#~ msgid "Logotype tooltip"
+#~ msgstr "Inforuta vid logotypen"
+
+#~ msgid ""
+#~ "Tooltip text when hovering over the logotype in the header. The logo "
+#~ "links to the front page. Leave empty if you don't want to show anything."
+#~ msgstr ""
+#~ "Inforuta som dyker upp när du håller musen ovanpå logotypen i sidhuvudet. "
+#~ "Logotypen länkar till startsidan. Lämna tomt om du inte vill visa någon "
+#~ "inforuta."
+
+#~ msgid "Header tagline"
+#~ msgstr "Slogan i sidhuvud"
+
+#~ msgid "Enable tagline"
+#~ msgstr "Aktivera slogan"
+
+#~ msgid "Yes, enable tagline in header"
+#~ msgstr "Ja, aktivera slogan i sidhuvudet"
+
+#~ msgid "Tagline"
+#~ msgstr "Slogan"
+
+#~ msgid "Use site description"
+#~ msgstr "Använd sidbeskrivningen"
+
+#~ msgid "Input custom"
+#~ msgstr "Använd egen"
+
+#~ msgid "Tagline text"
+#~ msgstr "Slogantext"
+
+#~ msgid "Header"
+#~ msgstr "Sidhuvud"
+
+#~ msgid "Layout"
+#~ msgstr "Layout"
+
+#~ msgid "business"
+#~ msgstr "business"
+
+#~ msgid "Business (default)"
+#~ msgstr "Business (standardval)"
+
+#~ msgid "Casual"
+#~ msgstr "Casual"
+
+#~ msgid "Jumbo"
+#~ msgstr "Jumbo"
+
+#~ msgid "Standard logotype"
+#~ msgstr "Standardlogotyp"
+
+#~ msgid "Only .svg-files are supported."
+#~ msgstr "Accepterar enbart .svg-filer"
+
+#~ msgid "Negative logotype"
+#~ msgstr "Negativ (vit) logotyp"
+
+#~ msgid ""
+#~ "Please upload a brand logo in the format .svg. The negative logo refers "
+#~ "to a 100% white logotype that can be used on dark backgrounds."
+#~ msgstr ""
+#~ "Vänligen ladda upp en logotyp i .svg-format. Den negativa logotypen är en "
+#~ "100% vit version av din logotyp som kan användas på mörka bakgrunden."
+
+#~ msgid "Timestamp"
+#~ msgstr "Tidstämplar"
+
+#~ msgid "Post footer timestamps"
+#~ msgstr "Tidstämplar under inlägg"
+
+#~ msgid ""
+#~ "Check boxes to enable timestamps for post types. Will be displayed after "
+#~ "the content area, if applicable."
+#~ msgstr ""
+#~ "Klicka i kryssrutorna för att aktivera tidsstämplar för inläggstyper. "
+#~ "Tidstämplarna visas under brödtexten, om möjligt."
+
+#~ msgid "Date published"
+#~ msgstr "Publiceringsdatum"
+
+#~ msgid "Posts"
+#~ msgstr "Inlägg"
+
+#~ msgid "Pages"
+#~ msgstr "Sidor"
+
+#~ msgid "Date updated"
+#~ msgstr "Senast uppdaterad"
+
+#~ msgid "Primary navigation"
+#~ msgstr "Huvudmeny"
+
+#~ msgid "Enable primary navigation"
+#~ msgstr "Aktivera huvudmeny"
+
+#~ msgid "Menu type"
+#~ msgstr "Typ av meny"
+
+#~ msgid "auto"
+#~ msgstr "auto"
+
+#~ msgid "Automatically generated"
+#~ msgstr "Automatiskt genererad"
+
+#~ msgid "WP Menu"
+#~ msgstr "WP Meny"
+
+#~ msgid "Dropdown sub-menus"
+#~ msgstr "Dropdown submenyer"
+
+#~ msgid "Yes, display sub-menus as dropdowns"
+#~ msgstr "Ja, visa submenyer som dropdowns"
+
+#~ msgid "Menu depth"
+#~ msgstr "Menydjup"
+
+#~ msgid ""
+#~ "When \\\"dropdown sub-menus\\\" is inacticated only the top level menu "
+#~ "items will be displayed in the main menu. To display the submenu items in "
+#~ "the sidebar menu you should set the \\\"secondary menu\\\" settings to \\"
+#~ "\"Act as sub menu to the primary menu\\\"."
+#~ msgstr ""
+#~ "När \\”dropdown submenyer\\” är inaktiverade kommer bara den första nivån "
+#~ "av menyval visas i huvudmenyn. För att aktivera submenyn i vänster-"
+#~ "sidebaren bör du ställa in \\”sekundär meny\\” till \\”Agera submeny till "
+#~ "huvudmenyn\\”"
+
+#~ msgid "Automatically generated menu"
+#~ msgstr "Automatiskt genererad meny"
+
+#~ msgid ""
+#~ "The automatically generated menu type will include all published pages "
+#~ "from top level pages and down to the below specified depth level. The "
+#~ "automatically generated menu is a heavy procedure for the system to run. "
+#~ "The deeper it should go the longer loading time."
+#~ msgstr ""
+#~ "Den automatiskt genererade menyn inkluderar alla publicerade sidor i "
+#~ "hierarkisk ordning ned till det angivna djupet. Den automatiska "
+#~ "genererade menyn kan ta lång tid att ladda in om det är många sidor som "
+#~ "ska genereras i menyn."
+
+#~ msgid "Set to 0 to show all levels"
+#~ msgstr "Sätt till 0 för att visa alla nivåer"
+
+#~ msgid "Render"
+#~ msgstr "Rendering"
+
+#~ msgid "How to render the items"
+#~ msgstr "Hur menyalternativen ska renderas"
+
+#~ msgid "All levels"
+#~ msgstr "Alla nivåer"
+
+#~ msgid "Only sub levels of active top level item"
+#~ msgstr "Bara undernivåer till aktiv förstanivå"
+
+#~ msgid "Menu items alignment"
+#~ msgstr "Justering för menylternativ"
+
+#~ msgid "justify"
+#~ msgstr "justify"
+
+#~ msgid "Left"
+#~ msgstr "Vänster"
+
+#~ msgid "Center"
+#~ msgstr "Centrerad"
+
+#~ msgid "Right"
+#~ msgstr "Höger"
+
+#~ msgid "Justify"
+#~ msgstr "Fyll bredd"
+
+#~ msgid "Display search"
+#~ msgstr "Visa sök"
+
+#~ msgid "In front-page hero/slider"
+#~ msgstr "I headern på startsidan"
+
+#~ msgid "In the header of all pages but front page"
+#~ msgstr "I headern på alla sidor utom startsidan"
+
+#~ msgid "In the header of all pages"
+#~ msgstr "I headern på alla sidor"
+
+#~ msgid "Icon in main menu"
+#~ msgstr "Ikon i huvudmenyn"
+
+#~ msgid "Search field label"
+#~ msgstr "Sökfältets titel"
+
+#~ msgid "Search field placeholder"
+#~ msgstr "Sökfältets beskrivning"
+
+#~ msgid "Search button text"
+#~ msgstr "Sök-knappens text"
+
+#~ msgid "Sök"
+#~ msgstr "Sök"
+
+#~ msgid "Google Search"
+#~ msgstr "Google Sök"
+
+#~ msgid "Use Google Site Search"
+#~ msgstr "Använd Google Site Search"
+
+#~ msgid "Google API Key"
+#~ msgstr "Google API Key"
+
+#~ msgid "Google Api CX"
+#~ msgstr "Google Api CX"
+
+#~ msgid "Show share icons"
+#~ msgstr "Visa delningsikoner"
+
+#~ msgid ""
+#~ "This is a master control which will enable/disable the social share icons "
+#~ "for each and all posts and pages."
+#~ msgstr ""
+#~ "Detta är en master-kontroll som inaktiverar/aktiverar delningsikoner för "
+#~ "alla sidor och inlägg."
+
+#~ msgid "Sub navigation"
+#~ msgstr "Sekundär meny"
+
+#~ msgid "Enable sub navigation"
+#~ msgstr "Aktivera sekundär meny"
+
+#~ msgid "sub"
+#~ msgstr "sub"
+
+#~ msgid "Act as sub menu to the primary menu"
+#~ msgstr "Agera submeny åt huvudmenyn"
+
+#~ msgid "Top level pages"
+#~ msgstr "Sidor från första nivån"
+
+#~ msgid ""
+#~ "Weather to include the top level pages. If unchecked the pages will be "
+#~ "generated from depth 2."
+#~ msgstr ""
+#~ "Bestäm om sidor från första nivån från den hierarkiska ordningen ska "
+#~ "visas. Om ej aktiverad så kommer sidorna börja genereras från djup 2."
+
+#~ msgid "Include top level pages"
+#~ msgstr "Inkludera första nivån"
+
+#~ msgid "All"
+#~ msgstr "Alla"
+
+#~ msgid "Only active level's subitems"
+#~ msgstr "Bara aktiva sidans undersidor"
+
+#~ msgid "User profile picture"
+#~ msgstr "Profilbild"
+
+#~ msgid "Author picture"
+#~ msgstr "Bild på författare"
+
+#~ msgid "Picture that show in author information for posts published by you"
+#~ msgstr "Bild som kan visas i byline."
+
+#~ msgid "Contact widget"
+#~ msgstr "Kontaktwidget"
+
+#~ msgid "Contact person"
+#~ msgstr "Kontaktperson"
+
+#~ msgid "Company"
+#~ msgstr "Företag"
+
+#~ msgid "Phone numer"
+#~ msgstr "Telefonnummer"
+
+#~ msgid "Email"
+#~ msgstr "Epost"
+
+#~ msgid "Address"
+#~ msgstr "Adress"
+
+#~ msgid "Contacts"
+#~ msgstr "Kontakter"
+
+#~ msgid "Private"
+#~ msgstr "Privat"
+
+#~ msgid "Archive for"
+#~ msgstr "Arkiv för"
+
+#~ msgid "Theme Options"
+#~ msgstr "Temainställningar"
+
+#~ msgid "Navigation"
+#~ msgstr "Navigering"
+
+#~ msgid "Content"
+#~ msgstr "Innehåll"
+
+#~ msgid "Footer"
+#~ msgstr "Sidfot"
+
+#~ msgid "Blog & Archives"
+#~ msgstr "Bloggar & Arkiv"
+
+#~ msgid "Custom Post Types"
+#~ msgstr "Egna inläggstyper"
+
+#~ msgid "Post Types"
+#~ msgstr "Inläggstyper"
+
+#~ msgid "Custom Taxonomies"
+#~ msgstr "Egna taxonomies"
+
+#~ msgid "Taxonomies"
+#~ msgstr "Taxonomies"
+
+#~ msgid "Custom CSS/JS Editor"
+#~ msgstr "Egen CSS/JS"
+
+#~ msgid "Custom CSS/JS"
+#~ msgstr "Egen CSS/JS"
+
+#~ msgid "Notice"
+#~ msgstr "Notis"
+
+#~ msgid "You're on a local server."
+#~ msgstr "Detta är en lokal server."
+
+#~ msgid "This it the test-environment. Your content will not be published."
+#~ msgstr "Detta är en test-miljö. Ditt innehåll kommer inte att publiceras."
+
+#~ msgid "This it the beta-environment. All functionality is not guaranteed."
+#~ msgstr "Detta är en beta-miljö. All funktionalitet är inte garanterad."
+
+#~ msgid "Varnish cache purged for this post!"
+#~ msgstr "Varnish cachen tömd för denna sida"
+
+#~ msgid "Purge Page"
+#~ msgstr "Töm cache för sidan"
+
+#~ msgid "Purge Varnish"
+#~ msgstr "Töm varnish"
+
+#~ msgid "Could not verify that you are human (image check)."
+#~ msgstr "Kunde inte verifiera att du är mänsklig (bildkontroll)"
+
+#~ msgid ""
+#~ "Could not verify that you are human (some hidden form fields are "
+#~ "manipulated)."
+#~ msgstr ""
+#~ "Kunde inte verifiera att du är mänsklig (ett dolt fält är manipulerat)"
+
+#~ msgid "Could not verify that you are human (some form fields are missing)."
+#~ msgstr ""
+#~ "Kunde inte verifiera att du är mänsklig (något formulärsfält saknas)"
+
+#~ msgid "Add new"
+#~ msgstr "Skapa ny"
+
+#~ msgid "Add new %s"
+#~ msgstr "Skapa ny %s"
+
+#~ msgid "New %s"
+#~ msgstr "Ny %s"
+
+#~ msgid "Edit %s"
+#~ msgstr "Redigera %s"
+
+#~ msgid "View %s"
+#~ msgstr "Visa %s"
+
+#~ msgid "All %s"
+#~ msgstr "Alla %s"
+
+#~ msgid "Search %s"
+#~ msgstr "Sök %s"
+
+#~ msgid "Parent %s"
+#~ msgstr "Förälder %s"
+
+#~ msgid "No %s found"
+#~ msgstr "Inga %s hittades"
+
+#~ msgid "No %s found in trash"
+#~ msgstr "Inga %s hittades i papperskorgen"
+
+#~ msgid "Auto generated cpt from user iterface."
+#~ msgstr "Automatiskt genererade posttyper från inställningspanel"
+
+#~ msgid "Submit"
+#~ msgstr "Skicka"
+
+#~ msgid "Page"
+#~ msgstr "Sida"
+
+#~ msgid "Front page"
+#~ msgstr "Startsida"
+
+#~ msgid "Admin notice"
+#~ msgstr "Administratörsnotis"
+
+#~ msgid "View [%s] was not found. Defaulting to [page.blade.php]."
+#~ msgstr "Mallen [%s] hittades inte. Använder [page.blade.php] istället."
+
+#~ msgid "The footer area"
+#~ msgstr "Footer-arean"
+
+#~ msgid "Hero"
+#~ msgstr "Hero"
+
+#~ msgid "The hero area"
+#~ msgstr "Hero-arean"
+
+#~ msgid "Content area (above article)"
+#~ msgstr "Innehållsarea (ovanför artikel)"
+
+#~ msgid "The area above the content"
+#~ msgstr "Arean ovanför huvudinnehållet"
+
+#~ msgid "Content area (below article)"
+#~ msgstr "Innehållsarea (nedanför artikel)"
+
+#~ msgid "The area below the content"
+#~ msgstr "Arean under innehållet"
+
+#~ msgid "Main container bottom"
+#~ msgstr "Main container bottom"
+
+#~ msgid "The area below the main container"
+#~ msgstr "Arean under main container"
+
+#~ msgid "Left sidebar"
+#~ msgstr "Vänster sidebar"
+
+#~ msgid "The left sidebar area"
+#~ msgstr "Sidebar till vänster"
+
+#~ msgid "Left sidebar bottom"
+#~ msgstr "Vänster sidebar bottom"
+
+#~ msgid "The area below the left sidebar content"
+#~ msgstr "Sidebar vänster botten"
+
+#~ msgid "Right sidebar"
+#~ msgstr "Höger sidebar"
+
+#~ msgid "The right sidebar area"
+#~ msgstr "Sidebar till höger"
+
+#~ msgid "Article"
+#~ msgstr "Artikel"
+
+#~ msgid "Contact"
+#~ msgstr "Kontakt"
+
+#~ msgid "Displays the contact information given."
+#~ msgstr "Visar den angivna kontaktinformationen"
+
+#~ msgid "From"
+#~ msgstr "Från"
+
+#~ msgid "From date"
+#~ msgstr "Från datum"
+
+#~ msgid "To"
+#~ msgstr "Till"
+
+#~ msgid "To date"
+#~ msgstr "Till datum"
+
+#~ msgid "Filter"
+#~ msgstr "Filtrera"
+
+#~ msgid "No categories"
+#~ msgstr "Inga kategorier"
+
+#~ msgid "No tags"
+#~ msgstr "Inga taggar"
+
+#~ msgid "Show all"
+#~ msgstr "Visa alla"
+
+#~ msgid "Menu"
+#~ msgstr "Meny"
+
+#~ msgid "More"
+#~ msgstr "Mer"
+
+#~ msgid "What are you looking for?"
+#~ msgstr "Vad letar du efter?"
+
+#~ msgid "Found no matching results on your search…"
+#~ msgstr "Hittade inga matchande resultat för din sökning…"
+
+#~ msgid "Municipio"
+#~ msgstr "Municipio"
+
+#~ msgid ""
+#~ "A bootstrap theme for creating municipality sites. Works veary webb with "
+#~ "Modularity Plugin."
+#~ msgstr "Ett bootstrap-tema för att skapa hemsidor för kommuner."
+
+#~ msgid ""
+#~ "Sebastian Thulin @ Helsingborg stad, Kristoffer Svanmark @ Lexicon IT-"
+#~ "Konsult"
+#~ msgstr ""
+#~ "Sebastian Thulin @ Helsingborg stad, Kristoffer Svanmark @ Lexicon IT-"
+#~ "Konsult"
+
+#~ msgid "http://www.helsingborg.se"
+#~ msgstr "http://www.helsingborg.se"
+
+#~ msgid "Theme options"
+#~ msgstr "Temainställningar"
+
+#~ msgid "Custom CSS Editor"
+#~ msgstr "CSS Editor"
+
+#~ msgid "Content area"
+#~ msgstr "Innehållsarea"
+
+#~ msgid "No posts found…"
+#~ msgstr "Inga inlägg hittades…"
+
+#~ msgid "https://github.com/helsingborg-stad/Bootstrap-Theme/"
+#~ msgstr "https://github.com/helsingborg-stad/Bootstrap-Theme/"
+
+#~ msgid "Feed post style"
+#~ msgstr "Stil på inlägg"
+
+#~ msgid "Full"
+#~ msgstr "Fullständig"
+
+#~ msgid "Collapsed"
+#~ msgstr "Infälld"
+
+#~ msgid "Grid"
+#~ msgstr "Rutnät"
+
+#~ msgid "Grid columns"
+#~ msgstr "Kolumner i rutnät"
+
+#~ msgid "datetime"
+#~ msgstr "datetime"
+
+#~ msgid "Do not show the date"
+#~ msgstr "Visa inte datum"
+
+#~ msgid "Date only"
+#~ msgstr "Bara datum"
+
+#~ msgid "Time only"
+#~ msgstr "Bara tid"
+
+#~ msgid "Date and time"
+#~ msgstr "Datum och tid"
+
+#~ msgid "Category"
+#~ msgstr "Kategori"
+
+#~ msgid "Only one category will be shown even if multiple existing."
+#~ msgstr "Bara en kategori kommer att visas även om det finns flera."
+
+#~ msgid "Show blog post category"
+#~ msgstr "Visa kategori"
+
+#~ msgid "Blog post display settings"
+#~ msgstr "Visningsinställningar för blogginlägg"
+
+#~ msgid "Show post author"
+#~ msgstr "Visa författare"
+
+#~ msgid "Show author's profile picture"
+#~ msgstr "Visa bild på författare"
+
+#~ msgid "Show post tags"
+#~ msgstr "Visa taggar"
+
+#~ msgid "Show post categories"
+#~ msgstr "Visa kategorier"
+
+#~ msgid "Horizontal position"
+#~ msgstr "Horisontell positionering"
+
+#~ msgid "left"
+#~ msgstr "vänster"
+
+#~ msgid "Blog"
+#~ msgstr "Blogg"
+
+#~ msgid "Archives"
+#~ msgstr "Arkiv"
+
+#~ msgid "my-first-custom-pos"
+#~ msgstr "min-forsta-post-typ"
+
+#~ msgid "henriks-post-typdaw"
+#~ msgstr "henriks-post-typ"
+
+#~ msgid "Set to -1 to disable depth limit"
+#~ msgstr "Sätt till -1 för att inaktivera djup"
+
+#~ msgid "Show hero search on front page"
+#~ msgstr "Visa sök-ruta i heron på startsidan"
+
+#~ msgid "Label text"
+#~ msgstr "Märkning"
+
+#~ msgid "Placeholder text"
+#~ msgstr "Platshållare"
+
+#~ msgid "Button text"
+#~ msgstr "Knapptext"
+
+#~ msgid "archive"
+#~ msgstr "archive"
+
+#~ msgid "collapsed"
+#~ msgstr "infälld"
