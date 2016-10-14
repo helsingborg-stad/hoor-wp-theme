@@ -22,15 +22,17 @@ $posts = get_posts($getPostsArgs);
 
 <div class="<?php echo implode(' ', apply_filters('Modularity/Module/Classes', array('box', 'box-panel'), $module->post_type, $args)); ?>">
     <h2 class="box-title"><?php echo $module->post_title; ?></h2>
-    <?php if (!empty($module->introductory_text)): ?>
+    <?php if (!empty($module->introductory_text) || empty($posts)): ?>
         <div class="box-content">
             <?php echo wpautop($module->introductory_text) ?>
+        <?php if(empty($posts)) : ?>
+                <p><?php _e('There are no announcements right now.') ?></p>
+            <?php endif; ?>
         </div>
     <?php endif ?>
+    <?php if(!empty($posts)) : ?>
     <ul class="box__list">
-        <?php
-        if (count($posts) > 0) :
-        foreach ($posts as $post) :
+        <?php foreach ($posts as $post) :
             $title = apply_filters('the_title', $post->post_title);
             $published = get_the_date('Y-m-d', $post);
             $custom = get_post_custom($post->ID);
@@ -56,6 +58,7 @@ $posts = get_posts($getPostsArgs);
                     <?php if ($unpubDate): ?><span class="box__date"><strong>Tas ner:</strong> <?php echo $unpubDate; ?></span><?php endif ?>
                 </div>
             </li>
-        <?php endforeach; endif; ?>
-    </ul>
+        <?php endforeach; ?>
+        </ul>
+    <?php endif; ?>
 </div>
