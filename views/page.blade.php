@@ -16,8 +16,10 @@
         <div class="{{ $contentGridSize }} grid-print-12" id="readspeaker-read">
 
             @if (is_active_sidebar('content-area-top'))
-                <div class="grid sidebar-content-area sidebar-content-area-top">
-                    <?php dynamic_sidebar('content-area-top'); ?>
+                <div class="sidebar-content-area sidebar-content-area-top">
+                    <div class="grid">
+                        <?php dynamic_sidebar('content-area-top'); ?>
+                    </div>
                 </div>
             @endif
 
@@ -28,8 +30,10 @@
             @endwhile
 
             @if (is_active_sidebar('content-area'))
-                <div class="grid sidebar-content-area sidebar-content-area-bottom">
-                    <?php dynamic_sidebar('content-area'); ?>
+                <div class="sidebar-content-area sidebar-content-area-bottom">
+                    <div class="grid">
+                        <?php dynamic_sidebar('content-area'); ?>
+                    </div>
                 </div>
             @endif
 

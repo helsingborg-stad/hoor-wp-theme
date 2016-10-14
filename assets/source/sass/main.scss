@@ -75,7 +75,9 @@
 
 @media #{$screen-md-up} {
 
-  .main-container article {
+  .page-child .main-container article,
+  .page-child .c-page-footer,
+  .page-child .sidebar-content-area {
     max-width: 36.875rem;
   }
 
@@ -127,6 +129,10 @@
 
 .hero {
     margin-top: $content-gutter * 2;
+}
+
+.hero + .main-container {
+    margin-top: $content-gutter;
 }
 
 
