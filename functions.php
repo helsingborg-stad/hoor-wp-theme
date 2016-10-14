@@ -62,7 +62,7 @@ function editor_buttons_before_init( $settings ) {
  * Remove unused buttons from TinyMCE toolbar
  */
 function hoor_tinymce_buttons($buttons) {
-    $remove = array('alignleft', 'aligncenter', 'alignright', 'wp_more');
+    $remove = array('alignleft', 'aligncenter', 'alignright');
     return array_diff($buttons,$remove);
 }
 add_filter('mce_buttons','hoor_tinymce_buttons');

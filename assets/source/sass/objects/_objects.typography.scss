@@ -4,9 +4,10 @@
   line-height: 1.6;
 }
 
-// Landing Pages
+// Landing Pages & 404 page
 
-.page-parent {
+.page-parent,
+.error404 {
 
   h1 {
     font-size: 3.125rem;
@@ -22,5 +23,22 @@
 
   .main-container article {
     max-width: 43.4375rem;
+  }
+}
+
+.error404 {
+  &__content {
+    margin: 0 auto;
+  }
+
+  &__headline {
+
+  }
+
+  &__error-code {
+    margin-top: $content-gutter;
+    display: block;
+    font-size: 1rem;
+    color: $color-gray-600;
   }
 }

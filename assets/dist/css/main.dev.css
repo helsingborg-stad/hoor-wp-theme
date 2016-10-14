@@ -641,18 +641,30 @@ textarea {
   font-size: 1.25rem;
   line-height: 1.6; }
 
-.page-parent h1 {
+.page-parent h1,
+.error404 h1 {
   font-size: 3.125rem;
   font-weight: 500;
   line-height: 1; }
 
-.page-parent .lead {
+.page-parent .lead,
+.error404 .lead {
   font-size: 1.375rem;
   line-height: 1.454545455;
   font-weight: 300; }
 
-.page-parent .main-container article {
+.page-parent .main-container article,
+.error404 .main-container article {
   max-width: 43.4375rem; }
+
+.error404__content {
+  margin: 0 auto; }
+
+.error404__error-code {
+  margin-top: 1.25rem;
+  display: block;
+  font-size: 1rem;
+  color: #808080; }
 
 .o-button {
   display: inline-block;

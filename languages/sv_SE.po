@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Municipio\n"
-"POT-Creation-Date: 2016-10-12 19:35+0200\n"
-"PO-Revision-Date: 2016-10-12 19:35+0200\n"
+"POT-Creation-Date: 2016-10-14 11:01+0200\n"
+"PO-Revision-Date: 2016-10-14 11:01+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -39,6 +39,10 @@ msgstr "Visa mer"
 #: templates/module/modularity-mod-latest-news.php:56
 msgid "Read more"
 msgstr "Läs mer"
+
+#: views/404.blade.php:8
+msgid "Error 404"
+msgstr "Felmeddelande 404"
 
 #: views/partials/accessibility-menu.blade.php:2
 msgid "Listen to this page with ReadSpeaker"
