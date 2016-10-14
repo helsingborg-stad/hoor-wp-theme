@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Municipio\n"
-"POT-Creation-Date: 2016-10-14 14:31+0200\n"
-"PO-Revision-Date: 2016-10-14 14:32+0200\n"
+"POT-Creation-Date: 2016-10-14 15:29+0200\n"
+"PO-Revision-Date: 2016-10-14 15:30+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -30,7 +30,7 @@ msgstr "Hem"
 
 #: templates/module/modularity-mod-index.php:8
 msgid "Maybe this is what you are looking for?"
-msgstr "Kanske är detta vad du söker?"
+msgstr "Kanske är detta vad du letar efter?"
 
 #: templates/module/modularity-mod-latest-list.php:54
 msgid "Show more"
@@ -39,6 +39,10 @@ msgstr "Visa mer"
 #: templates/module/modularity-mod-latest-news.php:56
 msgid "Read more"
 msgstr "Läs mer"
+
+#: templates/module/modularity-mod-noticeboard.php:29
+msgid "There are no announcements right now."
+msgstr "Det finns inga meddelanden just nu."
 
 #: views/404.blade.php:8
 msgid "Error 404"
