@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Municipio\n"
-"POT-Creation-Date: 2016-10-14 11:01+0200\n"
-"PO-Revision-Date: 2016-10-14 11:01+0200\n"
+"POT-Creation-Date: 2016-10-14 14:31+0200\n"
+"PO-Revision-Date: 2016-10-14 14:32+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -56,7 +56,7 @@ msgstr "Brödsmulor"
 msgid "You are here:"
 msgstr "Du är här:"
 
-#: views/partials/page-footer.blade.php:12
+#: views/partials/page-footer.blade.php:7
 msgid "Share the page"
 msgstr "Dela sidan"
 
@@ -72,25 +72,32 @@ msgid "Share on"
 msgstr "Dela på"
 
 #: views/partials/social-share.blade.php:16
+msgid "Send page via e-mail"
+msgstr "Skicka sidan via e-post"
+
+#: views/partials/social-share.blade.php:16
 msgid "Email page"
 msgstr "E-post"
+
+#: views/partials/social-share.blade.php:20
+msgid "Print this page"
+msgstr "Skriv ut sidan"
 
 #: views/partials/social-share.blade.php:20
 msgid "Print page"
 msgstr "Skriv ut"
 
-#: views/partials/timestamps.blade.php:4
-msgid "Published by"
-msgstr "Publicerad av"
-
-#: views/partials/timestamps.blade.php:30
-#: views/partials/timestamps.blade.php:51
+#: views/partials/timestamps.blade.php:7 views/partials/timestamps.blade.php:28
 msgid "Published"
 msgstr "Publicerad"
 
-#: views/partials/timestamps.blade.php:39
+#: views/partials/timestamps.blade.php:16
 msgid "Last updated"
 msgstr "Senast uppdaterad"
+
+#: views/partials/timestamps.blade.php:39
+msgid "Published by"
+msgstr "Publicerad av"
 
 #: views/templates/master.blade.php:17
 msgid "Jump to the main menu"
