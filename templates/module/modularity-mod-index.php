@@ -5,7 +5,7 @@
     $columnClass = !empty(get_field('index_columns', $module->ID)) ? get_field('index_columns', $module->ID) : 'grid-md-6';
 ?>
 
-<h2 class="modularity-mod-index__headline"><?php _e('Maybe this is what you are looking for?', 'municipio'); ?></h2>
+<h2 class="modularity-mod-index__headline"><?php _e('Maybe this is what you are looking for?', 'hoor'); ?></h2>
 
 <div class="grid" data-equal-container>
     <?php
