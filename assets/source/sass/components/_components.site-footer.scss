@@ -1,10 +1,10 @@
 .main-footer {
+  position: relative;
   padding-top: 2rem;
   padding-bottom: 2rem;
   border-top: 1px solid $color-gray-300;
   background: $color-gray-100;
   font-size: $font-size-smaller;
-  position: relative;
 
   // Show shadow when HTML background is visisble
   @media #{$screen-md-up} {
@@ -17,9 +17,8 @@
     padding-bottom: 0;
     border-top: 1px solid $color-gray-300;
     background: transparent;
-
+ 
     // TODO We need a better solution for this
-
     .sidebar-footer-area > div:not(:nth-child(2)) {
       display: none;
     }
@@ -43,8 +42,93 @@
 
 .sidebar-footer-area > div:not(:last-child) {
   border-right: 1px solid $color-gray-300;
-
   @media print {
     border-right: none;
+  }
+}
+
+// WordPress menu
+.menu-social-links-container {
+  .menu-item {
+    a {
+      position: relative;
+      padding-left: 1.75rem;
+
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        display: block;
+        width: 1.25rem;
+        height: 1.25rem;
+        border-radius: 100%;
+        background-position: 50% 50%;
+        background-size: .75rem .75rem;
+        background-repeat: no-repeat;
+        content: "";
+        transform: translateY(-50%);
+        transition: background .3s ease-in-out;
+      }
+    }
+
+    // Facebook
+    &--facebook a {
+      &::before {
+        background-color: $color-facebook;
+        background-image: url(../images/icons/facebook.svg);
+      }
+
+      &:hover,
+      &:focus {
+        &::before {
+          background-color: darken($color-facebook, 25%);
+        }
+      }
+    }
+
+    // Twitter
+    &--twitter a {
+      &::before {
+        background-color: $color-twitter;
+        background-image: url(../images/icons/twitter.svg);
+      }
+
+      &:hover,
+      &:focus {
+        &::before {
+          background-color: darken($color-twitter, 25%);
+        }
+      }
+    }
+
+    // Youtube
+    &--youtube a {
+      &::before {
+        background-color: $color-youtube;
+        background-image: url(../images/icons/youtube.svg);
+      }
+
+      &:hover,
+      &:focus {
+        &::before {
+          background-color: darken($color-youtube, 25%);
+        }
+      }
+    }
+
+    // Instagram
+    &--instagram a {
+      &::before {
+        background-color: $color-instagram;
+        background-image: url(../images/icons/instagram.svg);
+      }
+
+      &:hover,
+      &:focus {
+        &::before {
+          background-color: darken($color-instagram, 25%);
+        }
+      }
+    }
   }
 }

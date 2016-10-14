@@ -2107,12 +2107,12 @@ html:not(.no-flexbox) [data-equal-container] > [data-equal-item] {
                 justify-content: center; } }
 
 .main-footer {
+  position: relative;
   padding-top: 2rem;
   padding-bottom: 2rem;
   border-top: 1px solid #e3e3e3;
   background: #f4f4f4;
-  font-size: 0.8125rem;
-  position: relative; }
+  font-size: 0.8125rem; }
   @media (min-width: 769px) {
     .main-footer {
       border-bottom: 1px solid #e3e3e3;
@@ -2141,6 +2141,54 @@ html:not(.no-flexbox) [data-equal-container] > [data-equal-item] {
   @media print {
     .sidebar-footer-area > div:not(:last-child) {
       border-right: none; } }
+
+.menu-social-links-container .menu-item a {
+  position: relative;
+  padding-left: 1.75rem; }
+  .menu-social-links-container .menu-item a::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 100%;
+    background-position: 50% 50%;
+    background-size: .75rem .75rem;
+    background-repeat: no-repeat;
+    content: "";
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    -webkit-transition: background .3s ease-in-out;
+            transition: background .3s ease-in-out; }
+
+.menu-social-links-container .menu-item--facebook a::before {
+  background-color: #3a579a;
+  background-image: url(../images/icons/facebook.svg); }
+
+.menu-social-links-container .menu-item--facebook a:hover::before, .menu-social-links-container .menu-item--facebook a:focus::before {
+  background-color: #17233d; }
+
+.menu-social-links-container .menu-item--twitter a::before {
+  background-color: #4fabf0;
+  background-image: url(../images/icons/twitter.svg); }
+
+.menu-social-links-container .menu-item--twitter a:hover::before, .menu-social-links-container .menu-item--twitter a:focus::before {
+  background-color: #0f6bb0; }
+
+.menu-social-links-container .menu-item--youtube a::before {
+  background-color: #cd201f;
+  background-image: url(../images/icons/youtube.svg); }
+
+.menu-social-links-container .menu-item--youtube a:hover::before, .menu-social-links-container .menu-item--youtube a:focus::before {
+  background-color: #5e0f0e; }
+
+.menu-social-links-container .menu-item--instagram a::before {
+  background-color: #405de6;
+  background-image: url(../images/icons/instagram.svg); }
+
+.menu-social-links-container .menu-item--instagram a:hover::before, .menu-social-links-container .menu-item--instagram a:focus::before {
+  background-color: #132a93; }
 
 /**
  * Forms................Component-level form styling.
