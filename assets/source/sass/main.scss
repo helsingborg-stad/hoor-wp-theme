@@ -31,7 +31,6 @@
 @import "objects/objects.grid-flexbox";
 @import "objects/objects.embed";
 @import "objects/objects.icons";
-@import "objects/objects.notice";
 @import "objects/objects.tooltip";
 
 @import "components/share/_share";
@@ -62,6 +61,7 @@
 @import "components/modularity/modularity.script";
 @import "components/modularity/modularity.contact";
 @import "components/modularity/modularity.inheritpost";
+@import "components/modularity/modularity.notice";
 
 @import "components/navigation/primary";
 @import "components/navigation/help";
