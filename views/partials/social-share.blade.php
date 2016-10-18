@@ -9,7 +9,7 @@
         </a>
     </li>
     <li class="c-share__list-item">
-        <a class="c-share__link c-share__link--linkedin" data-action="share-popup" href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{ rawurlencode(get_the_permalink()) }}&amp;title={{ rawurlencode(get_the_title()) }}&amp;summary={{ get_the_excerpt() }}&amp;source={{ rawurlencode(get_bloginfo('site_name')) }}" data-tooltip="{{ __('Share on', 'municipio') }} Linkedin">@include('partials.icon', ['name' => 'linkedin'])<span class="visually-hidden">{{ __('Share on', 'municipio') }} </span>Linkedin
+        <a class="c-share__link c-share__link--linkedin" data-action="share-popup" href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{ rawurlencode(get_the_permalink()) }}&amp;title={{ rawurlencode(get_the_title()) }}&amp;summary={{ rawurlencode(get_the_excerpt()) }}&amp;source={{ rawurlencode(get_bloginfo('site_name')) }}" data-tooltip="{{ __('Share on', 'municipio') }} Linkedin">@include('partials.icon', ['name' => 'linkedin'])<span class="visually-hidden">{{ __('Share on', 'municipio') }} </span>Linkedin
         </a>
     </li>
     <li class="c-share__list-item">
@@ -17,7 +17,7 @@
         </a>
     </li>
     <li class="c-share__list-item c-share__list--print">
-        <a class="c-share__link c-share__link--print" href="#" onclick="window.print();return false; data-tooltip="{{ __('Print this page', 'hoor') }}">@include('partials.icon', ['name' => 'print']){{ __('Print page', 'hoor') }}
+        <a class="c-share__link c-share__link--print" href="#" onclick="window.print();return false;" data-tooltip="{{ __('Print this page', 'hoor') }}">@include('partials.icon', ['name' => 'print']){{ __('Print page', 'hoor') }}
         </a>
     </li>
 </ul>
