@@ -1,29 +1,29 @@
 .modularity-mod-noticeboard {
-  .box-content {
-    padding: 1rem;
-    word-wrap: break-word;
-
-    p {
-      font-size: $font-size-medium;
-    }
-
-    p:only-of-type {
-      margin: 0;
-    }
-
-    p:last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  .box__date {
-    display: block;
-    text-decoration: none;
-    font-size: $font-size-smaller;
-    padding: 0;
-  }
-
   .box {
+
+    &-content {
+      padding: 1rem;
+      word-wrap: break-word;
+
+      p {
+        font-size: $font-size-medium;
+      }
+
+      p:only-of-type {
+        margin: 0;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__date {
+      display: block;
+      text-decoration: none;
+      font-size: $font-size-smaller;
+      padding: 0;
+    }
 
     &__title {
       padding: 1rem;
