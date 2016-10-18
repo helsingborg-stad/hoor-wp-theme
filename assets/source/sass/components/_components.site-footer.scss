@@ -5,6 +5,7 @@
   border-top: 1px solid $color-gray-300;
   background: $color-gray-100;
   font-size: $font-size-smaller;
+  flex: none;
 
   // Show shadow when HTML background is visisble
   @media #{$screen-md-up} {
