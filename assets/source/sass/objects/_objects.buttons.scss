@@ -9,6 +9,9 @@
   white-space: nowrap;
   transition: all .15s ease-in-out;
 
+  border: 0;
+  cursor: pointer;
+
   &:hover,
   &:focus {
     background: darken($color-action, 6);

@@ -1,0 +1,123 @@
+.notice {
+  margin-bottom: $content-gutter;
+  background-color: $color-gray-400;
+  background-repeat: no-repeat;
+  line-height: 1.5;
+
+  @media #{$screen-below-md} {
+    padding: 1rem;
+    background-position: 1rem 1rem;
+    background-size: 1.5rem 1.5rem;
+  }
+
+  @media #{$screen-md-up} {
+    padding: 1rem 1rem 1rem 4.5rem;
+    background-position: 1rem 50%;
+    background-size: 2.5rem 2.5rem;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 1rem;
+
+    @media #{$screen-below-md} {
+      background-repeat: no-repeat;
+      background-position: 0 50%;
+      background-size: 16px 16px;
+      padding-left: 1.25rem;
+     }
+  }
+
+  &__description {
+    margin: 0;
+    font-size: 1em;
+  }
+
+  &.notice-lg {
+    font-size: $font-size-large;
+  }
+
+  &.notice-md {
+    font-size: $font-size-base;
+  }
+
+  &.notice-sm {
+    font-size: $font-size-small;
+  }
+
+  &.success {
+   background-color: $color-success-bg;
+   color: $color-success-text;
+
+   @media #{$screen-md-up} {
+     background-image: url(../images/icons/check.svg);
+   }
+
+   @media #{$screen-below-md} {
+      .notice__title {
+        background-image: url(../images/icons/check.svg);
+      }
+    }
+  }
+
+  &.info {
+    background-color: $color-info-bg;
+    color: $color-info-text;
+
+    @media #{$screen-md-up} {
+      background-image: url(../images/icons/informative.svg);
+    }
+
+    @media #{$screen-below-md} {
+       .notice__title {
+          background-image: url(../images/icons/informative.svg);
+      }
+    }
+  }
+
+  &.warning {
+    background-color: $color-warning-bg;
+    color: $color-warning-text;
+
+    @media #{$screen-md-up} {
+      background-image: url(../images/icons/warning.svg);
+    }
+
+    @media #{$screen-below-md} {
+       .notice__title {
+          background-image: url(../images/icons/warning.svg);
+      }
+    }
+  }
+
+  &.danger {
+    background-color: $color-error-bg;
+    color: $color-error-text;
+
+    @media #{$screen-md-up} {
+      background-image: url(../images/icons/warning.svg);
+    }
+
+    @media #{$screen-below-md} {
+       .notice__title {
+          background-image: url(../images/icons/warning.svg);
+      }
+    }
+  }
+
+  // TODO Doesn't exist yet
+  &.error {
+    background-color: $color-danger-bg;
+    color: $color-danger-text;
+
+    @media #{$screen-md-up} {
+      background-image: url(../images/icons/warning.svg);
+    }
+
+    @media #{$screen-below-md} {
+       .notice__title {
+          background-image: url(../images/icons/warning.svg);
+      }
+    }
+  }
+}
