@@ -13,11 +13,11 @@
         </a>
     </li>
     <li class="c-share__list-item">
-        <a class="c-share__link c-share__link--mail" href="mailto:?&amp;subject={{ rawurlencode(get_the_title() . ' — ' .  get_bloginfo('site_name')) }}&amp;body={{ rawurlencode(get_the_permalink()) }}" data-tooltip="{{ __('Send page via e-mail', 'hoor') }}">@include('partials.icon', ['name' => 'email']){{ __('Email page', 'hoor') }}
+        <a class="c-share__link c-share__link--mail" href="mailto:?&amp;subject={{ rawurlencode(get_the_title() . ' — ' .  get_bloginfo('site_name')) }}&amp;body={{ rawurlencode(get_the_permalink()) }}" data-tooltip="<?php _e('Send page via e-mail', 'hoor'); ?>">@include('partials.icon', ['name' => 'email'])<?php _e('Email page', 'hoor'); ?>
         </a>
     </li>
     <li class="c-share__list-item c-share__list--print">
-        <a class="c-share__link c-share__link--print" href="#" onclick="window.print();return false;" data-tooltip="{{ __('Print this page', 'hoor') }}">@include('partials.icon', ['name' => 'print']){{ __('Print page', 'hoor') }}
+        <a class="c-share__link c-share__link--print" href="#" onclick="window.print();return false;" data-tooltip="<?php _e('Print this page', 'hoor'); ?>">@include('partials.icon', ['name' => 'print'])<?php _e('Print this page', 'hoor'); ?>
         </a>
     </li>
 </ul>

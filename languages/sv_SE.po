@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Municipio\n"
-"POT-Creation-Date: 2016-10-19 12:26+0200\n"
-"PO-Revision-Date: 2016-10-19 12:26+0200\n"
+"POT-Creation-Date: 2016-10-19 17:27+0200\n"
+"PO-Revision-Date: 2016-10-19 17:27+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -52,7 +52,7 @@ msgstr "Filstorlek"
 msgid "File type"
 msgstr "Filtyp"
 
-#: templates/module/modularity-mod-index.php:8
+#: templates/module/modularity-mod-index.php:9
 msgid "Maybe this is what you are looking for?"
 msgstr "Kanske är detta vad du letar efter?"
 
@@ -77,7 +77,7 @@ msgstr "Inga inlägg att visa"
 msgid "Error 404"
 msgstr "Felmeddelande 404"
 
-#: views/front-page.blade.php:12
+#: views/front-page.blade.php:37
 msgid "Popular searches"
 msgstr "Populära sökningar"
 
@@ -131,6 +131,18 @@ msgstr "Du är här:"
 msgid "Found no matching results on your search."
 msgstr "Hittade inga matchande resultat på din sökning."
 
+#: views/partials/social-share.blade.php:16
+msgid "Send page via e-mail"
+msgstr "Skicka sidan via e-post"
+
+#: views/partials/social-share.blade.php:16
+msgid "Email page"
+msgstr "E-post"
+
+#: views/partials/social-share.blade.php:20
+msgid "Print this page"
+msgstr "Skriv ut sidan"
+
 #: views/partials/timestamps.blade.php:7 views/partials/timestamps.blade.php:28
 msgid "Published"
 msgstr "Publicerad"
@@ -161,15 +173,6 @@ msgstr "Whitespace AB"
 
 #~ msgid "Share on"
 #~ msgstr "Dela på"
-
-#~ msgid "Send page via e-mail"
-#~ msgstr "Skicka sidan via e-post"
-
-#~ msgid "Email page"
-#~ msgstr "E-post"
-
-#~ msgid "Print this page"
-#~ msgstr "Skriv ut sidan"
 
 #~ msgid "Print page"
 #~ msgstr "Skriv ut"
