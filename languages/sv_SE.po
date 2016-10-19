@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Municipio\n"
-"POT-Creation-Date: 2016-10-18 12:56+0200\n"
-"PO-Revision-Date: 2016-10-18 12:56+0200\n"
+"POT-Creation-Date: 2016-10-19 12:26+0200\n"
+"PO-Revision-Date: 2016-10-19 12:26+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -28,6 +28,22 @@ msgstr "Sök"
 msgid "Home"
 msgstr "Hem"
 
+#: library/Widget/Contact.php:11
+msgid "Contact"
+msgstr "Kontakt"
+
+#: library/Widget/Contact.php:13
+msgid "Displays the contact information given."
+msgstr "Visar den angivna kontaktinformationen"
+
+#: templates/module/modularity-mod-contact/modularity-mod-contact-cards.php:91
+msgid "Postal address"
+msgstr "Postadress"
+
+#: templates/module/modularity-mod-contact/modularity-mod-contact-cards.php:100
+msgid "Visiting address"
+msgstr "Besöksadress"
+
 #: templates/module/modularity-mod-files.php:16
 msgid "Size"
 msgstr "Filstorlek"
@@ -52,9 +68,18 @@ msgstr "Läs mer"
 msgid "There are no announcements right now."
 msgstr "Det finns inga meddelanden just nu."
 
+#: templates/module/modularity-mod-posts/modularity-mod-posts-items.php:69
+#: templates/module/modularity-mod-posts/modularity-mod-posts-list.php:20
+msgid "No posts to show…"
+msgstr "Inga inlägg att visa"
+
 #: views/404.blade.php:8
 msgid "Error 404"
 msgstr "Felmeddelande 404"
+
+#: views/front-page.blade.php:12
+msgid "Popular searches"
+msgstr "Populära sökningar"
 
 #: views/partials/accessibility-menu.blade.php:2
 msgid "Listen to this page with ReadSpeaker"
@@ -114,11 +139,11 @@ msgstr "Publicerad"
 msgid "Last updated"
 msgstr "Senast uppdaterad"
 
-#: views/templates/master.blade.php:17
+#: views/templates/master.blade.php:14
 msgid "Jump to the main menu"
 msgstr "Hoppa till huvudmenyn"
 
-#: views/templates/master.blade.php:18
+#: views/templates/master.blade.php:15
 msgid "Jump to the main content"
 msgstr "Hoppa till innehåll"
 
@@ -1164,12 +1189,6 @@ msgstr "Whitespace AB"
 
 #~ msgid "Article"
 #~ msgstr "Artikel"
-
-#~ msgid "Contact"
-#~ msgstr "Kontakt"
-
-#~ msgid "Displays the contact information given."
-#~ msgstr "Visar den angivna kontaktinformationen"
 
 #~ msgid "From"
 #~ msgstr "Från"
