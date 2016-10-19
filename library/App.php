@@ -16,5 +16,14 @@ class App
          * Admin
          */
         new \Hoor\Admin\UI\Translations();
+
+        /**
+         * Widgets
+         */
+        new \Hoor\Widget\Contact();
+
+        add_action('widgets_init', function () {
+            unregister_widget('\Municipio\Widget\Contact');
+        });
     }
 }
