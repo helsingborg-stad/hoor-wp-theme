@@ -2019,6 +2019,12 @@ html:not(.no-flexbox) [data-equal-container] > [data-equal-item] {
           transition: background .3s ease-in-out; }
   .c-search-form__button:hover, .c-search-form__button:focus {
     background: #c6c6c6; }
+  .c-search-form__button--primary {
+    font-weight: 400;
+    color: #fff;
+    background: #0872b9; }
+    .c-search-form__button--primary:hover, .c-search-form__button--primary:focus {
+      background: #0766a5; }
   @media (max-width: 469px) {
     .c-search-form__button {
       display: none; } }
@@ -2072,6 +2078,25 @@ html:not(.no-flexbox) [data-equal-container] > [data-equal-item] {
     @media (min-width: 769px) {
       .search-result__url {
         display: block; } }
+
+.search-popular {
+  padding: 1rem 0;
+  border-bottom: 1px solid #f1f1f1;
+  font-size: 0.8125rem;
+  background: #fff;
+  text-align: center; }
+  .search-popular__title {
+    display: inline;
+    font-weight: 700; }
+  .search-popular__list {
+    display: inline;
+    padding: 0;
+    list-style: none; }
+  .search-popular__list-item {
+    display: inline; }
+    .search-popular__list-item:not(:last-child)::after {
+      content: ", ";
+      speak: none; }
 
 .site-header {
   background: #fff;
@@ -2560,8 +2585,7 @@ html:not(.no-flexbox) [data-equal-container] > [data-equal-item] {
         margin-right: .25rem; } }
 
 .page-hero {
-  overflow: hidden;
-  box-shadow: inset 0 6px 9px -6px rgba(34, 34, 34, 0.4), inset 0 -6px 9px -6px rgba(34, 34, 34, 0.4); }
+  overflow: hidden; }
   .page-hero img {
     width: 100%;
     height: auto; }
@@ -3307,3 +3331,26 @@ body {
   .post .box.box-news time {
     font-size: 0.8125rem;
     color: #636363; }
+
+.container-front {
+  padding: 2.5rem 0; }
+  .container-front .box {
+    margin-bottom: 0; }
+  .container-front--alt {
+    border-bottom: 1px solid #E8E8E8;
+    background: #F9F9F9; }
+
+.hero-image {
+  width: 100%;
+  height: 328px;
+  background-size: cover;
+  background-position: 50% 50%;
+  position: relative; }
+
+.hero-search {
+  position: absolute;
+  width: 36.875rem;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }

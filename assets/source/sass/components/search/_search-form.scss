@@ -57,6 +57,18 @@
       background: $color-gray-400;
     }
 
+    &--primary {
+      font-weight: 400;
+      color: $color-light;
+      background: $color-action;
+
+      &:hover,
+      &:focus {
+        background: darken($color-action, 4);
+      }
+    }
+
+
     @media #{$screen-below-sm} {
       display: none; // Hide button on smaller screens. Make assumtion that the user has an on screen keyboard.
     }
