@@ -7,8 +7,8 @@ class Contact extends \WP_Widget
     public function __construct()
     {
         parent::__construct(
-            'minicipio-contact',
-            __('Contact', 'municipio'),
+            'municipio-contact',
+            'Höör Kontakt',
             array(
                 "description" => __('Displays the contact information given.', 'municipio')
             )
