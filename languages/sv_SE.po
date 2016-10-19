@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Municipio\n"
-"POT-Creation-Date: 2016-10-14 15:29+0200\n"
-"PO-Revision-Date: 2016-10-14 15:30+0200\n"
+"POT-Creation-Date: 2016-10-18 12:56+0200\n"
+"PO-Revision-Date: 2016-10-18 12:56+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -28,6 +28,14 @@ msgstr "Sök"
 msgid "Home"
 msgstr "Hem"
 
+#: templates/module/modularity-mod-files.php:16
+msgid "Size"
+msgstr "Filstorlek"
+
+#: templates/module/modularity-mod-files.php:17
+msgid "File type"
+msgstr "Filtyp"
+
 #: templates/module/modularity-mod-index.php:8
 msgid "Maybe this is what you are looking for?"
 msgstr "Kanske är detta vad du letar efter?"
@@ -52,6 +60,40 @@ msgstr "Felmeddelande 404"
 msgid "Listen to this page with ReadSpeaker"
 msgstr "Lyssna på sidan med ReadSpeaker"
 
+#: views/partials/blog/post-categories.blade.php:2
+msgid "Categories"
+msgstr "Kategorier"
+
+#: views/partials/blog/post-categories.blade.php:6
+msgid "No categories"
+msgstr "Inga kategorier"
+
+#: views/partials/blog/post-footer.blade.php:5
+#: views/partials/page-footer.blade.php:7
+msgid "Share the page"
+msgstr "Dela sidan"
+
+#: views/partials/blog/post-footer.blade.php:13
+#: views/partials/timestamps.blade.php:39
+msgid "Published by"
+msgstr "Publicerad av"
+
+#: views/partials/blog/post-header.blade.php:42
+msgid "Comments"
+msgstr "Kommentarer"
+
+#: views/partials/blog/post-tags.blade.php:2
+msgid "Tags"
+msgstr "Taggar"
+
+#: views/partials/blog/post-tags.blade.php:8
+msgid "No tags"
+msgstr "Inga taggar"
+
+#: views/partials/blog/taxonomy-filters.blade.php:10
+msgid "Show all"
+msgstr "Visa alla"
+
 #: views/partials/breadcrumbs.blade.php:1
 msgid "breadcrumbs"
 msgstr "Brödsmulor"
@@ -60,36 +102,9 @@ msgstr "Brödsmulor"
 msgid "You are here:"
 msgstr "Du är här:"
 
-#: views/partials/page-footer.blade.php:7
-msgid "Share the page"
-msgstr "Dela sidan"
-
 #: views/partials/search/google.blade.php:31
 msgid "Found no matching results on your search."
 msgstr "Hittade inga matchande resultat på din sökning."
-
-#: views/partials/social-share.blade.php:3
-#: views/partials/social-share.blade.php:4
-#: views/partials/social-share.blade.php:8
-#: views/partials/social-share.blade.php:12
-msgid "Share on"
-msgstr "Dela på"
-
-#: views/partials/social-share.blade.php:16
-msgid "Send page via e-mail"
-msgstr "Skicka sidan via e-post"
-
-#: views/partials/social-share.blade.php:16
-msgid "Email page"
-msgstr "E-post"
-
-#: views/partials/social-share.blade.php:20
-msgid "Print this page"
-msgstr "Skriv ut sidan"
-
-#: views/partials/social-share.blade.php:20
-msgid "Print page"
-msgstr "Skriv ut"
 
 #: views/partials/timestamps.blade.php:7 views/partials/timestamps.blade.php:28
 msgid "Published"
@@ -98,10 +113,6 @@ msgstr "Publicerad"
 #: views/partials/timestamps.blade.php:16
 msgid "Last updated"
 msgstr "Senast uppdaterad"
-
-#: views/partials/timestamps.blade.php:39
-msgid "Published by"
-msgstr "Publicerad av"
 
 #: views/templates/master.blade.php:17
 msgid "Jump to the main menu"
@@ -122,6 +133,21 @@ msgstr "Barntema för Municipio"
 #. Author of the plugin/theme
 msgid "Whitespace AB"
 msgstr "Whitespace AB"
+
+#~ msgid "Share on"
+#~ msgstr "Dela på"
+
+#~ msgid "Send page via e-mail"
+#~ msgstr "Skicka sidan via e-post"
+
+#~ msgid "Email page"
+#~ msgstr "E-post"
+
+#~ msgid "Print this page"
+#~ msgstr "Skriv ut sidan"
+
+#~ msgid "Print page"
+#~ msgstr "Skriv ut"
 
 #~ msgid "Display settings"
 #~ msgstr "Visningsinställningar"
@@ -423,9 +449,6 @@ msgstr "Whitespace AB"
 #~ msgid "Trackbacks"
 #~ msgstr "Trackbacks"
 
-#~ msgid "Comments"
-#~ msgstr "Kommentarer"
-
 #~ msgid "Page Attributes"
 #~ msgstr "Sidattribut"
 
@@ -456,12 +479,6 @@ msgstr "Whitespace AB"
 
 #~ msgid "Type of taxonomy"
 #~ msgstr "Typ av taxonomy"
-
-#~ msgid "Tags"
-#~ msgstr "Taggar"
-
-#~ msgid "Categories"
-#~ msgstr "Kategorier"
 
 #~ msgid "Connect to post type(s)"
 #~ msgstr "Koppla till inläggstyp(er)"
@@ -1168,15 +1185,6 @@ msgstr "Whitespace AB"
 
 #~ msgid "Filter"
 #~ msgstr "Filtrera"
-
-#~ msgid "No categories"
-#~ msgstr "Inga kategorier"
-
-#~ msgid "No tags"
-#~ msgstr "Inga taggar"
-
-#~ msgid "Show all"
-#~ msgstr "Visa alla"
 
 #~ msgid "Menu"
 #~ msgstr "Meny"
