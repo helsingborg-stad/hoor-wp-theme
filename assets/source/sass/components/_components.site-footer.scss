@@ -20,7 +20,7 @@
     background: transparent;
  
     // TODO We need a better solution for this
-    .sidebar-footer-area > div:not(:nth-child(2)) {
+    .sidebar-footer-area > div:not(:nth-child(2)):not(:nth-child(3)) {
       display: none;
     }
   }

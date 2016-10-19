@@ -2116,7 +2116,7 @@ html:not(.no-flexbox) [data-equal-container] > [data-equal-item] {
       padding-bottom: 0;
       border-top: 1px solid #e3e3e3;
       background: transparent; }
-      .main-footer .sidebar-footer-area > div:not(:nth-child(2)) {
+      .main-footer .sidebar-footer-area > div:not(:nth-child(2)):not(:nth-child(3)) {
         display: none; } }
   .main-footer ul {
     margin: 0;
