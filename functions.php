@@ -113,8 +113,8 @@ add_action( 'widgets_init', 'hoor_unregister_widgets' );
 
 
 register_nav_menus( array(
-	'footer_links' => 'Footer Navigation',
-	'footer_social_links' => 'Social Links',
+    'footer_links' => 'Footer Navigation',
+    'footer_social_links' => 'Social Links',
 ) );
 
 add_action( 'after_setup_theme', 'hoor_theme_setup' );

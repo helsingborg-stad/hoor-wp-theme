@@ -3,7 +3,7 @@
     {!! ReadSpeakerHelper_playButton() !!}
 
     @if (function_exists('ReadSpeakerHelper_player'))
-    	{!! ReadSpeakerHelper_player() !!}
-	@endif
+        {!! ReadSpeakerHelper_player() !!}
+    @endif
 </div>
 @endif

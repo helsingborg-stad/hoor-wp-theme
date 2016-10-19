@@ -1,9 +1,9 @@
 <header class="post-header">
 
     @if (is_single())
-    	<h1>{{ the_title() }}</h1>
+        <h1>{{ the_title() }}</h1>
     @else
-    	<h2><a href="{{ the_permalink() }}">{{ the_title() }}</a></h2>
+        <h2><a href="{{ the_permalink() }}">{{ the_title() }}</a></h2>
     @endif
 
     <div class="article-meta">
