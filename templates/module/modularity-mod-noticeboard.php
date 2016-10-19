@@ -20,10 +20,10 @@ $posts = get_posts($getPostsArgs);
 ?>
 
 
-<div class="<?php echo implode(' ', apply_filters('Modularity/Module/Classes', array('box', 'box-panel'), $module->post_type, $args)); ?>">
-    <h2 class="box__title"><?php echo $module->post_title; ?></h2>
+<div class="<?php echo implode(' ', apply_filters('Modularity/Module/Classes', array('box', 'box--panel'), $module->post_type, $args)); ?>">
+    <h2 class="box__headline"><?php echo $module->post_title; ?></h2>
     <?php if (!empty($module->introductory_text) || empty($posts)): ?>
-        <div class="box-content">
+        <div class="box__content">
             <?php echo wpautop($module->introductory_text) ?>
         <?php if(empty($posts)) : ?>
                 <p><?php _e('There are no announcements right now.') ?></p>
@@ -49,13 +49,17 @@ $posts = get_posts($getPostsArgs);
         ?>
             <li class="box__list-item">
                 <?php if ($link): ?>
-                    <a href="<?php echo $link ?>" class="box__list-link"><?php echo $title; ?> <?php echo $meetingDate; ?></a>
+                    <a href="<?php echo $link ?>" class="box__link box__link--arrow"><?php echo $title; ?> <?php echo $meetingDate; ?></a>
                 <?php else: ?>
                     <?php echo $title; ?> <?php echo $meetingDate; ?>
                 <?php endif ?>
-                <div>
-                    <span class="box__date"><strong>Anslaget:</strong> <time datetime="<?php echo $published ?>"><?php echo $published ?></time></span>
-                    <?php if ($unpubDate): ?><span class="box__date"><strong>Tas ner:</strong> <?php echo $unpubDate; ?></span><?php endif ?>
+                <div class="box__list-description">
+                    <p class="box__list-meta">
+                        <strong class="box__label">Anslaget:</strong> <time class="box__date" datetime="<?php echo $published ?>"><?php echo $published ?></time>,
+                        <?php if ($unpubDate): ?>
+                        <strong  class="box__label">Tas ner:</strong> <time class="box__date" datetime="<?php echo $unpubDate ?>"><?php echo $unpubDate ?></time>
+                        <?php endif ?>
+                    </p>
                 </div>
             </li>
         <?php endforeach; ?>

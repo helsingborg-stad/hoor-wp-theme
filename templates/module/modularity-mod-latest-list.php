@@ -1,6 +1,6 @@
 <?php if (count($posts) > 0): ?>
     <div class="<?php echo implode(' ', apply_filters('Modularity/Module/Classes', array('box', 'box--inline'), $module->post_type, $args)); ?>">
-        <h4 class="box__headline"><?php echo $module->post_title; ?></h4>
+        <h2 class="box__headline"><?php echo $module->post_title; ?></h2>
         <ul class="box__list">
             <?php
             foreach ($posts as $post) :
@@ -18,7 +18,7 @@
                 }
             ?>
                 <li class="box__list-item" data-meta-sort-by="<?php echo $meta_data; ?>">
-                    <a class="box__list-link" href="<?php echo get_permalink($post->ID); ?>" data-meta-sort-by="<?php echo $meta_data; ?>">
+                    <a class="box__link" href="<?php echo get_permalink($post->ID); ?>" data-meta-sort-by="<?php echo $meta_data; ?>">
                         <?php if ($fields->show_title) : ?>
                             <span class="box__title"><?php echo apply_filters('the_title', $post->post_title); ?></span>
                         <?php endif; ?>
