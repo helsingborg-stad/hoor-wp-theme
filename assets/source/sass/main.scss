@@ -32,6 +32,7 @@
 @import "objects/objects.embed";
 @import "objects/objects.icons";
 @import "objects/objects.tooltip";
+@import "objects/objects.comment-form";
 
 @import "components/share/_share";
 @import "components/search/search-form";
@@ -49,12 +50,8 @@
 @import "components/components.hero";
 
 @import "components/components.box";
-@import "components/modularity/modularity.posts";
 @import "components/modularity/modularity.iframe";
-@import "components/modularity/modularity.text";
 @import "components/modularity/modularity.files";
-@import "components/modularity/modularity.noticeboard";
-@import "components/modularity/modularity.mainnews";
 @import "components/modularity/modularity.inlaylist";
 @import "components/modularity/modularity.index";
 @import "components/modularity/modularity.latest";
@@ -171,5 +168,101 @@ body {
     display: block;
     height: 0px;
     visibility: hidden;
+  }
+}
+
+.article-meta {
+  margin-bottom: $content-gutter;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    float: left;
+  }
+}
+
+.post-categories,
+.post-tags {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline;
+
+  li {
+    display: inline;
+    font-size: $font-size-smaller;
+
+    &:not(:last-child)::after {
+      content: ", ";
+    }
+  }
+
+  &__wrapper {
+  }
+
+  &__title {
+    margin: 0;
+    display: inline;
+    font-size: $font-size-smaller;
+    font-weight: 700;
+  }
+}
+
+
+
+.post .box.box-news {
+  list-style: none;
+  display: block;
+  box-shadow: none;
+  border-radius: 0;
+  text-decoration: none;
+  margin: 0;
+  border-bottom: 1px solid $color-gray-200;
+  padding: 1rem 0;
+  display: table;
+  width: 100%;
+
+  h3 {
+    line-height: 1;
+    margin-bottom: .25rem;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: 400;
+  }
+
+  p {
+    font-size: $font-size-small;
+    color: $color-dark;
+    font-size: $font-size-small;
+    margin: 0;
+  }
+
+  .box-image-container {
+
+    img {
+      margin-bottom: 1rem;
+    }
+
+    @media #{$screen-sm-up} {
+      display: table-cell;
+      vertical-align: top;
+      width: 170px;
+
+      img {
+        margin: 0;
+        display: block;
+        padding-right: 1.25rem;
+      }
+    }
+  }
+
+
+  time {
+    font-size: $font-size-smaller;
+    color: $color-gray-700;
   }
 }
