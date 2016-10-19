@@ -5,7 +5,9 @@
     $columnClass = !empty(get_field('index_columns', $module->ID)) ? get_field('index_columns', $module->ID) : 'grid-md-6';
 ?>
 
-<h2 class="box__headline box__headline--inline"><?php _e('Maybe this is what you are looking for?', 'hoor'); ?></h2>
+<?php if (is_front_page()): ?>
+    <h2 class="box__headline box__headline--inline"><?php _e('Maybe this is what you are looking for?', 'hoor'); ?></h2>
+<?php endif ?>
 
 <div class="grid" data-equal-container>
     <?php
