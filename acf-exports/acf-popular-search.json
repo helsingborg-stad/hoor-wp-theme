@@ -7,7 +7,7 @@
                 "label": "Search links",
                 "name": "search_links",
                 "type": "repeater",
-                "instructions": "",
+                "instructions": "<a href=\"https:\/\/analytics.google.com\/analytics\/web\/#report\/content-site-search-search-terms\/\" target=\"_blank\">Se popul\u00e4ra s\u00f6kningar i Google Analytics<\/a>.",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
