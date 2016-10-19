@@ -2,8 +2,6 @@
 
 @section('content')
 
-@include('partials.hero-image')
-
 @include('partials.breadcrumbs')
 
 @include('partials.hero')
