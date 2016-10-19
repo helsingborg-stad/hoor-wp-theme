@@ -73,7 +73,7 @@
     }
 
     // Facebook
-    &--facebook a {
+    a[href*="facebook.com"] {
       &::before {
         background-color: $color-facebook;
         background-image: url(../images/icons/facebook.svg);
@@ -88,7 +88,7 @@
     }
 
     // Twitter
-    &--twitter a {
+    a[href*="twitter.com"] {
       &::before {
         background-color: $color-twitter;
         background-image: url(../images/icons/twitter.svg);
@@ -103,7 +103,7 @@
     }
 
     // Youtube
-    &--youtube a {
+    a[href*="youtube.com"] {
       &::before {
         background-color: $color-youtube;
         background-image: url(../images/icons/youtube.svg);
@@ -118,7 +118,7 @@
     }
 
     // Instagram
-    &--instagram a {
+    a[href*="instagram.com"] {
       &::before {
         background-color: $color-instagram;
         background-image: url(../images/icons/instagram.svg);

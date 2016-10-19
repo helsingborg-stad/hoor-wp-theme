@@ -1,18 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="7px" height="12px" viewBox="0 0 7 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 40.1 (33804) - http://www.bohemiancoding.com/sketch -->
-    <title>Chevron_left</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Documentation" transform="translate(-452.000000, -3718.000000)" fill="#FFFFFF">
-            <g id="Next" transform="translate(439.000000, 3708.000000)">
-                <g id="chevron-left" transform="translate(13.000000, 10.000000)">
-                    <g id="Chevron_left">
-                        <path d="M6.452,0.316955839 C6.898,0.752955839 6.933,1.35995584 6.452,1.89295584 L2.705,5.80095584 L6.452,9.70895584 C6.933,10.2419558 6.898,10.8499558 6.452,11.2829558 C6.007,11.7189558 5.255,11.6909558 4.837,11.2829558 C4.419,10.8769558 0.335,6.58795584 0.335,6.58795584 C0.112,6.37095584 0,6.08595584 0,5.80095584 C0,5.51595584 0.112,5.23095584 0.335,5.01195584 C0.335,5.01195584 4.419,0.724955839 4.837,0.316955839 C5.255,-0.0920441611 6.007,-0.119044161 6.452,0.316955839 L6.452,0.316955839 Z" id="Shape" transform="translate(3.399874, 5.799771) rotate(-180.000000) translate(-3.399874, -5.799771) "></path>
-                    </g>
-                </g>
-            </g>
-        </g>
-    </g>
-</svg>
+<svg width="7" height="12" viewBox="0 0 7 12" xmlns="http://www.w3.org/2000/svg"><title>Chevron_left</title><path d="M.348 11.283c-.446-.436-.481-1.043 0-1.576l3.747-3.908L.348 1.89C-.133 1.358-.098.75.348.317c.445-.436 1.197-.408 1.615 0 .418.406 4.502 4.695 4.502 4.695a1.095 1.095 0 0 1 0 1.576s-4.084 4.287-4.502 4.695c-.418.409-1.17.436-1.615 0z" fill="#FFF" fill-rule="evenodd"/></svg>

@@ -2155,32 +2155,32 @@ html:not(.no-flexbox) [data-equal-container] > [data-equal-item] {
     -webkit-transition: background .3s ease-in-out;
             transition: background .3s ease-in-out; }
 
-.menu-social-links-container .menu-item--facebook a::before {
+.menu-social-links-container .menu-item a[href*="facebook.com"]::before {
   background-color: #3a579a;
   background-image: url(../images/icons/facebook.svg); }
 
-.menu-social-links-container .menu-item--facebook a:hover::before, .menu-social-links-container .menu-item--facebook a:focus::before {
+.menu-social-links-container .menu-item a[href*="facebook.com"]:hover::before, .menu-social-links-container .menu-item a[href*="facebook.com"]:focus::before {
   background-color: #17233d; }
 
-.menu-social-links-container .menu-item--twitter a::before {
+.menu-social-links-container .menu-item a[href*="twitter.com"]::before {
   background-color: #4fabf0;
   background-image: url(../images/icons/twitter.svg); }
 
-.menu-social-links-container .menu-item--twitter a:hover::before, .menu-social-links-container .menu-item--twitter a:focus::before {
+.menu-social-links-container .menu-item a[href*="twitter.com"]:hover::before, .menu-social-links-container .menu-item a[href*="twitter.com"]:focus::before {
   background-color: #0f6bb0; }
 
-.menu-social-links-container .menu-item--youtube a::before {
+.menu-social-links-container .menu-item a[href*="youtube.com"]::before {
   background-color: #cd201f;
   background-image: url(../images/icons/youtube.svg); }
 
-.menu-social-links-container .menu-item--youtube a:hover::before, .menu-social-links-container .menu-item--youtube a:focus::before {
+.menu-social-links-container .menu-item a[href*="youtube.com"]:hover::before, .menu-social-links-container .menu-item a[href*="youtube.com"]:focus::before {
   background-color: #5e0f0e; }
 
-.menu-social-links-container .menu-item--instagram a::before {
+.menu-social-links-container .menu-item a[href*="instagram.com"]::before {
   background-color: #405de6;
   background-image: url(../images/icons/instagram.svg); }
 
-.menu-social-links-container .menu-item--instagram a:hover::before, .menu-social-links-container .menu-item--instagram a:focus::before {
+.menu-social-links-container .menu-item a[href*="instagram.com"]:hover::before, .menu-social-links-container .menu-item a[href*="instagram.com"]:focus::before {
   background-color: #132a93; }
 
 /**
