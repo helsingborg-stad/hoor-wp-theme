@@ -73,11 +73,11 @@ function hoor_tinymce_second_buttons($buttons) {
 }
 add_filter('mce_buttons_2','hoor_tinymce_second_buttons');
 
-function wpa_45815($arr){
-    $arr['block_formats'] = 'Paragraph=p;Heading 2=h2;Heading 3=h3;Heading 4=h4;Heading 5=h5;Heading 6=h6';
+function hoor_tinymce_elements($arr){
+    $arr['block_formats'] = 'Paragraph=p;Heading 2=h2;Heading 3=h3;';
     return $arr;
 }
-add_filter('tiny_mce_before_init', 'wpa_45815');
+add_filter('tiny_mce_before_init', 'hoor_tinymce_elements');
 
 
 // Register editor stylesheet for the theme.
