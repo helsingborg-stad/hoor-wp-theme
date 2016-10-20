@@ -60,9 +60,11 @@ class Navigation
                 echo '<li class="c-breadcrumbs__list-item" itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
                         <span class="c-breadcrumbs__current" itemprop="name" title="' . $title . '">' . $title . '</span><meta itemprop="position" content="' . $int . '" />
                       </li>';
+
             } else {
+                $title = is_home() ? single_post_title(): get_the_title();
                 echo '<li class="c-breadcrumbs__list-item" itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
-                        <span class="c-breadcrumbs__current" itemprop="name">' . get_the_title() . '</span><meta itemprop="position" content="' . $int . '" />
+                        <span class="c-breadcrumbs__current" itemprop="name">' . $title . '</span><meta itemprop="position" content="' . $int . '" />
                       </li>';
             }
             echo '</ol>';
