@@ -21,9 +21,11 @@ class App
          * Widgets
          */
         add_action('widgets_init', function () {
-            // Duplicate the Contact widget in Municipio so we can have our own template.
-            // A bit hackish since we can't deregister the original widget.
+            // Duplicate the Contact widget from Municipio so we can have our own template.
             register_widget('\Hoor\Widget\Contact');
-        });
+            // Remove the original widget.
+            unregister_widget('\Municipio\Widget\Contact');
+
+        }, 11);
     }
 }

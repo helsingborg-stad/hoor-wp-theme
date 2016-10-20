@@ -6,8 +6,11 @@ class Contact extends \WP_Widget
 {
     public function __construct()
     {
+        // The misspelled widget name "minicipio-contact" is from the original
+        // \Municipio\Widget\Contact and we keep it to be able to use the same
+        // ACF fields.
         parent::__construct(
-            'municipio-contact',
+            'minicipio-contact',
             'Höör Kontakt',
             array(
                 "description" => __('Displays the contact information given.', 'municipio')
@@ -26,6 +29,7 @@ class Contact extends \WP_Widget
         extract($args);
 
         $contacts = get_field('contacts', 'widget_' . $this->id);
+        // Use our own template.
         include HOOR_PATH . '/templates/widget/contact.php';
     }
 
