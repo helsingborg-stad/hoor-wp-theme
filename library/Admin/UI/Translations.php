@@ -12,14 +12,14 @@ class Translations
         'Inläggsnamn' => 'Nyhetsnamn',
         'Inlägg på startsidan' => 'Nyheter på startsidan',
         'Inläggssida: %s' => 'Nyhetssida: %s',
-        'Inlägg sparat.' => 'Nyheter sparat.',
-        'Inlägg uppdaterat.' => 'Nyheter uppdaterat.',
-        'Inlägg publicerat.' => 'Nyheter publicerat.',
+        //'Inlägg sparat.' => 'Nyheter sparat.', // Used for all post types apperently
+        //'Inlägg uppdaterat.' => 'Nyhet uppdaterat.', // Used for all post types apperently
+        //'Inlägg publicerat.' => 'Nyhet publicerat.', // Used for all post types apperently
         'Inläggssida' => 'Nyhetssida',
         'Inläggstitel' => 'Nyhetstitel',
         'Skapa ett blogginlägg' => 'Skapa en nyhet',
         'inlägg' => 'nyheter',
-        'Visa inlägg' => 'Visa nyheter',
+        //'Visa inlägg' => 'Visa nyheter', // Used for all post types apperently
 
 
     );
