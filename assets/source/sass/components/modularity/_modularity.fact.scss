@@ -1,0 +1,73 @@
+.box__fact {
+  box-shadow: none;
+  border-radius: 0;
+
+  a {
+    color: $color-dark;
+
+    &:hover,
+    &:focus {
+      color: $color-dark;
+    }
+  }
+
+  &--panel {
+    background: $color-light-gray;
+  }
+
+  .box__headline {
+    font-size: $font-size-medium;
+    background: $color-gray;
+    border-bottom: 0;
+  }
+
+  .box__content {
+    font-size: $font-size-small;
+  }
+
+  // Red box
+  &--red {
+    background: $color-light-red;
+
+    .box__headline {
+      background: darken($color-light-red, 16);
+    }
+  }
+
+  // Green box
+  &--green {
+    background: $color-light-green;
+
+    .box__headline {
+      background: darken($color-light-green, 16);
+    }
+  }
+
+  // Blue box
+  &--blue {
+    background: $color-light-blue;
+
+    .box__headline {
+      background: darken($color-light-blue, 16);
+    }
+  }
+
+  // Orange box
+  &--orange {
+    background: $color-light-orange;
+
+    .box__headline {
+      background: darken($color-light-orange, 16);
+    }
+  }
+
+  // Gray box
+  &--gray {
+    background: $color-light-gray;
+
+    .box__headline {
+      background: darken($color-light-gray, 16);
+    }
+  }
+}
+

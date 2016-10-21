@@ -1,9 +1,8 @@
-<h1>FAKTARUTA</h1>
-<div class="<?php echo implode(' ', apply_filters('Modularity/Module/Classes', array('box', 'box-panel'), $module->post_type, $args)); ?>">
+<div class="<?php echo implode(' ', apply_filters('Modularity/Module/Classes', array('box', 'box--panel', 'box__fact', 'box__fact--orange'), $module->post_type, $args)); ?>">
     <?php if (!$module->hideTitle && !empty($module->post_title)) { ?>
-        <h4 class="box-title"><?php echo apply_filters('the_title', $module->post_title); ?></h4>
+        <h2 class="box__headline"><?php echo apply_filters('the_title', $module->post_title); ?></h2>
     <?php } ?>
-    <div class="box-content">
+    <div class="box__content">
         <?php echo apply_filters('the_content', $module->post_content); ?>
     </div>
 </div>
