@@ -31,6 +31,7 @@ class Navigation
     /**
      * Outputs the html for the breadcrumb
      * @return void
+     * TODO: Refactor this mess.
      */
     public static function outputBreadcrumbs()
     {
@@ -61,8 +62,25 @@ class Navigation
                         <span class="c-breadcrumbs__current" itemprop="name" title="' . $title . '">' . $title . '</span><meta itemprop="position" content="' . $int . '" />
                       </li>';
 
+            } elseif (!is_home() && !is_archive() && get_post_type_archive_link($post->post_type)) {
+                $title = get_the_title();
+                $post_type_object = get_post_type_object($post->post_type);
+                $archive_title = $post_type_object->label;
+
+                echo '<li class="c-breadcrumbs__list-item" itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+                       <a class="c-breadcrumbs__link" itemprop="item" href="' . get_post_type_archive_link($post->post_type) . '" title="' . $archive_title . '">
+                        <span itemprop="name">' . $archive_title . '</span><meta itemprop="position" content="' . $int++ . '"></a></li>';
+                echo '<li class="c-breadcrumbs__list-item" itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+                        <span class="c-breadcrumbs__current" itemprop="name" title="' . $title . '">' . $title . '</span><meta itemprop="position" content="' . $int . '" />
+                      </li>';
             } else {
-                $title = is_home() ? single_post_title(): get_the_title();
+                if (is_home()) {
+                    $title = single_post_title();
+                } elseif (is_archive()) {
+                    $title = post_type_archive_title();
+                } else {
+                    $title = get_the_title();
+                }
                 echo '<li class="c-breadcrumbs__list-item" itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
                         <span class="c-breadcrumbs__current" itemprop="name">' . $title . '</span><meta itemprop="position" content="' . $int . '" />
                       </li>';
