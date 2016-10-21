@@ -42,11 +42,6 @@ function editor_buttons_before_init( $settings ) {
 
     $style_formats = array(
         array(
-            'title' => 'Preamble',
-            'selector' => 'p',
-            'classes' => 'lead'
-        ),
-        array(
             'title' => 'Pull quote',
             'selector' => 'blockquote',
             'classes' => 'o-pull-quote'
