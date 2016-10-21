@@ -2,7 +2,7 @@
   @include visually-hidden;
 }
 
-.visually-hidden--focusable:active,
-.visually-hidden--focusable:focus {
+.visually-hidden--focusable,
+.visually-hidden--focusable {
   @include visually-hidden--focusable;
 }
