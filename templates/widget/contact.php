@@ -1,26 +1,30 @@
 <?php echo $before_widget; ?>
 <?php foreach ($contacts as $contact) : ?>
-<ul>
-<h1>Höör contact widget</h1>
-    <?php if (isset($contact['contact_person']) && !empty($contact['contact_person'])) : ?>
-        <li class="contanct-person"><?php echo $contact['contact_person']; ?></li>
-    <?php endif; ?>
+<div class="site-footer__contact">
 
-    <?php if (isset($contact['contact_company']) && !empty($contact['contact_company'])) : ?>
-        <li class="contanct-company"><?php echo $contact['contact_company']; ?></li>
+    <?php if (isset($contact['address']) && !empty($contact['address'])) : ?>
+        <h2 class="footer-title"><?php _e('Contact details', 'hoor'); ?></h2>
+        <div class="contact-details">
+           <?php echo $contact['address']; ?>
+        </div>
     <?php endif; ?>
 
     <?php if (isset($contact['phone_numer']) && !empty($contact['phone_numer'])) : ?>
-        <li class="contanct-phone"><?php echo $contact['phone_numer']; ?></li>
+        <h2 class="footer-title"><?php _e('Phone and Email', 'hoor'); ?></h2>
+
+        <div class="site-footer__contact-phone">
+            <h3><?php _e('Phone number', 'hoor'); ?></h3>
+            <p class="phone"><?php echo $contact['phone_numer']; ?></p>
+        </div>
     <?php endif; ?>
 
     <?php if (isset($contact['email']) && !empty($contact['email'])) : ?>
-        <li class="contanct-email"><?php echo $contact['email']; ?></li>
+        <div class="site-footer__contact-email">
+        <h3><?php _e('Email address', 'hoor'); ?></h3>
+        <a  class="email" href="mailto:<?php echo $contact['email']; ?>"><?php echo $contact['email']; ?></a>
+        </div>
     <?php endif; ?>
 
-    <?php if (isset($contact['address']) && !empty($contact['address'])) : ?>
-        <li class="contanct-address"><?php echo $contact['address']; ?></li>
-    <?php endif; ?>
-</ul>
+</div>
 <?php endforeach; ?>
 <?php echo $after_widget; ?>
