@@ -1,5 +1,7 @@
 <div class="<?php echo implode(' ', apply_filters('Modularity/Module/Classes', array('box', 'box--panel'), $module->post_type, $args)); ?>">
+    <?php if (!$module->hideTitle) : ?>
     <h2 class="box__headline"><?php echo $module->post_title; ?></h2>
+    <?php endif; ?>
     <ul class="box__list">
         <?php
         if (count($posts) > 0) :
@@ -21,4 +23,8 @@
         </li>
         <?php endif; ?>
     </ul>
+
+    <?php if (isset($fields->archive_link) && $fields->archive_link) : ?>
+    <div class="box__footer"><a class="o-button o-button--primary" href="<?php echo get_post_type_archive_link($fields->posts_data_post_type); ?>"><?php _e('Show more', 'modularity'); ?></a></div>
+    <?php endif; ?>
 </div>
