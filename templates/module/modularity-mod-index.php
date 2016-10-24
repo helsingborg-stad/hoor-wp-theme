@@ -1,44 +1,39 @@
 <?php
     global $post;
     $items = get_field('index', $module->ID);
-
     $columnClass = !empty(get_field('index_columns', $module->ID)) ? get_field('index_columns', $module->ID) : 'grid-md-6';
 ?>
-
-<?php if (!is_front_page()): ?>
-    <h2 class="box__headline box__headline--inline"><?php _e('Maybe this is what you are looking for?', 'hoor'); ?></h2>
-<?php endif ?>
-
 <div class="grid" data-equal-container>
-    <?php
+    <?php if (!$module->hideTitle && !empty($module->post_title)) : ?>
+    <div class="grid-xs-12">
+        <h2 class="box__headline box__headline--inline"><?php echo $module->post_title; ?></h2>
+    </div>
+    <?php endif; ?>
 
+    <?php
     /* Get image size by column count */
     switch ($columnClass) {
         case "grid-md-12":    //1-col
-            $image_dimensions = array(1220,686);
+            $image_dimensions = array(1200,900);
             break;
         case "grid-md-6":    //2-col
-            $image_dimensions = array(590,332);
+            $image_dimensions = array(800,600);
             break;
         default:
-            $image_dimensions = array(275,155);
+            $image_dimensions = array(400,300);
     }
-
     /* Get image */
     foreach ($items as $item) : $post = $item['page'];
         if (!is_null($item['page'])) {
             setup_postdata($post);
         }
-
         $permalink = ($item['link_type'] == 'internal') ? get_permalink() : $item['link_url'];
-
         $thumbnail_image = null;
-
         if ($item['image_display'] == 'custom' || $item['link_type'] == 'external') {
             $thumbnail_image = wp_get_attachment_image_src(
                 $item['custom_image']['ID'],
                 apply_filters('Modularity/index/image',
-                    $image_dimensions,
+                    municipio_to_aspect_ratio('16:9', $image_dimensions),
                     $args
                 )
             );
@@ -46,7 +41,7 @@
             $thumbnail_image = wp_get_attachment_image_src(
                 get_post_thumbnail_id($item['page']->ID),
                 apply_filters('Modularity/index/image',
-                    $image_dimensions,
+                    municipio_to_aspect_ratio('16:9', $image_dimensions),
                     $args
                 )
             );
