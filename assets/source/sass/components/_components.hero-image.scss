@@ -8,13 +8,14 @@
   background-size: cover;
   align-items: center;
   justify-content: center;
+  background-color: $color-light-blue;
 
   @media #{$screen-sm-up} {
     height: 14rem;
   }
 
   @media #{$screen-md-up} {
-    height: 20rem;
+    height: 18rem;
   }
 
   @media #{$screen-md-up} {
@@ -25,7 +26,7 @@
       width: 140px;
       height: 170px;
       background: $color-light;
-      box-shadow: 0 0 1.5rem 0 rgba($color-dark, .6);
+      box-shadow: 0 0 1.5rem 0 rgba($color-dark, .2);
       content: "";
       transform: rotate(-45deg);
     }

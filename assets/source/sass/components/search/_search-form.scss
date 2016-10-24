@@ -109,5 +109,9 @@
   padding: 0 1.25rem;
   max-width: 36.875rem;
   flex-grow: 1;
+
+  .c-search-form__group {
+    box-shadow: 0 0 1.5rem 0 rgba($color-dark, .2);
+  }
 }
 
