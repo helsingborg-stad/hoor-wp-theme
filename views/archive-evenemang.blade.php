@@ -32,15 +32,30 @@
 
             <div class="grid">
                 @while(have_posts())
+                    <h1>Evenemang</h1>
                     {!! the_post() !!}
 
-                    @if (in_array($template, array('full', 'compressed', 'collapsed')))
-                        <div class="grid-xs-12 post">
-                            @include('partials.blog.type.post-' . $template)
+                    <?php global $post; ?>
+                    <div class="grid">
+                        <div class="grid-xs-12">
+                            <div class="post post-single">
+                                <h2><a href="{{ the_permalink() }}">{{ the_title() }}</a></h2>
+                                <h3>{{ get_field(date) }}</h3>
+                                <h3>{{ get_field(place) }}</h3>
+
+                                <article class="clearfix">
+                                    @if (isset(get_extended($post->post_content)['main']) && strlen(get_extended($post->post_content)['main']) > 0 && isset(get_extended($post->post_content)['extended']) && strlen(get_extended($post->post_content)['extended']) > 0)
+
+                                        {!! apply_filters('the_lead', get_extended($post->post_content)['main']) !!}
+                                        {!! apply_filters('the_content', get_extended($post->post_content)['extended']) !!}
+
+                                    @else
+                                        {!! the_content() !!}
+                                    @endif
+                                </article>
+                            </div>
                         </div>
-                    @else
-                        @include('partials.blog.type.post-' . $template)
-                    @endif
+                    </div>
                 @endwhile
             </div>
 
@@ -52,12 +67,14 @@
 
             <div class="grid">
                 <div class="grid-sm-12 text-center">
+                    <h2 class="visually-hidden" id="pagination"><?php _e('Pagination') ?></h2>
                     {!!
                         paginate_links(array(
-                            'type' => 'list'
+                            'type' => 'list',
+                            'next_text' => '<span class="next__label">Nästa<span class="visually-hidden"> sida</span></span>',
+                            'prev_text' => '<span class="previous__label">Föregående</span>',
                         ))
                     !!}
-                </div>
             </div>
         </div>
 

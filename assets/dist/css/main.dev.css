@@ -2384,7 +2384,7 @@ html:not(.no-flexbox) [data-equal-container] > [data-equal-item] {
   border-top: 1px solid #c6c6c6;
   border-bottom: none; }
 
-.pagination {
+ul.page-numbers {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2400,19 +2400,20 @@ html:not(.no-flexbox) [data-equal-container] > [data-equal-item] {
       -ms-flex-pack: center;
           justify-content: center; }
   @media (max-width: 769px) {
-    .pagination {
+    ul.page-numbers {
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
               justify-content: space-between; } }
-  .pagination li {
+  ul.page-numbers li {
     margin: 0 .25rem; }
-    .pagination li:first-child {
+    ul.page-numbers li:first-child {
       margin-left: 0; }
-    .pagination li:last-child {
+    ul.page-numbers li:last-child {
       margin-right: 0; }
-  .pagination .page,
-  .pagination .next,
-  .pagination .previous {
+  ul.page-numbers a.page-numbers,
+  ul.page-numbers span.page-numbers,
+  ul.page-numbers .next,
+  ul.page-numbers .previous {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2430,52 +2431,52 @@ html:not(.no-flexbox) [data-equal-container] > [data-equal-item] {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
-  .pagination .page:hover, .pagination .page:focus {
+  ul.page-numbers a.page-numbers:hover, ul.page-numbers a.page-numbers:focus {
     background-color: #065a92;
     color: #fff; }
-  .pagination .next,
-  .pagination .previous {
+  ul.page-numbers .next,
+  ul.page-numbers .previous {
     background-color: #0872b9;
     background-size: 7px 12px;
     background-repeat: no-repeat;
     color: #fff; }
-    .pagination .next:hover, .pagination .next:focus,
-    .pagination .previous:hover,
-    .pagination .previous:focus {
+    ul.page-numbers .next:hover, ul.page-numbers .next:focus,
+    ul.page-numbers .previous:hover,
+    ul.page-numbers .previous:focus {
       background-color: #065a92;
       color: #fff; }
-  .pagination .previous {
+  ul.page-numbers .previous {
     background-image: url(../images/icons/chevron-left.svg);
     background-position: calc(50% - 1px) 50%; }
     @media (max-width: 769px) {
-      .pagination .previous {
+      ul.page-numbers .previous {
         padding-left: 2rem;
         background-position: 10px 50%; } }
-    .pagination .previous__label {
+    ul.page-numbers .previous__label {
       display: none; }
       @media (max-width: 769px) {
-        .pagination .previous__label {
+        ul.page-numbers .previous__label {
           display: block; } }
-  .pagination .next {
+  ul.page-numbers .next {
     background-image: url(../images/icons/chevron-right.svg);
     background-position: calc(50% + 1px) 50%; }
     @media (max-width: 769px) {
-      .pagination .next {
+      ul.page-numbers .next {
         padding-right: 2rem;
         background-position: calc(100% - 10px) 50%; } }
-    .pagination .next__label {
+    ul.page-numbers .next__label {
       display: none; }
       @media (max-width: 769px) {
-        .pagination .next__label {
+        ul.page-numbers .next__label {
           display: block; } }
   @media (max-width: 769px) {
-    .pagination .page {
+    ul.page-numbers a.page-numbers, ul.page-numbers span.page-numbers {
       display: none; } }
-  .pagination .current {
+  ul.page-numbers span.current {
     border-color: #c6c6c6;
     background-color: #f4f4f4;
     color: #808080; }
-    .pagination .current:hover, .pagination .current:focus {
+    ul.page-numbers span.current:hover, ul.page-numbers span.current:focus {
       background-color: #f4f4f4;
       color: #808080; }
 
@@ -2722,6 +2723,44 @@ a.box {
   .box--panel .box__list-item {
     padding-right: 1rem;
     padding-left: .625rem; }
+
+.home .modularity-mod-inlaylist.grid-md-6 ul {
+  -webkit-column-count: 2;
+     -moz-column-count: 2;
+          column-count: 2;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px; }
+
+.home .modularity-mod-inlaylist .box {
+  box-shadow: none;
+  border-radius: 0; }
+
+.home .modularity-mod-inlaylist .box-title {
+  background: #f1f1f1;
+  font-size: 0.875rem; }
+
+.home .modularity-mod-inlaylist ul {
+  margin-top: .625rem; }
+
+.home .modularity-mod-inlaylist li {
+  margin-top: .25rem;
+  border: 0; }
+
+.home .modularity-mod-inlaylist a {
+  text-decoration: none;
+  color: #222;
+  padding: .25rem 1rem; }
+  .home .modularity-mod-inlaylist a .link-item {
+    padding-left: 1.25rem;
+    text-decoration: none;
+    background: url(../images/link-arrow.svg);
+    background-position: 0 3px;
+    background-size: 14px 14px;
+    background-repeat: no-repeat;
+    font-size: 0.875rem; }
+    .home .modularity-mod-inlaylist a .link-item:hover, .home .modularity-mod-inlaylist a .link-item:focus {
+      text-decoration: underline; }
 
 .modularity-mod-latest {
   margin-top: 2.5rem; }

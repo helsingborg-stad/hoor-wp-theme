@@ -54,12 +54,14 @@
 
             <div class="grid">
                 <div class="grid-sm-12 text-center">
+                    <h2 class="visually-hidden" id="pagination"><?php _e('Pagination') ?></h2>
                     {!!
                         paginate_links(array(
-                            'type' => 'list'
+                            'type' => 'list',
+                            'next_text' => '<span class="next__label">Nästa<span class="visually-hidden"> sida</span></span>',
+                            'prev_text' => '<span class="previous__label">Föregående</span>',
                         ))
                     !!}
-                </div>
             </div>
         </div>
 

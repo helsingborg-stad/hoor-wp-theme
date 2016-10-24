@@ -30,8 +30,8 @@ class Google extends \Municipio\Search\Google
             $this->currentIndex = sanitize_text_field($_GET['index']);
             $this->currentPage = (($this->currentIndex-1) / $this->resultsPerPage)+1;
         }
-
-        $markup[] = '<h2 class="visually-hidden" aria-labelledby="pagination"></h2><ul class="pagination" role="navigation" aria-labelledby="pagination">';
+        // Note: we are mathching the (ugly) wordpress pagination HTML here in order to not duplciate css.
+        $markup[] = '<h2 class="visually-hidden" id="pagination">' . __('Pagination', 'hoor') . '</h2><div class="pagination"><ul class="page-numbers" role="navigation" aria-labelledby="pagination">';
 
         // Get the previous page
         $previousPage = null;
@@ -58,11 +58,12 @@ class Google extends \Municipio\Search\Google
 
                 $current = null;
                 if ($thisIndex == $this->currentIndex) {
-                    $current = 'current';
+                    $markup[] = '<li><span class="page-numbers current">' . $i . '</span></li>';
                 }
-
-                $markup[] = '<li><a class="page ' . $current . '" href="?s=' . urlencode(stripslashes($this->keyword)) .
-                            '&amp;index=' . $thisIndex . '">' . $i . '</a></li>';
+                else {
+                    $markup[] = '<li><a class="page-numbers" href="?s=' . urlencode(stripslashes($this->keyword)) .
+                                '&amp;index=' . $thisIndex . '">' . $i . '</a></li>';
+                }
             }
         }
 

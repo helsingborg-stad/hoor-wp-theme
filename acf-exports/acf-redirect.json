@@ -1,0 +1,72 @@
+    {
+        "key": "group_58062ca699fef",
+        "title": "Omdirigering fr\u00e5n gamla till nya webbplatsen",
+        "fields": [
+            {
+                "key": "field_58062cbca21fc",
+                "label": "Har denna sida en motsvarande sida p\u00e5 nuvarande www.hoor.se?",
+                "name": "redirect_on",
+                "type": "select",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "Ja": "Ja",
+                    "Nej": "Nej"
+                },
+                "default_value": [],
+                "allow_null": 1,
+                "multiple": 0,
+                "ui": 0,
+                "ajax": 0,
+                "return_format": "value",
+                "placeholder": ""
+            },
+            {
+                "key": "field_58062d32a21fd",
+                "label": "URL\/webbsidel\u00e4nk p\u00e5 www.hoor.se",
+                "name": "redicrect_url",
+                "type": "url",
+                "instructions": "T.ex: <strong>http:\/\/www.hoor.se\/sv\/BUN\/Forskolor\/<\/strong>. Enklast \u00e4r att kopiera URL:en h\u00f6gst upp i webbl\u00e4sarf\u00f6nstret och sedan klistra in den h\u00e4r.",
+                "required": 1,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_58062cbca21fc",
+                            "operator": "==",
+                            "value": "Ja"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "page"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    }
