@@ -65,13 +65,13 @@ if (isset($info['image']) && !empty($info['image'])) {
 
 <div class="<?php echo isset($fields->columns) && !empty($fields->columns) ? $fields->columns : 'grid-md-12'; ?>">
     <div class="<?php echo implode(' ', apply_filters('Modularity/Module/Classes', array('box', 'box--panel', 'box--card'), $module->post_type, $args)); ?>" itemscope itemtype="http://schema.org/Person">
-        <h2 class="box__headline" itemprop="name"><?php echo $info['first_name']; ?> <?php echo $info['last_name']; ?></h2>
 
         <?php if ($image !== false) : ?>
         <img class="box__image" src="<?php echo $image[0]; ?>" alt="<?php echo $fields->first_name; ?> <?php echo $fields->last_name; ?>">
         <?php endif; ?>
 
         <div class="box__content">
+            <h2 class="box__title" itemprop="name"><?php echo $info['first_name']; ?> <?php echo $info['last_name']; ?></h2>
 
             <ul>
             <?php if ((isset($info['work_title']) && !empty($info['work_title'])) || (isset($info['administration_unit']) && !empty($info['administration_unit']))) : ?>
