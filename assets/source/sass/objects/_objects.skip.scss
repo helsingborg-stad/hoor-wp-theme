@@ -1,0 +1,14 @@
+.skip {
+
+  &:focus {
+    margin: 1rem;
+    padding: .5rem;
+    background: $color-action;
+    color: $color-light;
+    text-decoration: none;
+    position: absolute;
+    z-index: $level-top;
+    font-size: $font-size-small;
+    box-shadow: 0 0 .5rem 2px rgba($color-dark, .35);
+  }
+}

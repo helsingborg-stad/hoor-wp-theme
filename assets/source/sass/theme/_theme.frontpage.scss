@@ -1,0 +1,23 @@
+.container-front {
+  padding: $content-gutter * 2 0 $content-gutter;
+  overflow: hidden;
+
+  &--alt:not(:last-child) {
+    border-bottom: 1px solid #E8E8E8;
+    background: #F9F9F9;
+
+    &--alt:not(:first-child) {
+      border-top: 1px solid #E8E8E8;
+    }
+
+    &--alt:not(:last-child) {
+      border-bottom: 1px solid #E8E8E8;
+    }
+  }
+}
+
+.container {
+  .hero {
+    margin-top: 0;
+  }
+}
