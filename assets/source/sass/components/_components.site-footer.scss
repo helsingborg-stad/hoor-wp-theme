@@ -7,6 +7,11 @@
   font-size: $font-size-smaller;
   flex: none;
 
+
+  [class*="grid-"] {
+    margin-bottom: 1rem;
+  }
+
   // Show shadow when HTML background is visisble
   @media #{$screen-md-up} {
     border-bottom: 1px solid $color-gray-300;
@@ -42,7 +47,11 @@
 }
 
 .sidebar-footer-area > div:not(:last-child) {
-  border-right: 1px solid $color-gray-300;
+
+  @media #{$screen-lg-up} {
+    border-right: 1px solid $color-gray-300;
+  }
+
   @media print {
     border-right: none;
   }
@@ -131,5 +140,45 @@
         }
       }
     }
+  }
+}
+
+
+
+.site-footer__contact {
+
+  h3 {
+    margin: .5rem 0;
+    font-size: $font-size-smaller;
+    font-weight: 500;
+  }
+
+  p {
+    margin: 1px 0 1.5rem;
+  }
+
+  .contact-details {
+    h3 {
+      margin-bottom: 0;
+    }
+    p {
+      margin-bottom: 20px;
+    }
+  }
+
+  .phone {
+    padding-left: 1.25rem;
+    background-image: url(../images/icons/phone.svg);
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+    background-position: 0 50%;
+  }
+
+  .email {
+    padding-left: 1.25rem;
+    background-image: url(../images/icons/email-sign.svg);
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+    background-position: 0 50%;
   }
 }
