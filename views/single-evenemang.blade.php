@@ -47,8 +47,11 @@
                                   <span class="box__date-event-end--time"><?php echo date('H:i', $enddate); ?></span>
                                 </time>
                             <?php endif ?>
-
                         </div>
+
+                        <?php if ($place = get_field('event_place')): ?>
+                            <p><?php echo $place ?><p>
+                        <?php endif ?>
 
                         @if (isset(get_extended($post->post_content)['main']) && strlen(get_extended($post->post_content)['main']) > 0 && isset(get_extended($post->post_content)['extended']) && strlen(get_extended($post->post_content)['extended']) > 0)
 
