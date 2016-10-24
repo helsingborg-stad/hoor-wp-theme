@@ -1,9 +1,7 @@
 <div class="grid">
 <?php
 $contacts = $fields->contacts;
-
 foreach ($contacts as $contact) {
-
 $info = array(
     'image' => null,
     'first_name' => null,
@@ -16,7 +14,6 @@ $info = array(
     'visiting_address' => null,
     'opening_hours' => null
 );
-
 switch ($contact->acf_fc_layout) {
     case 'custom':
         $info = apply_filters('Modularity/mod-contacts/contact-info', array(
@@ -33,7 +30,6 @@ switch ($contact->acf_fc_layout) {
             'other'               => $contact->other
         ), $contact);
         break;
-
     case 'user':
         $info = apply_filters('Modularity/mod-contacts/contact-info', array(
             'image'               => null,
@@ -49,12 +45,11 @@ switch ($contact->acf_fc_layout) {
         ), $contact);
         break;
 }
-
 if (isset($info['image']) && !empty($info['image'])) {
     $image = wp_get_attachment_image_src(
         $info['image']->id,
         apply_filters('Modularity/image/contact',
-            array(590, 332),
+            municipio_to_aspect_ratio('16:9', array(400, 400)),
             $args
         )
     );
@@ -66,12 +61,16 @@ if (isset($info['image']) && !empty($info['image'])) {
 <div class="<?php echo isset($fields->columns) && !empty($fields->columns) ? $fields->columns : 'grid-md-12'; ?>">
     <div class="<?php echo implode(' ', apply_filters('Modularity/Module/Classes', array('box', 'box--panel', 'box--card'), $module->post_type, $args)); ?>" itemscope itemtype="http://schema.org/Person">
 
+        <?php if (!$module->hideTitle) : ?>
+            <h2 class="box__headline"><?php echo $module->post_title; ?></h2>
+        <?php endif; ?>
+
         <?php if ($image !== false) : ?>
-        <img class="box__image" src="<?php echo $image[0]; ?>" alt="<?php echo $fields->first_name; ?> <?php echo $fields->last_name; ?>">
+        <img class="box__image" src="<?php echo $image[0]; ?>" alt="<?php echo $info['first_name']; ?> <?php echo isset($info['last_name']) && !empty($info['last_name']) ? $info['last_name'] : ''; ?>">
         <?php endif; ?>
 
         <div class="box__content">
-            <h2 class="box__title" itemprop="name"><?php echo $info['first_name']; ?> <?php echo $info['last_name']; ?></h2>
+            <h3 itemprop="name"><?php echo $info['first_name']; ?> <?php echo isset($info['last_name']) && !empty($info['last_name']) ? $info['last_name'] : ''; ?></h3>
 
             <ul>
             <?php if ((isset($info['work_title']) && !empty($info['work_title'])) || (isset($info['administration_unit']) && !empty($info['administration_unit']))) : ?>
@@ -81,7 +80,7 @@ if (isset($info['image']) && !empty($info['image'])) {
             </li>
             <?php endif; ?>
             <?php if (isset($info['phone']) && !empty($info['phone'])) : ?><li><a itemprop="telephone" class="link-item" href="tel:<?php echo $info['phone']; ?>"><?php echo $info['phone']; ?></a></li><?php endif; ?>
-            <?php if (isset($info['email']) && !empty($info['email'])) : ?><li><a itemprop="email" class="link-item" href="mailto:<?php echo $info['email']; ?>"><?php echo $info['email']; ?></a></li><?php endif; ?>
+            <?php if (isset($info['email']) && !empty($info['email'])) : ?><li><a itemprop="email" class="link-item truncate" href="mailto:<?php echo $info['email']; ?>"><?php echo $info['email']; ?></a></li><?php endif; ?>
             <?php if (!empty($module->post_content)) : ?><li class="small description"><?php echo apply_filters('the_content', $module->post_content); ?></li><?php endif; ?>
             </ul>
 
