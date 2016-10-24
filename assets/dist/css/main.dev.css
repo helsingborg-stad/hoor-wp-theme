@@ -693,9 +693,9 @@ iframe {
     .o-button--primary:hover, .o-button--primary:focus {
       background: #07609c; }
   .o-button--secondary {
-    background-color: #4cc213; }
+    background-color: #33810d; }
     .o-button--secondary:hover, .o-button--secondary:focus {
-      background: #41a610; }
+      background: #2b6e0b; }
   .o-button--close {
     position: absolute;
     top: 1rem;
