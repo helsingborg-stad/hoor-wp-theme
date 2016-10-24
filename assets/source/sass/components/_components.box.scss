@@ -56,6 +56,11 @@ a.box {
   display: block;
   text-decoration: none;
 
+  &__footer {
+    border-top: 1px solid $color-gray-200;
+    padding: 1rem;
+  }
+
   &__headline {
     width: 100%;
     border-bottom: 1px solid $color-gray-200;
