@@ -4,7 +4,11 @@
 ?>
 
 <div class="<?php echo implode(' ', apply_filters('Modularity/Module/Classes', array('box', 'box--panel'), $module->post_type, $args)); ?>">
-    <h2 class="box__headline"><?php echo $module->post_title; ?></h2>
+
+    <?php if (!$module->hideTitle) : ?>
+        <h2 class="box__headline"><?php echo $module->post_title; ?></h2>
+    <?php endif; ?>
+
     <ul class="box__list">
         <?php foreach ($items as $item) : ?>
             <?php if ($item['type'] == 'external') : ?>

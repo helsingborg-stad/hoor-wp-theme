@@ -1,50 +1,51 @@
+// TODO We need a better solution for this.
 .home {
-
   .modularity-mod-inlaylist {
-
-    &.grid-md-6 {
-      ul {
-        column-count: 2;
-        column-gap: 20px;
-      }
-    }
-
     .box {
-      box-shadow: none;
       border-radius: 0;
-    }
+      background: $color-light;
+      box-shadow: none;
 
-    .box-title {
-      background: $color-gray-200;
-      font-size: $font-size-small;
-    }
+      &__headline {
+        background: #e5e5e5;
+        font-size: $font-size-small;
+      }
 
-    ul {
-      margin-top: .625rem;
-    }
+      &__list-item {
+        padding: .5rem 1rem;
+        border: 0;
+      }
 
-    li {
-      margin-top: .25rem;
-      border: 0;
-    }
-
-    a {
-      text-decoration: none;
-      color: $color-dark;
-      padding: .25rem 1rem;
-
-      .link-item {
+      &__link {
         padding-left: 1.25rem;
-        text-decoration: none;
         background: url(../images/link-arrow.svg);
         background-position: 0 3px;
         background-size: 14px 14px;
         background-repeat: no-repeat;
+        color: $color-dark;
+        text-decoration: none;
         font-size: $font-size-small;
 
         &:hover,
         &:focus {
           text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  // TODO We need a better solution for this. Temporary fix.
+  .grid-md-6.modularity-mod-inlaylist {
+
+    @media #{$screen-sm-up} {
+
+      .box__list {
+        display: flex;
+
+        flex-wrap: wrap;
+        &-item {
+          box-sizing: border-box;
+          flex: 1 0 50%;
         }
       }
     }
