@@ -13,11 +13,11 @@ class Sidebars
         // Set up a static counter to get the order for each.
         static $count = 0;
         $grid_classes = array(
-            'grid-lg-3 grid-xs-12', // First column classes
-            'grid-lg-2 grid-xs-6', // Second column classes
-            'grid-lg-2 grid-xs-6', // Third column classes
-            'grid-lg-2 grid-xs-6', // Fourth column classes
-            'grid-lg-3 grid-xs-6', // Fifth column classes
+            'grid-lg-3 grid-md-12 grid-sm-12', // First column classes
+            'grid-lg-2 grid-md-3 grid-sm-6', // Second column classes
+            'grid-lg-2 grid-md-3 grid-sm-6', // Third column classes
+            'grid-lg-2 grid-md-3 grid-sm-6', // Fourth column classes
+            'grid-lg-3 grid-md-3 grid-sm-6', // Fifth column classes
         );
 
         // Override the wrapper html from Municipio with our own classes.
