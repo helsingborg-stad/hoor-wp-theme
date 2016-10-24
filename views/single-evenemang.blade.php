@@ -31,8 +31,24 @@
 
                         @include('partials.accessibility-menu')
 
-                        <h1>{{ get_field(date) }}</h1>
-                        <h1>{{ get_field(place) }}</h1>
+                        <div class="box__date-event">
+                            <?php $startdate = strtotime(get_field('event_startdate', false, false)) ?>
+                                <time class="box__date-event" datetime="<?php echo date('Y-m-d\TH:i', $startdate); ?>">
+                                <span class="box__date-event-start--day"><?php echo date('d', $startdate); ?></span>
+                                <span class="box__date-event-start--month"><?php echo date_i18n('F', $startdate); ?></span>
+                                <span class="box__date-event-start--time"><?php echo date('H:i', $startdate); ?></span>
+                            </time>
+                            <?php if ($endate = get_field('event_enddate', false, false)): ?>
+                                -
+                                <?php $enddate = strtotime($endate) ?>
+                                <time class="box__date-event-end" datetime="<?php echo date('Y-m-d\TH:i', $enddate); ?>">
+                                  <span class="box__date-event-start--day"><?php echo date('d', $enddate); ?></span>
+                                  <span class="box__date-event-start--month"><?php echo date_i18n('F', $enddate); ?></span>
+                                  <span class="box__date-event-end--time"><?php echo date('H:i', $enddate); ?></span>
+                                </time>
+                            <?php endif ?>
+
+                        </div>
 
                         @if (isset(get_extended($post->post_content)['main']) && strlen(get_extended($post->post_content)['main']) > 0 && isset(get_extended($post->post_content)['extended']) && strlen(get_extended($post->post_content)['extended']) > 0)
 

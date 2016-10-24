@@ -1,10 +1,11 @@
 <?php
 // TODO: Cleanup/refactor template
+    $is_event = $module->meta['posts_data_post_type'][0] == 'evenemang';
 ?>
 
 <?php if (is_front_page()): ?>
     <?php // Frontpage ?>
-    <div class="grid box__news-column" data-equal-container>
+    <div class="grid <?php echo $is_event ? 'box__event-column': 'box__news-column' ?>" data-equal-container>
         <?php if (!$module->hideTitle) : ?>
             <?php // Heading ?>
             <div class="grid-xs-12 grid-align--center">
@@ -54,9 +55,9 @@
 
                         <?php if ($startdate = get_field('event_startdate', $post->ID, false)): ?>
                             <?php $startdate = strtotime($startdate) ?>
-                            <time class="box__date-event" datetime="<?php echo date('Y-m-d', $startdate); ?>">
-                              <span class="box__date-event-month"><?php echo date_i18n('M', $startdate); ?></span>
-                              <span class="box__date-event-day"><?php echo date('d', $startdate); ?></span>
+                                <time class="box__date-event" datetime="<?php echo date('Y-m-d\TH:i', $startdate); ?>">
+                                <span class="box__date-event-month"><?php echo date_i18n('M', $startdate); ?></span>
+                                <span class="box__date-event-day"><?php echo date('d', $startdate); ?></span>
                             </time>
                         <?php elseif(in_array('date', $fields->posts_fields) && $fields->posts_data_source !== 'input'): ?>
                             <time class="box__date" datetime="<?php echo get_the_time('Y-m-d', $post->ID); ?>"><?php echo get_the_time('d F Y', $post->ID); ?></time>
@@ -88,9 +89,9 @@
                                     <?php endif; ?>
                                     <?php if ($startdate = get_field('event_startdate', $post->ID, false)): ?>
                                         <?php $startdate = strtotime($startdate) ?>
-                                        <time class="box__date-event" datetime="<?php echo date('Y-m-d', $startdate); ?>">
-                                          <span class="box__date-event-month"><?php echo date_i18n('M', $startdate); ?></span>
-                                          <span class="box__date-event-day"><?php echo date('d', $startdate); ?></span>
+                                            <time class="box__date-event" datetime="<?php echo date('Y-m-d\TH:i', $startdate); ?>">
+                                            <span class="box__date-event-month"><?php echo date_i18n('M', $startdate); ?></span>
+                                            <span class="box__date-event-day"><?php echo date('d', $startdate); ?></span>
                                         </time>
                                     <?php elseif(in_array('date', $fields->posts_fields) && $fields->posts_data_source !== 'input'): ?>
                                         <time class="box__date" datetime="<?php echo get_the_time('Y-m-d', $post->ID); ?>"><?php echo get_the_time('d F Y', $post->ID); ?></time>
@@ -107,7 +108,7 @@
         <?php if (!empty($fields->archive_link)) : ?>
             <?php // Show more link ?>
             <div class="grid-lg-12  grid-align--center">
-                <a class="o-button o-button--primary" href="<?php echo get_post_type_archive_link($fields->posts_data_post_type); ?>"><?php _e('See more news', 'hoor'); ?></a>
+                <a class="o-button <?php echo $is_event ? 'o-button--secondary' : 'o-button--primary' ?>" href="<?php echo get_post_type_archive_link($fields->posts_data_post_type); ?>"><?php $is_event ? _e('See more events', 'hoor') : _e('See more news', 'hoor'); ?></a>
             </div>
         <?php endif; ?>
     </div>
