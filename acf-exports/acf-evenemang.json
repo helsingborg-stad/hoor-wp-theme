@@ -4,8 +4,8 @@
         "fields": [
             {
                 "key": "field_580a7a07bea8b",
-                "label": "Datum",
-                "name": "date",
+                "label": "Startdatum",
+                "name": "event_startdate",
                 "type": "date_time_picker",
                 "instructions": "Datum och tid d\u00e5 evenemanget startar",
                 "required": 1,
@@ -22,7 +22,7 @@
             {
                 "key": "field_580a7aaabea8c",
                 "label": "Plats",
-                "name": "place",
+                "name": "event_place",
                 "type": "text",
                 "instructions": "T.ex en adress.",
                 "required": 0,
