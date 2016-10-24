@@ -15,9 +15,9 @@ class Sidebars
         $grid_classes = array(
             'grid-lg-3 grid-xs-12', // First column classes
             'grid-lg-2 grid-xs-6', // Second column classes
-            'grid-lg-3 grid-xs-6', // Third column classes
+            'grid-lg-2 grid-xs-6', // Third column classes
             'grid-lg-2 grid-xs-6', // Fourth column classes
-            'grid-lg-2 grid-xs-6', // Fifth column classes
+            'grid-lg-3 grid-xs-6', // Fifth column classes
         );
 
         // Override the wrapper html from Municipio with our own classes.
