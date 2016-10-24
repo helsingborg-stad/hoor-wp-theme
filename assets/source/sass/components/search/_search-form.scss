@@ -75,6 +75,7 @@
   }
 }
 
+// Search in header
 .header__search {
   background: darken($color-action, 6);
 
@@ -87,6 +88,7 @@
   }
 }
 
+// On Search Page
 .main__search {
   background: $color-gray-200;
   margin-bottom: $content-gutter;
@@ -99,3 +101,13 @@
     }
   }
 }
+
+// On Frontpage
+.hero__search {
+  margin-right: 0;
+  margin-left: 0;
+  padding: 0 1.25rem;
+  max-width: 36.875rem;
+  flex-grow: 1;
+}
+
