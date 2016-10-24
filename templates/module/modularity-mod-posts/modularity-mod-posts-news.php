@@ -101,7 +101,9 @@
                                         <time class="box__date" datetime="<?php echo get_the_time('Y-m-d', $post->ID); ?>"><?php echo get_the_time('d F Y', $post->ID); ?></time>
                                     <?php endif ?>
                                     <?php if ($place = get_field('event_place')): ?>
-                                        <p><?php echo $place ?><p>
+                                        <div class="box__event-location">
+                                            <p><?php echo $place ?><p>
+                                        </div>
                                     <?php endif ?>
                                 </a>
                             </li>
