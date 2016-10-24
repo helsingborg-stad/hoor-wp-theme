@@ -14,7 +14,7 @@
 
   &:hover,
   &:focus {
-    background: darken($color-action, 6);
+    background: darken($color-gray-600, 6);
     box-shadow: 0 7px 14px rgba(50,50,93,.1),0 3px 6px rgba(0,0,0,.08);
     color: $color-light;
     transform: translateY(-2px);
@@ -22,6 +22,20 @@
 
   &--primary {
     background-color: $color-action;
+
+    &:hover,
+    &:focus {
+      background: darken($color-action, 6);
+    }
+  }
+
+  &--secondary {
+    background-color: $color-dark-green;
+    
+    &:hover,
+    &:focus {
+      background: darken($color-dark-green, 6);
+    }
   }
 
   &--close {
