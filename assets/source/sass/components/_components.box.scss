@@ -57,6 +57,7 @@ a.box {
   text-decoration: none;
 
   &__headline {
+    width: 100%;
     border-bottom: 1px solid $color-gray-200;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -107,6 +108,10 @@ a.box {
     padding-top: 1rem;
     padding-bottom: 1rem;
     word-wrap: break-word;
+
+    p:first-of-type {
+      margin-top: 0;
+    }
 
     p:only-of-type {
       margin: 0;
