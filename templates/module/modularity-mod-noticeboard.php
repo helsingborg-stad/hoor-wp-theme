@@ -21,7 +21,9 @@ $posts = get_posts($getPostsArgs);
 
 
 <div class="<?php echo implode(' ', apply_filters('Modularity/Module/Classes', array('box', 'box--panel'), $module->post_type, $args)); ?>">
-    <h2 class="box__headline"><?php echo $module->post_title; ?></h2>
+    <?php if (!$module->hideTitle && !empty($module->post_title)) { ?>
+        <h2 class="box__headline"><?php echo $module->post_title; ?></h2>
+    <?php } ?>
     <?php if (!empty($module->introductory_text) || empty($posts)): ?>
         <div class="box__content">
             <?php echo wpautop($module->introductory_text) ?>
