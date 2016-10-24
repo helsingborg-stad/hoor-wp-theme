@@ -1,18 +1,30 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>{{ wp_title('&mdash;', false, 'right') }}{{ get_bloginfo('name') }}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script>
-    var ajaxurl = '{!! apply_filters('Municipio/ajax_url_in_head', admin_url('admin-ajax.php')) !!}';
-  </script>
-  {!! wp_head() !!}
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{{ wp_title('&mdash;', false, 'right') }}{{ get_bloginfo('name') }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      var ajaxurl = '{!! apply_filters('Municipio/ajax_url_in_head', admin_url('admin-ajax.php')) !!}';
+    </script>
+    {!! wp_head() !!}
 </head>
 <body {!! body_class('no-js') !!}>
-  <a href="#main-menu" class="visually-hidden visually-hidden--focusable skip"><?php _e('Jump to the main menu', 'municipio'); ?></a>
-  <a href="#main-content" class="visually-hidden visually-hidden--focusable skip"><?php _e('Jump to the main content', 'municipio'); ?></a>
+  
+    <!--[if lte IE 9]>
+      <div class="notice info browserupgrade">
+          <div class="container">
+              <h2 class="notice__title"><?php _e('You are using an outdated browser.', 'hoor'); ?></h2>
+              <p class="notice__description"><?php _e('Please update your browser to a modern version. On <a href="http://browsehappy.com">browsehappy.com</a> you can get help finding a new modern browser', 'hoor'); ?></p>
+          </div>
+      </div>
+    <![endif]-->
+
+    
+
+    <a href="#main-menu" class="visually-hidden visually-hidden--focusable skip"><?php _e('Jump to the main menu', 'municipio'); ?></a>
+    <a href="#main-content" class="visually-hidden visually-hidden--focusable skip"><?php _e('Jump to the main content', 'municipio'); ?></a>
 
     @if (isset($notice) && !empty($notice))
         <div class="notices">
