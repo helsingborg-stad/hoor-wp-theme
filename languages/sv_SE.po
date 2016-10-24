@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Municipio\n"
-"POT-Creation-Date: 2016-10-24 22:55+0200\n"
-"PO-Revision-Date: 2016-10-24 22:55+0200\n"
+"POT-Creation-Date: 2016-10-24 23:10+0200\n"
+"PO-Revision-Date: 2016-10-24 23:10+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -47,7 +47,7 @@ msgstr "Besöksadress"
 
 #: templates/module/modularity-mod-contact/modularity-mod-contact-cards.php:114
 msgid "Opening hours"
-msgstr ""
+msgstr "Öppettider"
 
 #: templates/module/modularity-mod-files.php:16
 msgid "Size"
@@ -67,15 +67,19 @@ msgid "No posts to show…"
 msgstr "Inga inlägg att visa"
 
 #: templates/module/modularity-mod-posts/modularity-mod-posts-list.php:28
-#: templates/module/modularity-mod-posts/modularity-mod-posts-news.php:191
+#: templates/module/modularity-mod-posts/modularity-mod-posts-news.php:200
 msgid "Show more"
 msgstr "Visa mer"
 
-#: templates/module/modularity-mod-posts/modularity-mod-posts-news.php:110
+#: templates/module/modularity-mod-posts/modularity-mod-posts-news.php:119
+msgid "See more events"
+msgstr "Se fler evenemang"
+
+#: templates/module/modularity-mod-posts/modularity-mod-posts-news.php:119
 msgid "See more news"
 msgstr "Se fler nyheter"
 
-#: templates/module/modularity-mod-posts/modularity-mod-posts-news.php:183
+#: templates/module/modularity-mod-posts/modularity-mod-posts-news.php:192
 msgid "Read more"
 msgstr "Läs mer"
 
