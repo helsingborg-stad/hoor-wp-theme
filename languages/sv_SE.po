@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Municipio\n"
-"POT-Creation-Date: 2016-10-19 17:27+0200\n"
-"PO-Revision-Date: 2016-10-19 17:27+0200\n"
+"POT-Creation-Date: 2016-10-24 15:56+0200\n"
+"PO-Revision-Date: 2016-10-24 15:57+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -20,19 +20,20 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
+#: library/Search/Google.php:34 views/archive-evenemang.blade.php:70
+#: views/home.blade.php:57
+msgid "Pagination"
+msgstr "Paginering"
+
 #: library/Theme/Navigation.php:24
 msgid "Search"
 msgstr "Sök"
 
-#: library/Theme/Navigation.php:44 library/Theme/Navigation.php:45
+#: library/Theme/Navigation.php:45 library/Theme/Navigation.php:46
 msgid "Home"
 msgstr "Hem"
 
-#: library/Widget/Contact.php:11
-msgid "Contact"
-msgstr "Kontakt"
-
-#: library/Widget/Contact.php:13
+#: library/Widget/Contact.php:16
 msgid "Displays the contact information given."
 msgstr "Visar den angivna kontaktinformationen"
 
@@ -57,10 +58,12 @@ msgid "Maybe this is what you are looking for?"
 msgstr "Kanske är detta vad du letar efter?"
 
 #: templates/module/modularity-mod-latest-list.php:54
+#: templates/module/modularity-mod-posts/modularity-mod-posts-news.php:179
 msgid "Show more"
 msgstr "Visa mer"
 
-#: templates/module/modularity-mod-latest-news.php:56
+#: templates/module/modularity-mod-latest-news.php:55
+#: templates/module/modularity-mod-posts/modularity-mod-posts-news.php:171
 msgid "Read more"
 msgstr "Läs mer"
 
@@ -73,13 +76,29 @@ msgstr "Det finns inga meddelanden just nu."
 msgid "No posts to show…"
 msgstr "Inga inlägg att visa"
 
+#: templates/module/modularity-mod-posts/modularity-mod-posts-news.php:98
+msgid "See more news"
+msgstr "Se fler nyheter"
+
+#: templates/widget/contact.php:6
+msgid "Contact details"
+msgstr "Kontaktuppgifter"
+
+#: templates/widget/contact.php:11
+msgid "Phone and Email"
+msgstr "Telefon och e-post"
+
+#: templates/widget/contact.php:14
+msgid "Phone number"
+msgstr "Telefonnummer"
+
+#: templates/widget/contact.php:21
+msgid "Email address"
+msgstr "E-postadress"
+
 #: views/404.blade.php:8
 msgid "Error 404"
 msgstr "Felmeddelande 404"
-
-#: views/front-page.blade.php:37
-msgid "Popular searches"
-msgstr "Populära sökningar"
 
 #: views/partials/accessibility-menu.blade.php:2
 msgid "Listen to this page with ReadSpeaker"
@@ -127,6 +146,10 @@ msgstr "Brödsmulor"
 msgid "You are here:"
 msgstr "Du är här:"
 
+#: views/partials/search-popular.blade.php:6
+msgid "Popular searches"
+msgstr "Populära sökningar"
+
 #: views/partials/search/google.blade.php:31
 msgid "Found no matching results on your search."
 msgstr "Hittade inga matchande resultat på din sökning."
@@ -170,6 +193,9 @@ msgstr "Barntema för Municipio"
 #. Author of the plugin/theme
 msgid "Whitespace AB"
 msgstr "Whitespace AB"
+
+#~ msgid "Contact"
+#~ msgstr "Kontakt"
 
 #~ msgid "Share on"
 #~ msgstr "Dela på"
