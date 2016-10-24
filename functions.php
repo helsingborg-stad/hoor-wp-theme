@@ -26,15 +26,6 @@ function hoor_dequeue_unnecessary_styles() {
 }
 add_action( 'wp_print_styles', 'hoor_dequeue_unnecessary_styles' );
 
-
-// Add Format button to TinyMCE toolbar
-add_filter( 'mce_buttons_2', 'editor_buttons' );
-function editor_buttons( $buttons ) {
-
-    array_unshift( $buttons, 'styleselect' );
-    return $buttons;
-}
-
 // Add Styles to the Format TinyMCE toolbar
 add_filter( 'tiny_mce_before_init', 'editor_buttons_before_init' );
 
