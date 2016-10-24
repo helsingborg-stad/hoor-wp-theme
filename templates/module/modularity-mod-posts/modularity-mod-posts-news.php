@@ -4,11 +4,11 @@
 
 <?php if (is_front_page()): ?>
     <?php // Frontpage ?>
-    <div class="grid">
+    <div class="grid box__news-column" data-equal-container>
         <?php if (!$module->hideTitle) : ?>
             <?php // Heading ?>
-            <div class="grid-xs-12">
-                <h2><?php echo $module->post_title; ?></h2>
+            <div class="grid-xs-12 grid-align--center">
+                <h2 class="box__headline box__headline--centered"><?php echo $module->post_title; ?></h2>
             </div>
         <?php endif; ?>
 
@@ -41,10 +41,10 @@
                     }
                 }
             ?>
-            <div class="grid-md-3">
-                <a href="<?php echo get_permalink($post->ID); ?>" class="SOMEBOXCLASS" data-equal-item>
+            <div class="grid-sm-12 grid-md-6 grid-lg-3">
+                <a href="<?php echo get_permalink($post->ID); ?>" class="box box--panel box--panel-news-card" data-equal-item>
                     <?php if (!empty($image) && in_array('image', $fields->posts_fields)) : ?>
-                        <img class="box-image" src="<?php echo $image[0]; ?>" alt="<?php echo $post->post_title; ?>">
+                        <img  class="box__image" src="<?php echo $image[0]; ?>" alt="<?php echo $post->post_title; ?>">
                     <?php endif; ?>
 
                     <div class="box__content">
@@ -71,28 +71,31 @@
         <?php endforeach ?>
         <?php if ($rest_of_posts): ?>
             <?php // List to the right with title/date ?>
-            <div class="grid-md-6">
-            <?php foreach ($rest_of_posts as $post): ?>
-                <div class="SOMEWRAPPER">
-                    <a href="<?php echo get_permalink($post->ID); ?>" class="">
-                        <?php if (in_array('title', $fields->posts_fields)) : ?>
-                            <h2 class="box__title"><?php echo apply_filters('the_title', $post->post_title); ?></h2>
-                        <?php endif; ?>
-
-                        <?php if (in_array('date', $fields->posts_fields) && $fields->posts_data_source !== 'input') : ?>
-                        <time class="box__date" datetime="<?php echo get_the_time('Y-m-d', $post->ID); ?>"><?php echo get_the_time('d F Y', $post->ID); ?></time>
-                        <?php endif ?>
-                    </a>
+            <div class="grid-sm-12 grid-md-12 grid-lg-6">
+                <div class="box box--panel box--panel-clean">
+                    <ul class="box__list box__news-list">
+                        <?php foreach ($rest_of_posts as $post): ?>
+                            <li class="box__list-item">
+                                <a href="<?php echo get_permalink($post->ID); ?>" class="box__link">
+                                    <?php if (in_array('title', $fields->posts_fields)) : ?>
+                                        <h2 class="box__title"><?php echo apply_filters('the_title', $post->post_title); ?></h2>
+                                    <?php endif; ?>
+                                </a>
+                                <?php if (in_array('date', $fields->posts_fields) && $fields->posts_data_source !== 'input') : ?>
+                                <time class="box__date" datetime="<?php echo get_the_time('Y-m-d', $post->ID); ?>"><?php echo get_the_time('d F Y', $post->ID); ?></time>
+                                <?php endif ?>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
                 </div>
-            <?php endforeach; ?>
             </div>
         <?php endif ?>
 
 
         <?php if (!empty($fields->archive_link)) : ?>
             <?php // Show more link ?>
-            <div class="grid-lg-12">
-                <a class="read-more" href="<?php echo get_post_type_archive_link($fields->posts_data_post_type); ?>"><?php _e('Show more', 'modularity'); ?></a>
+            <div class="grid-lg-12  grid-align--center">
+                <a class="o-button o-button--primary" href="<?php echo get_post_type_archive_link($fields->posts_data_post_type); ?>"><?php _e('See more news', 'hoor'); ?></a>
             </div>
         <?php endif; ?>
     </div>
