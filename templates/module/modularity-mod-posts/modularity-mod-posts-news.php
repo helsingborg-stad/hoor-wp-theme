@@ -63,6 +63,10 @@
                             <time class="box__date" datetime="<?php echo get_the_time('Y-m-d', $post->ID); ?>"><?php echo get_the_time('d F Y', $post->ID); ?></time>
                         <?php endif ?>
 
+                        <?php if ($place = get_field('event_place')): ?>
+                            <p><?php echo $place ?><p>
+                        <?php endif ?>
+
                         <?php if (in_array('excerpt', $fields->posts_fields)) : ?>
                             <div class="box__excerpt">
                                 <?php if ($fields->posts_data_source === 'input') : ?>
@@ -95,6 +99,9 @@
                                         </time>
                                     <?php elseif(in_array('date', $fields->posts_fields) && $fields->posts_data_source !== 'input'): ?>
                                         <time class="box__date" datetime="<?php echo get_the_time('Y-m-d', $post->ID); ?>"><?php echo get_the_time('d F Y', $post->ID); ?></time>
+                                    <?php endif ?>
+                                    <?php if ($place = get_field('event_place')): ?>
+                                        <p><?php echo $place ?><p>
                                     <?php endif ?>
                                 </a>
                             </li>
