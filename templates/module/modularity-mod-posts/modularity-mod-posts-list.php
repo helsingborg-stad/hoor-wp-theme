@@ -14,7 +14,7 @@
                     <?php endif; ?>
                 </a>
                 <?php if (in_array('date', $fields->posts_fields) && $fields->posts_data_source !== 'input') : ?>
-                <time class="box__date"><?php echo get_the_time('Y-m-d', $post->ID); ?></time>
+                <time class="box__date" datetime="<?php echo get_the_time('Y-m-d', $post->ID); ?>"><?php echo get_the_time('Y-m-d', $post->ID); ?></time>
                 <?php endif; ?>
             </li>
         <?php endforeach; else : ?>
