@@ -1,9 +1,9 @@
 <?php $files = get_field('files', $module->ID); ?>
 
 <div class="<?php echo implode(' ', apply_filters('Modularity/Module/Classes', array('box', 'box--panel'), $module->post_type, $args)); ?>">
-    <?php if (!$module->hideTitle) : ?>
+    <?php if (!$module->hideTitle && !empty($module->post_title)) { ?>
         <h2 class="box__headline"><?php echo apply_filters('the_title', $module->post_title); ?></h2>
-    <?php endif; ?>
+    <?php } ?>
 
     <ul class="box__list">
         <?php foreach ($files as $file) : ?>
