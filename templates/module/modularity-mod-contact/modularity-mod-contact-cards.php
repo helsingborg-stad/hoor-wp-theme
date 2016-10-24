@@ -99,12 +99,20 @@ if (isset($info['image']) && !empty($info['image'])) {
                     <strong><?php _e('Visiting address', 'modularity'); ?></strong>
                 <?php endif; ?>
                 <?php echo $info['visiting_address']; ?>
+
             </div>
             <?php endif; ?>
 
             <?php if (isset($info['other']) && !empty($info['other'])) : ?>
             <div class="gutter gutter-top small">
                 <?php echo $info['other']; ?>
+            </div>
+            <?php endif; ?>
+
+            <?php if (isset($info['opening_hours']) && !empty($info['opening_hours'])) : ?>
+            <div class="gutter gutter-top small">
+                <strong><?php _e('Opening hours', 'modularity'); ?></strong>
+                <?php echo $info['opening_hours']; ?>
             </div>
             <?php endif; ?>
         </div>
