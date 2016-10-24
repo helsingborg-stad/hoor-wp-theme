@@ -30,11 +30,11 @@
   }
 
   &--secondary {
-    background-color: $color-dark-green;
+    background-color: darken($color-dark-green, 14);
     
     &:hover,
     &:focus {
-      background: darken($color-dark-green, 6);
+      background: darken($color-dark-green, 18);
     }
   }
 
