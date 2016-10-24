@@ -54,9 +54,9 @@
 
                         <?php if ($startdate = get_field('event_startdate', $post->ID, false)): ?>
                             <?php $startdate = strtotime($startdate) ?>
-                            <time class="box__date-event" datetime="<?php echo date('Y-m-d', $startdate); ?>">
-                              <span class="box__date-event-month"><?php echo date_i18n('M', $startdate); ?></span>
-                              <span class="box__date-event-day"><?php echo date('d', $startdate); ?></span>
+                                <time class="box__date-event" datetime="<?php echo date('Y-m-d\TH:i', $startdate); ?>">
+                                <span class="box__date-event-month"><?php echo date_i18n('M', $startdate); ?></span>
+                                <span class="box__date-event-day"><?php echo date('d', $startdate); ?></span>
                             </time>
                         <?php elseif(in_array('date', $fields->posts_fields) && $fields->posts_data_source !== 'input'): ?>
                             <time class="box__date" datetime="<?php echo get_the_time('Y-m-d', $post->ID); ?>"><?php echo get_the_time('d F Y', $post->ID); ?></time>
@@ -88,9 +88,9 @@
                                     <?php endif; ?>
                                     <?php if ($startdate = get_field('event_startdate', $post->ID, false)): ?>
                                         <?php $startdate = strtotime($startdate) ?>
-                                        <time class="box__date-event" datetime="<?php echo date('Y-m-d', $startdate); ?>">
-                                          <span class="box__date-event-month"><?php echo date_i18n('M', $startdate); ?></span>
-                                          <span class="box__date-event-day"><?php echo date('d', $startdate); ?></span>
+                                            <time class="box__date-event" datetime="<?php echo date('Y-m-d\TH:i', $startdate); ?>">
+                                            <span class="box__date-event-month"><?php echo date_i18n('M', $startdate); ?></span>
+                                            <span class="box__date-event-day"><?php echo date('d', $startdate); ?></span>
                                         </time>
                                     <?php elseif(in_array('date', $fields->posts_fields) && $fields->posts_data_source !== 'input'): ?>
                                         <time class="box__date" datetime="<?php echo get_the_time('Y-m-d', $post->ID); ?>"><?php echo get_the_time('d F Y', $post->ID); ?></time>
