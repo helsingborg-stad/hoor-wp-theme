@@ -1,0 +1,22 @@
+.truncate {
+  display: inline-block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  &:hover {
+    background-color: #fff;
+    width: auto;
+    overflow: visible;
+  }
+}
+
+.truncate.link-item {
+  padding-right: 0;
+  left: 0;
+
+  &::before {
+    margin-left: 0;
+  }
+}
