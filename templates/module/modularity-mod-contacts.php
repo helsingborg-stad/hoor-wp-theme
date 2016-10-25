@@ -19,7 +19,7 @@
     } else {
 ?>
 
-<div class="<?php echo implode(' ', apply_filters('Modularity/Module/Classes', array('box', 'box-card'), $module->post_type, $args)); ?>" itemscope="person" itemtype="http://schema.org/Organization">
+<div class="<?php echo implode(' ', apply_filters('Modularity/Module/Classes', array('box', 'box--panel', 'box--card'), $module->post_type, $args)); ?>" itemscope="person" itemtype="http://schema.org/Organization">
 
     <?php
     if (isset($fields->picture) && !empty($fields->picture)) {
@@ -36,15 +36,15 @@
     ?>
 
     <?php if ($image !== false) : ?>
-    <img class="box-image" src="<?php echo $image[0]; ?>" alt="<?php echo $fields->first_name; ?> <?php echo $fields->last_name; ?>">
+    <img class="box__image" src="<?php echo $image[0]; ?>" alt="<?php echo $fields->first_name; ?> <?php echo $fields->last_name; ?>">
     <?php endif; ?>
 
     <?php if (!$module->hideTitle) : ?>
-    <h4 class="box-title"><?php echo $module->post_title; ?></h4>
+    <strong class="box__title"><?php echo $module->post_title; ?></strong>
     <?php endif; ?>
 
-    <div class="box-content">
-        <h5 itemprop="name"><?php echo $fields->first_name; ?> <?php echo isset($fields->last_name) && !empty($fields->last_name) ? $fields->last_name : ''; ?></h5>
+    <div class="box__content">
+        <h2 itemprop="name"><?php echo $fields->first_name; ?> <?php echo isset($fields->last_name) && !empty($fields->last_name) ? $fields->last_name : ''; ?></h2>
         <ul>
             <?php if ((isset($fields->title) && !empty($fields->title)) || (isset($fields->organization) && !empty($fields->organization))) : ?>
                 <li class="card-title">

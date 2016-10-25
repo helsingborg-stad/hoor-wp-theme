@@ -1,9 +1,7 @@
 <div class="grid">
 <?php
 $contacts = $fields->contacts;
-
 foreach ($contacts as $contact) {
-
 $info = array(
     'image' => null,
     'first_name' => null,
@@ -16,7 +14,6 @@ $info = array(
     'visiting_address' => null,
     'opening_hours' => null
 );
-
 switch ($contact->acf_fc_layout) {
     case 'custom':
         $info = apply_filters('Modularity/mod-contacts/contact-info', array(
@@ -33,7 +30,6 @@ switch ($contact->acf_fc_layout) {
             'other'               => $contact->other
         ), $contact);
         break;
-
     case 'user':
         $info = apply_filters('Modularity/mod-contacts/contact-info', array(
             'image'               => null,
@@ -49,7 +45,6 @@ switch ($contact->acf_fc_layout) {
         ), $contact);
         break;
 }
-
 if (isset($info['image']) && !empty($info['image'])) {
     $image = wp_get_attachment_image_src(
         $info['image']->id,
@@ -64,17 +59,18 @@ if (isset($info['image']) && !empty($info['image'])) {
 ?>
 
 <div class="<?php echo isset($fields->columns) && !empty($fields->columns) ? $fields->columns : 'grid-md-12'; ?>">
-    <div class="<?php echo implode(' ', apply_filters('Modularity/Module/Classes', array('box', 'box-card'), $module->post_type, $args)); ?>" itemscope itemtype="http://schema.org/Person">
-        <?php if ($image !== false) : ?>
-        <img class="box-image" src="<?php echo $image[0]; ?>" alt="<?php echo $info['first_name']; ?> <?php echo isset($info['last_name']) && !empty($info['last_name']) ? $info['last_name'] : ''; ?>">
-        <?php endif; ?>
+    <div class="<?php echo implode(' ', apply_filters('Modularity/Module/Classes', array('box', 'box--panel', 'box--card'), $module->post_type, $args)); ?>" itemscope itemtype="http://schema.org/Person">
 
         <?php if (!$module->hideTitle) : ?>
-        <h4 class="box-title"><?php echo $module->post_title; ?></h4>
+            <h2 class="box__headline"><?php echo $module->post_title; ?></h2>
         <?php endif; ?>
 
-        <div class="box-content">
-            <h5 itemprop="name"><?php echo $info['first_name']; ?> <?php echo isset($info['last_name']) && !empty($info['last_name']) ? $info['last_name'] : ''; ?></h5>
+        <?php if ($image !== false) : ?>
+        <img class="box__image" src="<?php echo $image[0]; ?>" alt="<?php echo $info['first_name']; ?> <?php echo isset($info['last_name']) && !empty($info['last_name']) ? $info['last_name'] : ''; ?>">
+        <?php endif; ?>
+
+        <div class="box__content">
+            <h3 itemprop="name"><?php echo $info['first_name']; ?> <?php echo isset($info['last_name']) && !empty($info['last_name']) ? $info['last_name'] : ''; ?></h3>
 
             <ul>
             <?php if ((isset($info['work_title']) && !empty($info['work_title'])) || (isset($info['administration_unit']) && !empty($info['administration_unit']))) : ?>
@@ -83,11 +79,9 @@ if (isset($info['image']) && !empty($info['image'])) {
                 <span itemprop="department"><?php echo (isset($info['administration_unit']) && !empty($info['administration_unit'])) ? $info['administration_unit'] : ''; ?></span>
             </li>
             <?php endif; ?>
-
             <?php if (isset($info['phone']) && !empty($info['phone'])) : foreach ($info['phone'] as $phone) : ?>
-                <li><a itemprop="telephone" class="link-item" href="tel:<?php echo $phone->number; ?>"><?php echo $phone->number; ?></a></li>
+                <li><span itemprop="telephone"><?php echo $phone->number; ?></span></li>
             <?php endforeach; endif; ?>
-
             <?php if (isset($info['email']) && !empty($info['email'])) : ?><li><a itemprop="email" class="link-item truncate" href="mailto:<?php echo $info['email']; ?>"><?php echo $info['email']; ?></a></li><?php endif; ?>
             <?php if (!empty($module->post_content)) : ?><li class="small description"><?php echo apply_filters('the_content', $module->post_content); ?></li><?php endif; ?>
             </ul>
@@ -107,12 +101,20 @@ if (isset($info['image']) && !empty($info['image'])) {
                     <strong><?php _e('Visiting address', 'modularity'); ?></strong>
                 <?php endif; ?>
                 <?php echo $info['visiting_address']; ?>
+
             </div>
             <?php endif; ?>
 
             <?php if (isset($info['other']) && !empty($info['other'])) : ?>
             <div class="gutter gutter-top small">
                 <?php echo $info['other']; ?>
+            </div>
+            <?php endif; ?>
+
+            <?php if (isset($info['opening_hours']) && !empty($info['opening_hours'])) : ?>
+            <div class="gutter gutter-top small">
+                <strong><?php _e('Opening hours', 'modularity'); ?></strong>
+                <?php echo $info['opening_hours']; ?>
             </div>
             <?php endif; ?>
         </div>
