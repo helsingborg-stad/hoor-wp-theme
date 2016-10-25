@@ -20,6 +20,7 @@ class App
         new \Hoor\Admin\UI\ACF();
         new \Hoor\Admin\UI\Editor();
         new \Hoor\Admin\UI\Widget();
+        new \Hoor\Admin\UI\Metaboxes();
 
         /**
          * Widgets
