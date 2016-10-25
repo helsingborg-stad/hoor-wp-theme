@@ -17,12 +17,6 @@ load_child_theme_textdomain( 'hoor', get_stylesheet_directory() . '/languages' )
 
 new Hoor\App();
 
-// Wrap embeds in an div to be able to make videos responsive
-add_filter('embed_oembed_html', 'site_embed_oembed_html', 99, 4);
-function site_embed_oembed_html($html, $url, $attr, $post_id) {
-    return '<div class="o-embed-container">' . $html . '</div>';
-}
-
 add_action( 'after_setup_theme', 'hoor_theme_setup' );
 function hoor_theme_setup() {
     add_image_size( 'hero_image', 1300, 280, array( 'left', 'top' ) );
