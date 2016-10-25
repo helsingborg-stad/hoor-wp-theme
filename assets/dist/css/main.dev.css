@@ -444,6 +444,19 @@ html {
   box-sizing: inherit; }
 
 html {
+  height: 100%; }
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%; }
+
+html {
   font-family: "Clear Sans", Helvetica, Arial, sans-serif;
   color: #222; }
 
@@ -2705,6 +2718,15 @@ ul.page-numbers {
       background-repeat: no-repeat;
       content: ""; } }
 
+a.box {
+  text-decoration: none;
+  width: 100%;
+  box-sizing: border-box; }
+  a.box:hover, a.box:focus {
+    background: #f4f4f4;
+    -webkit-transition: background-color .3s ease-in-out, color .2s ease-in-out;
+            transition: background-color .3s ease-in-out, color .2s ease-in-out; }
+
 .box {
   margin-bottom: 1.25rem; }
   .box-title {
@@ -2719,10 +2741,16 @@ ul.page-numbers {
   margin-bottom: 2.5rem; }
 
 .box--panel-news-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
+  .box--panel-news-card .box__image-container {
+    border: 4px solid red;
+    max-width: 275px; }
 
 .box-content {
   -webkit-box-flex: 1;
@@ -2739,18 +2767,7 @@ ul.page-numbers {
       -ms-flex: 0 0 auto;
           flex: 0 0 auto; }
 
-a.box {
-  display: block;
-  text-decoration: none;
-  width: 100%;
-  box-sizing: border-box; }
-  a.box:hover, a.box:focus {
-    background: #f4f4f4;
-    -webkit-transition: background-color .3s ease-in-out, color .2s ease-in-out;
-            transition: background-color .3s ease-in-out, color .2s ease-in-out; }
-
 .box {
-  display: block;
   text-decoration: none; }
   .box__footer {
     border-top: 1px solid #f1f1f1;
@@ -2816,6 +2833,8 @@ a.box {
     padding-top: .75rem;
     padding-bottom: .75rem;
     font-size: 0.875rem; }
+    .box__list-item p:last-of-type {
+      margin-bottom: 0; }
     .box__list-item:not(:last-child) {
       border-bottom: 1px solid #f1f1f1; }
   .box__link {
@@ -2874,6 +2893,28 @@ a.box {
 .box__news-list .box__title {
   font-size: 0.9375rem;
   font-weight: 400; }
+
+.box__date-event {
+  box-shadow: 0 1px 2px rgba(34, 34, 34, 0.2);
+  display: block;
+  max-width: 48px;
+  text-align: center; }
+  .box__date-event-month {
+    display: block;
+    background: #e1261c;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 10px;
+    padding-top: .2rem;
+    padding-bottom: .2rem; }
+  .box__date-event-day {
+    display: block;
+    background: #fff;
+    color: #222;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    letter-spacing: -2px;
+    font-weight: 700; }
 
 .home .modularity-mod-inlaylist .box {
   border-radius: 0;
@@ -3153,6 +3194,27 @@ a.box {
   .primary-navigation .current-menu-item {
     background: #0766a5; }
 
+.menu-item-search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 62px; }
+  @media (max-width: 769px) {
+    .menu-item-search {
+      display: none; } }
+  .menu-item-search a {
+    background-color: #07609c;
+    display: block;
+    border: 0;
+    padding: 0 1.9375rem;
+    background-image: url(../images/icons/search-inverted.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 22px 22px;
+    box-sizing: border-box;
+    -webkit-transition: background-color .2s ease-in-out;
+            transition: background-color .2s ease-in-out; }
+
 .menu-help {
   font-size: 0.75rem;
   padding: 1rem 0; }
@@ -3287,6 +3349,89 @@ a.box {
   .nav-aside .has-children.current-menu-item::before {
     background-image: url(../images/icons/arrow-up.svg); }
 
+@media (min-width: 769px) {
+  .page-child .main-container article,
+  .page-child .c-page-footer,
+  .page-child .sidebar-content-area {
+    max-width: 36.875rem; }
+  body:not(.error404) {
+    background: #fff;
+    background-image: url(../images/pattern.png);
+    background-position: 50% calc(100% + 120px);
+    background-repeat: repeat-x;
+    background-attachment: fixed; }
+    body:not(.error404) .main-footer {
+      margin-bottom: 86px; } }
+
+#main-content {
+  background: #fff;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  width: 100%; }
+  #main-content::after {
+    content: '\00a0';
+    display: block;
+    height: 0px;
+    visibility: hidden; }
+
+.main-container {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem; }
+
+.hero {
+  margin-top: 2.5rem; }
+
+.hero + .main-container {
+  margin-top: 1.25rem; }
+
+.container-front {
+  padding: 2.5rem 0 1.25rem;
+  overflow: hidden; }
+  .container-front--alt:not(:last-child) {
+    border-bottom: 1px solid #E8E8E8;
+    background: #F9F9F9; }
+    .container-front--alt:not(:last-child)--alt:not(:first-child) {
+      border-top: 1px solid #E8E8E8; }
+    .container-front--alt:not(:last-child)--alt:not(:last-child) {
+      border-bottom: 1px solid #E8E8E8; }
+
+.container .hero {
+  margin-top: 0; }
+
+.container-front > .container > .grid-sm-12 {
+  padding-left: 0;
+  padding-right: 0; }
+
+.article-meta {
+  margin-bottom: 1.25rem; }
+  .article-meta ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+  .article-meta li {
+    float: left; }
+
+.post-categories,
+.post-tags {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline; }
+  .post-categories li,
+  .post-tags li {
+    display: inline;
+    font-size: 0.8125rem; }
+    .post-categories li:not(:last-child)::after,
+    .post-tags li:not(:last-child)::after {
+      content: ", "; }
+  .post-categories__title,
+  .post-tags__title {
+    margin: 0;
+    display: inline;
+    font-size: 0.8125rem;
+    font-weight: 700; }
+
 .visually-hidden {
   position: absolute;
   overflow: hidden;
@@ -3383,3 +3528,14 @@ a.box {
 @media print {
   .hidden-print {
     display: none; } }
+
+.no-js .menu-item-translate,
+.no-js .menu-item-search,
+.no-js .c-share__list--print {
+  display: none; }
+
+.no-js .header__search {
+  display: block; }
+
+.no-js.search .header__search {
+  display: none; }

@@ -64,3 +64,27 @@
     background: darken($color-action, 4);
   }
 }
+
+
+// List item injected by the Municipio
+.menu-item-search {
+  display: flex;
+  max-width: 62px;
+
+  @media #{$screen-below-md} {
+    display: none;
+  }
+
+  a {
+    background-color: darken($color-action, 6);
+    display: block;
+    border: 0;
+    padding: 0 1.9375rem;
+    background-image: url(../images/icons/search-inverted.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 22px 22px;
+    box-sizing: border-box;
+    transition: background-color .2s ease-in-out;
+  }
+}

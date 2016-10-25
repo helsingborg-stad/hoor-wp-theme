@@ -1,0 +1,15 @@
+.no-js {
+  .menu-item-translate,
+  .menu-item-search,
+  .c-share__list--print {
+    display: none;
+  }
+  .header__search {
+    display: block;
+  }
+  &.search {
+    .header__search {
+      display: none;
+    }
+  }
+}

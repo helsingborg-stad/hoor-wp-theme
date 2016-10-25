@@ -1,0 +1,40 @@
+.article-meta {
+  margin-bottom: $content-gutter;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    float: left;
+  }
+}
+
+.post-categories,
+.post-tags {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline;
+
+  li {
+    display: inline;
+    font-size: $font-size-smaller;
+
+    &:not(:last-child)::after {
+      content: ", ";
+    }
+  }
+
+  &__wrapper {
+  }
+
+  &__title {
+    margin: 0;
+    display: inline;
+    font-size: $font-size-smaller;
+    font-weight: 700;
+  }
+}

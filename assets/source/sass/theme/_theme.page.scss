@@ -1,0 +1,13 @@
+.main-container {
+  margin-top: $content-gutter * 2;
+  margin-bottom: $content-gutter * 2;
+}
+
+
+.hero {
+    margin-top: $content-gutter * 2;
+}
+
+.hero + .main-container {
+    margin-top: $content-gutter;
+}

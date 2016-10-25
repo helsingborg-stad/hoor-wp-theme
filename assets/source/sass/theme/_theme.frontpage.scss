@@ -21,3 +21,9 @@
     margin-top: 0;
   }
 }
+
+// TODO: Temporary fix
+.container-front > .container > .grid-sm-12 {
+  padding-left: 0;
+  padding-right: 0;
+}
