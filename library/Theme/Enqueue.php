@@ -9,6 +9,11 @@ class Enqueue
         // Enqueue scripts and styles
         add_action('wp_enqueue_scripts', array($this, 'style'));
         add_action('wp_enqueue_scripts', array($this, 'script'),900);
+
+        // Admin style
+        add_action('admin_enqueue_scripts', array($this, 'adminStyle'), 1000);
+
+        add_action('wp_print_styles', array($this, 'dequeueUnnecessaryStyles'));
     }
 
     /**
@@ -18,6 +23,15 @@ class Enqueue
     public function style()
     {
         wp_enqueue_style('hoor-css', get_stylesheet_directory_uri(). '/assets/dist/css/main.min.css', '', filemtime(get_stylesheet_directory() . '/assets/dist/css/main.min.css'));
+    }
+
+    /**
+     * Enqueue admin style
+     * @return void
+     */
+    public function adminStyle()
+    {
+        wp_dequeue_style('helsingborg-se-admin');
     }
 
     /**
@@ -51,4 +65,13 @@ class Enqueue
 
         wp_enqueue_script('hoor-js');
     }
+
+    public function dequeueUnnecessaryStyles() {
+            wp_dequeue_style( 'hbg-prime' );
+            wp_deregister_style( 'hbg-prime' );
+
+            wp_dequeue_style( 'municipio' );
+            wp_deregister_style( 'municipio' );
+
+        }
 }
