@@ -1,93 +1,92 @@
-    {
-        "key": "group_580e80484ee12",
-        "title": "Metadata",
-        "fields": [
-            {
-                "key": "field_580e80a4d4082",
-                "label": "Sektor",
-                "name": "page_meta_sector",
-                "type": "select",
-                "instructions": "",
-                "required": 1,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "33",
-                    "class": "",
-                    "id": ""
-                },
-                "choices": {
-                    "Barn och utbildning": "Barn och utbildning",
-                    "Kommunledningskansli": "Kommunledningskansli",
-                    "Kultur och fritid": "Kultur och fritid",
-                    "Milj\u00f6 och bygg": "Milj\u00f6 och bygg",
-                    "R\u00e4ddningstj\u00e4nst": "R\u00e4ddningstj\u00e4nst",
-                    "Samh\u00e4llsbyggnad": "Samh\u00e4llsbyggnad",
-                    "Social sektor": "Social sektor"
-                },
-                "default_value": [],
-                "allow_null": 1,
-                "multiple": 0,
-                "ui": 0,
-                "ajax": 0,
-                "return_format": "value",
-                "placeholder": ""
-            },
-            {
-                "key": "field_580e8103d4083",
-                "label": "Huvudredakt\u00f6r",
-                "name": "page_meta_maineditor",
-                "type": "user",
-                "instructions": "",
-                "required": 1,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "33",
-                    "class": "",
-                    "id": ""
-                },
-                "role": [
-                    "administrator",
-                    "editor"
-                ],
-                "allow_null": 1,
-                "multiple": 0
-            },
-            {
-                "key": "field_580e818d88916",
-                "label": "Faktaansvarig",
-                "name": "page_meta_factchecker",
-                "type": "user",
-                "instructions": "",
-                "required": 1,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "33",
-                    "class": "",
-                    "id": ""
-                },
-                "role": [
-                    "administrator",
-                    "editor"
-                ],
-                "allow_null": 1,
-                "multiple": 0
-            }
-        ],
-        "location": [
-            [
+        {
+            "key": "group_580e80484ee12",
+            "title": "Metadata",
+            "fields": [
                 {
-                    "param": "post_type",
-                    "operator": "==",
-                    "value": "page"
+                    "key": "field_580e80a4d4082",
+                    "label": "Sektor",
+                    "name": "page_meta_sector",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Barn och utbildning": "Barn och utbildning",
+                        "Kommunledningskansli": "Kommunledningskansli",
+                        "Kultur och fritid": "Kultur och fritid",
+                        "Milj\u00f6 och bygg": "Milj\u00f6 och bygg",
+                        "R\u00e4ddningstj\u00e4nst": "R\u00e4ddningstj\u00e4nst",
+                        "Samh\u00e4llsbyggnad": "Samh\u00e4llsbyggnad",
+                        "Social sektor": "Social sektor"
+                    },
+                    "default_value": [],
+                    "allow_null": 1,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_580e8103d4083",
+                    "label": "Huvudredakt\u00f6r",
+                    "name": "page_meta_maineditor",
+                    "type": "user",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "role": [
+                        "administrator",
+                        "editor"
+                    ],
+                    "allow_null": 1,
+                    "multiple": 0
+                },
+                {
+                    "key": "field_580e818d88916",
+                    "label": "Faktaansvarig",
+                    "name": "page_meta_factchecker",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 }
-            ]
-        ],
-        "menu_order": 10,
-        "position": "normal",
-        "style": "default",
-        "label_placement": "top",
-        "instruction_placement": "label",
-        "hide_on_screen": "",
-        "active": 1,
-        "description": ""
-    }
+            ],
+            "location": [
+                [
+                    {
+                        "param": "post_type",
+                        "operator": "==",
+                        "value": "page"
+                    }
+                ]
+            ],
+            "menu_order": 10,
+            "position": "normal",
+            "style": "default",
+            "label_placement": "top",
+            "instruction_placement": "label",
+            "hide_on_screen": "",
+            "active": 1,
+            "description": ""
+        }
