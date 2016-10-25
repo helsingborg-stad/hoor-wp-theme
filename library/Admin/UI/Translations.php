@@ -20,6 +20,7 @@ class Translations
         'Skapa ett blogginlägg' => 'Skapa en nyhet',
         'inlägg' => 'nyheter',
         //'Visa inlägg' => 'Visa nyheter', // Used for all post types apperently
+        'Författare' => 'Redaktör',
 
 
     );
