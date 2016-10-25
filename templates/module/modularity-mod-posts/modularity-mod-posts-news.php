@@ -116,7 +116,7 @@
 
         <?php if (!empty($fields->archive_link)) : ?>
             <?php // Show more link ?>
-            <div class="grid-lg-12  grid-align--center">
+            <div class="grid-lg-12 grid-align--center hidden-print">
                 <a class="o-button <?php echo $is_event ? 'o-button--secondary' : 'o-button--primary' ?>" href="<?php echo get_post_type_archive_link($fields->posts_data_post_type); ?>"><?php $is_event ? _e('See more events', 'hoor') : _e('See more news', 'hoor'); ?></a>
             </div>
         <?php endif; ?>

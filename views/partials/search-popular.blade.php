@@ -1,5 +1,5 @@
 <?php if( have_rows('search_links') ): ?>
-    <div class="search-popular">
+    <div class="search-popular hidden-print">
         <div class="container">
             <div class="grid">
                 <div class="grid-md-12">

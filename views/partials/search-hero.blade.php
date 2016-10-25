@@ -3,7 +3,7 @@
 
     if( !empty($image) ): ?>
 
-    <div class="hero-image">
+    <div class="hero-image hidden-print">
         <style>
             .hero-image {
                 background-image: url(<?php echo $image['url']; ?>);
