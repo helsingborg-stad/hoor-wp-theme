@@ -2,17 +2,27 @@
   outline: 3px solid $color-blue;
 }
 
-/* Mouse */
-[data-whatinput='mouse'] :focus {
+/* initial styling after what input has executed but before any interaction */
+[data-whatinput="initial"] :focus {
+  outline-color: $color-green;
+}
+
+/* mouse */
+[data-whatinput="mouse"] :focus {
   outline: none;
 }
 
-/* Keyboard */
-[data-whatinput='keyboard'] :focus {
+/* keyboard */
+[data-whatinput="keyboard"] :focus {
   outline-color: $color-orange;
 }
 
-/* Touch */
-[data-whatinput='touch'] :focus {
+/* touch */
+[data-whatinput="touch"] :focus {
   outline-color: $color-blue;
+}
+
+/* IE11 gives the body element focus on page load */
+body:focus {
+  outline: none;
 }
