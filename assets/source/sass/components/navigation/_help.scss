@@ -1,19 +1,38 @@
+html:not(.no-flexbox) {
+  .menu-help {
+    float: none;
+
+    @media #{$screen-xs} {
+      display: flex;
+      justify-content: center;
+    }
+
+    ul {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    li {
+      float: none;
+    }
+  }
+}
+
+
 .menu-help {
   font-size: $font-size-tiny;
   padding: 1rem 0;
-
-  @media #{$screen-xs} {
-    display: flex;
-    justify-content: center;
-  }
-
+  float: right;
+ 
   ul {
     margin: 0;
     padding: 0;
     list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+  }
+
+  li {
+    float: left;
   }
 
   .menu-item {
@@ -36,7 +55,6 @@
     }
 
     // NOTE This selector doesn't follow BEM
-
     &-translate a::before {
       background-image: url(../images/icons/translate.svg);
     }

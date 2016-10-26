@@ -28,7 +28,7 @@
 
 @if (get_field('nav_primary_enable', 'option') === true)
     <nav class="primary-navigation hidden-print">
-        <div class="primary-navigation__container">
+        <div class="primary-navigation__container clearfix">
             {!! $navigation['mainMenu'] !!}
         </div>
     </nav>

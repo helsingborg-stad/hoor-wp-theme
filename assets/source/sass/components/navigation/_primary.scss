@@ -1,3 +1,34 @@
+html:not(.no-flexbox) {
+  .primary-navigation {
+
+    &__container {
+      display: flex;
+    }
+
+    ul {
+      display: flex;
+      flex-grow: 2;
+
+      @media #{$screen-below-md} {
+        flex-direction: column;
+      }
+
+      @media #{$screen-md-up} {
+        flex-direction: row;
+      }
+    }
+
+    li {
+      float: none;
+      flex-grow: 1;
+    }
+  }
+
+  .menu-item-search {
+    display: flex;
+  }
+}
+
 .primary-navigation {
   position: relative;
   background: $color-action;
@@ -6,7 +37,6 @@
   z-index: 1;
 
   &__container {
-    display: flex;
     margin: 0 auto;
     max-width: $screen-lg-max;
 
@@ -19,20 +49,10 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    display: flex;
-    flex-grow: 2;
-
-    @media #{$screen-below-md} {
-      flex-direction: column;
-    }
-
-    @media #{$screen-md-up} {
-      flex-direction: row;
-    }
   }
 
   li {
-    flex-grow: 1;
+    float: left;
 
     &:not(:first-child) {
       border-top: 1px solid rgba($color-light, .5);
@@ -68,7 +88,6 @@
 
 // List item injected by the Municipio
 .menu-item-search {
-  display: flex;
   max-width: 62px;
 
   @media #{$screen-below-md} {
