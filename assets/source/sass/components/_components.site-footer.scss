@@ -15,7 +15,7 @@
   // Show shadow when HTML background is visisble
   @media #{$screen-md-up} {
     border-bottom: 1px solid $color-gray-300;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+    box-shadow: 0 1px 4px rgba(0,0,0,.35);
   }
 
   @media print {

@@ -2192,7 +2192,7 @@ html:not(.no-flexbox) [data-equal-container] > [data-equal-item] {
   @media (min-width: 769px) {
     .main-footer {
       border-bottom: 1px solid #e3e3e3;
-      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); } }
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35); } }
   @media print {
     .main-footer {
       padding-top: 1rem;
@@ -2237,8 +2237,8 @@ html:not(.no-flexbox) [data-equal-container] > [data-equal-item] {
     content: "";
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
-    -webkit-transition: background .3s ease-in-out;
-            transition: background .3s ease-in-out; }
+    -webkit-transition: background-color .3s ease-in-out;
+            transition: background-color .3s ease-in-out; }
 
 .menu-social-links-container .menu-item a[href*="facebook.com"]::before {
   background-color: #3a579a;
@@ -3206,7 +3206,8 @@ html:not(.no-flexbox) .menu-item-search {
     text-decoration: none;
     padding: 1rem;
     -webkit-transition: background-color .5s ease-out;
-            transition: background-color .5s ease-out; }
+            transition: background-color .5s ease-out;
+    font-weight: 500; }
     @media (min-width: 769px) {
       .primary-navigation a {
         text-align: center;
