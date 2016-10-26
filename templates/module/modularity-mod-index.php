@@ -3,12 +3,11 @@
     $items = get_field('index', $module->ID);
     $columnClass = !empty(get_field('index_columns', $module->ID)) ? get_field('index_columns', $module->ID) : 'grid-md-6';
 ?>
+<?php if (!$module->hideTitle && !empty($module->post_title)) : ?>
+    <h2 class="box__headline box__headline--inline"><?php echo $module->post_title; ?></h2>
+<?php endif; ?>
 <div class="grid" data-equal-container>
-    <?php if (!$module->hideTitle && !empty($module->post_title)) : ?>
-    <div class="grid-xs-12">
-        <h2 class="box__headline box__headline--inline"><?php echo $module->post_title; ?></h2>
-    </div>
-    <?php endif; ?>
+
 
     <?php
     /* Get image size by column count */
@@ -55,7 +54,7 @@
 
             <div class="box__content">
                 <h3 class="box__link box__link--arrow"><?php echo isset($item['title']) && !empty($item['title']) ? $item['title'] : get_the_title(); ?></h3>
-                <?php echo isset($item['lead']) && !empty($item['lead']) ? $item['lead'] : get_the_excerpt(); ?>
+                <p><?php echo isset($item['lead']) && !empty($item['lead']) ? $item['lead'] : get_the_excerpt(); ?></p>
             </div>
         </a>
     </div>
