@@ -69,6 +69,5 @@ html:not(.no-flexbox) {
   [data-equal-container] > [data-equal-item] {
     display: flex;
     min-height: .5px;
-    -ms-flex-preferred-size: auto;
   }
 }

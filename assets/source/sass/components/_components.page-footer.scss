@@ -1,6 +1,7 @@
 .c-page-footer,
 .c-post-footer {
   border-top: 1px solid $color-gray-200;
+  overflow: hidden; // "Temporary" fix for overflow problem in IE11 
 }
 
 .c-article-timestamps {

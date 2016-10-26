@@ -68,6 +68,7 @@ html:not(.no-flexbox) {
     color: $color-light;
     text-decoration: none;
     padding: 1rem;
+    transition: background-color .5s ease-out;
 
     @media #{$screen-md-up} {
       text-align: center;
@@ -75,6 +76,7 @@ html:not(.no-flexbox) {
     }
 
     &:hover {
+      background-color: darken($color-action, 4);
       text-decoration: underline;
     }
   }
