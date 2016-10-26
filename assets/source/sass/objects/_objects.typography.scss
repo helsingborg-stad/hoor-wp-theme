@@ -6,7 +6,7 @@
 
 // Landing Pages & 404 page
 
-.page-parent,
+.page-parent:not(.page-child),
 .error404 {
 
   h1 {

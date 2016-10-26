@@ -83,7 +83,7 @@
     border-top: 1px solid $color-light;
   }
 
-  @media #{$screen-sm-up} {
+  @media #{$screen-md-up} {
     display: none; // Hide the Header Search
   }
 }

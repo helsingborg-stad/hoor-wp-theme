@@ -34,7 +34,11 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    line-height: 2.4615;
+    padding-top: .5rem;
+  }
+
+  li {
+    padding-bottom: .75rem;
   }
 
   a {
@@ -60,9 +64,11 @@
 // WordPress menu
 .menu-social-links-container {
   .menu-item {
+
     a {
       position: relative;
       padding-left: 1.75rem;
+      display: block;
 
       &::before {
         position: absolute;

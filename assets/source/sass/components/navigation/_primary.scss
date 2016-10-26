@@ -25,7 +25,11 @@ html:not(.no-flexbox) {
   }
 
   .menu-item-search {
-    display: flex;
+    display: none;
+
+    @media #{$screen-md-up} {
+      display: flex;
+    }
   }
 }
 
