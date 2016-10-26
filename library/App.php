@@ -11,12 +11,16 @@ class App
         new \Hoor\Theme\Sidebars();
         new \Hoor\Theme\Enqueue();
         new \Hoor\Theme\Navigation();
+        new \Hoor\Theme\Oembed();
 
         /**
          * Admin
          */
         new \Hoor\Admin\UI\Translations();
         new \Hoor\Admin\UI\ACF();
+        new \Hoor\Admin\UI\Editor();
+        new \Hoor\Admin\UI\Widget();
+        new \Hoor\Admin\UI\Metaboxes();
 
         /**
          * Widgets

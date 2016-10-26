@@ -5,6 +5,11 @@ namespace Hoor\Theme;
 class Navigation
 {
 
+    public function __construct()
+    {
+        $this->registerMenus();
+    }
+
     /**
      * Adds a search icon to the main menu
      * @param string $items Menu items html markup
@@ -25,6 +30,16 @@ class Navigation
 
         $items .= $search;
         return $items;
+    }
+
+    public function registerMenus()
+    {
+        register_nav_menus(
+            array(
+                'footer_links' => 'Footer Navigation',
+                'footer_social_links' => 'Social Links',
+            )
+        );
     }
 
 

@@ -8,7 +8,9 @@ class Enqueue
     {
         // Enqueue scripts and styles
         add_action('wp_enqueue_scripts', array($this, 'style'));
-        add_action('wp_enqueue_scripts', array($this, 'script'),900);
+        add_action('wp_enqueue_scripts', array($this, 'script'), 900);
+
+        add_action('wp_print_styles', array($this, 'dequeueUnnecessaryStyles'));
     }
 
     /**
@@ -51,4 +53,13 @@ class Enqueue
 
         wp_enqueue_script('hoor-js');
     }
+
+    public function dequeueUnnecessaryStyles() {
+            wp_dequeue_style( 'hbg-prime' );
+            wp_deregister_style( 'hbg-prime' );
+
+            wp_dequeue_style( 'municipio' );
+            wp_deregister_style( 'municipio' );
+
+        }
 }
