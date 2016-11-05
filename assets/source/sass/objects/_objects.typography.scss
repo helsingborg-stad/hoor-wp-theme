@@ -10,9 +10,11 @@
 .error404 {
 
   h1 {
-    font-size: 3.125rem;
-    font-weight: 500;
-    line-height: 1;
+    @media #{$screen-md-up} {
+      font-size: 3.125rem;
+      font-weight: 500;
+      line-height: 1;
+    }
   }
 
   .lead {

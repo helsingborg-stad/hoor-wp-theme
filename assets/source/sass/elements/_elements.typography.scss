@@ -12,11 +12,15 @@ hr {
   border-top: 1px solid $color-gray;
 }
 
-
 h1 {
   margin: 0 0 $content-gutter;
-  font-size: 2.375rem;
-  line-height: 1.0526; /* 40/38 */
+  font-size: 1.5rem;
+  line-height: 1.25;
+
+  @media #{$screen-md-up} {
+    font-size: 2.375rem;
+    line-height: 1.0526; /* 40/38 */
+  }
 }
 
 h2 {
