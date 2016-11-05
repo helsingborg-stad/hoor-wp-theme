@@ -1,4 +1,4 @@
-<div id="translate" class="c-google-translate {{ get_field('show_google_translate', 'option') != 'fold' ? 'c-google-translate--static' : 'c-google-translate--fixed' }} target-toggle hidden-print">
+<div id="translate" lang="en" class="c-google-translate {{ get_field('show_google_translate', 'option') != 'fold' ? 'c-google-translate--static' : 'c-google-translate--fixed' }} target-toggle hidden-print">
     <div class="c-google-translate__container">
         <h3 class="c-google-translate__headline">Translate</h3>
         <div class="c-google-translate__content">
