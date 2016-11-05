@@ -12,6 +12,10 @@
     position: relative;
   }
 
+  &__label {
+    color: $color-light;
+  }
+
   &__field {
     width: 100%;
     border-width: 1px;
@@ -79,6 +83,15 @@
 .header__search {
   background: darken($color-action, 6);
 
+  .c-search-form {
+    &__field {
+
+      &:focus {
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .3);
+      }
+    }
+  }
+
   @media #{$screen-below-sm} {
     border-top: 1px solid $color-light;
   }
@@ -94,11 +107,8 @@
   margin-bottom: $content-gutter;
   border-bottom: 1px solid $color-gray-300;
 
-  .c-search-form {
-
-    &__field {
-      border-color: $color-gray-300;
-    }
+  .c-search-form__field {
+    border-color: $color-gray-300;
   }
 }
 
@@ -110,8 +120,11 @@
   max-width: 36.875rem;
   flex-grow: 1;
 
-  .c-search-form__group {
-    box-shadow: 0 0 1.5rem 0 rgba($color-dark, .2);
+  .c-search-form {
+
+    &__group {
+      box-shadow: 0 0 1.5rem 0 rgba($color-dark, .2);
+    }
   }
 }
 
