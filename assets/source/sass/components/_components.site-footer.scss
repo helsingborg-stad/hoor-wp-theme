@@ -7,7 +7,6 @@
   font-size: $font-size-smaller;
   flex: none;
 
-
   [class*="grid-"] {
     margin-bottom: 1rem;
   }
@@ -15,7 +14,7 @@
   // Show shadow when HTML background is visisble
   @media #{$screen-md-up} {
     border-bottom: 1px solid $color-gray-300;
-    box-shadow: 0 1px 4px rgba(0,0,0,.35);
+    box-shadow: 0 3px 1px rgba(0, 0, 0, .15);
   }
 
   @media print {
@@ -23,7 +22,7 @@
     padding-bottom: 0;
     border-top: 1px solid $color-gray-300;
     background: transparent;
- 
+
     // TODO We need a better solution for this
     .sidebar-footer-area > div:not(:nth-child(2)):not(:nth-child(3)) {
       display: none;
