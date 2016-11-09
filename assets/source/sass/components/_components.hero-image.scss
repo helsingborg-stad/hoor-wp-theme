@@ -17,30 +17,4 @@
   @media #{$screen-md-up} {
     height: 18rem;
   }
-
-  @media #{$screen-md-up} {
-    &::before {
-      position: absolute;
-      right: -20px;
-      bottom: -40px;
-      width: 140px;
-      height: 170px;
-      background: $color-light;
-      box-shadow: 0 0 1.5rem 0 rgba($color-dark, .2);
-      content: "";
-      transform: rotate(-45deg);
-    }
-
-    &::after {
-      position: absolute;
-      right: 1rem;
-      bottom: 1rem;
-      width: 100px;
-      height: 78px;
-      background-image: url(../images/mitt-i-skane-small.png);
-      background-size: 100% 100%;
-      background-repeat: no-repeat;
-      content: "";
-    }
-  }
 }
