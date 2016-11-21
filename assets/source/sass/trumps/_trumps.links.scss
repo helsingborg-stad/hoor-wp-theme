@@ -1,0 +1,7 @@
+html[lang^="sv"] [target="_blank"]::after {
+  content: " (nytt fönster)";
+}
+
+html[lang^="en"] [target="_blank"]::after {
+  content: " (new window)";
+}

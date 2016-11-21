@@ -28,7 +28,7 @@ $posts = get_posts($getPostsArgs);
         <div class="box__content">
             <?php echo wpautop($module->introductory_text) ?>
         <?php if(empty($posts)) : ?>
-                <p><?php _e('There are no announcements right now.') ?></p>
+                <p><?php _e('There are no announcements right now.', 'hoor') ?></p>
             <?php endif; ?>
         </div>
     <?php endif ?>
@@ -51,7 +51,7 @@ $posts = get_posts($getPostsArgs);
         ?>
             <li class="box__list-item">
                 <?php if ($link): ?>
-                    <a href="<?php echo $link ?>" class="box__link box__link--arrow"><?php echo $title; ?> <?php echo $meetingDate; ?></a>
+                    <a href="<?php echo $link ?>" target="_blank" rel="noopener noreferrer" class="box__link box__link--arrow"><?php echo $title; ?> <?php echo $meetingDate; ?></a>
                 <?php else: ?>
                     <?php echo $title; ?> <?php echo $meetingDate; ?>
                 <?php endif ?>
