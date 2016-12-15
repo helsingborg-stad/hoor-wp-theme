@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Municipio\n"
-"POT-Creation-Date: 2016-10-24 23:10+0200\n"
-"PO-Revision-Date: 2016-10-24 23:10+0200\n"
+"POT-Creation-Date: 2016-12-15 21:36+0100\n"
+"PO-Revision-Date: 2016-12-15 21:41+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -25,11 +25,11 @@ msgstr ""
 msgid "Pagination"
 msgstr "Paginering"
 
-#: library/Theme/Navigation.php:24
+#: library/Theme/Navigation.php:29
 msgid "Search"
 msgstr "Sök"
 
-#: library/Theme/Navigation.php:45 library/Theme/Navigation.php:46
+#: library/Theme/Navigation.php:60 library/Theme/Navigation.php:61
 msgid "Home"
 msgstr "Hem"
 
@@ -38,14 +38,17 @@ msgid "Displays the contact information given."
 msgstr "Visar den angivna kontaktinformationen"
 
 #: templates/module/modularity-mod-contact/modularity-mod-contact-cards.php:90
+#: templates/module/modularity-mod-contacts/modularity-mod-contacts-cards.php:92
 msgid "Postal address"
 msgstr "Postadress"
 
 #: templates/module/modularity-mod-contact/modularity-mod-contact-cards.php:99
+#: templates/module/modularity-mod-contacts/modularity-mod-contacts-cards.php:101
 msgid "Visiting address"
 msgstr "Besöksadress"
 
 #: templates/module/modularity-mod-contact/modularity-mod-contact-cards.php:114
+#: templates/module/modularity-mod-contacts/modularity-mod-contacts-cards.php:116
 msgid "Opening hours"
 msgstr "Öppettider"
 
@@ -67,19 +70,19 @@ msgid "No posts to show…"
 msgstr "Inga inlägg att visa"
 
 #: templates/module/modularity-mod-posts/modularity-mod-posts-list.php:28
-#: templates/module/modularity-mod-posts/modularity-mod-posts-news.php:200
+#: templates/module/modularity-mod-posts/modularity-mod-posts-news.php:201
 msgid "Show more"
 msgstr "Visa mer"
 
-#: templates/module/modularity-mod-posts/modularity-mod-posts-news.php:119
+#: templates/module/modularity-mod-posts/modularity-mod-posts-news.php:120
 msgid "See more events"
 msgstr "Se fler evenemang"
 
-#: templates/module/modularity-mod-posts/modularity-mod-posts-news.php:119
+#: templates/module/modularity-mod-posts/modularity-mod-posts-news.php:120
 msgid "See more news"
 msgstr "Se fler nyheter"
 
-#: templates/module/modularity-mod-posts/modularity-mod-posts-news.php:192
+#: templates/module/modularity-mod-posts/modularity-mod-posts-news.php:193
 msgid "Read more"
 msgstr "Läs mer"
 
@@ -177,11 +180,11 @@ msgstr "Publicerad"
 msgid "Last updated"
 msgstr "Senast uppdaterad"
 
-#: views/templates/master.blade.php:18
+#: views/templates/master.blade.php:20
 msgid "You are using an outdated browser."
 msgstr "Du använder en gammal webbläsare."
 
-#: views/templates/master.blade.php:19
+#: views/templates/master.blade.php:21
 msgid ""
 "Please update your browser to a modern version. On <a href=\"http://"
 "browsehappy.com\">browsehappy.com</a> you can get help finding a new modern "
