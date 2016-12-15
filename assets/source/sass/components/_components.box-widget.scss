@@ -15,7 +15,6 @@
     a {
       font-size: 1.375rem;
       font-weight: 500;
-
     }
   }
 
@@ -37,6 +36,13 @@
   a {
     display: inline-block;
     font-size: 1rem;
+  }
+
+  .rss-date {
+    display: block;
+    color: $color-gray-700;
+    text-decoration: none;
+    font-size: $font-size-smaller;
   }
 
   @media print {
