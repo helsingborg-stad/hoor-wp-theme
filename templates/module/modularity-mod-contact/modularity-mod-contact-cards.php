@@ -111,7 +111,7 @@ if (isset($info['image']) && !empty($info['image'])) {
 
             <?php if (isset($info['opening_hours']) && !empty($info['opening_hours'])) : ?>
             <div class="gutter gutter-top small">
-                <strong><?php _e('Opening hours', 'modularity'); ?></strong>
+                <strong><?php _e('Opening hours', 'hoor'); ?></strong>
                 <?php echo $info['opening_hours']; ?>
             </div>
             <?php endif; ?>
