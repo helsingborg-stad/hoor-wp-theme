@@ -65,6 +65,8 @@
 @import "components/modularity/modularity.notice";
 @import "components/modularity/modularity.fact";
 
+@import "components/components.box-widget"; // Fix for WordPress Widget Output
+
 @import "components/navigation/primary";
 @import "components/navigation/help";
 @import "components/navigation/sidebar";
