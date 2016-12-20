@@ -29,10 +29,10 @@ class Enqueue
     public function script()
     {
         // Remove default hbg-prime scripts added by Municipio
-        wp_dequeue_script( 'hbg-prime' );
+        wp_deregister_script( 'hbg-prime' );
 
         // Remove Municipio scripts.
-        wp_dequeue_script( 'municipio' );
+        wp_deregister_script( 'municipio' );
 
         wp_register_script('hoor-js', get_stylesheet_directory_uri(). '/assets/dist/js/app.min.js', '', filemtime(get_stylesheet_directory() . '/assets/dist/js/app.min.js'), true);
 
