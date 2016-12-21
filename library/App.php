@@ -13,6 +13,7 @@ class App
         new \Hoor\Theme\Navigation();
         new \Hoor\Theme\Oembed();
         new \Hoor\Theme\Seo();
+        new \Hoor\Theme\Feeds();
 
         /**
          * Admin
