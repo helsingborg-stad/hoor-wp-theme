@@ -67,5 +67,3 @@ function output_nginx_redirects() {
     }
 }
 output_nginx_redirects();
-
-
