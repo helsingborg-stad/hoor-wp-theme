@@ -1,0 +1,223 @@
+.accordion {
+  .accordion-section > input[type="checkbox"],
+  .accordion-section > input[type="radio"] {
+    display: none;
+  }
+}
+
+.accordion-content {
+  background-color: $color-light;
+}
+
+.accordion-table-head {
+    border-radius: 0px;
+    padding: $grid-gutter-sm/2 $grid-gutter-sm;
+    padding-right: 40px;
+}
+
+.box-panel-secondary .accordion-table-head {
+  padding-top: $grid-gutter-sm/2 - 3px;
+}
+
+.accordion-boxes,
+.accordion-box,
+.accordion-list {
+
+  .accordion-toggle,
+  .accordion-content {
+    padding: $grid-gutter-sm $grid-gutter-sm * 1.5;
+
+    &:before {
+      right: $grid-gutter-sm * 1.5;
+    }
+  }
+
+    .accordion-toggle {
+        //@include gradient(#fff, lighten($creamy, 2%));
+    }
+
+  .accordion-content {
+    position: relative;
+    padding: $grid-gutter-sm * 2;
+
+    &::after {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+    }
+  }
+
+  &.boxes-medium,
+  &.box-medium,
+  &.list-medium {
+    .accordion-toggle,
+    .accordion-content {
+      padding: $grid-gutter-md $grid-gutter-md * 1.5;
+
+      &:before {
+        right: $grid-gutter-md * 1.5;
+      }
+    }
+
+    .accordion-content {
+            padding: $grid-gutter-md * 2;
+        }
+
+        .accordion-table-head {
+            padding: $grid-gutter-md/2 $grid-gutter-md;
+        }
+  }
+
+  &.boxes-large,
+  &.box-large,
+  &.list-large {
+    .accordion-toggle,
+    .accordion-content {
+      padding: $grid-gutter-lg $grid-gutter-lg * 1.5;
+
+      &:before {
+        right: $grid-gutter-lg * 1.5;
+      }
+    }
+
+    .accordion-content {
+      padding: $grid-gutter-lg * 2;
+    }
+
+        .accordion-table-head {
+            padding: $grid-gutter-lg/2 $grid-gutter-lg;
+        }
+  }
+
+  .accordion-section {
+    background: transparent;
+  }
+
+  .accordion-section:not(:last-child) {
+    border-bottom: 1px solid $color-gray-200;
+  }
+
+  .accordion-toggle {
+    h1, h2, h3, h4, h5, h6 {
+      padding: 0;
+      margin: 0;
+            font-weight: normal;
+
+            .fa,
+            .pricon {
+                font-size: .9em;
+                width: 1.1em;
+                text-align: center;
+            }
+    }
+
+  }
+
+}
+
+.accordion-content article {
+    margin-bottom: 0;
+}
+
+.accordion-list {
+  .accordion-section + .accordion-section {
+    margin-top: 0;
+    border-top: none;
+  }
+}
+
+.accordion-icon input[type="checkbox"]:checked ~ .accordion-toggle:before,
+.accordion-icon input[type="radio"]:checked ~ .accordion-toggle:before {
+    background: red;
+}
+
+input[type="checkbox"]:checked ~ .accordion-toggle,
+input[type="radio"]:checked ~ .accordion-toggle,
+input[type="checkbox"]:target ~ .accordion-toggle,
+input[type="radio"]:target ~ .accordion-toggle {
+    font-weight: bold;
+
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: bold;
+    }
+
+    .label-number {
+        color: $color-orange;
+    }
+}
+
+.accordion-toggle {
+  display: block;
+  cursor: default;
+}
+
+label.accordion-toggle {
+  cursor: pointer;
+}
+
+.accordion-content {
+    display: none;
+
+    input[type="checkbox"] ~ &,
+    input[type="radio"] ~ & {
+        display: none;
+
+        @media print {
+            display: block !important;
+        }
+    }
+
+    input[type="checkbox"]:checked ~ &,
+    input[type="radio"]:checked ~ &,
+    input[type="checkbox"]:target ~ &,
+    input[type="radio"]:target ~ & {
+        display: block;
+    }
+
+    @media print {
+        display: block !important;
+    }
+}
+
+.accordion-table {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+
+    .column-header {
+        display: table-cell;
+        width: 2%;
+    }
+}
+
+.accordion-table-head {
+    background-color: $color-gray-300;
+    color: #fff;
+    font-weight: bold;
+}
+
+.modal-body .accordion {
+    .accordion-section:first-child {
+        border-top: none;
+    }
+
+    .accordion-section:last-child {
+        border-bottom: none;
+    }
+}
+
+.accordion-nav {
+    background-color: #F6F5F2;
+    margin: -20px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-top: 1px solid #E7E5E1;
+
+    @media print {
+        display: none;
+    }
+}
