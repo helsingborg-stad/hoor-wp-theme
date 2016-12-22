@@ -20,7 +20,7 @@ class Translations
         'Skapa ett blogginlägg' => 'Skapa en nyhet',
         'inlägg' => 'nyheter',
         //'Visa inlägg' => 'Visa nyheter', // Used for all post types apperently
-        'Författare' => 'Redaktör',
+        'Författare' => array('Redaktör', 'better-post-ui'),
 
 
     );
@@ -40,18 +40,22 @@ class Translations
     {
         // Use the text string exactly as it is in the translation file
         if (isset($this->translations[$translated])) {
-            $translated = $this->translations[$translated];
+            $translation = $this->translations[$translated];
+            if (is_array($translation)) {
+                if ($translation[1] == $domain) {
+                    $translated = $translation[0];
+                }
+            }
+            else {
+                $translated = $translation;
+            }
         }
 
         return $translated;
     }
 
     public function filter_gettext_with_context($translated, $original, $context, $domain) {
-        if (isset($this->translations[$translated])) {
-            $translated = $this->translations[$translated];
-        }
-
-        return $translated;
+        return $this->filter_gettext($translated, $original, $domain);
     }
 }
 
