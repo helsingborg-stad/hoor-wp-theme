@@ -12,6 +12,7 @@ class App
         new \Hoor\Theme\Enqueue();
         new \Hoor\Theme\Navigation();
         new \Hoor\Theme\Oembed();
+        new \Hoor\Theme\Seo();
 
         /**
          * Admin
