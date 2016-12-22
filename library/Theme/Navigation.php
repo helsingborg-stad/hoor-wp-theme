@@ -8,6 +8,15 @@ class Navigation
     public function __construct()
     {
         $this->registerMenus();
+
+        // Add Ajax callback for getting a submenu. We want this to feel instant
+        // (~100ms per request) for the best user experience.
+        // Since the same menu is used for logged in and not logged in users we
+        // can add the callback before the init hook (the hook where authorization
+        // is done). To be able to add the callback this early we can't use
+        // cleaner approaces like register_rest_route().
+        // But this makes this callback significantly faster in our tests.
+        add_action('after_setup_theme', array($this, 'submenuUnauthorizedAjaxCallback'));
     }
 
     /**
@@ -103,4 +112,20 @@ class Navigation
             echo '</ol>';
         }
     }
+
+    public function submenuUnauthorizedAjaxCallback() {
+            if (isset($_GET['hoor_submenu_unauthorized']) && is_numeric($_GET['hoor_submenu_unauthorized'])) {
+                $parent = get_page($_GET['hoor_submenu_unauthorized']);
+                if ($parent) {
+                    $menu = new \Hoor\Helper\NavigationTree(array(
+                        'include_top_level' => false,
+                        'depth' => 1,
+                    ), $parent);
+
+                    header("Content-Type: application/json; charset=UTF-8");
+                    echo json_encode('<ul class="sub-menu">' . $menu->render(false) . '</ul>');
+                    die;
+                }
+            }
+        }
 }

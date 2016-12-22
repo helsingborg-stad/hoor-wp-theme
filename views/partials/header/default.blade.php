@@ -29,7 +29,14 @@
 @if (get_field('nav_primary_enable', 'option') === true)
     <nav class="primary-navigation hidden-print">
         <div class="primary-navigation__container clearfix">
-            {!! $navigation['mainMenu'] !!}
+            <?php
+                // {!! $navigation['mainMenu'] !!}
+                // Ideally the above should be used if Municipio
+                // is updated so we don't need our helpers that
+                // override Municipio´s helpers.
+                $navigation = new \Hoor\Helper\Navigation();
+                echo $navigation->mainMenu();
+             ?>
         </div>
     </nav>
 @endif

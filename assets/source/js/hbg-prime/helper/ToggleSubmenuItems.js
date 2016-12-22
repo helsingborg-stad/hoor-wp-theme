@@ -9,17 +9,14 @@ HelsingborgPrime.Helper.ToggleSubmenuItems = (function ($) {
     }
 
     ToggleSubmenuItems.prototype.init = function () {
-        $(".nav-mobile").each(function(menuIndex,menuObject){
-            $("li.has-children > a, li.menu-item-has-children > a",menuObject).click(function(event){
-                if(event.offsetX > ($(event.target).width()-7)) {
-                    event.preventDefault();
-                    if(!this.useAjax(event.target)) {
-                        this.toggleSibling(event.target);
-                    } else {
-                        this.ajaxLoadItems(event.target);
-                    }
-                }
-            }.bind(this));
+        $("#sidebar-menu, #main-menu").on('click', 'button', function(event){
+            event.preventDefault();
+            if(!this.useAjax(event.target)) {
+                this.toggleSibling(event.target);
+            } else {
+                this.ajaxLoadItems(event.target);
+                this.toggleSibling(event.target);
+            }
         }.bind(this));
     };
 
@@ -32,19 +29,13 @@ HelsingborgPrime.Helper.ToggleSubmenuItems = (function ($) {
     };
 
     ToggleSubmenuItems.prototype.ajaxLoadItems = function (target) {
-        var markup      = '';
-        var parentId    = $.grep($(target).parent().attr('class').split(" "), function(v, i){
-           return v.indexOf('page-') === 0;
-        }).join().replace('page-','');
+        var markup = '';
+        var parentId = this.getItemId(target);
 
-        $.get('/wp-json/wp/v2/pages/',{parent: parentId},function(response){
+        $.get('/?hoor_submenu_unauthorized=' + parentId, function(response){
 
-            if(typeof response == 'object' && response.length != 0) {
-                $.each(response,function(index,pageObject){
-                    markup = markup + '<li class="menu-item page-' + pageObject.id + '"><a href="' + pageObject.link + '">' + pageObject.title.rendered + '</a></li>';
-                }.bind(markup));
-                $(target).parent().append('<ul class="sub-menu">' + markup + '</ul>');
-                $(target).parent().addClass('current-menu-item current_page_item current');
+            if(response.length !== "") {
+                $(target).after(response);
             } else {
                 window.location.href = $(target).attr('href');
             }
@@ -55,11 +46,11 @@ HelsingborgPrime.Helper.ToggleSubmenuItems = (function ($) {
     };
 
     ToggleSubmenuItems.prototype.getItemId = function (target) {
-        return $(target).parent('li').attr('data-post-id');
+        return $(target).parent('li').data('page-id');
     };
 
     ToggleSubmenuItems.prototype.toggleSibling = function (target) {
-        $(target).parent().toggleClass('current-menu-item current_page_item current');
+        $(target).parent().toggleClass('is-expanded');
     };
 
     return new ToggleSubmenuItems();

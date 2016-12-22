@@ -72,6 +72,13 @@
     }
   }
 
+  .sub-menu {
+    display: none;
+  }
+  .is-expanded > .sub-menu {
+    display: block;
+  }
+
   // Temporary solution for arrows
 
   .has-children {
@@ -81,12 +88,9 @@
       padding-right: 2rem;
     }
 
-    &::before {
+    button {
       position: absolute;
-      right: 6px;
-      top: 10px;
-      width: 1.125rem;
-      height: 1.125rem;
+      right: 0;
       //background: $color-gray-100;
       //border-radius: 3px;
       //border: 1px solid $color-gray-300;
@@ -98,14 +102,18 @@
       background-size: 8px 4px;
       text-align: center;
       font-size: 10px;
-      pointer-events: none;
+      z-index: 10;
+      cursor: pointer;
+      text-indent: -1000em;
+      border: none;
+      background-color: transparent;
+      height: 2.5rem; // Should match the height of the a tag
+      top: 0;
     }
   }
 
-  .has-children.current-node,
-  .has-children.current-menu-item {
-
-    &::before {
+  .is-expanded {
+    > button {
       background-image: url(../images/icons/arrow-up.svg);
     }
   }
