@@ -20,7 +20,14 @@
         ?>
 
         <h2 class="sidebar-menu__headline"><span class="visually-hidden">Undernavigation för </span>{{ $sidebar_label }}</h2>
-        {!! $navigation['sidebarMenu'] !!}
+        <?php
+            //{!! $navigation['sidebarMenu'] !!}
+            // Ideally the above should be used if Municipio
+            // is updated so we don't need our helpers that
+            // override Municipio´s helpers.
+            $navigation = new \Hoor\Helper\Navigation();
+            echo $navigation->sidebarMenu();
+        ?>
     @endif
 
     @if (is_active_sidebar('left-sidebar-bottom'))
