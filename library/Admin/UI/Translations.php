@@ -27,8 +27,13 @@ class Translations
 
     public function __construct()
     {
-        add_filter( 'gettext', array($this, 'filter_gettext'), 10, 3 );
-        add_filter( 'gettext_with_context', array($this, 'filter_gettext_with_context'), 10, 4 );
+        // Performance optimisation: only apply these filter on admin pages since
+        // applying by just this filter it seems to add around 60 ms to every call
+        // (very rudimentary tests, but still)
+        if (is_admin()) {
+            add_filter( 'gettext', array($this, 'filter_gettext'), 10, 3 );
+            add_filter( 'gettext_with_context', array($this, 'filter_gettext_with_context'), 10, 4 );
+        }
     }
 
     public function filter_gettext($translated, $original, $domain)
