@@ -2589,7 +2589,7 @@ ul.page-numbers {
 .c-accessibility-menu {
   margin-bottom: 1.25rem;
   font-size: 0.8125rem; }
-  .c-accessibility-menu #readspeaker-play-button {
+  .c-accessibility-menu .readspeaker-play-button {
     display: inline-block;
     padding: .5rem 1rem .5rem 1.75rem;
     border-radius: 10em;
@@ -2601,12 +2601,11 @@ ul.page-numbers {
     background-image: url(../images/icons/listen.svg);
     background-repeat: no-repeat;
     background-position: .5rem 50%; }
-    .c-accessibility-menu #readspeaker-play-button:hover, .c-accessibility-menu #readspeaker-play-button:focus {
+    .c-accessibility-menu .readspeaker-play-button:hover, .c-accessibility-menu .readspeaker-play-button:focus {
       background-color: #c6c6c6; }
-
-.readspeaker-player-element.rsbtn {
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem; }
+  .c-accessibility-menu .rsbtn_exp {
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem; }
 
 .cookie-consent {
   position: relative;

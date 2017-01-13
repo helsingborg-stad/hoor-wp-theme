@@ -2,7 +2,7 @@
   margin-bottom: $content-gutter;
   font-size: $font-size-smaller;
 
-  #readspeaker-play-button {
+  .readspeaker-play-button {
     display: inline-block;
     padding: .5rem 1rem .5rem 1.75rem;
     border-radius: 10em;
@@ -19,10 +19,10 @@
       background-color: $color-gray-400;
     }
   }
+  // Target Readspeaker bar that is shown when button is clicked and override default value
+  .rsbtn_exp {
+    margin-top: $content-gutter;
+    margin-bottom: $content-gutter;
+  }
 }
 
-// Target Readspeaker button and override default value
-.readspeaker-player-element.rsbtn {
-  margin-top: $content-gutter;
-  margin-bottom: $content-gutter;
-}
