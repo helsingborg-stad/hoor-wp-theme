@@ -1,20 +1,22 @@
 .truncate {
   display: inline-block;
-  width: 100%;
-  white-space: nowrap;
   overflow: hidden;
+  width: 100%;
   text-overflow: ellipsis;
+  white-space: nowrap;
 
-  &:hover {
-    background-color: #fff;
+  &:hover,
+  &:focus {
+    overflow: auto;
     width: auto;
-    overflow: visible;
+    background-color: $color-light;
+    text-decoration: underline;
+    }
   }
-}
 
 .truncate.link-item {
-  padding-right: 0;
   left: 0;
+  padding-right: 0;
 
   &::before {
     margin-left: 0;
