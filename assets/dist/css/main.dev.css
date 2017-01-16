@@ -2966,24 +2966,26 @@ a.box {
     margin: 0 0 .5rem;
     padding: 0;
     list-style: none; }
-    .modularity-mod-contact ul a, .modularity-mod-contact ul span, .modularity-mod-contacts ul a, .modularity-mod-contacts ul span {
+    .modularity-mod-contact ul a,
+    .modularity-mod-contact ul span, .modularity-mod-contacts ul a,
+    .modularity-mod-contacts ul span {
       display: inline-block;
-      padding-left: 1.25rem;
       word-wrap: break-word; }
   .modularity-mod-contact .card-title, .modularity-mod-contacts .card-title {
-    font-style: italic;
     margin-bottom: .5rem; }
   .modularity-mod-contact [itemprop=telephone], .modularity-mod-contacts [itemprop=telephone] {
     background-image: url(../images/icons/phone.svg);
     background-repeat: no-repeat;
     background-size: 1rem 1rem;
     background-position: 0 50%;
-    margin-bottom: .5rem; }
+    margin-bottom: .5rem;
+    padding-left: 1.25rem; }
   .modularity-mod-contact a[itemprop=email], .modularity-mod-contacts a[itemprop=email] {
     background-image: url(../images/icons/email-sign.svg);
     background-repeat: no-repeat;
     background-size: 1rem 1rem;
-    background-position: 0 50%; }
+    background-position: 0 50%;
+    padding-left: 1.25rem; }
   .modularity-mod-contact .small:not(:last-child), .modularity-mod-contacts .small:not(:last-child) {
     margin: 0 0 .5rem; }
 
@@ -3105,14 +3107,14 @@ a.box {
     color: #222; }
     .box__fact a:hover, .box__fact a:focus {
       color: #222; }
+  .box__fact ul {
+    padding-left: 1rem;
+    list-style-type: square; }
   .box__fact--panel {
     background: #e3e3e3; }
   .box__fact .box__headline {
-    font-size: 0.9375rem;
     background: #c6c6c6;
     border-bottom: 0; }
-  .box__fact .box__content {
-    font-size: 0.875rem; }
   .box__fact--red {
     background: #f0938e; }
     .box__fact--red .box__headline {
@@ -3513,8 +3515,25 @@ html:not(.no-flexbox) .primary-navigation li {
       -ms-flex-positive: 1;
           flex-grow: 1; }
 
-html:not(.no-flexbox) .primary-navigation ul.sub-menu {
-  display: none; }
+html:not(.no-flexbox) .primary-navigation .sub-menu {
+  display: none;
+  background: rgba(0, 0, 0, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.5); }
+
+html:not(.no-flexbox) .primary-navigation ul a {
+  padding-left: 1rem; }
+
+html:not(.no-flexbox) .primary-navigation ul ul a {
+  padding-left: 2rem; }
+
+html:not(.no-flexbox) .primary-navigation ul ul ul a {
+  padding-left: 3rem; }
+
+html:not(.no-flexbox) .primary-navigation ul ul ul ul a {
+  padding-left: 4rem; }
+
+html:not(.no-flexbox) .primary-navigation ul ul ul ul ul a {
+  padding-left: 5rem; }
 
 html:not(.no-flexbox) .primary-navigation .is-expanded > .sub-menu {
   display: -webkit-box;
@@ -3587,6 +3606,7 @@ html:not(.no-flexbox) .menu-item-search {
     right: 0;
     box-sizing: border-box;
     content: "";
+    background-color: red;
     background-image: url(../images/icons/arrow-down.svg);
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -3597,8 +3617,7 @@ html:not(.no-flexbox) .menu-item-search {
     cursor: pointer;
     text-indent: -1000em;
     border: none;
-    background-color: transparent;
-    height: 2.5rem;
+    height: 3.3125rem;
     top: 0; }
   .primary-navigation .is-expanded > button {
     background-image: url(../images/icons/arrow-up.svg); }
@@ -3892,18 +3911,19 @@ html[lang^="en"] [target="_blank"]::after {
 
 .truncate {
   display: inline-block;
-  width: 100%;
-  white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis; }
-  .truncate:hover {
-    background-color: #fff;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+  .truncate:hover, .truncate:focus {
+    overflow: auto;
     width: auto;
-    overflow: visible; }
+    background-color: #fff;
+    text-decoration: underline; }
 
 .truncate.link-item {
-  padding-right: 0;
-  left: 0; }
+  left: 0;
+  padding-right: 0; }
   .truncate.link-item::before {
     margin-left: 0; }
 
