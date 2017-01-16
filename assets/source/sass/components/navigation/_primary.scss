@@ -23,9 +23,32 @@ html:not(.no-flexbox) {
       flex-grow: 1;
     }
 
-    ul.sub-menu {
+    .sub-menu {
       display: none;
+      background: rgba(0, 0, 0, 0.25);
+      border-top: 1px solid hsla(0,0%,100%,.5);
     }
+
+    ul a {
+      padding-left: 1rem;
+    }
+
+    ul ul a {
+      padding-left: 2rem;
+    }
+
+    ul ul ul a {
+      padding-left: 3rem;
+    }
+
+    ul ul ul ul a {
+      padding-left: 4rem;
+    }
+
+    ul ul ul ul ul a {
+      padding-left: 5rem;
+    }
+
     .is-expanded > .sub-menu {
       display: flex;
     }
@@ -122,6 +145,7 @@ html:not(.no-flexbox) {
     right: 0;
     box-sizing: border-box;
     content: "";
+    background-color: red;
     background-image: url(../images/icons/arrow-down.svg);
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -132,8 +156,7 @@ html:not(.no-flexbox) {
     cursor: pointer;
     text-indent: -1000em;
     border: none;
-    background-color: transparent;
-    height: 2.5rem; // Should match the height of the a tag
+    height: 3.3125rem; // Should match the height of the a tag
     top: 0;
   }
 
