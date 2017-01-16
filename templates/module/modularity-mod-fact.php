@@ -1,4 +1,4 @@
-<div class="<?php echo implode(' ', apply_filters('Modularity/Module/Classes', array('box', 'box--panel', 'box__fact', 'box__fact--orange'), $module->post_type, $args)); ?>">
+<div class="<?php echo implode(' ', apply_filters('Modularity/Module/Classes', array('box', 'box--panel', 'box__fact', 'box__fact--blue'), $module->post_type, $args)); ?>">
     <?php if (!$module->hideTitle && !empty($module->post_title)) { ?>
         <h2 class="box__headline"><?php echo apply_filters('the_title', $module->post_title); ?></h2>
     <?php } ?>

@@ -11,18 +11,18 @@
     }
   }
 
+  ul {
+    padding-left: 1rem;
+    list-style-type: square;
+  }
+
   &--panel {
     background: $color-light-gray;
   }
 
   .box__headline {
-    font-size: $font-size-medium;
     background: $color-gray;
     border-bottom: 0;
-  }
-
-  .box__content {
-    font-size: $font-size-small;
   }
 
   // Red box
