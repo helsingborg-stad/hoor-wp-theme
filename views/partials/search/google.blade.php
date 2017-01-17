@@ -36,7 +36,7 @@
         <div class="grid gutter gutter-lg gutter-top">
             <div class="grid-lg-12">
                 <div class="notice info">
-                 <?php _e('Found no matching results on your search.', 'municipio'); ?>
+                 <?php _e('Found no matching results on your search.', 'hoor'); ?>
                 </div>
             </div>
         </div>
