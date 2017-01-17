@@ -12,6 +12,14 @@
 
 <div class="container main-container">
 
+    @if (is_active_sidebar('content-area-top'))
+        <div class="sidebar-content-area sidebar-content-area-top">
+            <div class="grid">
+                <?php dynamic_sidebar('content-area-top'); ?>
+            </div>
+        </div>
+    @endif
+
     <section class="gutter-vertical gutter-lg clearfix">
         <div class="gid">
             <div class="grid-lg-12">
@@ -22,7 +30,7 @@
         </div>
     </section>
 
-    @if (!$results->items)
+@if (empty($results->items))
 
     <div class="container gutter gutter-lg gutter-top">
         <div class="grid gutter gutter-lg gutter-top">
@@ -34,7 +42,7 @@
         </div>
     </div>
 
-    @else
+@else
 
     <section>
         <div class="container">
@@ -69,10 +77,18 @@
                     @endif
                 </div>
 
-                @include('partials.sidebar-right')
             </div>
         </div>
     </section>
+@endif
+
+@if (is_active_sidebar('content-area'))
+    <div class="sidebar-content-area sidebar-content-area-bottom">
+        <div class="grid">
+            <?php dynamic_sidebar('content-area'); ?>
+        </div>
+    </div>
+@endif
 </div>
 
-@endif
+@include('partials.sidebar-right')
