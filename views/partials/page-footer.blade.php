@@ -9,8 +9,4 @@
 
     </div>
     @endif
-
-    <div class="c-article-timestamps">
-        @include('partials.timestamps')
-    </div>
 </footer>

@@ -1,5 +1,5 @@
 @if ($hasLeftSidebar)
-<aside class="grid-md-4 grid-lg-3 sidebar-left-sidebar hidden-print">
+<aside class="sidebar-left-sidebar hidden-print">
     @if (is_active_sidebar('left-sidebar'))
         <div class="grid sidebar-left-sidebar-top">
             <?php dynamic_sidebar('left-sidebar'); ?>
@@ -19,7 +19,10 @@
 
         ?>
 
-        <h2 class="sidebar-menu__headline"><span class="visually-hidden">Undernavigation för </span>{{ $sidebar_label }}</h2>
+        <!-- Set aria-expanded="true/false" with JS -->
+        <button aria-expanded="false" aria-controls="sidebarMenu"class="sidebar-menu__navigation-button o-button o-button--primary"><?php _e('Navigation for', 'hoor'); ?> </span>{{ $sidebar_label }}</button>
+
+        <h2 class="sidebar-menu__headline"><span class="visually-hidden"><?php _e('Undernavigation för', 'hoor'); ?>Navigation for </span>{{ $sidebar_label }}</h2>
         <?php
             //{!! $navigation['sidebarMenu'] !!}
             // Ideally the above should be used if Municipio
