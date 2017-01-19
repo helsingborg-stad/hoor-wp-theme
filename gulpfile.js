@@ -68,7 +68,7 @@ gulp.task('scripts-dist', function() {
                 'node_modules/jquery/dist/jquery.js',
                 'assets/source/js/hbg-prime/plugins/jquery-ui-1.11.4/jquery-ui.js',
                 'assets/source/js/hbg-prime/**/*.js',
-                'assets/source/js/*.js',
+                'assets/source/js/**/*.js',
                 '../municipio/assets/dist/js/packaged.js'
             ])
             .pipe(plumber({
