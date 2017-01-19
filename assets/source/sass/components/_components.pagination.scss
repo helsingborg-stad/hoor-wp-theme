@@ -27,7 +27,7 @@ ul.page-numbers {
     a.page-numbers,
     span.page-numbers,
     .next,
-    .previous {
+    .prev {
       display: flex;
       padding: .25rem .675rem;
       min-width: 40px;
@@ -51,11 +51,14 @@ ul.page-numbers {
 
 
   .next,
-  .previous {
+  .prev {
     background-color: $color-action;
     background-size: 7px 12px;
     background-repeat: no-repeat;
     color: $color-light;
+    width: 40px;
+    text-indent: -1000px;
+    overflow: hidden;
 
     &:hover,
     &:focus {
@@ -64,7 +67,7 @@ ul.page-numbers {
     }
   }
 
-  .previous {
+  .prev {
     background-image: url(../images/icons/chevron-left.svg);
     background-position: calc(50% - 1px) 50%;
 
