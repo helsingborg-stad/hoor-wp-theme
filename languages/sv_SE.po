@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Municipio\n"
-"POT-Creation-Date: 2017-01-19 15:17+0100\n"
-"PO-Revision-Date: 2017-01-19 15:17+0100\n"
+"POT-Creation-Date: 2017-01-19 15:18+0100\n"
+"PO-Revision-Date: 2017-01-19 15:24+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -21,6 +21,7 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
 #: library/Helper/NavigationTree.php:406
+#: views/partials/sidebar-left.blade.php:24
 msgid "Show submenu"
 msgstr "Visa undermeny"
 
@@ -181,10 +182,6 @@ msgid "Found no matching results on your search."
 msgstr "Hittade inga matchande resultat på din sökning."
 
 #: views/partials/sidebar-left.blade.php:24
-msgid "Navigation"
-msgstr "Navigering"
-
-#: views/partials/sidebar-left.blade.php:24
 msgid "for"
 msgstr "för"
 
@@ -241,6 +238,9 @@ msgstr "Barntema för Municipio"
 #. Author of the plugin/theme
 msgid "Whitespace AB"
 msgstr "Whitespace AB"
+
+#~ msgid "Navigation"
+#~ msgstr "Navigering"
 
 #~ msgid "Maybe this is what you are looking for?"
 #~ msgstr "Kanske är detta vad du letar efter?"
