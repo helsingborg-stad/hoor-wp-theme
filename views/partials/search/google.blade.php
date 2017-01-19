@@ -26,6 +26,11 @@
                 <div class="gutter gutter-sm gutter-top">
                     <h1 class="search-result__headline"><strong>{{ $results->searchInformation->formattedTotalResults }}</strong> träffar på <strong>"{{ get_search_query() }}"</strong> inom Hoor.se</h1>
                 </div>
+                @if (!empty($results->spelling->correctedQuery))
+                 <div class="gutter gutter-sm gutter-top">
+                     <p class="did-you-mean">Menade du: <a class="did-you-mean__suggestion" href="/?s={{ $results->spelling->correctedQuery }}">{{ $results->spelling->correctedQuery }}</a>?<p>
+                 </div>
+                @endif
             </div>
         </div>
     </section>

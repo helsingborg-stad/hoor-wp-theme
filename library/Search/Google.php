@@ -38,7 +38,7 @@ class Google extends \Municipio\Search\Google
         if (isset($query->previousPage)) {
             $previousPage = $query->previousPage[0];
 
-            $markup[] = '<li><a class="previous" href="?s=' . urlencode(stripslashes($this->keyword)) .
+            $markup[] = '<li><a class="prev" href="?s=' . urlencode(stripslashes($this->keyword)) .
                         '&amp;index=' . $previousPage->startIndex .
                         '" aria-label="Föregående sida"><span class="previous__label">Föregående<span class="visually-hidden"> sida</span></span></a></li>';
         }
