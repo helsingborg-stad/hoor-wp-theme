@@ -1,3 +1,20 @@
+.sidebar-menu__navigation-button {
+  display: none;
+}
+
+@media #{$screen-below-lg} {
+
+  .sidebar-menu__navigation-button {
+    display: block;
+    margin-bottom: 2rem;
+  }
+
+  #sidebar-menu,
+  .sidebar-menu__headline {
+    display: none;
+  }
+}
+
 .sidebar-menu {
 
   &__headline {

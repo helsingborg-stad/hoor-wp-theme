@@ -8,6 +8,11 @@
   padding: 1rem 0;
   font-size: $font-size-smaller;
 
+  @media #{$screen-below-lg} {
+    padding-top: 0;
+    padding-bottom: 2rem;
+  }
+
   &__list {
     margin: 0;
     padding: 0;
