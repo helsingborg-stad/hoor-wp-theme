@@ -1,7 +1,7 @@
 <div class="container">
     <div class="grid">
         <div class="grid-xs-12 grid-sm-3 site-header__logotype">
-            {!! municipio_get_logotype(get_field('header_logotype', 'option'), get_field('logotype_tooltip', 'option'), true, get_field('header_tagline_enable', 'option')) !!}
+            {!! municipio_get_logotype(get_field('header_logotype', 'option'), get_field('logotype_tooltip', 'option'), false, get_field('header_tagline_enable', 'option')) !!}
         </div>
         <div class="grid-xs-12 grid-sm-9 hidden-print">
             {!!
