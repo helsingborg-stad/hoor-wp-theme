@@ -2,11 +2,11 @@
     <div class="mobile-header__logotype">
         {!! municipio_get_logotype(get_field('header_logotype', 'option'), get_field('logotype_tooltip', 'option'), false, get_field('header_tagline_enable', 'option')) !!}
     </div>
-    <button aria-expanded="false" aria-controls="site-header-container" class=""><?php _e('Menu', 'municipio'); ?></button>
-    <button aria-expanded="false" aria-controls="search" class=""><?php _e('Search', 'municipio'); ?></button>
+    <button aria-expanded="false" aria-controls="site-header-container" class="hidden-print"><?php _e('Menu', 'municipio'); ?></button>
+    <button aria-expanded="false" aria-controls="search" class="hidden-print"><?php _e('Search', 'municipio'); ?></button>
 </div>
 
-<div id="site-header-container" class="site-header-container">
+<div id="site-header-container" class="site-header-container hidden-print">
     <div class="container">
         <div class="grid">
             <div class="grid-xs-12 grid-sm-3 site-header__logotype">

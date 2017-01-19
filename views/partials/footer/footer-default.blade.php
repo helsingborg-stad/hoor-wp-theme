@@ -1,4 +1,4 @@
-<footer class="main-footer">
+<footer class="main-footer hidden-print">
     <div class="container">
         <div class="grid sidebar-footer-area">
             @if (is_active_sidebar('footer-area'))
