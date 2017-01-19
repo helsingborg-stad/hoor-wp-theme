@@ -3997,3 +3997,24 @@ html[lang^="en"] [target="_blank"]::after {
 
 .no-js.search .header__search {
   display: none; }
+
+.site-header-container,
+.header__search {
+  display: none; }
+
+.site-header__logotype {
+  display: none; }
+
+@media (min-width: 769px) {
+  .mobile-header {
+    display: none; }
+  .site-header-container,
+  .header__search,
+  .site-header__logotype {
+    display: block; } }
+
+.mobile-header {
+  margin: 1rem; }
+  .mobile-header__logotype .logotype {
+    display: block;
+    width: 138px; }
