@@ -28,7 +28,7 @@
                 </div>
                 @if (!empty($results->spelling->correctedQuery))
                  <div class="gutter gutter-sm gutter-top">
-                     <p class="did-you-mean">Menade du: <a class="did-you-mean__suggestion" href="/?s={{ $results->spelling->correctedQuery }}">{{ $results->spelling->correctedQuery }}</a>?<p>
+                     <p class="did-you-mean"><?php _e('Did you mean', 'hoor'); ?>: <a class="did-you-mean__suggestion" href="/?s={{ $results->spelling->correctedQuery }}">{{ $results->spelling->correctedQuery }}</a><p>
                  </div>
                 @endif
             </div>

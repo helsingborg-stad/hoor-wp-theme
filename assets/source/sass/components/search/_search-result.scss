@@ -54,3 +54,11 @@
     }
   }
 }
+
+.did-you-mean {
+  color: $color-red;
+
+  &__suggestion {
+    font-weight: bold;
+  }
+}

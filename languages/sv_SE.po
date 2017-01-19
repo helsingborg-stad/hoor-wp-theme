@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Municipio\n"
-"POT-Creation-Date: 2016-12-15 21:36+0100\n"
-"PO-Revision-Date: 2016-12-15 21:41+0100\n"
+"POT-Creation-Date: 2017-01-19 15:17+0100\n"
+"PO-Revision-Date: 2017-01-19 15:17+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -20,16 +20,20 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
+#: library/Helper/NavigationTree.php:406
+msgid "Show submenu"
+msgstr "Visa undermeny"
+
 #: library/Search/Google.php:34 views/archive-evenemang.blade.php:70
 #: views/home.blade.php:57
 msgid "Pagination"
 msgstr "Paginering"
 
-#: library/Theme/Navigation.php:29
+#: library/Theme/Navigation.php:38 views/partials/header/default.blade.php:6
 msgid "Search"
 msgstr "Sök"
 
-#: library/Theme/Navigation.php:60 library/Theme/Navigation.php:61
+#: library/Theme/Navigation.php:69 library/Theme/Navigation.php:70
 msgid "Home"
 msgstr "Hem"
 
@@ -63,6 +67,14 @@ msgstr "Filtyp"
 #: templates/module/modularity-mod-noticeboard.php:31
 msgid "There are no announcements right now."
 msgstr "Det finns inga meddelanden just nu."
+
+#: templates/module/modularity-mod-posts/modularity-mod-posts-expandable-list.php:8
+msgid "Title"
+msgstr "Titel"
+
+#: templates/module/modularity-mod-posts/modularity-mod-posts-expandable-list.php:57
+msgid "Nothing to display…"
+msgstr "Inget att visa..."
 
 #: templates/module/modularity-mod-posts/modularity-mod-posts-items.php:69
 #: templates/module/modularity-mod-posts/modularity-mod-posts-list.php:22
@@ -152,13 +164,29 @@ msgstr "Brödsmulor"
 msgid "You are here:"
 msgstr "Du är här:"
 
+#: views/partials/header/default.blade.php:5
+msgid "Menu"
+msgstr "Meny"
+
 #: views/partials/search-popular.blade.php:6
 msgid "Popular searches"
 msgstr "Populära sökningar"
 
 #: views/partials/search/google.blade.php:31
+msgid "Did you mean"
+msgstr "Menade du"
+
+#: views/partials/search/google.blade.php:44
 msgid "Found no matching results on your search."
 msgstr "Hittade inga matchande resultat på din sökning."
+
+#: views/partials/sidebar-left.blade.php:24
+msgid "Navigation"
+msgstr "Navigering"
+
+#: views/partials/sidebar-left.blade.php:24
+msgid "for"
+msgstr "för"
 
 #: views/partials/social-share.blade.php:16
 msgid "Send page via e-mail"
@@ -648,9 +676,6 @@ msgstr "Whitespace AB"
 #~ msgid "- Select -"
 #~ msgstr "- Välj -"
 
-#~ msgid "Title"
-#~ msgstr "Titel"
-
 #~ msgid "Url"
 #~ msgstr "Url"
 
@@ -1082,9 +1107,6 @@ msgstr "Whitespace AB"
 #~ msgid "Theme Options"
 #~ msgstr "Temainställningar"
 
-#~ msgid "Navigation"
-#~ msgstr "Navigering"
-
 #~ msgid "Content"
 #~ msgstr "Innehåll"
 
@@ -1256,9 +1278,6 @@ msgstr "Whitespace AB"
 
 #~ msgid "Filter"
 #~ msgstr "Filtrera"
-
-#~ msgid "Menu"
-#~ msgstr "Meny"
 
 #~ msgid "More"
 #~ msgstr "Mer"

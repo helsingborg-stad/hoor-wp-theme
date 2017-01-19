@@ -20,9 +20,10 @@
         ?>
 
         <!-- Set aria-expanded="true/false" with JS -->
-        <button aria-expanded="false" aria-controls="sidebarMenu"class="sidebar-menu__navigation-button o-button o-button--primary"><?php _e('Navigation for', 'hoor'); ?> </span>{{ $sidebar_label }}</button>
+        <button aria-expanded="false" aria-controls="sidebarMenu" class="sidebar-menu__navigation-button o-button o-button--primary">
+        <?php _e('Show submenu', 'hoor'); ?><span class="visually-hidden"><?php _e('for', 'hoor'); ?> {{ $sidebar_label }}</span></button>
 
-        <h2 class="sidebar-menu__headline"><span class="visually-hidden"><?php _e('Undernavigation för', 'hoor'); ?>Navigation for </span>{{ $sidebar_label }}</h2>
+        <h2 class="sidebar-menu__headline">{{ $sidebar_label }}</h2>
         <?php
             //{!! $navigation['sidebarMenu'] !!}
             // Ideally the above should be used if Municipio

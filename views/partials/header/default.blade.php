@@ -2,8 +2,8 @@
     <div class="mobile-header__logotype">
         {!! municipio_get_logotype(get_field('header_logotype', 'option'), get_field('logotype_tooltip', 'option'), false, get_field('header_tagline_enable', 'option')) !!}
     </div>
-    <button aria-expanded="false" aria-controls="site-header-container" class="hidden-print"><?php _e('Menu', 'municipio'); ?></button>
-    <button aria-expanded="false" aria-controls="search" class="hidden-print"><?php _e('Search', 'municipio'); ?></button>
+    <button aria-expanded="false" aria-controls="site-header-container" class="hidden-print"><?php _e('Menu', 'hoor'); ?></button>
+    <button aria-expanded="false" aria-controls="search" class="hidden-print"><?php _e('Search', 'hoor'); ?></button>
 </div>
 
 <div id="site-header-container" class="site-header-container hidden-print">

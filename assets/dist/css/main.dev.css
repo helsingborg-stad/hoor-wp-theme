@@ -2148,6 +2148,11 @@ a.skip {
       .search-result__url {
         display: block; } }
 
+.did-you-mean {
+  color: #e1261c; }
+  .did-you-mean__suggestion {
+    font-weight: bold; }
+
 .search-popular {
   padding: 1rem 0;
   border-bottom: 1px solid #f1f1f1;
@@ -2524,7 +2529,7 @@ ul.page-numbers {
   ul.page-numbers a.page-numbers,
   ul.page-numbers span.page-numbers,
   ul.page-numbers .next,
-  ul.page-numbers .previous {
+  ul.page-numbers .prev {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2546,27 +2551,30 @@ ul.page-numbers {
     background-color: #065a92;
     color: #fff; }
   ul.page-numbers .next,
-  ul.page-numbers .previous {
+  ul.page-numbers .prev {
     background-color: #0872b9;
     background-size: 7px 12px;
     background-repeat: no-repeat;
-    color: #fff; }
+    color: #fff;
+    width: 40px;
+    text-indent: -1000px;
+    overflow: hidden; }
     ul.page-numbers .next:hover, ul.page-numbers .next:focus,
-    ul.page-numbers .previous:hover,
-    ul.page-numbers .previous:focus {
+    ul.page-numbers .prev:hover,
+    ul.page-numbers .prev:focus {
       background-color: #065a92;
       color: #fff; }
-  ul.page-numbers .previous {
+  ul.page-numbers .prev {
     background-image: url(../images/icons/chevron-left.svg);
     background-position: calc(50% - 1px) 50%; }
     @media (max-width: 769px) {
-      ul.page-numbers .previous {
+      ul.page-numbers .prev {
         padding-left: 2rem;
         background-position: 10px 50%; } }
-    ul.page-numbers .previous__label {
+    ul.page-numbers .prev__label {
       display: none; }
       @media (max-width: 769px) {
-        ul.page-numbers .previous__label {
+        ul.page-numbers .prev__label {
           display: block; } }
   ul.page-numbers .next {
     background-image: url(../images/icons/chevron-right.svg);
