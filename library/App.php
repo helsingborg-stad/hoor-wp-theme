@@ -14,6 +14,7 @@ class App
         new \Hoor\Theme\Oembed();
         new \Hoor\Theme\Seo();
         new \Hoor\Theme\Feeds();
+        new \Hoor\Theme\Grid();
 
         /**
          * Admin
