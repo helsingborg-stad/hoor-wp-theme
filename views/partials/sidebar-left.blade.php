@@ -6,7 +6,15 @@
         </div>
     @endif
 
-    @if (get_field('nav_sub_enable', 'option'))
+    <?php
+        // Ideally $navigation['sidebarMenu'] should be used if Municipio
+        // is updated so we don't need our helpers that
+        // override Municipio´s helpers.
+        $navHelper = new \Hoor\Helper\Navigation();
+        $sidebarMenu = $navHelper->sidebarMenu();
+    ?>
+
+    @if ($sidebarMenu)
         <?php
             global $post;
             $ancestors = array_reverse(get_post_ancestors($post->ID));
@@ -24,14 +32,7 @@
         <?php _e('Show submenu', 'hoor'); ?><span class="visually-hidden"><?php _e('for', 'hoor'); ?> {{ $sidebar_label }}</span></button>
 
         <h2 class="sidebar-menu__headline">{{ $sidebar_label }}</h2>
-        <?php
-            //{!! $navigation['sidebarMenu'] !!}
-            // Ideally the above should be used if Municipio
-            // is updated so we don't need our helpers that
-            // override Municipio´s helpers.
-            $navigation = new \Hoor\Helper\Navigation();
-            echo $navigation->sidebarMenu();
-        ?>
+        <?php echo $sidebarMenu; ?>
     @endif
 
     @if (is_active_sidebar('left-sidebar-bottom'))

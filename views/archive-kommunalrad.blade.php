@@ -1,5 +1,4 @@
-{{-- This template is used for the event archive page --}}
-
+{{-- This template is used for the kommunalrådsblogg --}}
 
 @extends('templates.master')
 
@@ -27,33 +26,23 @@
                         </div>
                     @endif
 
-                    @while(have_posts())
-                        <h1>Evenemang</h1>
-                        {!! the_post() !!}
+                    @if (have_posts())
+                        @while(have_posts())
+                            {!! the_post() !!}
 
-                        <?php global $post; ?>
-                        <div class="grid">
-                            <div class="grid-xs-12">
-                                <div class="post post-single">
-                                    <h2><a href="{{ the_permalink() }}">{{ the_title() }}</a></h2>
-                                    <h3>{{ get_field(date) }}</h3>
-                                    <h3>{{ get_field(place) }}</h3>
-
-                                    <article class="clearfix">
-                                        @if (isset(get_extended($post->post_content)['main']) && strlen(get_extended($post->post_content)['main']) > 0 && isset(get_extended($post->post_content)['extended']) && strlen(get_extended($post->post_content)['extended']) > 0)
-
-                                            {!! apply_filters('the_lead', get_extended($post->post_content)['main']) !!}
-                                            {!! apply_filters('the_content', get_extended($post->post_content)['extended']) !!}
-
-                                        @else
-                                            {!! the_content() !!}
-                                        @endif
-                                    </article>
+                            @if (in_array($template, array('full', 'compressed', 'collapsed')))
+                                <div class="grid-xs-12 post">
+                                    @include('partials.blog.type.post-' . $template)
                                 </div>
-                            </div>
+                            @else
+                                @include('partials.blog.type.post-' . $template)
+                            @endif
+                        @endwhile
+                    @else
+                        <div class="grid-xs-12">
+                            <div class="notice info pricon pricon-info-o pricon-space-right"><?php _e('No posts to show'); ?>…</div>
                         </div>
-                    @endwhile
-
+                    @endif
 
                     @if (is_active_sidebar('content-area'))
                         <div class="sidebar-content-area sidebar-content-area-bottom">
