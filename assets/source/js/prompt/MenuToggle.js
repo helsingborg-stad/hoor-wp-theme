@@ -19,12 +19,8 @@ HelsingborgPrime.Prompt.MenuToggle = (function ($) {
     };
 
     MenuToggle.prototype.toggle = function () {
-        $('.site-header-container').toggleClass('is-expanded');
+        $('.site-header-container').slideToggle(300);
         $('.search-top').slideUp(300);
-    };
-
-    MenuToggle.prototype.hide = function () {
-        $('.site-header-container').removeClass('is-expanded');
     };
 
     return new MenuToggle();

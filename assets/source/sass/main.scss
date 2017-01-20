@@ -91,12 +91,6 @@
   display: none;
 }
 
-@media #{$screen-below-md} {
-  .site-header-container.is-expanded {
-    display: block;
-  }
-}
-
 .site-header__logotype {
   display: none;
 }
