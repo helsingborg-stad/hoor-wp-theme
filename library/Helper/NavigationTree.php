@@ -413,13 +413,17 @@ class NavigationTree
      */
     public function shouldBeIncluded($item)
     {
+        if (!is_object($item)) {
+            return false;
+        }
+
         $pageId = $this->getPageId($item);
-        $hide = get_field('hide_in_menu', $pageId) ? get_field('hide_in_menu', $pageId) : false;
+        $showInMenu = get_field('hide_in_menu', $pageId) ? !get_field('hide_in_menu', $pageId) : true;
+        $isNotTopLevelItem = !($item->post_type === 'page' && isset($item->post_parent) && $item->post_parent === 0);
+        $showTopLevel = $this->args['include_top_level'];
 
-        return !($item->post_type === 'page' && isset($item->post_parent) && !$this->args['include_top_level'] && $item->post_parent === 0)
-               || $hide;
+        return ($showTopLevel || $isNotTopLevelItem) && $showInMenu;
     }
-
 
     /**
      * Adds markup to the output string
