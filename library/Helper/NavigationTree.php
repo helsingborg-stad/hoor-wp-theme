@@ -89,7 +89,7 @@ class NavigationTree
 
         if ($this->args['include_top_level']) {
             $this->walk($this->topLevelPages);
-        } else {
+        } elseif($page) {
             $this->walk(array($page));
         }
     }
@@ -117,7 +117,7 @@ class NavigationTree
 
             if ($this->getPageId($this->currentPage) == $pageId) {
                 $classes[] = 'current current-menu-item';
-                if (!empty($this->getChildren($pageId)) && $this->depth < $this->args['depth']) {
+                if (!empty($this->getChildren($pageId)) && $this->depth != $this->args['depth']) {
                     $classes[] = 'is-expanded';
                 }
             }
