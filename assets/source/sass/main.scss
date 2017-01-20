@@ -90,7 +90,9 @@
 .header__search {
   display: none;
 }
-
+.site-header-container.is-expanded {
+  display: block;
+}
 .site-header__logotype {
   display: none;
 }

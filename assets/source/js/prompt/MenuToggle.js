@@ -19,8 +19,19 @@ HelsingborgPrime.Prompt.MenuToggle = (function ($) {
     };
 
     MenuToggle.prototype.toggle = function () {
-        $('.site-header-container').slideToggle(300);
+        $('.site-header-container').slideToggle(300, function() {
+            $(this).toggleClass('is-expanded');
+            $(this).css('display', '');
+        });
         $('.search-top').slideUp(300);
+    };
+
+    // Not used here atm but can be used by others, e.g search toggle.
+    MenuToggle.prototype.hide = function () {
+        $('.site-header-container').slideUp(300, function() {
+            $(this).removeClass('is-expanded');
+            $(this).css('display', '');
+        });
     };
 
     return new MenuToggle();

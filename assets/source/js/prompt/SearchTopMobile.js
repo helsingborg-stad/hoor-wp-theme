@@ -13,7 +13,7 @@ HelsingborgPrime.Prompt.SearchTopMobile = (function ($) {
 
     SearchTopMobile.prototype.bindEvents = function () {
         $('.js-search-top-mobile').on('click', function (e) {
-            $('.site-header-container').slideUp(300);
+            HelsingborgPrime.Prompt.MenuToggle.hide();
         }.bind(this));
     };
 
