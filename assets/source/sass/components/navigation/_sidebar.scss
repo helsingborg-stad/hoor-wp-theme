@@ -5,8 +5,16 @@
 @media #{$screen-below-lg} {
 
   .sidebar-menu__navigation-button {
-    display: block;
+    display: flex;
     margin-bottom: 2rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    background: darken($color-action, 6);
+
+    svg {
+      fill: currentColor;
+      margin-right: 1.25rem;
+    }
   }
 
   #sidebar-menu,

@@ -145,7 +145,7 @@ html:not(.no-flexbox) {
     right: 0;
     box-sizing: border-box;
     content: "";
-    background-color: red;
+    background-color: $color-light;
     background-image: url(../images/icons/arrow-down.svg);
     background-repeat: no-repeat;
     background-position: 50% 50%;

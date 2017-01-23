@@ -5,7 +5,7 @@
   }
 
   @media #{$screen-sm-up} {
-    padding: 1.5rem 0;
+    padding: 1rem 0;
   }
 
   &__group {
@@ -90,10 +90,6 @@
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .3);
       }
     }
-  }
-
-  @media #{$screen-below-sm} {
-    border-top: 1px solid $color-light;
   }
 
   @media #{$screen-md-up} {

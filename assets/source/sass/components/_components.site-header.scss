@@ -1,6 +1,11 @@
 .site-header {
-  background: $color-light;
   flex: none;
+  background: $color-gray-100;
+
+  @media #{$screen-md-up} {
+    background: $color-light;
+  }
+
 
   &__logotype {
     margin: 1rem 0;

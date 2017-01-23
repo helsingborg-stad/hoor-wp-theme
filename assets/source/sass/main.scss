@@ -86,6 +86,14 @@
 @import "trumps/trumps.print";
 @import "trumps/trumps.no-js";
 
+.site-header-container {
+    background: darken($color-action, 6);
+
+  @media #{$screen-md-up} {
+    background: $color-light;
+  }
+}
+
 .site-header-container,
 .header__search {
   display: none;
@@ -109,7 +117,7 @@
 }
 
 .mobile-header {
-  margin: 1rem;
+  margin: .5rem 12px;
 
   &__logotype {
 
@@ -119,4 +127,44 @@
       //margin: 0 auto;
     }
   }
+}
+
+.js-menu-toggle,
+.js-search-top-mobile {
+  position: absolute;
+  top: 0;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  width: 73px;
+  height: 73px;
+  text-align: center;
+  font-size: $font-size-tiny;
+  color: $color-dark;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &:active {
+    background: darken($color-action, 6);
+    color: $color-light;
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+  }
+}
+
+.js-menu-toggle {
+  right: 73px;
+  background-color: darken($color-gray-100, 5);
+}
+
+.js-search-top-mobile {
+  right: 0;
+  background-color: darken($color-gray-100, 10);
 }
