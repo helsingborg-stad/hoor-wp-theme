@@ -29,7 +29,11 @@
 
         <!-- Set aria-expanded="true/false" with JS -->
         <button aria-expanded="false" aria-controls="sidebarMenu" class="sidebar-menu__navigation-button o-button o-button--primary">
-        <?php _e('Show submenu', 'hoor'); ?><span class="visually-hidden"><?php _e('for', 'hoor'); ?> {{ $sidebar_label }}</span></button>
+            <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" fill-rule="evenodd"/></svg>
+            <span>
+                <?php _e('Show submenu', 'hoor'); ?><span class="visually-hidden"><?php _e('for', 'hoor'); ?> {{ $sidebar_label }}</span>
+            </span>
+        </button>
 
         <h2 class="sidebar-menu__headline">{{ $sidebar_label }}</h2>
         <?php echo $sidebarMenu; ?>
