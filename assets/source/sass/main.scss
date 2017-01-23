@@ -147,22 +147,28 @@
   justify-content: center;
   align-items: center;
   user-select: none;
-
-  &:active {
-    background: darken($color-action, 6);
-    color: $color-light;
-  }
+  transition: background-color .25s ease-out;
 
   svg {
     width: 20px;
     height: 20px;
     fill: currentColor;
   }
+
+  &[aria-expanded="true"] {
+    background: darken($color-action, 6);
+    color: $color-light;
+  }
 }
 
 .js-menu-toggle {
   right: 73px;
   background-color: darken($color-gray-100, 5);
+
+  &:hover,
+  &:focus {
+    background-color: darken($color-gray-100, 15);
+  }
 
   &[aria-expanded="false"] {
     .icon-close {
@@ -177,11 +183,14 @@
   }
 }
 
-
-
 .js-search-top-mobile {
   right: 0;
   background-color: darken($color-gray-100, 10);
+
+  &:hover,
+  &:focus {
+    background-color: darken($color-gray-100, 20);
+  }
 
   &[aria-expanded="false"] {
     .icon-close {

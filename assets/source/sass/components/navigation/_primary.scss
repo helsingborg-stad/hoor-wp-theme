@@ -9,6 +9,10 @@ html:not(.no-flexbox) {
       display: flex;
       flex-grow: 2;
 
+      &:last-child {
+        border-bottom: 1px solid rgba($color-gray-200, .5);
+      }
+
       @media #{$screen-below-md} {
         flex-direction: column;
       }
@@ -25,28 +29,30 @@ html:not(.no-flexbox) {
 
     .sub-menu {
       display: none;
-      background: rgba(0, 0, 0, .25);
-      border-top: 1px solid hsla(0, 0%, 100%, .5);
+      background: rgba(0, 0, 0, .05);
+      border-top: 1px solid rgba($color-gray-200, .5);
     }
 
-    li:not(:last-child) a {
-      padding-left: 1rem;
+    @media #{$screen-md-up} {
+      li:not(:last-child) a {
+        padding-left: 1rem;
+      }
     }
 
     ul ul a {
-      padding-left: 2rem;
+      padding-left: 1.5rem;
     }
 
     ul ul ul a {
-      padding-left: 3rem;
+      padding-left: 2rem;
     }
 
     ul ul ul ul a {
-      padding-left: 4rem;
+      padding-left: 2.5rem;
     }
 
     ul ul ul ul ul a {
-      padding-left: 5rem;
+      padding-left: 3rem;
     }
 
     .is-expanded > .sub-menu {
@@ -65,10 +71,14 @@ html:not(.no-flexbox) {
 
 .primary-navigation {
   position: relative;
-  background: $color-action;
+  background: $color-light;
   font-size: $font-size-small;
   line-height: 1.5;
   z-index: 1;
+
+  @media #{$screen-md-up} {
+    background: $color-action;
+  }
 
   &__container {
     margin: 0 auto;
@@ -89,7 +99,7 @@ html:not(.no-flexbox) {
     float: left;
 
     &:not(:first-child) {
-      border-top: 1px solid rgba($color-light, .5);
+      border-top: 1px solid $color-gray-200;
 
       @media #{$screen-md-up} {
         border-top: none;
@@ -99,25 +109,30 @@ html:not(.no-flexbox) {
 
   a {
     display: block;
-    color: #E9EFF8;
     text-decoration: none;
-    padding: 1rem;
+    padding: .75rem 1rem;
     transition: background-color .25s ease-out;
+    color: $color-dark;
 
     @media #{$screen-md-up} {
+      color: #E9EFF8;
       text-align: center;
       padding: 1.28125rem 1rem;
-    }
 
-    &:hover {
-      background-color: darken($color-action, 4);
-      text-decoration: underline;
+      &:hover {
+        background-color: darken($color-action, 4);
+        text-decoration: underline;
+      }
     }
   }
 
   .current-page-ancestor,
   .current-menu-item {
-    background: darken($color-action, 4);
+    background: $color-gray;
+
+    @media #{$screen-md-up} {
+      background: darken($color-action, 4);
+    }
   }
 
   .has-children {
@@ -144,19 +159,21 @@ html:not(.no-flexbox) {
     right: 0;
     box-sizing: border-box;
     content: "";
-    background-color: $color-light;
+    background-color: rgba($color-gray-100, .5);
     background-image: url(../images/icons/arrow-down.svg);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: 8px 4px;
     text-align: center;
     font-size: 10px;
-    z-index: 10;
+    z-index: 2;
     cursor: pointer;
     text-indent: -1000em;
     border: none;
-    height: 3.3125rem; // Should match the height of the a tag
+    height: 2.8125rem; // Should match the height of the a element
+    width: 2.8125rem; // Should match the height of the a element
     top: 0;
+    border-left: 1px solid $color-gray-200;
   }
 
   .is-expanded {
