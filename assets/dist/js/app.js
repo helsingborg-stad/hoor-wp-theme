@@ -23918,13 +23918,17 @@ HelsingborgPrime.Prompt.MenuToggle = (function ($) {
     }
 
     MenuToggle.prototype.bindEvents = function () {
+        var self = this;
         $('.js-menu-toggle').on('click', function (e) {
             e.preventDefault();
-            this.toggle();
-        }.bind(this));
+            self.toggle(this);
+        });
     };
 
-    MenuToggle.prototype.toggle = function () {
+    MenuToggle.prototype.toggle = function (button) {
+        var $button = $(button);
+        var state = $button.attr('aria-expanded') == 'false' ? 'true' : 'false';
+        $button.attr('aria-expanded', state);
         $('.site-header-container').slideToggle(300, function() {
             $(this).toggleClass('is-expanded');
             $(this).css('display', '');
