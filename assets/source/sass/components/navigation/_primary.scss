@@ -7,6 +7,10 @@ html:not(.no-flexbox) {
       > ul {
         &:last-child {
           border-bottom: 1px solid $color-gray-200;
+
+          @media #{$screen-md-up} {
+            border-bottom: none;
+          }
         }
       }
     }
