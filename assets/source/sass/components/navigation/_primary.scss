@@ -25,11 +25,11 @@ html:not(.no-flexbox) {
 
     .sub-menu {
       display: none;
-      background: rgba(0, 0, 0, 0.25);
-      border-top: 1px solid hsla(0,0%,100%,.5);
+      background: rgba(0, 0, 0, .25);
+      border-top: 1px solid hsla(0, 0%, 100%, .5);
     }
 
-    ul a {
+    li:not(:last-child) a {
       padding-left: 1rem;
     }
 
