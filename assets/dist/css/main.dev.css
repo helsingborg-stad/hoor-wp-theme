@@ -2173,6 +2173,7 @@ a.skip {
   -webkit-box-flex: 0;
       -ms-flex: none;
           flex: none;
+  position: relative;
   background: #f4f4f4; }
   @media (min-width: 769px) {
     .site-header {
@@ -2929,17 +2930,22 @@ a.box {
     letter-spacing: -2px;
     font-weight: 700; }
 
-.home .modularity-mod-inlaylist .box {
+.home .modularity-mod-inlaylist .box,
+.home .modularity-mod-contacts .box {
   border-radius: 0;
   background: #fff;
   box-shadow: none; }
-  .home .modularity-mod-inlaylist .box__headline {
+  .home .modularity-mod-inlaylist .box__headline,
+  .home .modularity-mod-contacts .box__headline {
     background: #e5e5e5;
-    font-size: 0.875rem; }
-  .home .modularity-mod-inlaylist .box__list-item {
+    font-size: 0.875rem;
+    border-bottom: 0; }
+  .home .modularity-mod-inlaylist .box__list-item,
+  .home .modularity-mod-contacts .box__list-item {
     padding: .5rem 1rem;
     border: 0; }
-  .home .modularity-mod-inlaylist .box__link {
+  .home .modularity-mod-inlaylist .box__link,
+  .home .modularity-mod-contacts .box__link {
     padding-left: 1.25rem;
     background: url(../images/link-arrow.svg);
     background-position: 0 3px;
@@ -2948,7 +2954,9 @@ a.box {
     color: #222;
     text-decoration: none;
     font-size: 0.875rem; }
-    .home .modularity-mod-inlaylist .box__link:hover, .home .modularity-mod-inlaylist .box__link:focus {
+    .home .modularity-mod-inlaylist .box__link:hover, .home .modularity-mod-inlaylist .box__link:focus,
+    .home .modularity-mod-contacts .box__link:hover,
+    .home .modularity-mod-contacts .box__link:focus {
       text-decoration: underline; }
 
 @media (min-width: 469px) {
@@ -3644,10 +3652,8 @@ html:not(.no-flexbox) .menu-help {
 .menu-help {
   font-size: 0.75rem;
   float: right;
-  padding: .5rem 0; }
-  @media (min-width: 769px) {
-    .menu-help {
-      padding: 1rem 0; } }
+  padding: .5rem 0;
+  padding: 1rem 0; }
   .menu-help ul {
     margin: 0;
     padding: 0;
@@ -3668,15 +3674,18 @@ html:not(.no-flexbox) .menu-help {
       background-image: url(../images/icons/translate.svg); }
   .menu-help a {
     text-decoration: none;
-    color: #03273f;
     position: relative;
     text-align: center;
-    display: block; }
+    display: block;
+    color: #fff; }
+    @media (min-width: 769px) {
+      .menu-help a {
+        color: #03273f; } }
     .menu-help a::before {
       position: relative;
       content: "";
       display: block;
-      border: 1px solid rgba(8, 114, 185, 0.15);
+      border: 1px solid transparent;
       border-radius: 100%;
       width: 44px;
       height: 44px;
@@ -3686,6 +3695,9 @@ html:not(.no-flexbox) .menu-help {
       background-size: 20px 20px;
       background-repeat: no-repeat;
       background-position: 50% 50%; }
+      @media (min-width: 769px) {
+        .menu-help a::before {
+          border-color: rgba(8, 114, 185, 0.15); } }
     .menu-help a:hover {
       text-decoration: underline; }
   .menu-help .current-page-item,
@@ -3703,16 +3715,19 @@ html:not(.no-flexbox) .menu-help {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-bottom: 2rem;
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
-    background: #07609c; }
+    margin-bottom: 1.25rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    background: #07609c;
+    font-size: 0.875rem; }
     .sidebar-menu__navigation-button svg {
       fill: currentColor;
       margin-right: 1.25rem; }
   #sidebar-menu,
   .sidebar-menu__headline {
-    display: none; } }
+    display: none; }
+  #sidebar-menu.is-expanded {
+    display: block; } }
 
 .sidebar-menu__headline {
   font-size: 0.875rem;
@@ -3815,8 +3830,12 @@ html:not(.no-flexbox) .menu-help {
     visibility: hidden; }
 
 .main-container {
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem; }
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem; }
+  @media (min-width: 769px) {
+    .main-container {
+      margin-top: 2.5rem;
+      margin-bottom: 2.5rem; } }
 
 .hero {
   margin-top: 2.5rem; }
@@ -4037,7 +4056,11 @@ html[lang^="en"] [target="_blank"]::after {
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
   .js-menu-toggle:active,
   .js-search-top-mobile:active {
     background: #07609c;

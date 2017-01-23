@@ -6,10 +6,11 @@
 
   .sidebar-menu__navigation-button {
     display: flex;
-    margin-bottom: 2rem;
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
+    margin-bottom: $content-gutter;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
     background: darken($color-action, 6);
+    font-size: $font-size-small;
 
     svg {
       fill: currentColor;

@@ -146,6 +146,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  user-select: none;
 
   &:active {
     background: darken($color-action, 6);

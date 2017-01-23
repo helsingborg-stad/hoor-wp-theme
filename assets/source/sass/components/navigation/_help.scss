@@ -28,10 +28,7 @@ html:not(.no-flexbox) {
   font-size: $font-size-tiny;
   float: right;
   padding: .5rem 0;
-
-  @media #{$screen-md-up} {
-    padding: 1rem 0;
-  }
+  padding: 1rem 0;
 
   ul {
     margin: 0;
@@ -70,26 +67,33 @@ html:not(.no-flexbox) {
 
   a {
     text-decoration: none;
-    color: darken($color-action, 25);
     position: relative;
     text-align: center;
     display: block;
+    color: $color-light;
+
+    @media #{$screen-md-up} {
+      color: darken($color-action, 25);
+    }
 
     &::before {
       position: relative;
       content: "";
       display: block;
-      border: 1px solid rgba($color-action, .15);
+      border: 1px solid transparent;
       border-radius: 100%;
       width: 44px;
       height: 44px;
       margin: 0 auto;
       box-sizing: border-box;
-
       background-color: $color-light;
       background-size: 20px 20px;
       background-repeat: no-repeat;
       background-position: 50% 50%;
+
+      @media #{$screen-md-up} {
+        border-color: rgba($color-action, .15);
+      }
     }
 
     &:hover {

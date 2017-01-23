@@ -1,5 +1,6 @@
 .site-header {
   flex: none;
+  position: relative;
   background: $color-gray-100;
 
   @media #{$screen-md-up} {
