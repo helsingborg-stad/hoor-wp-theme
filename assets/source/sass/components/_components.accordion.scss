@@ -1,3 +1,4 @@
+// TODO: copy/paste from Helsingborg, needs rework
 .accordion {
   .accordion-section > input[type="checkbox"],
   .accordion-section > input[type="radio"] {
@@ -96,13 +97,13 @@
     background-image: url(../images/icons/plus-sign.svg);
     background-repeat: no-repeat;
     background-position: calc(100% - 1rem ) 50%;
+    padding-right: 2.5rem;
 
     h1, h2, h3, h4, h5, h6 {
       padding: 0;
       margin: 0;
       font-weight: normal;
     }
-
   }
 
 }
