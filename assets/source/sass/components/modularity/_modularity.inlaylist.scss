@@ -36,6 +36,16 @@
     }
   }
 
+  .modularity-mod-contacts {
+    [itemprop=telephone],
+    [itemprop=email] {
+      background-size: 1.5rem 1.5rem;
+      padding-left: 2.25rem;
+      padding-top: .375rem;
+      padding-bottom: .375rem;
+    }
+  }
+
   // TODO We need a better solution for this. Temporary fix.
   .grid-md-6.modularity-mod-inlaylist {
 
