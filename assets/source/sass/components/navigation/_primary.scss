@@ -3,15 +3,17 @@ html:not(.no-flexbox) {
 
     &__container {
       display: flex;
+
+      > ul {
+        &:last-child {
+          border-bottom: 1px solid $color-gray-200;
+        }
+      }
     }
 
     ul {
       display: flex;
       flex-grow: 2;
-
-      &:last-child {
-        border-bottom: 1px solid rgba($color-gray-200, .5);
-      }
 
       @media #{$screen-below-md} {
         flex-direction: column;
@@ -29,8 +31,7 @@ html:not(.no-flexbox) {
 
     .sub-menu {
       display: none;
-      background: rgba(0, 0, 0, .05);
-      border-top: 1px solid rgba($color-gray-200, .5);
+      border-top: 1px solid $color-gray-200;
     }
 
     @media #{$screen-md-up} {
@@ -40,19 +41,19 @@ html:not(.no-flexbox) {
     }
 
     ul ul a {
-      padding-left: 1.5rem;
-    }
-
-    ul ul ul a {
       padding-left: 2rem;
     }
 
+    ul ul ul a {
+      padding-left: 3rem;
+    }
+
     ul ul ul ul a {
-      padding-left: 2.5rem;
+      padding-left: 4rem;
     }
 
     ul ul ul ul ul a {
-      padding-left: 3rem;
+      padding-left: 5rem;
     }
 
     .is-expanded > .sub-menu {
@@ -126,9 +127,10 @@ html:not(.no-flexbox) {
     }
   }
 
-  .current-page-ancestor,
-  .current-menu-item {
-    background: $color-gray;
+  .current-page-ancestor > a,
+  .current-menu-item > a {
+    background: darken($color-action, 8);
+    color: $color-light;
 
     @media #{$screen-md-up} {
       background: darken($color-action, 4);
@@ -142,8 +144,11 @@ html:not(.no-flexbox) {
   .sub-menu {
     display: none;
   }
+
   .is-expanded > .sub-menu {
     display: block;
+    border-left: .5rem solid $color-gray-100;
+
     @media #{$screen-md-up} {
       display: none!important; // Always hide submenu on desktop, e.g when resizing browser.
     }
@@ -159,7 +164,7 @@ html:not(.no-flexbox) {
     right: 0;
     box-sizing: border-box;
     content: "";
-    background-color: rgba($color-gray-100, .5);
+    background-color: $color-light;
     background-image: url(../images/icons/arrow-down.svg);
     background-repeat: no-repeat;
     background-position: 50% 50%;

@@ -165,8 +165,7 @@
   right: 73px;
   background-color: darken($color-gray-100, 5);
 
-  &:hover,
-  &:focus {
+  &:hover {
     background-color: darken($color-gray-100, 15);
   }
 
@@ -187,8 +186,7 @@
   right: 0;
   background-color: darken($color-gray-100, 10);
 
-  &:hover,
-  &:focus {
+  &:hover {
     background-color: darken($color-gray-100, 20);
   }
 

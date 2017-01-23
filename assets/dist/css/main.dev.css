@@ -3194,12 +3194,6 @@ a.box {
 .accordion-list .accordion-toggle {
   -webkit-transition: background-color .2s linear;
           transition: background-color .2s linear; }
-  .accordion-boxes .accordion-toggle:hover, .accordion-boxes .accordion-toggle:focus,
-  .accordion-box .accordion-toggle:hover,
-  .accordion-box .accordion-toggle:focus,
-  .accordion-list .accordion-toggle:hover,
-  .accordion-list .accordion-toggle:focus {
-    background-color: #f4f4f4; }
 
 .accordion-boxes .accordion-content,
 .accordion-box .accordion-content,
@@ -3330,6 +3324,12 @@ a.box {
   background-repeat: no-repeat;
   background-position: calc(100% - 1rem) 50%;
   padding-right: 2.5rem; }
+  .accordion-boxes .accordion-toggle:hover, .accordion-boxes .accordion-toggle:focus,
+  .accordion-box .accordion-toggle:hover,
+  .accordion-box .accordion-toggle:focus,
+  .accordion-list .accordion-toggle:hover,
+  .accordion-list .accordion-toggle:focus {
+    background-color: #f4f4f4; }
   .accordion-boxes .accordion-toggle h1, .accordion-boxes .accordion-toggle h2, .accordion-boxes .accordion-toggle h3, .accordion-boxes .accordion-toggle h4, .accordion-boxes .accordion-toggle h5, .accordion-boxes .accordion-toggle h6,
   .accordion-box .accordion-toggle h1,
   .accordion-box .accordion-toggle h2,
@@ -3359,7 +3359,16 @@ input[type="radio"]:checked ~ .accordion-toggle,
 input[type="checkbox"]:target ~ .accordion-toggle,
 input[type="radio"]:target ~ .accordion-toggle {
   font-weight: bold;
-  background-image: none; }
+  background-image: none;
+  cursor: default; }
+  input[type="checkbox"]:checked ~ .accordion-toggle:hover, input[type="checkbox"]:checked ~ .accordion-toggle:focus,
+  input[type="radio"]:checked ~ .accordion-toggle:hover,
+  input[type="radio"]:checked ~ .accordion-toggle:focus,
+  input[type="checkbox"]:target ~ .accordion-toggle:hover,
+  input[type="checkbox"]:target ~ .accordion-toggle:focus,
+  input[type="radio"]:target ~ .accordion-toggle:hover,
+  input[type="radio"]:target ~ .accordion-toggle:focus {
+    background-color: transparent; }
   input[type="checkbox"]:checked ~ .accordion-toggle h1, input[type="checkbox"]:checked ~ .accordion-toggle h2, input[type="checkbox"]:checked ~ .accordion-toggle h3, input[type="checkbox"]:checked ~ .accordion-toggle h4, input[type="checkbox"]:checked ~ .accordion-toggle h5, input[type="checkbox"]:checked ~ .accordion-toggle h6,
   input[type="radio"]:checked ~ .accordion-toggle h1,
   input[type="radio"]:checked ~ .accordion-toggle h2,
@@ -3483,6 +3492,8 @@ html:not(.no-flexbox) .primary-navigation__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+  html:not(.no-flexbox) .primary-navigation__container > ul:last-child {
+    border-bottom: 1px solid #f1f1f1; }
 
 html:not(.no-flexbox) .primary-navigation ul {
   display: -webkit-box;
@@ -3491,8 +3502,6 @@ html:not(.no-flexbox) .primary-navigation ul {
   -webkit-box-flex: 2;
       -ms-flex-positive: 2;
           flex-grow: 2; }
-  html:not(.no-flexbox) .primary-navigation ul:last-child {
-    border-bottom: 1px solid rgba(241, 241, 241, 0.5); }
   @media (max-width: 769px) {
     html:not(.no-flexbox) .primary-navigation ul {
       -webkit-box-orient: vertical;
@@ -3514,24 +3523,23 @@ html:not(.no-flexbox) .primary-navigation li {
 
 html:not(.no-flexbox) .primary-navigation .sub-menu {
   display: none;
-  background: rgba(0, 0, 0, 0.05);
-  border-top: 1px solid rgba(241, 241, 241, 0.5); }
+  border-top: 1px solid #f1f1f1; }
 
 @media (min-width: 769px) {
   html:not(.no-flexbox) .primary-navigation li:not(:last-child) a {
     padding-left: 1rem; } }
 
 html:not(.no-flexbox) .primary-navigation ul ul a {
-  padding-left: 1.5rem; }
-
-html:not(.no-flexbox) .primary-navigation ul ul ul a {
   padding-left: 2rem; }
 
+html:not(.no-flexbox) .primary-navigation ul ul ul a {
+  padding-left: 3rem; }
+
 html:not(.no-flexbox) .primary-navigation ul ul ul ul a {
-  padding-left: 2.5rem; }
+  padding-left: 4rem; }
 
 html:not(.no-flexbox) .primary-navigation ul ul ul ul ul a {
-  padding-left: 3rem; }
+  padding-left: 5rem; }
 
 html:not(.no-flexbox) .primary-navigation .is-expanded > .sub-menu {
   display: -webkit-box;
@@ -3587,19 +3595,21 @@ html:not(.no-flexbox) .menu-item-search {
         .primary-navigation a:hover {
           background-color: #0766a5;
           text-decoration: underline; } }
-  .primary-navigation .current-page-ancestor,
-  .primary-navigation .current-menu-item {
-    background: #c6c6c6; }
+  .primary-navigation .current-page-ancestor > a,
+  .primary-navigation .current-menu-item > a {
+    background: #065a92;
+    color: #fff; }
     @media (min-width: 769px) {
-      .primary-navigation .current-page-ancestor,
-      .primary-navigation .current-menu-item {
+      .primary-navigation .current-page-ancestor > a,
+      .primary-navigation .current-menu-item > a {
         background: #0766a5; } }
   .primary-navigation .has-children {
     position: relative; }
   .primary-navigation .sub-menu {
     display: none; }
   .primary-navigation .is-expanded > .sub-menu {
-    display: block; }
+    display: block;
+    border-left: 0.5rem solid #f4f4f4; }
     @media (min-width: 769px) {
       .primary-navigation .is-expanded > .sub-menu {
         display: none !important; } }
@@ -3611,7 +3621,7 @@ html:not(.no-flexbox) .menu-item-search {
     right: 0;
     box-sizing: border-box;
     content: "";
-    background-color: rgba(244, 244, 244, 0.5);
+    background-color: #fff;
     background-image: url(../images/icons/arrow-down.svg);
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -4102,7 +4112,7 @@ html[lang^="en"] [target="_blank"]::after {
 .js-menu-toggle {
   right: 73px;
   background-color: #e7e7e7; }
-  .js-menu-toggle:hover, .js-menu-toggle:focus {
+  .js-menu-toggle:hover {
     background-color: #cecece; }
   .js-menu-toggle[aria-expanded="false"] .icon-close {
     display: none; }
@@ -4112,7 +4122,7 @@ html[lang^="en"] [target="_blank"]::after {
 .js-search-top-mobile {
   right: 0;
   background-color: #dbdbdb; }
-  .js-search-top-mobile:hover, .js-search-top-mobile:focus {
+  .js-search-top-mobile:hover {
     background-color: #c1c1c1; }
   .js-search-top-mobile[aria-expanded="false"] .icon-close {
     display: none; }
