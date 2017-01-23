@@ -35,12 +35,7 @@
   }
 
     .accordion-toggle {
-        transition: background-color .2s linear, border-color .1s ease-in-out;
-
-          &:hover,
-          &:focus {
-            background-color: $color-gray-100;
-        }
+        transition: background-color .2s linear;
     }
 
   .accordion-content {
@@ -104,6 +99,11 @@
     background-position: calc(100% - 1rem ) 50%;
     padding-right: 2.5rem;
 
+    &:hover,
+    &:focus {
+        background-color: $color-gray-100;
+    }
+
     h1, h2, h3, h4, h5, h6 {
       padding: 0;
       margin: 0;
@@ -130,6 +130,12 @@ input[type="checkbox"]:target ~ .accordion-toggle,
 input[type="radio"]:target ~ .accordion-toggle {
     font-weight: bold;
     background-image: none;
+    cursor: default;
+
+    &:hover,
+    &:focus {
+        background-color: transparent;
+    }
 
     h1, h2, h3, h4, h5, h6 {
         font-weight: bold;
