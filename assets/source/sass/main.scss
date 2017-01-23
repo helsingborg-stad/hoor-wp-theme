@@ -124,7 +124,6 @@
     .logotype {
       display: block;
       width: 138px;
-      //margin: 0 auto;
     }
   }
 }
@@ -135,29 +134,53 @@
   top: 0;
   border: 0;
   padding: 0;
-  background: transparent;
-  cursor: pointer;
-  width: 73px;
-  height: 73px;
   text-align: center;
   font-size: $font-size-tiny;
   color: $color-dark;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  user-select: none;
   transition: background-color .25s ease-out;
+  background: transparent;
+  cursor: pointer;
+  user-select: none;
+
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 73px;
+    height: 73px;
+  }
+
+  @media print {
+    display: none;
+  }
 
   svg {
     width: 20px;
     height: 20px;
     fill: currentColor;
+    margin-bottom: 4px;
   }
 
   &[aria-expanded="true"] {
     background: darken($color-action, 6);
     color: $color-light;
+
+    .icon-default {
+      display: none;
+    }
+
+    &:hover,
+    &:focus {
+      background: darken($color-action, 6);
+      color: $color-light;
+    }
+  }
+
+  &[aria-expanded="false"] {
+    .icon-close {
+      display: none;
+    }
   }
 }
 
@@ -168,18 +191,6 @@
   &:hover {
     background-color: darken($color-gray-100, 15);
   }
-
-  &[aria-expanded="false"] {
-    .icon-close {
-      display: none;
-    }
-  }
-
-  &[aria-expanded="true"] {
-    .icon-menu {
-      display: none;
-    }
-  }
 }
 
 .js-search-top-mobile {
@@ -188,17 +199,5 @@
 
   &:hover {
     background-color: darken($color-gray-100, 20);
-  }
-
-  &[aria-expanded="false"] {
-    .icon-close {
-      display: none;
-    }
-  }
-
-  &[aria-expanded="true"] {
-    .icon-search {
-      display: none;
-    }
   }
 }
