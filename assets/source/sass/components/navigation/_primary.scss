@@ -39,7 +39,7 @@ html:not(.no-flexbox) {
         padding-left: 1rem;
       }
     }
-
+/*
     ul ul a {
       padding-left: 2rem;
     }
@@ -55,7 +55,7 @@ html:not(.no-flexbox) {
     ul ul ul ul ul a {
       padding-left: 5rem;
     }
-
+*/
     .is-expanded > .sub-menu {
       display: flex;
     }
@@ -147,7 +147,7 @@ html:not(.no-flexbox) {
 
   .is-expanded > .sub-menu {
     display: block;
-    border-left: .5rem solid $color-gray-100;
+    border-left: 1rem solid $color-gray-100;
 
     @media #{$screen-md-up} {
       display: none!important; // Always hide submenu on desktop, e.g when resizing browser.
