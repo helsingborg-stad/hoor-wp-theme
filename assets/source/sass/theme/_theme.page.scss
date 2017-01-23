@@ -1,6 +1,11 @@
 .main-container {
-  margin-top: $content-gutter * 2;
-  margin-bottom: $content-gutter * 2;
+  margin-top: $content-gutter;
+  margin-bottom: $content-gutter;
+
+  @media #{$screen-md-up} {
+    margin-top: $content-gutter * 2;
+    margin-bottom: $content-gutter * 2;
+  }
 }
 
 
