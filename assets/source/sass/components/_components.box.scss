@@ -25,6 +25,12 @@ a.box {
   }
 }
 
+@media print {
+  .box {
+    page-break-inside: avoid;
+  }
+}
+
 .box__news-column {
   margin-bottom: $content-gutter * 2;
 }
@@ -175,6 +181,12 @@ a.box {
       background-position: 0 3px;
       background-size: 14px 14px;
       background-repeat: no-repeat;
+
+      @media print {
+        padding-left: 0;
+        background: none;
+      }
+
     }
 
     &:hover,
@@ -207,6 +219,10 @@ a.box {
     text-decoration: none;
     font-size: $font-size-small;
     transition: background .2s linear, border-color .1s ease-in-out;
+
+    @media print {
+      border: none;
+    }
 
     &:hover,
     &:focus {
