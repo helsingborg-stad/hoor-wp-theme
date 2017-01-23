@@ -1,6 +1,7 @@
 // TODO We need a better solution for this.
 .home {
-  .modularity-mod-inlaylist {
+  .modularity-mod-inlaylist,
+  .modularity-mod-contacts {
     .box {
       border-radius: 0;
       background: $color-light;
@@ -9,6 +10,7 @@
       &__headline {
         background: #e5e5e5;
         font-size: $font-size-small;
+        border-bottom: 0;
       }
 
       &__list-item {
