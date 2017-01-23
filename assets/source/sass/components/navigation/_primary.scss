@@ -183,6 +183,12 @@ html:not(.no-flexbox) {
     width: 2.8125rem; // Should match the height of the a element
     top: 0;
     border-left: 1px solid $color-gray-200;
+    transition: background-color .2s ease-in-out;
+
+    &:hover,
+    &:focus {
+      background-color: $color-gray-100;
+    }
   }
 
   .is-expanded {
