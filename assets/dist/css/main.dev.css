@@ -2174,10 +2174,12 @@ a.skip {
       -ms-flex: none;
           flex: none;
   position: relative;
-  background: #f4f4f4; }
+  background: #f4f4f4;
+  min-height: 73px; }
   @media (min-width: 769px) {
     .site-header {
-      background: #fff; } }
+      background: #fff;
+      min-height: auto; } }
   .site-header__logotype {
     margin: 1rem 0; }
     .site-header__logotype .logotype {
@@ -3187,6 +3189,18 @@ a.box {
   .accordion-list .accordion-content:before {
     right: 18px; }
 
+.accordion-boxes .accordion-toggle,
+.accordion-box .accordion-toggle,
+.accordion-list .accordion-toggle {
+  -webkit-transition: background-color .2s linear, border-color .1s ease-in-out;
+          transition: background-color .2s linear, border-color .1s ease-in-out; }
+  .accordion-boxes .accordion-toggle:hover, .accordion-boxes .accordion-toggle:focus,
+  .accordion-box .accordion-toggle:hover,
+  .accordion-box .accordion-toggle:focus,
+  .accordion-list .accordion-toggle:hover,
+  .accordion-list .accordion-toggle:focus {
+    background-color: #f4f4f4; }
+
 .accordion-boxes .accordion-content,
 .accordion-box .accordion-content,
 .accordion-list .accordion-content {
@@ -3554,12 +3568,11 @@ html:not(.no-flexbox) .menu-item-search {
           border-top: none; } }
   .primary-navigation a {
     display: block;
-    color: #fff;
+    color: #E9EFF8;
     text-decoration: none;
     padding: 1rem;
-    -webkit-transition: background-color .5s ease-out;
-            transition: background-color .5s ease-out;
-    font-weight: 500; }
+    -webkit-transition: background-color .25s ease-out;
+            transition: background-color .25s ease-out; }
     @media (min-width: 769px) {
       .primary-navigation a {
         text-align: center;

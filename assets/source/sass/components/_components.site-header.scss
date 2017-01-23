@@ -2,11 +2,12 @@
   flex: none;
   position: relative;
   background: $color-gray-100;
+  min-height: 73px;
 
   @media #{$screen-md-up} {
     background: $color-light;
+    min-height: auto;
   }
-
 
   &__logotype {
     margin: 1rem 0;
