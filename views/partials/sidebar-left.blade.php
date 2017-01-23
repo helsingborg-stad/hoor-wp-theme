@@ -1,5 +1,5 @@
 @if ($hasLeftSidebar)
-<aside class="sidebar-left-sidebar hidden-print">
+<aside class="sidebar-left-sidebar">
     @if (is_active_sidebar('left-sidebar'))
         <div class="grid sidebar-left-sidebar-top">
             <?php dynamic_sidebar('left-sidebar'); ?>

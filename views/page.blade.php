@@ -9,7 +9,7 @@
 <div class="container main-container">
 
     <div class="grid">
-        <div class="grid-lg-3">
+        <div class="grid-lg-3 hidden-print">
             @include('partials.sidebar-left')
         </div>
 
