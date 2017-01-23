@@ -35,7 +35,12 @@
   }
 
     .accordion-toggle {
-        //@include gradient(#fff, lighten($creamy, 2%));
+        transition: background-color .2s linear, border-color .1s ease-in-out;
+
+          &:hover,
+          &:focus {
+            background-color: $color-gray-100;
+        }
     }
 
   .accordion-content {

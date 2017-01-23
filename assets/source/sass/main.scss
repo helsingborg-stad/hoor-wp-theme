@@ -163,9 +163,35 @@
 .js-menu-toggle {
   right: 73px;
   background-color: darken($color-gray-100, 5);
+
+  &[aria-expanded="false"] {
+    .icon-close {
+      display: none;
+    }
+  }
+
+  &[aria-expanded="true"] {
+    .icon-menu {
+      display: none;
+    }
+  }
 }
+
+
 
 .js-search-top-mobile {
   right: 0;
   background-color: darken($color-gray-100, 10);
+
+  &[aria-expanded="false"] {
+    .icon-close {
+      display: none;
+    }
+  }
+
+  &[aria-expanded="true"] {
+    .icon-search {
+      display: none;
+    }
+  }
 }

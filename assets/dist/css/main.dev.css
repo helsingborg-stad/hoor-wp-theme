@@ -4087,7 +4087,15 @@ html[lang^="en"] [target="_blank"]::after {
 .js-menu-toggle {
   right: 73px;
   background-color: #e7e7e7; }
+  .js-menu-toggle[aria-expanded="false"] .icon-close {
+    display: none; }
+  .js-menu-toggle[aria-expanded="true"] .icon-menu {
+    display: none; }
 
 .js-search-top-mobile {
   right: 0;
   background-color: #dbdbdb; }
+  .js-search-top-mobile[aria-expanded="false"] .icon-close {
+    display: none; }
+  .js-search-top-mobile[aria-expanded="true"] .icon-search {
+    display: none; }
