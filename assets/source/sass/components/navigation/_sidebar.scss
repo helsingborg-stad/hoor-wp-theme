@@ -21,6 +21,9 @@
   .sidebar-menu__headline {
     display: none;
   }
+  #sidebar-menu.is-expanded {
+    display: block;
+  }
 }
 
 .sidebar-menu {
