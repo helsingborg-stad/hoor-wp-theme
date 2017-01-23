@@ -39,24 +39,34 @@ function output_nginx_redirects() {
 
         $output = '';
         $error = '';
+        $old_urls = array();
         $posts = get_posts(array(
-            'numberposts'   => 10,
+            'numberposts'   => -1,
             'post_type'     => 'page',
             'meta_key'      => 'redirect_on',
             'meta_value'    => 'Ja'
         ));
 
         foreach ($posts as $post) {
-            $old_url = get_field('redirect_url', $post->ID);
+            $old_url = get_field('redicrect_url', $post->ID);
             $old_url_relative = str_replace('http://www.hoor.se', '', $old_url);
+            $old_url_relative = str_replace('http://hoor.se', '', $old_url_relative);
+            $old_url_relative = str_replace('http://www.höör.se', '', $old_url_relative);
+            $old_url_relative = str_replace('http://höör.se', '', $old_url_relative);
             $permalink = get_permalink($post->ID);
             $permalink_relative = str_replace(home_url(), '', $permalink);
-            $permalink_normalized = rtrim(str_replace(home_url(), '', $permalink), '/');
-            if ($old_url == $old_url_relative || $old_url_relative == $permalink_relative || $old_url_relative == $permalink_normalized) {
-                $error .= "$old_url. <a href=\"$permalink\"><small>View page</small></a></br>";
+            $permalink_normalized = rtrim(str_replace(home_url(), '', $permalink), '/') . '/';
+            if (in_array($old_url_relative, $old_urls)) {
+                $page_url = array_search($old_url_relative, $old_urls);
+                $error .= "Det finns redan en <a href=\"http://hoor-prod.whitespace.work$page_url\">sida</a> som $old_url_relative redirectar till. <a href=\"http://hoor-prod.whitespace.work/$permalink_relative\">Visa/Redigera</a></br>\n";
+            } elseif ($old_url == $old_url_relative || $old_url_relative == $permalink_relative || $old_url_relative == $permalink_normalized) {
+                $error .= "Fela$old_url. <a href=\"$permalink\"><small>View page</small></a></br>";
+            } elseif($old_url_relative == $permalink_normalized || $old_url_relative == $permalink_relative) {
+                var_dump($old_url_relative,$permalink_normalized); die;
             }
             else {
-                $output .= "location = $old_url_relative {\n  return 301 $permalink_relative;\n}\n";
+                $output .= "location = $old_url_relative {\n  return 301 $permalink_normalized;\n}\n";
+                $old_urls[$permalink_normalized] = $old_url_relative;
             }
         }
 
