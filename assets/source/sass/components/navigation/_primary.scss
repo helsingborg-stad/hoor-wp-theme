@@ -99,11 +99,10 @@ html:not(.no-flexbox) {
 
   a {
     display: block;
-    color: $color-light;
+    color: #E9EFF8;
     text-decoration: none;
     padding: 1rem;
-    transition: background-color .5s ease-out;
-    font-weight: 500;
+    transition: background-color .25s ease-out;
 
     @media #{$screen-md-up} {
       text-align: center;
