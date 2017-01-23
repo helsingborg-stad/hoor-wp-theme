@@ -27,11 +27,15 @@ HelsingborgPrime.Prompt.MenuToggle = (function ($) {
             $(this).toggleClass('is-expanded');
             $(this).css('display', '');
         });
-        $('.search-top').slideUp(300);
+        if ($('.search-top').is(':visible')) {
+            $('.search-top').slideUp(300);
+            $('.toggle-search-top').attr('aria-expanded', 'false');
+        }
     };
 
     // Not used here atm but can be used by others, e.g search toggle.
     MenuToggle.prototype.hide = function () {
+        $('.js-menu-toggle').attr('aria-expanded', false);
         $('.site-header-container').slideUp(300, function() {
             $(this).removeClass('is-expanded');
             $(this).css('display', '');
