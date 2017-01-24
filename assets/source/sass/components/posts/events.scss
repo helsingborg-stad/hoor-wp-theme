@@ -1,0 +1,27 @@
+.event__meta {
+  border: 1px solid $color-gray-200;
+  margin-bottom: 1rem;
+
+  p {
+    margin: 0;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $color-gray-200;
+    }
+  }
+
+  .event__meta--date,
+  .event__meta--place {
+    padding: .5rem;
+  }
+
+  svg {
+    fill: $color-dark;
+    position: relative;
+    top: 1px;
+  }
+}
+
+.event__image-container {
+  margin-bottom: 1rem;
+}

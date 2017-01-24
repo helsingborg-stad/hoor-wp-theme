@@ -13,11 +13,11 @@
     margin-bottom: .25rem;
   }
 
-  p {
+  p,
+  time {
     font-size: $font-size-medium;
     margin: 0;
   }
-
 
   &__item {
     padding: 1rem 0;
@@ -34,12 +34,27 @@
     margin-bottom: .5rem;
     display: block;
   }
+
+  &__meta {
+    padding: .5rem 0;
+
+    &--date + &--place {
+      padding-top: .5rem;
+    }
+
+    svg {
+      fill: $color-dark;
+      position: relative;
+      top: 1px;
+    }
+  }
 }
 
 
 .archive__container {
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   @media #{$screen-md-up} {
     flex-direction: row;
@@ -53,5 +68,15 @@
     min-width: 200px;
     margin-right: 1rem;
     margin-bottom: 0;
+  }
+}
+
+.archive__event {
+  .archive__image-container {
+
+    @media #{$screen-md-up} {
+      margin-right: 0;
+      margin-left: 1rem;
+    }
   }
 }
