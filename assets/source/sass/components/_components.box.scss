@@ -101,6 +101,8 @@ a.box {
 
   &__image-holder {
     position: relative;
+    min-height: 71px;
+    background: $color-gray-100;
 
     .box__date-event {
       position: absolute;

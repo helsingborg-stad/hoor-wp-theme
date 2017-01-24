@@ -44,9 +44,10 @@
             ?>
             <div class="grid-sm-12 grid-md-6 grid-lg-3">
                 <a href="<?php echo get_permalink($post->ID); ?>" class="box box--panel box--panel-news-card" data-equal-item>
-                    <?php if (!empty($image) && in_array('image', $fields->posts_fields)) : ?>
                         <div class="box__image-holder">
-                            <img  class="box__image" src="<?php echo $image[0]; ?>" alt="<?php echo $post->post_title; ?>">
+                            <?php if (!empty($image) && in_array('image', $fields->posts_fields)) : ?>
+                                <img  class="box__image" src="<?php echo $image[0]; ?>" alt="<?php echo $post->post_title; ?>">
+                            <?php endif; ?>
 
                             <?php if ($startdate = get_field('event_startdate', $post->ID, false)): ?>
                                 <?php $startdate = strtotime($startdate) ?>
@@ -56,7 +57,6 @@
                                 </time>
                             <?php endif ?>
                         </div>
-                    <?php endif; ?>
 
                     <div class="box__content">
                         <?php if (in_array('title', $fields->posts_fields)) : ?>
