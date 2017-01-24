@@ -99,11 +99,30 @@ a.box {
     flex: 0 0 auto;
   }
 
+  &__image-holder {
+    position: relative;
+
+    .box__date-event {
+      position: absolute;
+      top: .5rem;
+      right: .5rem;
+    }
+  }
+
   &__date {
     display: block;
     color: $color-gray-700;
     text-decoration: none;
     font-size: $font-size-smaller;
+  }
+
+  &__event-location {
+    display: block;
+    color: $color-gray-700;
+    text-decoration: none;
+    font-size: $font-size-smaller;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
   }
 
   &__label {
@@ -240,6 +259,31 @@ a.box {
   &-clean {
     box-shadow: none;
     border-radius: 0;
+    min-width: 100%;
+
+    .box__list-item {
+      padding: 0 !important;
+    }
+
+    a {
+      display: block;
+      text-decoration: none;
+      padding: 1rem;
+      padding-left: .625rem;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+
+      &:hover,
+      &:focus {
+        background: $color-gray-100;
+        transition: background-color .3s ease-in-out, color .2s ease-in-out;
+      }
+    }
+
+    .box__title {
+      text-decoration: underline;
+    }
   }
 
   @media print {
@@ -252,7 +296,6 @@ a.box {
     padding-left: 1rem;
     background: $color-gray-100;
   }
-
 
   .box__content {
     padding-right: 1rem;
@@ -277,7 +320,14 @@ a.box {
   box-shadow: 0 1px 2px rgba($color-dark, .2);
   display: block;
   max-width: 48px;
+  min-width: 48px;
   text-align: center;
+
+  &-holder {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+  }
 
   &-month {
     display: block;

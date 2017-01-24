@@ -45,7 +45,17 @@
             <div class="grid-sm-12 grid-md-6 grid-lg-3">
                 <a href="<?php echo get_permalink($post->ID); ?>" class="box box--panel box--panel-news-card" data-equal-item>
                     <?php if (!empty($image) && in_array('image', $fields->posts_fields)) : ?>
-                        <img  class="box__image" src="<?php echo $image[0]; ?>" alt="<?php echo $post->post_title; ?>">
+                        <div class="box__image-holder">
+                            <img  class="box__image" src="<?php echo $image[0]; ?>" alt="<?php echo $post->post_title; ?>">
+
+                            <?php if ($startdate = get_field('event_startdate', $post->ID, false)): ?>
+                                <?php $startdate = strtotime($startdate) ?>
+                                    <time class="box__date-event" datetime="<?php echo date('Y-m-d\TH:i', $startdate); ?>">
+                                    <span class="box__date-event-month"><?php echo date_i18n('M', $startdate); ?></span>
+                                    <span class="box__date-event-day"><?php echo date('d', $startdate); ?></span>
+                                </time>
+                            <?php endif ?>
+                        </div>
                     <?php endif; ?>
 
                     <div class="box__content">
@@ -53,18 +63,14 @@
                             <h2 class="box__title"><?php echo apply_filters('the_title', $post->post_title); ?></h2>
                         <?php endif; ?>
 
-                        <?php if ($startdate = get_field('event_startdate', $post->ID, false)): ?>
-                            <?php $startdate = strtotime($startdate) ?>
-                                <time class="box__date-event" datetime="<?php echo date('Y-m-d\TH:i', $startdate); ?>">
-                                <span class="box__date-event-month"><?php echo date_i18n('M', $startdate); ?></span>
-                                <span class="box__date-event-day"><?php echo date('d', $startdate); ?></span>
-                            </time>
-                        <?php elseif(in_array('date', $fields->posts_fields) && $fields->posts_data_source !== 'input'): ?>
+                        <?php if(in_array('date', $fields->posts_fields) && $fields->posts_data_source !== 'input'): ?>
                             <time class="box__date" datetime="<?php echo get_the_time('Y-m-d', $post->ID); ?>"><?php echo get_the_time('d F Y', $post->ID); ?></time>
                         <?php endif ?>
 
-                        <?php if ($place = get_field('event_place')): ?>
-                            <p><?php echo $place ?><p>
+                        <?php if ($place = get_field('event_place', $post->ID, false)): ?>
+                            <div class="box__event-location">
+                                <?php echo $place ?>
+                            </div>
                         <?php endif ?>
 
                         <?php if (in_array('excerpt', $fields->posts_fields)) : ?>
@@ -89,22 +95,27 @@
                             <li class="box__list-item">
                                 <a href="<?php echo get_permalink($post->ID); ?>" class="box__link">
                                     <?php if (in_array('title', $fields->posts_fields)) : ?>
+                                    <div class="box__date-event-holder">
+                                        <?php if ($startdate = get_field('event_startdate', $post->ID, false)): ?>
+                                            <?php $startdate = strtotime($startdate) ?>
+                                                <time class="box__date-event" datetime="<?php echo date('Y-m-d\TH:i', $startdate); ?>">
+                                                <span class="box__date-event-month"><?php echo date_i18n('M', $startdate); ?></span>
+                                                <span class="box__date-event-day"><?php echo date('d', $startdate); ?></span>
+                                            </time>
+                                        <?php endif ?>
+                                    </div>
+                                    <div class="box__content-holder">
                                         <h2 class="box__title"><?php echo apply_filters('the_title', $post->post_title); ?></h2>
-                                    <?php endif; ?>
-                                    <?php if ($startdate = get_field('event_startdate', $post->ID, false)): ?>
-                                        <?php $startdate = strtotime($startdate) ?>
-                                            <time class="box__date-event" datetime="<?php echo date('Y-m-d\TH:i', $startdate); ?>">
-                                            <span class="box__date-event-month"><?php echo date_i18n('M', $startdate); ?></span>
-                                            <span class="box__date-event-day"><?php echo date('d', $startdate); ?></span>
-                                        </time>
-                                    <?php elseif(in_array('date', $fields->posts_fields) && $fields->posts_data_source !== 'input'): ?>
-                                        <time class="box__date" datetime="<?php echo get_the_time('Y-m-d', $post->ID); ?>"><?php echo get_the_time('d F Y', $post->ID); ?></time>
-                                    <?php endif ?>
-                                    <?php if ($place = get_field('event_place')): ?>
-                                        <div class="box__event-location">
-                                            <p><?php echo $place ?><p>
-                                        </div>
-                                    <?php endif ?>
+                                        <?php endif; ?>
+                                        <?php if(in_array('date', $fields->posts_fields) && $fields->posts_data_source !== 'input'): ?>
+                                            <time class="box__date" datetime="<?php echo get_the_time('Y-m-d', $post->ID); ?>"><?php echo get_the_time('d F Y', $post->ID); ?></time>
+                                        <?php endif ?>
+                                        <?php if ($place = get_field('event_place', $post->ID, false)): ?>
+                                            <div class="box__event-location">
+                                                <?php echo $place ?>
+                                            </div>
+                                        <?php endif ?>
+                                    </div>
                                 </a>
                             </li>
                         <?php endforeach; ?>
