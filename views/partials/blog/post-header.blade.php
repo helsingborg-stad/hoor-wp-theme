@@ -1,12 +1,14 @@
 <header class="post-header">
 
     @if (is_single())
-        <h1>{{ the_title() }}</h1>
+        <h1 class="post__headline">{{ the_title() }}</h1>
     @else
         <h2><a href="{{ the_permalink() }}">{{ the_title() }}</a></h2>
     @endif
 
     <div class="article-meta">
+        <time datetime="2016-09-28T19:51">28 september 2016, 19.51</time>,
+        <span>Kategori: <a href="/">Namn</a></span>
         <ul class="clearfix">
             @if (in_array('author', (array)get_field('archive_' . sanitize_title(get_post_type()) . '_post_display_info', 'option')))
             <li class="post-author">
