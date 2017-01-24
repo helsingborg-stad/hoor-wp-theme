@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Municipio\n"
-"POT-Creation-Date: 2017-01-19 15:18+0100\n"
-"PO-Revision-Date: 2017-01-19 15:24+0100\n"
+"POT-Creation-Date: 2017-01-25 00:23+0100\n"
+"PO-Revision-Date: 2017-01-25 00:23+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -20,17 +20,16 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: library/Helper/NavigationTree.php:406
-#: views/partials/sidebar-left.blade.php:24
+#: library/Helper/NavigationTree.php:409
+#: views/partials/sidebar-left.blade.php:33
 msgid "Show submenu"
 msgstr "Visa undermeny"
 
-#: library/Search/Google.php:34 views/archive-evenemang.blade.php:70
-#: views/home.blade.php:57
+#: library/Search/Google.php:34 views/home.blade.php:57
 msgid "Pagination"
 msgstr "Paginering"
 
-#: library/Theme/Navigation.php:38 views/partials/header/default.blade.php:6
+#: library/Theme/Navigation.php:38 views/partials/header/default.blade.php:16
 msgid "Search"
 msgstr "Sök"
 
@@ -83,19 +82,19 @@ msgid "No posts to show…"
 msgstr "Inga inlägg att visa"
 
 #: templates/module/modularity-mod-posts/modularity-mod-posts-list.php:28
-#: templates/module/modularity-mod-posts/modularity-mod-posts-news.php:201
+#: templates/module/modularity-mod-posts/modularity-mod-posts-news.php:212
 msgid "Show more"
 msgstr "Visa mer"
 
-#: templates/module/modularity-mod-posts/modularity-mod-posts-news.php:120
+#: templates/module/modularity-mod-posts/modularity-mod-posts-news.php:131
 msgid "See more events"
 msgstr "Se fler evenemang"
 
-#: templates/module/modularity-mod-posts/modularity-mod-posts-news.php:120
+#: templates/module/modularity-mod-posts/modularity-mod-posts-news.php:131
 msgid "See more news"
 msgstr "Se fler nyheter"
 
-#: templates/module/modularity-mod-posts/modularity-mod-posts-news.php:193
+#: templates/module/modularity-mod-posts/modularity-mod-posts-news.php:204
 msgid "Read more"
 msgstr "Läs mer"
 
@@ -118,6 +117,26 @@ msgstr "E-postadress"
 #: views/404.blade.php:8
 msgid "Error 404"
 msgstr "Felmeddelande 404"
+
+#: views/archive-evenemang.blade.php:30
+msgid "Events"
+msgstr "Evenemang"
+
+#: views/archive-evenemang.blade.php:44
+msgid "Date"
+msgstr "Datum"
+
+#: views/archive-evenemang.blade.php:65
+msgid "Location"
+msgstr "Ort"
+
+#: views/archive-kommunalrad.blade.php:43 views/archive-nyheter.blade.php:84
+msgid "No posts to show"
+msgstr "Inga inlägg att visa"
+
+#: views/archive-nyheter.blade.php:68
+msgid "Latest news"
+msgstr "Senaste nyheter"
 
 #: views/partials/accessibility-menu.blade.php:2
 msgid "Listen to this page with ReadSpeaker"
@@ -165,7 +184,7 @@ msgstr "Brödsmulor"
 msgid "You are here:"
 msgstr "Du är här:"
 
-#: views/partials/header/default.blade.php:5
+#: views/partials/header/default.blade.php:9
 msgid "Menu"
 msgstr "Meny"
 
@@ -181,7 +200,7 @@ msgstr "Menade du"
 msgid "Found no matching results on your search."
 msgstr "Hittade inga matchande resultat på din sökning."
 
-#: views/partials/sidebar-left.blade.php:24
+#: views/partials/sidebar-left.blade.php:33
 msgid "for"
 msgstr "för"
 
