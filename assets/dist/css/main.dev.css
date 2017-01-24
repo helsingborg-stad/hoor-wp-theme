@@ -2972,6 +2972,13 @@ a.box {
     .home .modularity-mod-contacts .box__link:focus {
       text-decoration: underline; }
 
+.home .modularity-mod-contacts [itemprop=telephone],
+.home .modularity-mod-contacts [itemprop=email] {
+  background-size: 1.5rem 1.5rem;
+  padding-left: 2.25rem;
+  padding-top: .375rem;
+  padding-bottom: .375rem; }
+
 @media (min-width: 469px) {
   .home .grid-md-6.modularity-mod-inlaylist .box__list {
     display: -webkit-box;
@@ -2993,33 +3000,45 @@ a.box {
   border-radius: 0;
   background: transparent; }
 
-.modularity-mod-contact, .modularity-mod-contacts {
+.modularity-mod-contact,
+.modularity-mod-contacts {
   font-size: 0.9375rem; }
-  .modularity-mod-contact ul, .modularity-mod-contacts ul {
+  .modularity-mod-contact ul,
+  .modularity-mod-contacts ul {
     margin: 0 0 .5rem;
     padding: 0;
     list-style: none; }
     .modularity-mod-contact ul a,
-    .modularity-mod-contact ul span, .modularity-mod-contacts ul a,
+    .modularity-mod-contact ul span,
+    .modularity-mod-contacts ul a,
     .modularity-mod-contacts ul span {
       display: inline-block;
       word-wrap: break-word; }
-  .modularity-mod-contact .card-title, .modularity-mod-contacts .card-title {
+  .modularity-mod-contact .card-title,
+  .modularity-mod-contacts .card-title {
     margin-bottom: .5rem; }
-  .modularity-mod-contact [itemprop=telephone], .modularity-mod-contacts [itemprop=telephone] {
+  .modularity-mod-contact h3,
+  .modularity-mod-contacts h3 {
+    font-weight: 500;
+    font-size: 1rem;
+    margin-bottom: .5rem; }
+  .modularity-mod-contact [itemprop=telephone],
+  .modularity-mod-contacts [itemprop=telephone] {
     background-image: url(../images/icons/phone.svg);
     background-repeat: no-repeat;
     background-size: 1rem 1rem;
     background-position: 0 50%;
     margin-bottom: .5rem;
     padding-left: 1.25rem; }
-  .modularity-mod-contact a[itemprop=email], .modularity-mod-contacts a[itemprop=email] {
+  .modularity-mod-contact a[itemprop=email],
+  .modularity-mod-contacts a[itemprop=email] {
     background-image: url(../images/icons/email-sign.svg);
     background-repeat: no-repeat;
     background-size: 1rem 1rem;
     background-position: 0 50%;
     padding-left: 1.25rem; }
-  .modularity-mod-contact .small:not(:last-child), .modularity-mod-contacts .small:not(:last-child) {
+  .modularity-mod-contact .small:not(:last-child),
+  .modularity-mod-contacts .small:not(:last-child) {
     margin: 0 0 .5rem; }
 
 .modularity-mod-inheritpost .box-index {
