@@ -2169,6 +2169,40 @@ a.skip {
       content: ", ";
       speak: none; }
 
+.archive {
+  margin: 0 0 1.25rem;
+  padding: 0;
+  list-style: none; }
+  .archive__headline {
+    font-weight: 400;
+    font-size: 1rem; }
+  .archive__title {
+    line-height: 1;
+    margin-bottom: .25rem; }
+  .archive__link {
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: 400; }
+  .archive p {
+    font-size: 0.875rem;
+    margin: 0; }
+  .archive__item {
+    padding: 1rem 0;
+    border-bottom: 1px solid #f1f1f1; }
+    .archive__item:first-child {
+      border-top: 1px solid #f1f1f1; }
+  .archive__date {
+    font-size: 0.8125rem;
+    color: #636363; }
+  .archive__url {
+    margin-top: .25rem;
+    font-size: 0.8125rem;
+    color: #636363;
+    display: none; }
+    @media (min-width: 769px) {
+      .archive__url {
+        display: block; } }
+
 .site-header {
   -webkit-box-flex: 0;
       -ms-flex: none;
@@ -2371,7 +2405,7 @@ a.skip {
   border-top: 1px solid #f1f1f1; }
 
 .c-article-timestamps {
-  padding: 1rem 0;
+  padding: 0 0 1rem;
   font-size: 0.8125rem; }
   @media (max-width: 961px) {
     .c-article-timestamps {
