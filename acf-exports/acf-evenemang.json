@@ -15,8 +15,8 @@
                         "class": "",
                         "id": ""
                     },
-                    "display_format": "Y-m-d g:i",
-                    "return_format": "Y-m-d g:i",
+                    "display_format": "Y-m-d H:i",
+                    "return_format": "Y-m-d H:i",
                     "first_day": 1
                 },
                 {
@@ -24,7 +24,7 @@
                     "label": "Slutdatum",
                     "name": "event_enddate",
                     "type": "date_time_picker",
-                    "instructions": "Datum och tid d\u00e5 evenemanget startar",
+                    "instructions": "Datum och tid d\u00e5 evenemanget slutar",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
