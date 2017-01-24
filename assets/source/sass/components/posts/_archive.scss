@@ -5,7 +5,7 @@
 
   &__headline {
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 
   &__title {
@@ -13,14 +13,8 @@
     margin-bottom: .25rem;
   }
 
-   &__link {
-    font-size: 1rem;
-    text-decoration: none;
-    font-weight: 400;
-  }
-
   p {
-    font-size: $font-size-small;
+    font-size: $font-size-medium;
     margin: 0;
   }
 
@@ -35,22 +29,29 @@
   }
 
   &__date {
-    font-size: $font-size-smaller;
+    font-size: $font-size-small;
     color: $color-gray-700;
+    margin-bottom: .5rem;
+    display: block;
   }
+}
 
-  &__info {
 
+.archive__container {
+  display: flex;
+  flex-direction: column;
+
+  @media #{$screen-md-up} {
+    flex-direction: row;
   }
+}
 
-  &__url {
-    margin-top: .25rem;
-    font-size: $font-size-smaller;
-    color: $color-gray-700;
-    display: none;
+.archive__image-container {
+  margin-bottom: 1rem;
 
-    @media #{$screen-md-up} {
-      display: block;
-    }
+  @media #{$screen-md-up} {
+    min-width: 200px;
+    margin-right: 1rem;
+    margin-bottom: 0;
   }
 }
