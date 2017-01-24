@@ -2179,7 +2179,8 @@ a.skip {
   .archive__title {
     line-height: 1;
     margin-bottom: .25rem; }
-  .archive p {
+  .archive p,
+  .archive time {
     font-size: 0.9375rem;
     margin: 0; }
   .archive__item {
@@ -2192,6 +2193,14 @@ a.skip {
     color: #636363;
     margin-bottom: .5rem;
     display: block; }
+  .archive__meta {
+    padding: .5rem 0; }
+    .archive__meta--date + .archive__meta--place {
+      padding-top: .5rem; }
+    .archive__meta svg {
+      fill: #222;
+      position: relative;
+      top: 1px; }
 
 .archive__container {
   display: -webkit-box;
@@ -2200,7 +2209,10 @@ a.skip {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
-          flex-direction: column; }
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
   @media (min-width: 769px) {
     .archive__container {
       -webkit-box-orient: horizontal;
@@ -2215,6 +2227,29 @@ a.skip {
       min-width: 200px;
       margin-right: 1rem;
       margin-bottom: 0; } }
+
+@media (min-width: 769px) {
+  .archive__event .archive__image-container {
+    margin-right: 0;
+    margin-left: 1rem; } }
+
+.event__meta {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 1rem; }
+  .event__meta p {
+    margin: 0; }
+    .event__meta p:not(:last-child) {
+      border-bottom: 1px solid #f1f1f1; }
+  .event__meta .event__meta--date,
+  .event__meta .event__meta--place {
+    padding: .5rem; }
+  .event__meta svg {
+    fill: #222;
+    position: relative;
+    top: 1px; }
+
+.event__image-container {
+  margin-bottom: 1rem; }
 
 .site-header {
   -webkit-box-flex: 0;
@@ -2860,11 +2895,26 @@ a.box {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto; }
+  .box__image-holder {
+    position: relative;
+    min-height: 155px;
+    background: #a8d2ee; }
+    .box__image-holder .box__date-event {
+      position: absolute;
+      top: 1rem;
+      left: 1rem; }
   .box__date {
     display: block;
     color: #636363;
     text-decoration: none;
     font-size: 0.8125rem; }
+  .box__event-location {
+    display: block;
+    color: #636363;
+    text-decoration: none;
+    font-size: 0.8125rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem; }
   .box__label {
     font-size: 0.8125rem;
     color: #222; }
@@ -2948,7 +2998,29 @@ a.box {
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.25); }
   .box--panel-clean {
     box-shadow: none;
-    border-radius: 0; }
+    border-radius: 0;
+    min-width: 100%; }
+    .box--panel-clean .box__list-item {
+      padding: 0 !important; }
+    .box--panel-clean a {
+      display: block;
+      text-decoration: none;
+      padding: 1rem;
+      padding-left: .625rem;
+      width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row; }
+      .box--panel-clean a:hover, .box--panel-clean a:focus {
+        background: #f4f4f4;
+        -webkit-transition: background-color .3s ease-in-out, color .2s ease-in-out;
+                transition: background-color .3s ease-in-out, color .2s ease-in-out; }
+    .box--panel-clean .box__title {
+      text-decoration: underline; }
   @media print {
     .box--panel {
       border-radius: 0;
@@ -2972,7 +3044,16 @@ a.box {
   box-shadow: 0 1px 2px rgba(34, 34, 34, 0.2);
   display: block;
   max-width: 48px;
+  min-width: 48px;
   text-align: center; }
+  .box__date-event-holder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: 1rem; }
   .box__date-event-month {
     display: block;
     background: #e1261c;
