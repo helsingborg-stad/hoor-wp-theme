@@ -13,10 +13,14 @@
 <div class="container main-container">
 
     <div class="grid">
-        <div class="grid-lg-12">
+        <div class="grid-lg-3 hidden-print">
+            @include('partials.sidebar-left')
+        </div>
+
+        <div class="grid-lg-9">
             <div class="grid">
 
-                <div class="{{ $contentGridSize }} grid-print-12">
+                <div class="grid-sm-12 grid-md-8 grid-print-12">
 
                     @if (is_active_sidebar('content-area-top'))
                         <div class="sidebar-content-area sidebar-content-area-top">
@@ -31,9 +35,7 @@
                             {!! the_post() !!}
 
                             @if (in_array($template, array('full', 'compressed', 'collapsed')))
-                                <div class="grid-xs-12 post">
-                                    @include('partials.blog.type.post-' . $template)
-                                </div>
+                                @include('partials.blog.type.post-' . $template)
                             @else
                                 @include('partials.blog.type.post-' . $template)
                             @endif
@@ -51,10 +53,6 @@
                             </div>
                         </div>
                     @endif
-
-                    <div class="c-article-timestamps">
-                        @include('partials.timestamps')
-                    </div>
 
                 </div>
 

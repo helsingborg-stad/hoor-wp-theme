@@ -8,7 +8,7 @@
         @endif
 
         <div class="box-content">
-            <h3 class="text-highlight">{{ the_title() }}</h3>
+            <h3>{{ the_title() }}</h3>
 
             @if (get_field('archive_' . sanitize_title(get_post_type()) . '_feed_date_published', 'option') != 'false')
             <time>
@@ -20,6 +20,4 @@
             {{ the_excerpt() }}
         </div>
     </a>
-
-    @include('partials.blog.post-footer')
 </div>
