@@ -101,13 +101,13 @@ a.box {
 
   &__image-holder {
     position: relative;
-    min-height: 71px;
-    background: $color-gray-100;
+    min-height: 155px;
+    background: $color-action;
 
     .box__date-event {
       position: absolute;
-      top: .5rem;
-      right: .5rem;
+      top: 1rem;
+      left: 1rem;
     }
   }
 
