@@ -18,7 +18,6 @@ class App
         /**
          * Admin
          */
-        new \Hoor\Admin\UI\Translations();
         new \Hoor\Admin\UI\ACF();
         new \Hoor\Admin\UI\Editor();
         new \Hoor\Admin\UI\Widget();
