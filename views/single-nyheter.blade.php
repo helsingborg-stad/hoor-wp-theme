@@ -10,7 +10,43 @@
 
     <div class="grid">
         <div class="grid-lg-3 hidden-print">
-            @include('partials.sidebar-left')
+
+            <!-- TODO: Dummy example -->
+            <aside class="sidebar-left-sidebar">
+                <button aria-expanded="false" aria-controls="sidebarMenu" class="sidebar-menu__navigation-button o-button o-button--primary">
+                    <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" fill-rule="evenodd"></path>
+                    </svg>
+                    <span>
+                    Visa undermeny<span class="visually-hidden">Nyhetsarkiv</span>
+                    </span>
+                </button>
+                <h2 class="sidebar-menu__headline">Nyhetsarkiv</h2>
+                <nav id="sidebar-menu">
+                    <ul class="nav-aside hidden-xs hidden-sm">
+                        <li class=""><a href="/">2017</a></li>
+                        <li class="has-children is-expanded"><a href="/">2016</a><button>Show submenu</button>
+                        <ul class="sub-menu">
+                            <li><a href="/">December</a></li>
+                            <li><a href="/">November</a></li>
+                            <li><a href="/">Oktober</a></li>
+                            <li><a href="/">September</a></li>
+                            <li><a href="/">Augusti</a></li>
+                            <li><a href="/">Juli</a></li>
+                            <li><a href="/">Juni</a></li>
+                            <li><a href="/">Maj</a></li>
+                            <li><a href="/">April</a></li>
+                            <li><a href="/">Mars</a></li>
+                            <li><a href="/">Februari</a></li>
+                            <li><a href="/">Januari</a></li>
+                        </ul>
+                        </li>
+                        <li><a href="/">2015</a></li>
+                        <li><a href="/">2014</a></li>
+                    </ul>
+                </nav>
+            </aside>
+            <!-- TODO: /Dummy example -->
         </div>
 
         <div class="grid-lg-9">
