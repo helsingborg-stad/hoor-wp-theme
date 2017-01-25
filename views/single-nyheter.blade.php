@@ -10,7 +10,7 @@
 
     <div class="grid">
         <div class="grid-lg-3 hidden-print">
-            <a class="o-button o-button--primary" href="/nyheter">Till alla nyheter</a>
+            <a class="o-button o-button--primary" href="/nyheter">Se fler nyheter</a>
         </div>
 
         <div class="grid-lg-9">

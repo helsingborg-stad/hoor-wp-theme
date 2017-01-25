@@ -10,7 +10,7 @@
 
     <div class="grid {{ (wp_get_post_parent_id(get_the_id()) != 0) ? 'no-margin-top' : '' }}">
         <div class="grid-lg-3 hidden-print">
-            <a class="o-button o-button--primary" href="/evenemang">Till alla evenemang</a>
+            <a class="o-button o-button--primary" href="/evenemang">Se fler evenemang</a>
         </div>
 
         <div class="grid-lg-9">
