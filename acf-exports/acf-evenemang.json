@@ -32,8 +32,8 @@
                         "class": "",
                         "id": ""
                     },
-                    "display_format": "Y-m-d g:i",
-                    "return_format": "Y-m-d g:i",
+                    "display_format": "Y-m-d H:i",
+                    "return_format": "Y-m-d H:i",
                     "first_day": 1
                 },
                 {
