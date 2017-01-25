@@ -51,7 +51,7 @@
 
                             <?php if ($startdate = get_field('event_startdate', $post->ID, false)): ?>
                                 <?php $startdate = strtotime($startdate) ?>
-                                    <time class="box__date-event" datetime="<?php echo date('Y-m-d\TH:i', $startdate); ?>">
+                                <time class="box__date-event" datetime="<?php echo date('Y-m-d\TH:i', $startdate); ?>">
                                     <span class="box__date-event-month"><?php echo date_i18n('M', $startdate); ?></span>
                                     <span class="box__date-event-day"><?php echo date('d', $startdate); ?></span>
                                 </time>
@@ -63,7 +63,7 @@
                             <h2 class="box__title"><?php echo apply_filters('the_title', $post->post_title); ?></h2>
                         <?php endif; ?>
 
-                        <?php if(in_array('date', $fields->posts_fields) && $fields->posts_data_source !== 'input'): ?>
+                        <?php if(in_array('date', $fields->posts_fields) && $fields->posts_data_source !== 'input' && !$startdate): ?>
                             <time class="box__date" datetime="<?php echo get_the_time('Y-m-d', $post->ID); ?>"><?php echo get_the_time('d F Y', $post->ID); ?></time>
                         <?php endif ?>
 
@@ -98,7 +98,7 @@
                                     <div class="box__date-event-holder">
                                         <?php if ($startdate = get_field('event_startdate', $post->ID, false)): ?>
                                             <?php $startdate = strtotime($startdate) ?>
-                                                <time class="box__date-event" datetime="<?php echo date('Y-m-d\TH:i', $startdate); ?>">
+                                            <time class="box__date-event" datetime="<?php echo date('Y-m-d\TH:i', $startdate); ?>">
                                                 <span class="box__date-event-month"><?php echo date_i18n('M', $startdate); ?></span>
                                                 <span class="box__date-event-day"><?php echo date('d', $startdate); ?></span>
                                             </time>
@@ -107,7 +107,7 @@
                                     <div class="box__content-holder">
                                         <h2 class="box__title"><?php echo apply_filters('the_title', $post->post_title); ?></h2>
                                         <?php endif; ?>
-                                        <?php if(in_array('date', $fields->posts_fields) && $fields->posts_data_source !== 'input'): ?>
+                                        <?php if(in_array('date', $fields->posts_fields) && $fields->posts_data_source !== 'input' && !$startdate): ?>
                                             <time class="box__date" datetime="<?php echo get_the_time('Y-m-d', $post->ID); ?>"><?php echo get_the_time('d F Y', $post->ID); ?></time>
                                         <?php endif ?>
                                         <?php if ($place = get_field('event_place', $post->ID, false)): ?>
