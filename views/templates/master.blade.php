@@ -3,7 +3,6 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>{{ wp_title('&mdash;', false, 'right') }}{{ get_bloginfo('name') }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
         document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1js$2');
@@ -13,7 +12,7 @@
     {!! wp_head() !!}
 </head>
 <body {!! body_class() !!}>
-  
+
     <!--[if lte IE 9]>
       <div class="notice info browserupgrade">
           <div class="container">
