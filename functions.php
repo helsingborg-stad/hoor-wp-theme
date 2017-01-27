@@ -37,7 +37,7 @@ function output_nginx_redirects() {
 
         */
 
-        $output = '';
+        $output = "location = /sv/Om-webbplatsen/Prenumerera-pa-information-fran-hemsidan/Nyheter-fran-startsidan/ {\n  return 301 /nyheter/feed/;\n}\n"; //RSS
         $error = '';
         $old_urls = array();
         $posts = get_posts(array(
