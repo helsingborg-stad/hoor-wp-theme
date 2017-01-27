@@ -11,6 +11,9 @@ var autoprefixer    = require('gulp-autoprefixer');
 var plumber         = require('gulp-plumber');
 var notify          = require('gulp-notify');
 var svgSprite       = require('gulp-svg-sprite');
+var rev             = require('gulp-rev');
+var revReplace      = require('gulp-rev-replace');
+var override=require('gulp-rev-css-url');
 
 // Compile Our Sass
 gulp.task('sass-dist', function() {
@@ -124,6 +127,23 @@ gulp.task('icons', function () {
     }))
     .pipe(svgSprite(config))
     .pipe(gulp.dest('assets/dist/images'))
+});
+
+gulp.task("revision", ["sass-dist", "sass-editor", "scripts-dist"], function(){
+  return gulp.src(["./assets/dist/**/*"])
+    .pipe(rev())
+    .pipe(override())
+    .pipe(gulp.dest('assets/dist'))
+    .pipe(rev.manifest())
+    .pipe(gulp.dest('assets/dist'))
+})
+
+gulp.task("revreplace", ["revision"], function(){
+  var manifest = gulp.src("assets/dist/rev-manifest.json");
+
+  return gulp.src("assets")
+    .pipe(revReplace({manifest: manifest}))
+    .pipe(gulp.dest("assets/dist"));
 });
 
 // Watch Files For Changes
