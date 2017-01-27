@@ -33,5 +33,8 @@ class App
             unregister_widget('\Municipio\Widget\Contact');
 
         }, 11);
+
+        // Remove stream plugin hidden comments.
+        add_filter('wp_stream_frontend_indicator', '__return_empty_string');
     }
 }

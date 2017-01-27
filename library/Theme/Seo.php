@@ -8,6 +8,9 @@ class Seo
     public function __construct() {
         add_filter('the_seo_framework_ogimage_output', array($this, 'default_image'), 10, 2);
         add_filter('the_seo_framework_twitterimage_output', array($this, 'default_image'), 10, 2);
+        // Remove plugin hidden comments.
+        add_filter('the_seo_framework_indicator', '__return_false');
+
     }
 
     function fallback_image() {
