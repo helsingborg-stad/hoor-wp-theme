@@ -17,12 +17,6 @@ load_child_theme_textdomain( 'hoor', get_stylesheet_directory() . '/languages' )
 
 new Hoor\App();
 
-add_action( 'after_setup_theme', 'hoor_theme_setup' );
-function hoor_theme_setup() {
-    add_image_size( 'hero_image', 1300, 280, array( 'left', 'top' ) );
-}
-
-
 /**
  * Quick hack to render output collected redirects.
  * TODO: Remove this after the site has been released.
