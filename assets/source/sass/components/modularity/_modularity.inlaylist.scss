@@ -6,11 +6,16 @@
       border-radius: 0;
       background: $color-light;
       box-shadow: none;
+      overflow: hidden;
 
       &__headline {
         background: #e5e5e5;
         font-size: $font-size-small;
         border-bottom: 0;
+      }
+
+      .box__list {
+        margin: .5em 0;
       }
 
       &__list-item {
@@ -33,16 +38,6 @@
           text-decoration: underline;
         }
       }
-    }
-  }
-
-  .modularity-mod-contacts {
-    [itemprop=telephone],
-    [itemprop=email] {
-      background-size: 1.5rem 1.5rem;
-      padding-left: 2.25rem;
-      padding-top: .375rem;
-      padding-bottom: .375rem;
     }
   }
 
