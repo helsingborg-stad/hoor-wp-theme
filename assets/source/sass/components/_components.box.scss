@@ -102,7 +102,11 @@ a.box {
   &__image-holder {
     position: relative;
     min-height: 155px;
-    background: $color-light-blue;
+    background: $color-gray-100;
+    background-image: url(../images/icons/thumb-placeholder.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 50% 50%;
 
     .box__date-event {
       position: absolute;
