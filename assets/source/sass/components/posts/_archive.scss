@@ -54,7 +54,7 @@
 .archive__container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 
   @media #{$screen-md-up} {
     flex-direction: row;
