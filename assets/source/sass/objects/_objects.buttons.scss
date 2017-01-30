@@ -31,7 +31,7 @@
 
   &--secondary {
     background-color: darken($color-dark-green, 14);
-    
+
     &:hover,
     &:focus {
       background: darken($color-dark-green, 18);
@@ -42,5 +42,18 @@
     position: absolute;
     top: 1rem;
     right: 1rem;
+  }
+
+  &--more {
+    margin-bottom: 1.25em;
+    background: darken($color-action, 6);
+    line-height: 1.5rem;
+
+    svg {
+      fill: currentColor;
+      position: relative;
+      top: 4px;
+      margin-right: .25rem;
+    }
   }
 }

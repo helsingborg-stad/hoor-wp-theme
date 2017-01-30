@@ -19,6 +19,7 @@ They might well be outsourced to an external stylesheet of course.
 
 <style type="text/css">
   .svg-arrow-down-dims { width: 8px; height: 4px; }
+  .svg-arrow-left-dims { width: 16px; height: 16px; }
   .svg-arrow-up-dims { width: 8px; height: 4px; }
   .svg-calendar-dims { width: 16px; height: 16px; }
   .svg-check-dims { width: 16px; height: 16px; }
@@ -70,6 +71,7 @@ further details on how to create this embeddable sprite variant.
 
 <svg width="0" height="0" style="position:absolute">
     <symbol viewBox="0 0 8 4" id="arrow-down"><title>android arrow dropdown</title><path d="M0 0l4 4 4-4z" fill="#222" fill-rule="evenodd"/></symbol>
+    <symbol viewBox="0 0 512 512" id="arrow-left"><path d="M427 234.625H167.296l119.702-119.702L256 85 85 256l171 171 29.922-29.924-118.626-119.701H427v-42.75z"/></symbol>
     <symbol viewBox="0 0 8 4" id="arrow-up"><title>android arrow dropdown</title><path d="M8 4L4 0 0 4z" fill="#222" fill-rule="evenodd"/></symbol>
     <symbol viewBox="0 0 512 512" id="calendar"><path d="M144 128c17.7 0 32-14.3 32-32V64c0-17.7-14.3-32-32-32s-32 14.3-32 32v32c0 17.7 14.3 32 32 32zm224 0c17.7 0 32-14.3 32-32V64c0-17.7-14.3-32-32-32s-32 14.3-32 32v32c0 17.7 14.3 32 32 32z"/><path d="M472 64h-56v40.7c0 22.5-23.2 39.3-47.2 39.3S320 127.2 320 104.7V64H192v40.7c0 22.5-24 39.3-48 39.3s-48-16.8-48-39.3V64H40c-4.4 0-8 3.6-8 8v400c0 4.4 3.6 8 8 8h432c4.4 0 8-3.6 8-8V72c0-4.4-3.6-8-8-8zm-40 368H80V176h352v256z"/></symbol>
     <symbol viewBox="0 0 40 40" id="check"><title>Shape</title><path d="M20 0C8.955 0 0 8.955 0 20s8.955 20 20 20 20-8.955 20-20S31.045 0 20 0zm10.259 13.313L17.839 29.25c-.098.098-.259.313-.455.313-.205 0-.34-.143-.455-.26a9975.16 9975.16 0 0 0-7.045-6.776l-.134-.134a.523.523 0 0 1-.098-.286c0-.107.044-.205.098-.286a.937.937 0 0 0 .098-.107c.688-.723 2.08-2.187 2.17-2.276.116-.117.214-.268.428-.268.224 0 .367.187.474.294.107.107 4.018 3.866 4.018 3.866l9.937-12.767a.51.51 0 0 1 .313-.126.5.5 0 0 1 .312.117l2.732 2.151a.5.5 0 0 1 .116.313.463.463 0 0 1-.09.294z" fill="#222" fill-rule="evenodd"/></symbol>
@@ -137,6 +139,17 @@ embedded above. They may be styled via CSS.
 
           </div>
           <h2>arrow-down</h2>
+        </li>
+        <li title="arrow-left">
+          <div class="icon-box">
+
+            <!-- arrow-left -->
+            <svg class="svg-arrow-left-dims">
+              <use xlink:href="#arrow-left"></use>
+            </svg>
+
+          </div>
+          <h2>arrow-left</h2>
         </li>
         <li title="arrow-up">
           <div class="icon-box">
@@ -520,6 +533,17 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 
           </div>
           <h2>arrow-down</h2>
+        </li>
+        <li title="arrow-left">
+          <div class="icon-box">
+
+            <!-- arrow-left -->
+            <svg class="svg-arrow-left-dims">
+              <use xlink:href="../icons.svg#arrow-left"></use>
+            </svg>
+
+          </div>
+          <h2>arrow-left</h2>
         </li>
         <li title="arrow-up">
           <div class="icon-box">
