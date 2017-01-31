@@ -56,7 +56,11 @@
 
             <div class="box__content">
                 <h3 class="box__link box__link--arrow"><?php echo isset($item['title']) && !empty($item['title']) ? $item['title'] : get_the_title(); ?></h3>
-                <p><?php echo isset($item['lead']) && !empty($item['lead']) ? $item['lead'] : get_the_excerpt(); ?></p>
+                <?php if (!empty($item['lead'])): ?>
+                    <?php echo $item['lead'] ?>
+                <?php else: ?>
+                    <?php the_excerpt() ?>
+                <?php endif ?>
             </div>
         </a>
     </div>
