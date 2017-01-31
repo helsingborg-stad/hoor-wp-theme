@@ -2,11 +2,23 @@
 
 $fields = json_decode(json_encode(get_fields($module->ID)));
 
+
 $getPostsArgs = array(
     'post_type' => MODULARITYNOTICEBOARD_POST_TYPE,
     'posts_per_page' => -1,
-    'orderby' => 'date',
-    'order' => 'asc',
+    'meta_query' => array(
+        'relation' => 'OR',
+        array(
+            'key' => 'meeting_date',
+            'compare' => 'EXISTS'
+        ),
+        array(
+            'key' => 'meeting_date',
+            'compare' => 'NOT EXISTS'
+        )
+    ),
+    'orderby' => 'meta_value post_date',
+    'order' => 'desc',
     'tax_query' => array(
         array(
             'taxonomy' => MODULARITYNOTICEBOARD_TAXONOMY,
@@ -59,7 +71,7 @@ $posts = get_posts($getPostsArgs);
                     <p class="box__list-meta">
                         <strong class="box__label">Anslaget:</strong> <time class="box__date" datetime="<?php echo $published ?>"><?php echo $published ?></time>
                         <?php if ($unpubDate): ?>
-                        , <strong  class="box__label">Tas ner:</strong> <time class="box__date" datetime="<?php echo $unpubDate ?>"><?php echo $unpubDate ?></time>
+                          <strong  class="box__label">Tas ner:</strong> <time class="box__date" datetime="<?php echo $unpubDate ?>"><?php echo $unpubDate ?></time>
                         <?php endif ?>
                     </p>
                 </div>

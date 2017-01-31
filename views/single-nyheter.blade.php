@@ -35,16 +35,7 @@
                     </div>
 
                     <div class="c-article-timestamps">
-                        <ul class="c-article-timestamps__list">
-                            <li class="c-article-timestamps__list-item">
-                                <strong>Publicerad:</strong>
-                                <time datetime="2016-09-28T19:51">28 september 2016, 19.51</time>
-                            </li>
-                            <li class="c-article-timestamps__list-item">
-                                <strong>Senast uppdaterad:</strong>
-                                <time datetime="2017-01-04T19:51">4 januari 2017, 13.55</time>
-                            </li>
-                        </ul>
+                        @include('partials.timestamps')
                     </div>
 
                     @if (is_single() && is_active_sidebar('content-area'))

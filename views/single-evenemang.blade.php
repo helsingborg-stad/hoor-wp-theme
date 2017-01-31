@@ -87,6 +87,10 @@
                         @endwhile
                     </div>
 
+                    <div class="c-article-timestamps">
+                        @include('partials.timestamps')
+                    </div>
+
                     @if (is_active_sidebar('content-area'))
                         <div class="sidebar-content-area sidebar-content-area-bottom">
                             <div class="grid">
