@@ -1,3 +1,5 @@
+html.no-flexbox { }
+
 .primary-navigation {
 
   &__container {
@@ -28,7 +30,6 @@
   }
 
   li {
-    float: none;
     flex-grow: 1;
   }
 
@@ -83,7 +84,6 @@
   }
 
   li {
-    float: left;
 
     &:not(:first-child) {
       border-top: 1px solid $color-gray-200;
