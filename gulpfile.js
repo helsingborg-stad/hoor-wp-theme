@@ -12,7 +12,7 @@ var plumber         = require('gulp-plumber');
 var notify          = require('gulp-notify');
 var svgSprite       = require('gulp-svg-sprite');
 var rev             = require('gulp-rev');
-var revReplace      = require('gulp-rev-replace');
+var revDel = require('rev-del');
 var override=require('gulp-rev-css-url');
 
 // Compile Our Sass
@@ -31,7 +31,7 @@ gulp.task('sass-dist', function() {
                 mergeLonghand: false,
                 zindex: false
             }))
-            .pipe(gulp.dest('assets/dist/css'));
+            .pipe(gulp.dest('assets/tmp/css'));
 });
 
 gulp.task('sass-editor', function() {
@@ -48,7 +48,7 @@ gulp.task('sass-editor', function() {
                 mergeLonghand: false,
                 zindex: false
             }))
-            .pipe(gulp.dest('assets/dist/css'));
+            .pipe(gulp.dest('assets/tmp/css'));
 });
 
 gulp.task('sass-dev', function() {
@@ -62,8 +62,12 @@ gulp.task('sass-dev', function() {
             .pipe(sass())
             .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
             .pipe(rename({suffix: '.dev'}))
-            .pipe(gulp.dest('assets/dist/css'));
+            .pipe(gulp.dest('assets/tmp/css'));
 });
+
+gulp.task("rev:sass", ['sass-dist', 'sass-dev', 'sass-editor'], function(){
+  return revTask()
+})
 
 // Concatenate & Minify JS
 gulp.task('scripts-dist', function() {
@@ -72,7 +76,7 @@ gulp.task('scripts-dist', function() {
                 'assets/source/js/hbg-prime/plugins/jquery-ui-1.11.4/jquery-ui.js',
                 'assets/source/js/hbg-prime/**/*.js',
                 'assets/source/js/**/*.js',
-                '../municipio/assets/dist/js/packaged.js'
+                '../municipio/assets/tmp/js/packaged.js'
             ])
             .pipe(plumber({
                 errorHandler: notify.onError({
@@ -81,16 +85,15 @@ gulp.task('scripts-dist', function() {
                 })
             }))
             .pipe(concat('app.js'))
-            .pipe(gulp.dest('assets/dist/js'))
+            .pipe(gulp.dest('assets/tmp/js'))
             .pipe(rename('app.min.js'))
             .pipe(uglify())
-            .pipe(gulp.dest('assets/dist/js'));
+            .pipe(gulp.dest('assets/tmp/js'));
 });
 
-gulp.task('icons', function () {
-    runSequence('iconfont', ['sass-dist', 'sass-dev', 'dss-sass']);
-});
-
+gulp.task("rev:scripts", ['scripts-dist'], function(){
+  return revTask()
+})
 
 gulp.task('icons', function () {
   var config = {
@@ -126,33 +129,46 @@ gulp.task('icons', function () {
         })
     }))
     .pipe(svgSprite(config))
-    .pipe(gulp.dest('assets/dist/images'))
+    .pipe(gulp.dest('assets/tmp/images'))
 });
 
-gulp.task("revision", ["sass-dist", "sass-editor", "scripts-dist"], function(){
-  return gulp.src(["./assets/dist/**/*"])
-    .pipe(rev())
-    .pipe(override())
-    .pipe(gulp.dest('assets/dist'))
-    .pipe(rev.manifest())
-    .pipe(gulp.dest('assets/dist'))
+gulp.task("rev:icons", ['icons'], function(){
+  return revTask()
 })
 
-gulp.task("revreplace", ["revision"], function(){
-  var manifest = gulp.src("assets/dist/rev-manifest.json");
+gulp.task("images", function(){
+  return gulp.src(['assets/source/images/*'])
+    .pipe(gulp.dest('assets/tmp/images'))
+})
 
-  return gulp.src("assets")
-    .pipe(revReplace({manifest: manifest}))
-    .pipe(gulp.dest("assets/dist"));
-});
+gulp.task("fonts", function(){
+  return gulp.src(['assets/source/fonts/*'])
+    .pipe(gulp.dest('assets/tmp/fonts'))
+})
+
+var revTask = function() {
+    return gulp.src(["./assets/tmp/**/*"])
+      .pipe(rev())
+      .pipe(override())
+      .pipe(gulp.dest('assets/dist'))
+      .pipe(rev.manifest())
+      .pipe(revDel({dest: 'assets/dist'}))
+      .pipe(gulp.dest('assets/dist'));
+}
+
+gulp.task("build", ['build:tmp'], function(){
+  return revTask();
+})
 
 // Watch Files For Changes
 gulp.task('watch', function() {
-    gulp.watch('assets/source/js/**/*.js', ['scripts-dist']);
-    gulp.watch('assets/source/sass/**/*.scss', ['sass-dist', 'sass-dev', 'sass-editor']);
-    gulp.watch('assets/source/icons/*.svg', ['icons']);
+    gulp.watch('assets/source/js/**/*.js', ['rev:scripts']);
+    gulp.watch('assets/source/sass/**/*.scss', ['rev:sass']);
+    gulp.watch('assets/source/icons/*.svg', ['rev:icons']);
 //    gulp.watch('assets/source/images/**/*', ['imagemin']);
 });
 
+gulp.task('build:tmp', ['sass-dist', 'sass-dev', 'sass-editor', 'scripts-dist', 'icons', 'images', 'fonts']);
+
 // Default Task
-gulp.task('default', ['sass-dist', 'sass-dev', 'sass-editor', 'scripts-dist', 'icons', 'watch']);
+gulp.task('default', ['build', 'watch']);
