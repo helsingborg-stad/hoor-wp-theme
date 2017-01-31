@@ -25,6 +25,7 @@
   .sidebar-menu__headline {
     display: none;
   }
+
   #sidebar-menu.is-expanded {
     display: block;
   }
@@ -33,10 +34,13 @@
 .sidebar-menu {
 
   &__headline {
-    font-size: $font-size-small;
+    font-size: $font-size-medium;
     font-weight: 700;
-    border-bottom: 3px solid $color-action;
-    padding: .625rem 0;
+    border-bottom: 1px solid $color-gray-300;
+    padding: .875rem .625rem;
+    background: $color-gray-100;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
   }
 }
 
