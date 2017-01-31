@@ -6,15 +6,17 @@
 
   .sidebar-menu__navigation-button {
     display: flex;
-    margin-bottom: $content-gutter;
-    padding-top: .5rem;
-    padding-bottom: .5rem;
+    margin-top: .75rem;
+    padding: .5rem .75rem;
     background: darken($color-action, 6);
-    font-size: $font-size-small;
+    font-size: $font-size-smaller;
+    border-radius: 2px;
 
     svg {
       fill: currentColor;
-      margin-right: 1.25rem;
+      margin-right: .75rem;
+      position: relative;
+      top: 1px;
     }
   }
 

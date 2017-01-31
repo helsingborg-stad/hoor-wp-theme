@@ -28,9 +28,9 @@
         ?>
 
         <button aria-expanded="false" aria-controls="sidebarMenu" class="sidebar-menu__navigation-button o-button o-button--primary">
-            <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" fill-rule="evenodd"/></svg>
+            <svg width="16" height="16" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" fill-rule="evenodd"/></svg>
             <span>
-                <?php _e('Show submenu', 'hoor'); ?><span class="visually-hidden"><?php _e('for', 'hoor'); ?> {{ $sidebar_label }}</span>
+                <?php _e('Menu', 'hoor'); ?> - {{ $sidebar_label }}
             </span>
         </button>
 
