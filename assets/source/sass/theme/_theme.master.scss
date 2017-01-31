@@ -23,6 +23,7 @@
   background: $color-light;
   flex: 1 0 auto;
   width: 100%;
+  min-height: 100%;
 
   &::after {
     content: '\00a0';
