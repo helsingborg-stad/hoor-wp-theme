@@ -3927,14 +3927,16 @@ html:not(.no-flexbox) .menu-help {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-bottom: 1.25rem;
-    padding-top: .5rem;
-    padding-bottom: .5rem;
+    margin-top: .75rem;
+    padding: .5rem .75rem;
     background: #07609c;
-    font-size: 0.875rem; }
+    font-size: 0.8125rem;
+    border-radius: 2px; }
     .sidebar-menu__navigation-button svg {
       fill: currentColor;
-      margin-right: 1.25rem; }
+      margin-right: .75rem;
+      position: relative;
+      top: 1px; }
   #sidebar-menu,
   .sidebar-menu__headline {
     display: none; }
