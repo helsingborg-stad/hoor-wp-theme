@@ -1,76 +1,58 @@
-html:not(.no-flexbox) {
-  .primary-navigation {
+.primary-navigation {
 
-    &__container {
-      display: flex;
+  &__container {
+    display: flex;
 
-      > ul {
-        &:last-child {
-          border-bottom: 1px solid $color-gray-200;
+    > ul {
+      &:last-child {
+        border-bottom: 1px solid $color-gray-200;
 
-          @media #{$screen-md-up} {
-            border-bottom: none;
-          }
+        @media #{$screen-md-up} {
+          border-bottom: none;
         }
       }
     }
+  }
 
-    ul {
-      display: flex;
-      flex-grow: 2;
+  ul {
+    display: flex;
+    flex-grow: 2;
 
-      @media #{$screen-below-md} {
-        flex-direction: column;
-      }
-
-      @media #{$screen-md-up} {
-        flex-direction: row;
-      }
-    }
-
-    li {
-      float: none;
-      flex-grow: 1;
-    }
-
-    .sub-menu {
-      display: none;
-      border-top: 1px solid $color-gray-200;
+    @media #{$screen-below-md} {
+      flex-direction: column;
     }
 
     @media #{$screen-md-up} {
-      li:not(:last-child) a {
-        padding-left: 1rem;
-      }
-    }
-/*
-    ul ul a {
-      padding-left: 2rem;
-    }
-
-    ul ul ul a {
-      padding-left: 3rem;
-    }
-
-    ul ul ul ul a {
-      padding-left: 4rem;
-    }
-
-    ul ul ul ul ul a {
-      padding-left: 5rem;
-    }
-*/
-    .is-expanded > .sub-menu {
-      display: flex;
+      flex-direction: row;
     }
   }
 
-  .menu-item-search {
-    display: none;
+  li {
+    float: none;
+    flex-grow: 1;
+  }
 
-    @media #{$screen-md-up} {
-      display: flex;
+  .sub-menu {
+    display: none;
+    border-top: 1px solid $color-gray-200;
+  }
+
+  @media #{$screen-md-up} {
+    li:not(:last-child) a {
+      padding-left: 1rem;
     }
+  }
+
+  .is-expanded > .sub-menu {
+    display: flex;
+  }
+}
+
+.menu-item-search {
+  display: none;
+
+  @media #{$screen-md-up} {
+    display: flex;
   }
 }
 
@@ -211,6 +193,7 @@ html:not(.no-flexbox) {
     background-color: darken($color-action, 6);
     display: block;
     border: 0;
+    width: 62px;
     padding: 0 1.9375rem;
     background-image: url(../images/icons/search-inverted.svg);
     background-repeat: no-repeat;
