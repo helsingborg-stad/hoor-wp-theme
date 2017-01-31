@@ -67,6 +67,7 @@
 @import "components/modularity/modularity.inheritpost";
 @import "components/modularity/modularity.notice";
 @import "components/modularity/modularity.fact";
+@import "components/modularity/modularity.image";
 @import "components/components.accordion";
 
 @import "components/components.box-widget"; // Fix for WordPress Widget Output
@@ -203,10 +204,4 @@
   &:hover {
     background-color: darken($color-gray-100, 20);
   }
-}
-
-
-// TODO: Temporary fix for image module that prints an h2 even if it's empty
-.modularity-mod-image h2:empty {
-  display: none;
 }
