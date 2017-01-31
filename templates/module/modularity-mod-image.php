@@ -17,7 +17,7 @@ $classes = array();
 if ($fields['mod_image_responsive'] === true) {
     $classes[] = 'image-responsive';
 }
-if (!$module->hideTitle) {
+if (!$module->hideTitle && !empty($module->post_title)) {
     echo '<h2 class="box__headline">' . $module->post_title . '</h2>';
 }
 if (isset($fields['mod_image_link_url']) && strlen($fields['mod_image_link_url']) > 0) {
