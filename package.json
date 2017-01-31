@@ -10,7 +10,6 @@
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.3.1",
     "gulp-concat": "^2.5.2",
-    "gulp-copy": "0.0.2",
     "gulp-cssnano": "^2.1.0",
     "gulp-notify": "^2.2.0",
     "gulp-plumber": "^1.0.1",
@@ -21,7 +20,6 @@
     "gulp-sass": "^2.0.1",
     "gulp-svg-sprite": "^1.2.16",
     "gulp-uglify": "^1.2.0",
-    "imagemin-pngquant": "^4.2.0",
     "rev-del": "^1.0.5"
   },
   "scripts": {

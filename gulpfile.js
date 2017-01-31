@@ -12,8 +12,8 @@ var plumber         = require('gulp-plumber');
 var notify          = require('gulp-notify');
 var svgSprite       = require('gulp-svg-sprite');
 var rev             = require('gulp-rev');
-var revDel = require('rev-del');
-var override=require('gulp-rev-css-url');
+var revDel          = require('rev-del');
+var revReplaceCSS   = require('gulp-rev-css-url');
 
 // Compile Our Sass
 gulp.task('sass-dist', function() {
@@ -149,7 +149,7 @@ gulp.task("fonts", function(){
 var revTask = function() {
     return gulp.src(["./assets/tmp/**/*"])
       .pipe(rev())
-      .pipe(override())
+      .pipe(revReplaceCSS())
       .pipe(gulp.dest('assets/dist'))
       .pipe(rev.manifest())
       .pipe(revDel({dest: 'assets/dist'}))
