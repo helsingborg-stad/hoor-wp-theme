@@ -2,10 +2,22 @@
 
 $fields = json_decode(json_encode(get_fields($module->ID)));
 
+
 $getPostsArgs = array(
     'post_type' => MODULARITYNOTICEBOARD_POST_TYPE,
     'posts_per_page' => -1,
-    'orderby' => 'date',
+    'meta_query' => array(
+        'relation' => 'OR',
+        array(
+            'key' => 'meeting_date',
+            'compare' => 'EXISTS'
+        ),
+        array(
+            'key' => 'meeting_date',
+            'compare' => 'NOT EXISTS'
+        )
+    ),
+    'orderby' => 'meta_value post_date',
     'order' => 'asc',
     'tax_query' => array(
         array(
