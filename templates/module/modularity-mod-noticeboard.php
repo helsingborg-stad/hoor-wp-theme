@@ -18,7 +18,7 @@ $getPostsArgs = array(
         )
     ),
     'orderby' => 'meta_value post_date',
-    'order' => 'asc',
+    'order' => 'desc',
     'tax_query' => array(
         array(
             'taxonomy' => MODULARITYNOTICEBOARD_TAXONOMY,
