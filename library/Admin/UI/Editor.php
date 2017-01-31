@@ -26,7 +26,7 @@ class Editor
     }
 
     public function addEditorStyles() {
-            add_editor_style('assets/dist/css/editor-style.css');
+            add_editor_style('assets/dist/' . \Hoor\Helper\CacheBust::name('css/editor-style.css'));
     }
 
     public function styleFormats($settings) {
