@@ -59,7 +59,7 @@ $posts = get_posts($getPostsArgs);
                     <p class="box__list-meta">
                         <strong class="box__label">Anslaget:</strong> <time class="box__date" datetime="<?php echo $published ?>"><?php echo $published ?></time>
                         <?php if ($unpubDate): ?>
-                        , <strong  class="box__label">Tas ner:</strong> <time class="box__date" datetime="<?php echo $unpubDate ?>"><?php echo $unpubDate ?></time>
+                          <strong  class="box__label">Tas ner:</strong> <time class="box__date" datetime="<?php echo $unpubDate ?>"><?php echo $unpubDate ?></time>
                         <?php endif ?>
                     </p>
                 </div>
