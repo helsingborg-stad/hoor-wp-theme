@@ -6,6 +6,10 @@ class Seo
     const IMAGE_NAME = 'default-meta-image.png';
 
     public function __construct() {
+        // Disable Wordpress automatic redirects. It's a bit too smart. We want 404s and not a
+        // somewhat random redirect.
+        remove_action('template_redirect', 'redirect_canonical');
+
         // Let SEO plugin set the title tag.
         add_theme_support( 'title-tag' );
         add_filter('the_seo_framework_ogimage_output', array($this, 'default_image'), 10, 2);
